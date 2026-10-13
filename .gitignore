@@ -1,0 +1,10 @@
+node_modules
+.next
+npm-debug.log*
+.env
+.env.local
+.env.*
+!.env.example
+cookies.txt
+public/uploads/*
+!public/uploads/.gitkeep
