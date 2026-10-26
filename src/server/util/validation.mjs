@@ -4,7 +4,7 @@ export const normalizeAdminEmail = (value) => {
   }
 
   const normalized = value.trim().toLowerCase()
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
+  if (normalized.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
     throw new Error('Invalid email address')
   }
 
@@ -92,10 +92,18 @@ export const validateUploadBuffer = (buffer, mimeType, fileName, options = {}) =
   }
 
   for (let index = 0; index < config.signatures.length; index += 1) {
-    if (buffer[index] !== config.signatures[index]) {
+    const offset = normalizedMime === 'image/webp' && index >= 4 ? index + 4 : index
+    if (buffer[offset] !== config.signatures[index]) {
       throw new Error(`Invalid ${config.label} file upload`)
     }
   }
 
   return true
+}
+
+export const validateStrongPassword = value => {
+  if (typeof value !== 'string' || value.length < 12 || Buffer.byteLength(value, 'utf8') > 72 || !/[a-z]/.test(value) || !/[A-Z]/.test(value) || !/\d/.test(value) || !/[^a-zA-Z0-9]/.test(value)) {
+    throw new Error('Password must have at least 12 characters, uppercase, lowercase, a number and a symbol, and at most 72 UTF-8 bytes')
+  }
+  return value
 }

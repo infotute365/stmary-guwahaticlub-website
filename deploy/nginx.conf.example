@@ -1,0 +1,46 @@
+﻿# Template: replace GC_DOMAIN, GC_PORT and certificate paths before installing.
+# Put these zones in the http context once, using these distinct names.
+limit_req_zone $binary_remote_addr zone=gc_login:10m rate=6r/m;
+limit_conn_zone $binary_remote_addr zone=gc_upload_connections:10m;
+
+server {
+    listen 80;
+    server_name GC_DOMAIN;
+    location /.well-known/acme-challenge/ { root /var/www/letsencrypt; }
+    location / { return 301 https://GC_DOMAIN$request_uri; }
+}
+
+server {
+    listen 443 ssl;
+    server_name GC_DOMAIN;
+    ssl_certificate /etc/letsencrypt/live/GC_DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/GC_DOMAIN/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    server_tokens off;
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    client_max_body_size 21m;
+    client_body_timeout 30s;
+    client_header_timeout 15s;
+    access_log /var/log/nginx/stmarys-guwahati-club.access.log;
+    error_log /var/log/nginx/stmarys-guwahati-club.error.log warn;
+
+    # Each proxy location includes the SAME header/timeouts snippet below.
+    location = /api/auth/login {
+        limit_req zone=gc_login burst=5 nodelay;
+        limit_req_status 429;
+        include /etc/nginx/snippets/stmarys-guwahati-club-proxy.conf;
+    }
+    location /api/upload/ {
+        limit_conn gc_upload_connections 2;
+        limit_conn_status 429;
+        include /etc/nginx/snippets/stmarys-guwahati-club-proxy.conf;
+    }
+    location /_next/static/ {
+        include /etc/nginx/snippets/stmarys-guwahati-club-proxy.conf;
+    }
+    # Validated application routes serve both /uploads/* and /api/uploads/*.
+    # No alias: this keeps traversal, hidden-file and file-type checks authoritative.
+    location / {
+        include /etc/nginx/snippets/stmarys-guwahati-club-proxy.conf;
+    }
+}

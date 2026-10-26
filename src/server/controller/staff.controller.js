@@ -299,9 +299,6 @@ export const updateStaff = async (req, res) => {
         // Handle image update - delete the old local image if a new image is provided
         let image = staff.image
         if (req.body.image && req.body.image !== staff.image) {
-            if (staff.image) {
-                await deleteUploadedFile(staff.image)
-            }
             image = req.body.image
         }
 
@@ -324,9 +321,10 @@ export const updateStaff = async (req, res) => {
                     isActive: isActive !== undefined ? isActive : staff.isActive
                 }
             },
-            { new: true }
+            { new: true, runValidators: true }
         )
 
+        if (staff.image && image !== staff.image) await deleteUploadedFile(staff.image)
         res.json({ message: "Staff updated successfully", staff: updated })
     }
     catch (err) {

@@ -360,10 +360,7 @@ export const updateSyllabus = async (req, res) => {
             throw TryError("Stream is required for class 11 and 12", 400)
         }
 
-        // If file is being replaced, delete the old local file
-        if (fileUrl && syllabus.fileUrl && fileUrl !== syllabus.fileUrl) {
-            await deleteUploadedFile(syllabus.fileUrl)
-        }
+        const replacedFile = fileUrl && syllabus.fileUrl && fileUrl !== syllabus.fileUrl ? syllabus.fileUrl : null
 
         const updated = await SyllabusModel.findByIdAndUpdate(
             req.params.id,
@@ -378,9 +375,10 @@ export const updateSyllabus = async (req, res) => {
                     displayOrder: displayOrder !== undefined ? displayOrder : syllabus.displayOrder
                 }
             },
-            { new: true }
+            { new: true, runValidators: true }
         )
 
+        if (replacedFile) await deleteUploadedFile(replacedFile)
         res.json({ message: "Syllabus updated successfully", syllabus: updated })
     }
     catch (err) {

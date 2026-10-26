@@ -34,8 +34,11 @@ const authSchema = new Schema({
     },
     refreshToken: {
         type: String,
+        select: false,
         default: null
     },
+    refreshTokenHistory: { type: [String], default: [], select: false },
+    sessionVersion: { type: Number, default: 0 },
     expiry: {
         type: Date,
         default: null

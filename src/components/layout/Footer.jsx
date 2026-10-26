@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { School, Phone, Mail, MapPin, Globe2, MessageCircle, Send, Play, Heart, ChevronRight } from 'lucide-react'
+import { School, Phone, Mail, MapPin, Globe2, MessageCircle, Send, Play, Heart, ChevronRight, LogIn } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Footer = () => {
@@ -77,6 +77,13 @@ const Footer = () => {
                 </motion.a>
               ))}
             </div>
+            <Link
+              href="/login"
+              className="mt-5 inline-flex items-center gap-2 rounded-md border border-white/20 px-3 py-2 text-xs font-medium text-gray-300 transition-colors hover:border-gold-400/60 hover:bg-white/5 hover:text-gold-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400"
+            >
+              <LogIn size={14} aria-hidden="true" />
+              Admin Login
+            </Link>
           </motion.div>
 
           {/* Quick Links - Column 2 */}

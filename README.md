@@ -1,63 +1,33 @@
-# St. Mary's School — Single Next.js Full-Stack App
+﻿# St. Mary's Guwahati Club - Next.js application
 
-The project is now one Next.js application. The former Express backend logic lives inside `src/server` and is exposed through Next.js Route Handlers. There is no separate backend process.
+The existing public school website and admin dashboard share a Next.js 15 App Router application. Its existing Guwahati Club controllers and Mongoose models run server-side; no separate Express service is needed.
 
-## Structure
-
-```text
-SeintMaris/
-├── app/
-│   ├── (site)/
-│   ├── admin/
-│   ├── login/
-│   ├── api/[...path]/route.js
-│   ├── globals.css
-│   ├── layout.jsx
-│   └── not-found.jsx
-├── src/
-│   ├── components/
-│   ├── context/
-│   ├── hooks/
-│   ├── pages/
-│   ├── services/
-│   ├── utils/
-│   └── server/
-│       ├── controller/
-│       ├── middleware/
-│       ├── model/
-│       ├── util/
-│       ├── db.js
-│       └── route-adapter.js
-├── public/
-├── .env.local
-└── package.json
-```
-
-## Run
+For local development:
 
 ```bash
+npm ci
 cp .env.example .env.local
-npm install
+# Privately configure MONGODB_URI, JWT_SECRET, APP_ORIGIN=http://localhost:3000.
+# Remove NODE_ENV=production and UPLOAD_DIR for project-local development uploads.
+# Set bootstrap credentials only if creating the first administrator.
 npm run seed:admin
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Runtime login uses the saved MongoDB password hash. Seeding is deliberate and idempotent; it does not reset existing passwords. Remove bootstrap credentials afterward. Keep `.env.local` private and ignored.
 
-Set your MongoDB and authentication credentials in `.env.local`. The app requires `MONGODB_URI`, `AUTH_SECRET`, and the initial admin provisioning values (`ADMIN_INITIAL_EMAIL` and `ADMIN_INITIAL_PASSWORD`). Uploaded images and PDFs are stored locally under `public/uploads`, so the VPS must keep that directory on persistent storage and include it in backups.
-
-## Admin bootstrap
+Production instructions, PM2/Nginx templates, persistent-upload migration, backups and rollback are in [the Hetzner guide](docs/deployment/HETZNER_DEPLOYMENT.md). [Environment variables](docs/deployment/ENVIRONMENT_VARIABLES.md) includes the controlled `AUTH_SECRET` to `JWT_SECRET` migration. The authoritative database helper is `src/server/config/database.js`, used by the API adapter and seed command.
 
 ```bash
-npm run seed:admin
+npm test
+# Optional real integration suite: disposable MongoDB only; it deletes this test DB.
+TEST_MONGODB_URI=mongodb://127.0.0.1:27017/stmary_gc_test_local npm test
+npm run verify:preservation
+npm run build
+npm audit --omit=dev
+npm run start -- --hostname 127.0.0.1 --port YOUR_VERIFIED_FREE_PORT
 ```
 
-This creates the first database-backed administrator only when the account does not already exist. It never overwrites an existing admin password or creates duplicates. Do not use the seed values as the runtime login mechanism; login verifies against the stored password hash in MongoDB.
+Existing API families remain `/api/auth`, `/api/circulars`, `/api/staff`, `/api/gallery`, `/api/syllabus`, `/api/upload` and `/api/health`. Refresh now uses protected POST at the same `/api/auth/refresh-token` URL, deployed together with automatic frontend recovery. Existing response shapes and `/uploads/...` media URLs are retained; `/api/uploads/...` serves compatibility paths used by existing components.
 
-## API compatibility
-
-The frontend still calls `/api`, but these are now handled directly by Next.js:
-
-`/api/auth/*`, `/api/circulars/*`, `/api/staff/*`, `/api/gallery/*`, `/api/syllabus/*`, `/api/upload/*`, and `/api/health`.
-
-The existing UI and frontend service layer are preserved; only the backend execution layer has moved into the Next.js application.
+See [verification results and remaining deployment checks](docs/verification/REPORT.md).

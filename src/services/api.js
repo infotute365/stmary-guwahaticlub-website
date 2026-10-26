@@ -10,6 +10,40 @@ const api = axios.create({
   }
 })
 
+// Share one refresh request when several API calls encounter an expired access
+// token together. Retry each original request once without changing its payload.
+let pendingRefresh
+const recoverSession = async () => {
+  if (!pendingRefresh) {
+    pendingRefresh = axios.post(`${API_URL}/auth/refresh-token`, {}, { withCredentials: true }).finally(() => { pendingRefresh = null })
+  }
+  return pendingRefresh
+}
+api.interceptors.request.use(async config => {
+  // Admin lists ask for all records. Check the session first so an expired
+  // access cookie cannot silently turn the dashboard into a public-only list.
+  if (config.params?.all === 'true') await api.get('/auth/session')
+  return config
+})
+api.interceptors.response.use(response => response, async error => {
+  const config = error.config
+  if (error.response?.status === 401 && config && !config._sessionRetried && !/\/auth\/(login|logout|refresh-token|change-password)/.test(config.url)) {
+    config._sessionRetried = true
+    await recoverSession()
+    return api(config)
+  }
+  throw error
+})
+
+const uploadRequest = async (url, options) => {
+  let response = await fetch(url, options)
+  if (response.status === 401) {
+    await recoverSession()
+    response = await fetch(url, options)
+  }
+  return response
+}
+
 // ==================== AUTH ====================
 export const login = async (email, password) => {
   const { data } = await api.post('/auth/login', { email, password })
@@ -27,11 +61,12 @@ export const getSession = async () => {
 }
 
 export const refreshToken = async () => {
-  const { data } = await api.get('/auth/refresh-token')
+  const { data } = await recoverSession()
   return data
 }
 
 export const changePassword = async (oldPassword, newPassword) => {
+  await getSession()
   const { data } = await api.put('/auth/change-password', { oldPassword, newPassword })
   return data
 }
@@ -233,7 +268,7 @@ export const uploadImage = async (file, folder = 'gallery') => {
   const formData = new FormData()
   formData.append('image', file)
 
-  const response = await fetch(`${API_URL}/upload/image?folder=${encodeURIComponent(folder)}`, {
+  const response = await uploadRequest(`${API_URL}/upload/image?folder=${encodeURIComponent(folder)}`, {
     method: 'POST',
     body: formData,
     credentials: 'include'
@@ -254,7 +289,7 @@ export const uploadMultipleImages = async (files, folder = 'gallery') => {
     formData.append('images', file)
   })
   
-  const response = await fetch(`${API_URL}/upload/images?folder=${encodeURIComponent(folder)}`, {
+  const response = await uploadRequest(`${API_URL}/upload/images?folder=${encodeURIComponent(folder)}`, {
     method: 'POST',
     body: formData,
     credentials: 'include'
@@ -273,7 +308,7 @@ export const uploadPDF = async (file, folder = 'syllabus') => {
   const formData = new FormData()
   formData.append('pdf', file)
 
-  const response = await fetch(`${API_URL}/upload/pdf?folder=${encodeURIComponent(folder)}`, {
+  const response = await uploadRequest(`${API_URL}/upload/pdf?folder=${encodeURIComponent(folder)}`, {
     method: 'POST',
     body: formData,
     credentials: 'include'

@@ -1,5 +1,8 @@
-import { NextResponse } from 'next/server'
-import { connectDB } from './db.js'
+import { NextResponse } from 'next/server.js'
+import connectDB from './config/database.js'
+import { readAccessUser, sessionUser } from './config/auth.js'
+import { TryError } from './util/error.js'
+import { checkMutationOrigin, rateLimit, boundedBody, validateBody } from './util/requestSecurity.js'
 import { resolveRoutePath } from './route-path.js'
 import AuthMiddleware from './middleware/auth.middleware.js'
 import RefreshMiddleware from './middleware/refresh.middleware.js'
@@ -12,8 +15,9 @@ import { uploadImage, uploadMultipleImages, uploadPDF, deleteFile } from './cont
 
 const normalizeCookieOptions = (options = {}) => ({
   httpOnly: options.httpOnly ?? true,
-  maxAge: options.maxAge,
-  secure: process.env.NODE_ENV === 'production' ? (options.secure ?? true) : false,
+  // Express uses milliseconds; Next.js ResponseCookies uses seconds.
+  maxAge: options.maxAge === undefined ? undefined : Math.floor(options.maxAge / 1000),
+  secure: process.env.NODE_ENV === 'production' || options.secure === true,
   sameSite: options.sameSite ?? 'lax',
   path: options.path ?? '/',
 })
@@ -34,13 +38,13 @@ const createMockResponse = () => {
   }
 }
 
-async function parseRequest(request, params) {
+async function parseRequest(request, params, parseBody = true) {
   const url = new URL(request.url)
   const cookies = {}
   for (const item of (request.headers.get('cookie') || '').split(';')) {
     if (!item.trim()) continue
     const [name, ...value] = item.trim().split('=')
-    cookies[name] = decodeURIComponent(value.join('='))
+    try { cookies[name] = decodeURIComponent(value.join('=')) } catch { throw TryError('Invalid cookie', 400) }
   }
 
   let body = {}
@@ -48,15 +52,24 @@ async function parseRequest(request, params) {
   let files
   const contentType = request.headers.get('content-type') || ''
 
-  if (!['GET', 'HEAD'].includes(request.method)) {
+  if (parseBody && !['GET', 'HEAD'].includes(request.method)) {
+    const multipart = contentType.includes('multipart/form-data')
+    if (multipart && !url.pathname.startsWith('/api/upload/')) throw TryError('Unsupported content type', 415)
+    const bytes = await boundedBody(request, multipart ? 21 * 1024 * 1024 : 128 * 1024)
     if (contentType.includes('multipart/form-data')) {
-      const form = await request.formData()
+      let form
+      try { form = await new Response(bytes, { headers: { 'content-type': contentType } }).formData() }
+      catch { throw TryError('Invalid multipart request', 400) }
+      const entries = [...form.entries()]
+      const uploads = entries.filter(([, value]) => typeof value !== 'string')
+      const multiple = url.pathname.endsWith('/upload/images')
+      if (entries.length > 8 || uploads.length > (multiple ? 4 : 1)) throw TryError('Too many uploaded files', 400)
       const asFile = async (value, maxSize = Infinity) => {
         if (!value || typeof value.arrayBuffer !== 'function') return null
         const fileSize = Number(value.size || 0)
         if (!Number.isFinite(fileSize) || fileSize <= 0) return null
         if (fileSize > maxSize) {
-          throw new Error('File too large')
+          throw TryError('File too large', 413)
         }
         return { buffer: Buffer.from(await value.arrayBuffer()), originalname: value.name, mimetype: value.type, size: fileSize }
       }
@@ -79,8 +92,10 @@ async function parseRequest(request, params) {
       }
       if (all.length) files = all
     } else {
-      const text = await request.text()
-      body = text ? JSON.parse(text) : {}
+      if (bytes.length && !contentType.includes('application/json')) throw TryError('Expected application/json', 415)
+      try { body = bytes.length ? JSON.parse(bytes.toString('utf8')) : {} }
+      catch { throw TryError('Invalid JSON body', 400) }
+      validateBody(body)
     }
   }
 
@@ -97,15 +112,15 @@ async function parseRequest(request, params) {
   }
 }
 
-function routeFor(method, parts) {
+export function routeFor(method, parts) {
   const [resource, first, second, third] = parts
   if (resource === 'health' && method === 'GET') return { handler: (_req, res) => res.json({ status: 'OK', timestamp: new Date().toISOString() }) }
 
   if (resource === 'auth') {
     if (method === 'POST' && first === 'login') return { handler: login }
-    if (method === 'POST' && first === 'logout') return { handler: logout, auth: true }
+    if (method === 'POST' && first === 'logout') return { handler: logout }
     if (method === 'GET' && first === 'session') return { handler: getSession }
-    if (method === 'GET' && first === 'refresh-token') return { handler: refreshToken, refresh: true }
+    if (method === 'POST' && first === 'refresh-token') return { handler: refreshToken, refresh: true }
     if (method === 'PUT' && first === 'change-password') return { handler: changePassword, auth: true }
   }
 
@@ -158,32 +173,52 @@ function routeFor(method, parts) {
   return null
 }
 
-function toNextResponse(state) {
+export function toNextResponse(state) {
   const response = NextResponse.json(state.body ?? {}, { status: state.status })
+  response.headers.set('Cache-Control', 'no-store')
   for (const cookie of state.cookies) response.cookies.set(cookie.name, cookie.value, cookie.options)
   return response
 }
 
 export async function handleApiRequest(request, context) {
+  let uploadSlot = false
   try {
-    await connectDB()
-
     const resolvedPath = await resolveRoutePath(request, context)
     const route = routeFor(request.method, resolvedPath)
     if (!route) return NextResponse.json({ message: 'Endpoint not found' }, { status: 404 })
-
-    const req = await parseRequest(request, route.params || {})
+    if (!['GET', 'HEAD', 'OPTIONS'].includes(request.method)) checkMutationOrigin(request)
+    if (resolvedPath.join('/') === 'auth/login') rateLimit(request, 'login', 10, 15 * 60 * 1000)
+    if (resolvedPath.join('/') === 'auth/refresh-token') rateLimit(request, 'refresh', 60, 60 * 1000)
+    if (resolvedPath[0] === 'upload') rateLimit(request, 'upload', 60, 60 * 1000)
+    const req = await parseRequest(request, route.params || {}, false)
     const res = createMockResponse()
+    if (resolvedPath[0] !== 'health') {
+      try { await connectDB() } catch { throw TryError('Database unavailable', 503) }
+    }
     let nextCalled = !route.auth && !route.refresh
     const next = () => { nextCalled = true }
 
     if (route.auth) await AuthMiddleware(req, res, next)
     if (route.refresh) await RefreshMiddleware(req, res, next)
     if (!nextCalled) return toNextResponse(res.state)
-
+    if (request.method === 'GET' && !['auth', 'health'].includes(resolvedPath[0]) && req.cookies.accessToken) {
+      try { req.session = sessionUser(await readAccessUser(req.cookies.accessToken)) }
+      catch (err) { if (err.status !== 401) throw err }
+    }
+    if (resolvedPath[0] === 'upload' && request.method === 'POST') {
+      if ((globalThis.__guwahatiActiveUploads || 0) >= 2) throw TryError('Too many concurrent uploads', 429)
+      globalThis.__guwahatiActiveUploads = (globalThis.__guwahatiActiveUploads || 0) + 1
+      uploadSlot = true
+    }
+    if (!['GET', 'HEAD'].includes(request.method)) Object.assign(req, await parseRequest(request, route.params || {}), { session: req.session })
+    for (const [name, value] of Object.entries(req.params)) {
+      if (name.toLowerCase().endsWith('id') && !/^[a-f\d]{24}$/i.test(value)) throw TryError('Invalid ID', 400)
+    }
     await route.handler(req, res)
     return toNextResponse(res.state)
   } catch (error) {
-    return NextResponse.json({ message: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error' }, { status: error.status || 500 })
+    return NextResponse.json({ message: error.status ? error.message : 'Internal server error' }, { status: error.status || 500, headers: { 'Cache-Control': 'no-store' } })
+  } finally {
+    if (uploadSlot) globalThis.__guwahatiActiveUploads--
   }
 }

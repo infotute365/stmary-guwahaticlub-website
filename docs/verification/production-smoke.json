@@ -1,0 +1,11 @@
+{
+  "database": "disposable local database (removed afterward)",
+  "checks": [
+    "Existing external upload survived production rebuild",
+    "Actual seed CLI succeeds twice without password replacement",
+    "30 existing page routes, 21 internal navigation targets and 50 static chunks returned HTTP 200",
+    "Production HTTP login/session/refresh/create/delete/logout pass with Secure cookies and cross-origin mutation rejection",
+    "Both media URL forms work; upload checksum is unchanged after process restart"
+  ],
+  "status": "PASS"
+}

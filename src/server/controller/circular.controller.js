@@ -242,10 +242,7 @@ export const updateCircular = async (req, res) => {
 
         const { title, content, date, time, isPublished, fileUrl } = req.body
 
-        // If file is being replaced, delete the old local file
-        if (fileUrl && circular.fileUrl && fileUrl !== circular.fileUrl) {
-            await deleteUploadedFile(circular.fileUrl)
-        }
+        const replacedFile = fileUrl && circular.fileUrl && fileUrl !== circular.fileUrl ? circular.fileUrl : null
 
         const updated = await CircularModel.findByIdAndUpdate(
             req.params.id,
@@ -259,9 +256,10 @@ export const updateCircular = async (req, res) => {
                     isPublished: isPublished !== undefined ? isPublished : circular.isPublished
                 }
             },
-            { new: true }
+            { new: true, runValidators: true }
         )
 
+        if (replacedFile) await deleteUploadedFile(replacedFile)
         res.json({ message: "Circular updated successfully", circular: updated })
     }
     catch (err) {

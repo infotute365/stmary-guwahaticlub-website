@@ -392,8 +392,8 @@ export const getEvents = async (req, res) => {
         const { all, flat, page = 1, limit = 12 } = req.query
         const isAdmin = Boolean(req.session && ['admin', 'super-admin'].includes(req.session.role))
 
-        const pageNum = parseInt(page, 10) || 1
-        const limitNum = parseInt(limit, 10) || 12
+        const pageNum = Math.min(100000, Math.max(1, parseInt(page, 10) || 1))
+        const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 12))
         const skip = (pageNum - 1) * limitNum
 
         let filter = {}
@@ -524,7 +524,7 @@ export const updateEvent = async (req, res) => {
                     displayOrder: displayOrder !== undefined ? displayOrder : event.displayOrder
                 }
             },
-            { new: true }
+            { new: true, runValidators: true }
         )
 
         res.json({ message: "Event updated successfully", event: updated })
