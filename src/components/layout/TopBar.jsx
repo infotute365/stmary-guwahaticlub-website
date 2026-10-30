@@ -11,12 +11,12 @@ const TopBar = () => {
     {
       label: 'Class KG – VIII',
       bank: 'Federal Bank, Silpukhuri Branch',
-      url: 'https://epay.federalbank.co.in/easypayments/AddPayee.aspx'
+      url: 'https://epay.federalbank.co.in/easypayments/DIRECTPAYMENT.ASPX?CODE=DABB4QLY4Q1O4'
     },
     {
       label: 'Class IX – XII',
       bank: 'South Indian Bank, Ambari Branch',
-      url: 'https://eacademia.southindianbank.bank.in/feeuser/home?encr=MzAzNw==#no-back'
+      url: 'https://eacademia.southindianbank.bank.in/feeuser/org?id=3037'
     }
   ]
 
