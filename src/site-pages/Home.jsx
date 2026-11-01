@@ -9,8 +9,14 @@ import CircularsPanel from '../components/home/CircularsPanel.jsx'
 import WelcomeSection from '../components/home/WelcomeSection.jsx'
 import FeatureCard from '../components/home/FeatureCard.jsx'
 import PrincipalMessage from '../components/home/PrincipalMessage.jsx'
+import { useWebsiteField } from '../components/website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../components/website-editor/useWebsiteContent.js'
 
 const Home = () => {
+  const websiteContent = useWebsiteContent()
+
+  const establishedFact = useWebsiteField('home.home.item1.value', '1924')
+  const contactDestination = useWebsiteField('home.home.href.2', '/contact')
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -21,7 +27,7 @@ const Home = () => {
   }
 
   return (
-    <div className="font-body">
+    <div className="school-home font-body">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
@@ -43,7 +49,7 @@ const Home = () => {
       `}</style>
 
       {/* ============ HERO SECTION ============ */}
-      <section className="relative w-full min-h-[90vh]  max-h-212.5 bg-hero-gradient overflow-hidden">
+      <section className="school-home-hero relative w-full bg-hero-gradient">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gold-400 z-20" />
         
         <div className="absolute inset-0 pointer-events-none">
@@ -52,13 +58,13 @@ const Home = () => {
         </div>
 
         <div className="relative h-full w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 h-full min-h-[90vh] max-h-100">
-            <div className="lg:col-span-8 xl:col-span-8 relative h-full">
+          <div className="school-hero-grid">
+            <div className="school-hero-photo relative">
               <HeroCarousel />
             </div>
 
-            <div className="lg:col-span-4 xl:col-span-4 relative">
-              <div id="latest-notices" className="w-full h-full px-3 py-3 lg:px-4 lg:py-8 flex items-center">
+            <div className="school-hero-notices relative">
+              <div id="latest-notices" className="school-notices-position">
                 <div className="w-full">
                   <CircularsPanel />
                 </div>
@@ -82,18 +88,16 @@ const Home = () => {
             
             <div className="lg:col-span-1">
               <SectionWrapper>
-                <div className="bg-maroon-50 rounded-2xl p-6 md:p-8 shadow-premium border border-maroon-100/40 h-full">
-                  <h3 className="font-serif-custom text-lg font-semibold text-maroon-800 mb-6 flex items-center gap-2">
-                    <span className="text-gold-500">✦</span>
-                    Quick Facts
-                  </h3>
+                <div className="school-quick-facts bg-maroon-50 rounded-2xl p-6 md:p-8 shadow-premium border border-maroon-100/40 h-full">
+                  <h3 {...websiteContent.props(["home.home.heading"])} className="font-serif-custom text-lg font-semibold text-maroon-800 mb-6 flex items-center gap-2">
+                    <span className="text-gold-500">✦</span>{websiteContent.value("home.home.heading", "Quick Facts")}</h3>
                   <div className="space-y-4">
                     {[
-                      { label: 'Established', value: '1924' },
-                      { label: 'Students', value: '2,000+' },
-                      { label: 'Teachers', value: '85+' },
-                      { label: 'Years Legacy', value: '100+' },
-                      { label: 'Awards Won', value: '100+' }
+                      { label: websiteContent.value("home.home.item1.label", 'Established'), value: '1924' },
+                      { label: websiteContent.value("home.home.item2.label", 'Students'), value: websiteContent.value("home.home.item2.value", '2,000+') },
+                      { label: websiteContent.value("home.home.item3.label", 'Teachers'), value: websiteContent.value("home.home.item3.value", '85+') },
+                      { label: websiteContent.value("home.home.item4.label", 'Years Legacy'), value: websiteContent.value("home.home.item4.value", '100+') },
+                      { label: websiteContent.value("home.home.item5.label", 'Awards Won'), value: websiteContent.value("home.home.item5.value", '100+') }
                     ].map((item, index) => (
                       <motion.div
                         key={index}
@@ -103,18 +107,16 @@ const Home = () => {
                         viewport={{ once: true }}
                         className="flex items-center justify-between py-2 border-b border-maroon-100/50 last:border-0"
                       >
-                        <span className="text-sm text-gray-600">{item.label}</span>
-                        <span className="font-semibold text-maroon-800 text-sm">{item.value}</span>
+                        <span {...websiteContent.propsFor(item.label)} className="text-sm text-gray-600">{item.label}</span>
+                        <span {...websiteContent.propsFor(index === 0 ? establishedFact.value : item.value)} {...(index === 0 ? establishedFact.editorProps : {})} className="font-semibold text-maroon-800 text-sm">{index === 0 ? establishedFact.value : item.value}</span>
                       </motion.div>
                     ))}
                   </div>
                   <div className="mt-6 pt-6 border-t border-maroon-100/50">
-                    <a 
-                      href="/about/founders" 
+                    <a {...websiteContent.props(["home.home.href","home.home.text.2"])}
+                      href={websiteContent.value("home.home.href", "/about/founders")}
                       className="group inline-flex items-center gap-1 text-sm text-maroon-700 font-medium hover:text-maroon-900 transition-colors"
-                    >
-                      Discover Our Legacy
-                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    >{websiteContent.value("home.home.text.2", "Discover Our Legacy")}<span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
                   </div>
                 </div>
@@ -145,22 +147,16 @@ const Home = () => {
             className="text-center max-w-3xl mx-auto mb-12 md:mb-14"
           >
             {/* Decorative Gold Line - Left */}
-            <span className="inline-flex items-center gap-3 text-gold-600 font-label text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-              <span className="w-10 h-px bg-gold-400" />
-              Why Choose Us
-              <span className="w-10 h-px bg-gold-400" />
+            <span {...websiteContent.props(["home.home.text.4"])} className="inline-flex items-center gap-3 text-gold-600 font-label text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+              <span className="w-10 h-px bg-gold-400" />{websiteContent.value("home.home.text.4", "Why Choose Us")}<span className="w-10 h-px bg-gold-400" />
             </span>
             
-            <h2 className="font-serif-custom text-3xl md:text-4xl lg:text-5xl font-semibold text-maroon-900">
-              Why Choose <span className="text-gold-600">St. Mary's?</span>
+            <h2 {...websiteContent.props(["home.home.heading.2"])} className="font-serif-custom text-3xl md:text-4xl lg:text-5xl font-semibold text-maroon-900">{websiteContent.value("home.home.heading.2", "Why Choose ")}<span {...websiteContent.props(["home.home.text.5"])} className="text-gold-600">{websiteContent.value("home.home.text.5", "St. Mary's?")}</span>
             </h2>
             
             <div className="w-16 h-0.5 bg-gold-400 mx-auto mt-4 mb-4" />
             
-            <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-              For over a century, St. Mary's has been shaping young minds into responsible 
-              citizens and future leaders through quality education and values.
-            </p>
+            <p {...websiteContent.props(["home.home.paragraph"])} className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">{websiteContent.value("home.home.paragraph", "For over a century, St. Mary's has been shaping young minds into responsible citizens and future leaders through quality education and values.")}</p>
           </motion.div>
 
           <FeatureCard />
@@ -185,34 +181,28 @@ const Home = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-flex items-center gap-3 text-gold-400 font-label text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-              <span className="w-8 h-px bg-gold-400/50" />
-              Join Our Family
-              <span className="w-8 h-px bg-gold-400/50" />
+            <span {...websiteContent.props(["home.home.text.6"])} className="inline-flex items-center gap-3 text-gold-400 font-label text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+              <span className="w-8 h-px bg-gold-400/50" />{websiteContent.value("home.home.text.6", "Join Our Family")}<span className="w-8 h-px bg-gold-400/50" />
             </span>
 
-            <h2 className="font-serif-custom text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
-              Ready to Join <span className="text-gold-400">St. Mary's?</span>
+            <h2 {...websiteContent.props(["home.home.heading.3"])} className="font-serif-custom text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">{websiteContent.value("home.home.heading.3", "Ready to Join ")}<span {...websiteContent.props(["home.home.text.7"])} className="text-gold-400">{websiteContent.value("home.home.text.7", "St. Mary's?")}</span>
             </h2>
 
-            <p className="text-white/70 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed">
-              Take the first step towards a bright future. Be with us for upcoming admission notification details.
-            </p>
+            <p {...websiteContent.props(["home.home.paragraph.2"])} className="text-white/70 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed">{websiteContent.value("home.home.paragraph.2", "Take the first step towards a bright future. Be with us for upcoming admission notification details.")}</p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <a
-                href="/contact"
+              <a {...websiteContent.props(["home.home.text.8"])}
+                {...contactDestination.editorProps}
+                href={contactDestination.value}
                 className="group inline-flex items-center gap-2 bg-yellow-400 text-maroon-900 hover:bg-yellow-600 px-8 py-3.5 rounded-full font-medium text-sm font-label tracking-wide transition-all duration-300 border border-white/20 hover:border-white/40"
-              >
-                Contact Us
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              >{websiteContent.value("home.home.text.8", "Contact Us")}<span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-8 pt-6 border-t border-white/10 text-xs text-white/40 font-label">
-              <span className="flex items-center gap-2">📍 M.C.Road, Chenikuthi, Guwahati</span>
-              <span className="flex items-center gap-2">📞 +91-94351-90537</span>
-              <span className="flex items-center gap-2">✉️ stmarysghy1924@yahoo.com</span>
+              <span {...websiteContent.props(["home.home.text.10"])} className="flex items-center gap-2">{websiteContent.value("home.home.text.10", "📍 M.C.Road, Chenikuthi, Guwahati")}</span>
+              <span {...websiteContent.props(["home.home.text.11"])} className="flex items-center gap-2">{websiteContent.value("home.home.text.11", "📞 +91-94351-90537")}</span>
+              <span {...websiteContent.props(["home.home.text.12"])} className="flex items-center gap-2">{websiteContent.value("home.home.text.12", "✉️ stmarysghy1924@yahoo.com")}</span>
             </div>
           </motion.div>
         </div>

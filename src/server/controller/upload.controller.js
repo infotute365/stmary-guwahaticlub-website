@@ -132,12 +132,19 @@ import {
   deleteUploadedFile
 } from "../util/imageProcessor.js"
 
+// Website revisions retain their immutable image families. Existing Gallery,
+// Staff and Syllabus tools cannot overwrite or delete that reserved namespace.
+const protectWebsiteFolder = folder => {
+  if (typeof folder === 'string' && /^website(?:\/|$)/i.test(folder)) throw TryError('Use the website image editor for this storage area',403)
+}
+
 export const uploadImage = async (req, res) => {
   try {
     if (!req.session) throw TryError("Unauthorized", 401)
     if (!req.file) throw TryError("No image file provided", 400)
 
     const folder = req.query.folder || 'gallery'
+    protectWebsiteFolder(folder)
     const imagePath = await processAndSaveImage(req.file, folder)
 
     res.json({
@@ -156,6 +163,7 @@ export const uploadMultipleImages = async (req, res) => {
     if (req.files.length > 4) throw TryError("Maximum 4 images can be uploaded at once", 400)
 
     const folder = req.query.folder || 'gallery'
+    protectWebsiteFolder(folder)
     const results = []
     for (const file of req.files) {
       const imagePath = await processAndSaveImage(file, folder)
@@ -177,6 +185,7 @@ export const uploadPDF = async (req, res) => {
     if (!req.file) throw TryError("No PDF file provided", 400)
 
     const folder = req.query.folder || 'syllabus'
+    protectWebsiteFolder(folder)
     const pdfUrl = await uploadPDFToLocal(req.file, folder)
 
     res.json({
@@ -194,6 +203,9 @@ export const deleteFile = async (req, res) => {
     if (!req.session) throw TryError("Unauthorized", 401)
     const { filePath } = req.body
     if (!filePath) throw TryError("File path is required", 400)
+    let inspectedPath=filePath
+    if(typeof inspectedPath==='string')try{inspectedPath=decodeURIComponent(inspectedPath)}catch{ /* Existing storage validation handles malformed paths. */ }
+    if (typeof inspectedPath === 'string' && /^(?:https?:\/\/[^/]+)?\/?(?:api\/)?uploads\/website\//i.test(inspectedPath)) throw TryError('Website images are retained for revision rollback',403)
 
     const deleted = await deleteUploadedFile(filePath)
     if (deleted) {

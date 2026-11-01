@@ -6,8 +6,11 @@ import { Users, BookOpen, GraduationCap } from 'lucide-react'
 import SectionWrapper from '../../../components/common/SectionWrapper.jsx'
 import StaffCard from '../../../components/common/StaffCard.jsx'
 import { getStaff } from '../../../services/api.js'
+import { useWebsiteContent } from '../../../components/website-editor/useWebsiteContent.js'
 
 const MiddleSchool = () => {
+  const websiteContent = useWebsiteContent()
+
   const [staff, setStaff] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -32,9 +35,7 @@ const MiddleSchool = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            MIDDLE
-          </span>
+          <span {...websiteContent.props(["administration.teaching.staff.middle.middle-school.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("administration.teaching.staff.middle.middle-school.text", "MIDDLE")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -46,26 +47,23 @@ const MiddleSchool = () => {
               className="flex items-center gap-3 mb-2"
             >
               <BookOpen size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Classes 7-8</span>
+              <span {...websiteContent.props(["administration.teaching.staff.middle.middle-school.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("administration.teaching.staff.middle.middle-school.text.2", "Classes 7-8")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["administration.teaching.staff.middle.middle-school.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Middle <span className="text-gold-400">School Staff</span>
+            >{websiteContent.value("administration.teaching.staff.middle.middle-school.heading", "Middle ")}<span {...websiteContent.props(["administration.teaching.staff.middle.middle-school.text.3"])} className="text-gold-400">{websiteContent.value("administration.teaching.staff.middle.middle-school.text.3", "School Staff")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["administration.teaching.staff.middle.middle-school.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Experienced educators guiding young minds
-            </motion.p>
+            >{websiteContent.value("administration.teaching.staff.middle.middle-school.paragraph", "Experienced educators guiding young minds")}</motion.p>
           </div>
         </div>
 
@@ -85,12 +83,9 @@ const MiddleSchool = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Users size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Middle Section</span>
+              <span {...websiteContent.props(["administration.teaching.staff.middle.middle-school.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("administration.teaching.staff.middle.middle-school.text.4", "Middle Section")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Experienced educators who guide students through their critical middle school years,
-              preparing them for the challenges of higher education.
-            </p>
+            <p {...websiteContent.props(["administration.teaching.staff.middle.middle-school.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("administration.teaching.staff.middle.middle-school.paragraph.2", "Experienced educators who guide students through their critical middle school years, preparing them for the challenges of higher education.")}</p>
           </motion.div>
         </div>
       </section>
@@ -100,9 +95,7 @@ const MiddleSchool = () => {
         <div className="container-custom">
           <SectionWrapper>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">
-                Dedicated <span className="text-gold-600">Middle</span> Teachers
-              </h2>
+              <h2 {...websiteContent.props(["administration.teaching.staff.middle.middle-school.heading.2","administration.teaching.staff.middle.middle-school.heading.3"])} className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">{websiteContent.value("administration.teaching.staff.middle.middle-school.heading.2", "Dedicated ")}<span {...websiteContent.props(["administration.teaching.staff.middle.middle-school.text.5"])} className="text-gold-600">{websiteContent.value("administration.teaching.staff.middle.middle-school.text.5", "Middle")}</span>{websiteContent.value("administration.teaching.staff.middle.middle-school.heading.3", " Teachers")}</h2>
               <div className="w-16 h-0.5 bg-gold-400 mx-auto mb-4" />
             </div>
           </SectionWrapper>
@@ -134,14 +127,9 @@ const MiddleSchool = () => {
                   <div className="inline-flex p-6 bg-white rounded-2xl shadow-lg mb-6 border border-maroon-100">
                     <GraduationCap size={48} className="text-maroon-700" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-maroon-800 mb-3">
-                    Staff List Coming Soon
-                  </h3>
+                  <h3 {...websiteContent.props(["administration.teaching.staff.middle.middle-school.heading.4"])} className="text-2xl font-serif font-bold text-maroon-800 mb-3">{websiteContent.value("administration.teaching.staff.middle.middle-school.heading.4", "Staff List Coming Soon")}</h3>
                   <div className="w-16 h-0.5 bg-gold-400 mx-auto mb-4" />
-                  <p className="text-gray-600 text-base leading-relaxed">
-                    We are currently updating our middle school staff details. 
-                    Please check back later.
-                  </p>
+                  <p {...websiteContent.props(["administration.teaching.staff.middle.middle-school.paragraph.3"])} className="text-gray-600 text-base leading-relaxed">{websiteContent.value("administration.teaching.staff.middle.middle-school.paragraph.3", "We are currently updating our middle school staff details. Please check back later.")}</p>
                 </div>
               </motion.div>
             )}

@@ -1,0 +1,98 @@
+{
+  "task": "02 of 05",
+  "captured": "2026-10-31",
+  "timezone": "Asia/Calcutta",
+  "status": "BACKEND_IMPLEMENTED_AND_TESTED",
+  "editablePublicFields": 883,
+  "fieldTypes": { "text": 862, "number": 21 },
+  "schemaModels": ["WebsiteContent", "WebsiteContentRevision"],
+  "changedOriginalFiles": ["src/server/route-adapter.js", "src/services/api.js"],
+  "newFileCount": 15,
+  "newHashedFilesManifest": "docs/website-editor/task02-changes.json",
+  "checks": [
+    {
+      "command": "node scripts/run-website-content-tests.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "tests": 63,
+      "passed": 63,
+      "failed": 0,
+      "skipped": 0,
+      "database": "A new isolated standalone MongoDB 8.0 process on a free loopback port; only unique stmary_gc_test_* databases",
+      "cleanup": "Temporary process stopped and data directory removed",
+      "includes": [
+        "Existing administrator lifecycle and authentication integration",
+        "Existing Circular/Staff/Gallery/Syllabus CRUD and uploads",
+        "New content save/update/history/conflicts/restore/reset",
+        "Empty and zero values, scopes and original defaults",
+        "Active-role authentication, expired-session refresh and original API compatibility",
+        "Input/security checks and public-safe response projection",
+        "Interrupted reservation/history publication and idempotent concurrent recovery"
+      ]
+    },
+    {
+      "command": "npm test",
+      "environment": "No TEST_MONGODB_URI supplied",
+      "status": "PASS_WITH_EXPECTED_OPT_IN_SKIPS",
+      "exitCode": 0,
+      "tests": 41,
+      "passed": 39,
+      "failed": 0,
+      "skipped": 2,
+      "skipReason": "Both real-MongoDB parent suites are opt-in; the separate isolated run executed them successfully."
+    },
+    {
+      "command": "node --test tests/website-content.test.js",
+      "status": "PASS",
+      "tests": 8,
+      "passed": 8,
+      "note": "Additional assertions were subsequently included and passed in both final suites."
+    },
+    {
+      "command": "node --test tests/website-content-service.test.js",
+      "status": "PASS",
+      "tests": 7,
+      "passed": 7
+    },
+    { "command": "npm run build", "status": "PASS", "exitCode": 0, "nextVersion": "15.5.28", "publicRoutes": 23, "loginAndAdminRoutes": 7 },
+    { "command": "git diff --check", "status": "PASS", "exitCode": 0 },
+    {
+      "command": "node scripts/verify-website-content.mjs",
+      "task02Preservation": "PASS",
+      "unchangedOriginalFiles": 155,
+      "exactReviewedBackendIntegrations": 2,
+      "task01ArtifactsUnchanged": 125,
+      "allOriginalPublicSources": "unchanged",
+      "originalApiContracts": "unchanged",
+      "legacyPreservation": "FAIL (pre-existing TopBar mismatch; not waived)",
+      "exitCode": 1,
+      "reasonForNonzero": "The unchanged original scripts/verify-preservation.mjs still reports Preserved website file changed: src/components/layout/TopBar.jsx."
+    }
+  ],
+  "resolvedHarnessIssue": {
+    "initialRun": "All 63 tests passed; runner cleanup then exited unsuccessfully due to an already-delivered Windows process exit event.",
+    "fix": "Check both exitCode and signalCode and register the stop promise before terminating the owned child.",
+    "verification": "Complete rerun: 63 pass, 0 fail, 0 skipped, exit 0; stopped first fixture verified and removed."
+  },
+  "preservation": {
+    "publicJsxChanged": false,
+    "originalModelsControllersChanged": false,
+    "originalAuthenticationBehaviorChanged": false,
+    "schoolDatabaseAccessedOrChanged": false,
+    "schoolMongoServiceReconfigured": false,
+    "originalDefaultsSeeded": false,
+    "existingDynamicRecordsMigratedOrDuplicated": false,
+    "task01EvidenceChanged": false,
+    "oldPreservationCheckBypassed": false
+  },
+  "remainingIssues": [
+    "Historical TopBar baseline discrepancy still needs separate review.",
+    "All image and URL fields, including fee-payment destinations, remain protected by the authoritative allowlist.",
+    "Interrupted operations finish on a subsequent authenticated read or mutation; clients must reload after ambiguous network failures.",
+    "Production deployment, production database and browser editing UI were not exercised or changed.",
+    "Mandatory Disclosure and timer-only inquiry/contact behavior remain as documented in Task 01."
+  ],
+  "visualInterfaceImplemented": false,
+  "publicContentBindingsImplemented": false,
+  "nextPromptStarted": false
+}

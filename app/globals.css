@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../src/styles/public-redesign.css";
 
 @theme {
   --color-maroon-50: #fdf2f2;

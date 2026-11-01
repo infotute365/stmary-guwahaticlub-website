@@ -44,8 +44,13 @@
 import React from 'react'
 import { Mail, Phone } from 'lucide-react'
 import Card from './Card.jsx'
+import { useManagedRecord } from '../website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
 const StaffCard = ({ staff }) => {
+  const websiteContent = useWebsiteContent()
+
+  const recordProps = useManagedRecord('staff')
   // Helper to get full image URL
   const getImageUrl = (path) => {
     if (!path) return null
@@ -55,7 +60,7 @@ const StaffCard = ({ staff }) => {
   }
 
   return (
-    <Card className="text-center p-6">
+    <Card {...recordProps(staff._id || staff.id, staff.name)} className="text-center p-6">
       <div className="relative inline-block">
         <img
           src={getImageUrl(staff.image) || `https://ui-avatars.com/api/?name=${encodeURIComponent(staff.name)}&background=7A0C1E&color=fff&size=120`}
@@ -64,12 +69,12 @@ const StaffCard = ({ staff }) => {
           loading="lazy"
         />
       </div>
-      <h4 className="font-serif font-semibold text-lg text-maroon-800 mt-3">
+      <h4 {...websiteContent.propsFor(staff.name)} className="font-serif font-semibold text-lg text-maroon-800 mt-3">
         {staff.name}
       </h4>
-      <p className="text-gold-600 font-medium text-sm">{staff.designation}</p>
-      <p className="text-gray-500 text-sm mt-1">{staff.qualification}</p>
-      <p className="text-gray-400 text-xs">Experience: {staff.experience}</p>
+      <p {...websiteContent.propsFor(staff.designation)} className="text-gold-600 font-medium text-sm">{staff.designation}</p>
+      <p {...websiteContent.propsFor(staff.qualification)} className="text-gray-500 text-sm mt-1">{staff.qualification}</p>
+      <p {...websiteContent.props(["global.staff-card.staff-card.paragraph"])} className="text-gray-400 text-xs">{websiteContent.value("global.staff-card.staff-card.paragraph", "Experience: ")}{staff.experience}</p>
       <div className="flex justify-center gap-3 mt-3">
         {staff.email && (
           <a href={`mailto:${staff.email}`} className="text-gray-400 hover:text-maroon-700 transition-colors">

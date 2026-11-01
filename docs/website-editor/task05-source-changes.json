@@ -1,0 +1,473 @@
+{
+    "scope":  "Cumulative implementation source changes against immutable Task 01 baseline",
+    "files":  [
+                  {
+                      "path":  "app/layout.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "a06de08fa7ab168dba1d966e1d06db0381dac49b3cca16dbb567a59f4ba1ce71",
+                      "sha256":  "8179fad6262d4163a4f15c1641f361e22549ab86247c5a8deee482c36f8df272"
+                  },
+                  {
+                      "path":  "scripts/audit-website-coverage.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "f5a6baa1f7cf59a4a01994a60af4bbbaa57a3e43c157877a8369e3eec3805b02"
+                  },
+                  {
+                      "path":  "scripts/inspect-website-bindings.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "3aff1fe4d13c8e9f9f332ecba4621cd6e4e6fc798c52845ff83d66c411d4ff1e"
+                  },
+                  {
+                      "path":  "scripts/preview-website-editor.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "2b36cb0a2140f48e541c560dea7ad1934b5cbc4336aa2e4b1f793c06d9520bd6"
+                  },
+                  {
+                      "path":  "scripts/run-website-content-tests.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "a9ffcf8a41e222c2b9f6e288aa38f47e94058cc3496721791e9955acd4cb0dcc"
+                  },
+                  {
+                      "path":  "scripts/task04-bindings.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "5935484823750d02bee292b94d0a92c112073793421bea3b65975b6ee518f25c"
+                  },
+                  {
+                      "path":  "scripts/verify-preservation.mjs",
+                      "change":  "modified",
+                      "originalSha256":  "789cd437ad7b43d3ea73018306f0e711d963bae332ac655ec6bb8ab75f644200",
+                      "sha256":  "5f987fc5720e53ef855c1567e8a7408bbfe826dafe4370a2169bf187e868befe"
+                  },
+                  {
+                      "path":  "scripts/verify-website-content.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "5c79f443e35cda858d8b52a1e592f1d4c2c3422c611c3956690c47105c0d836d"
+                  },
+                  {
+                      "path":  "scripts/verify-website-editor.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "aa15212d31abca4e080f6995daf15c6b750b3eb5a44ea7bc271d4be404dee787"
+                  },
+                  {
+                      "path":  "scripts/website-editor-audit.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "d9e172fc5ea0ef141477fe47c249f76b5b65e175e7ff60ad1468947761742691"
+                  },
+                  {
+                      "path":  "scripts/website-editor-audit.test.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "63ceef22fc4870914b794a6969626a1f9dbe02ff8338e1a027ff42cf0cf6c9f0"
+                  },
+                  {
+                      "path":  "scripts/website-pages-smoke.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "3d56f9c9c7e8a0b49e5b5cd7a571356ac0c01cf9f55014a97414ac5d404e244d"
+                  },
+                  {
+                      "path":  "src/components/common/Breadcrumb.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "b89ef5dab73da65a7893b423d0b27c4961a1edfd2b75cbd5b57b80bb745170ab",
+                      "sha256":  "67bf7d44eab2b2f63a867e60a007c4e6d47d2b83927fcb8aa255e12fda2be803"
+                  },
+                  {
+                      "path":  "src/components/common/Card.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "e807c8f796256dcaaa88b3cdfcaf5c372ca69208ee2f2e5d1b7541ce3d67d452",
+                      "sha256":  "fd518432b6a4f89dd79ee2254df1f655127387ab3b425b64e87ac81de51436b7"
+                  },
+                  {
+                      "path":  "src/components/common/StaffCard.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "6c35b2fd541f15f3fe329ebb1a30fb825977bebd17a02f0449dee355047810cd",
+                      "sha256":  "5792b67fca6d14f4061ffca01b52b68dd2e648438bb6029c805d2fe3a4991a4c"
+                  },
+                  {
+                      "path":  "src/components/home/CircularsPanel.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "5b0a3ffe2a3d4e5cca55579d42db1d014a6095a273d21669dc22442b1a6124d6",
+                      "sha256":  "8c0fc8645aea9d1f90b67d592758fa190ab94d3f62bfbba3ea5d6c4da65255c3"
+                  },
+                  {
+                      "path":  "src/components/home/FeatureCard.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "bb13d94863e37bb6174f2b57e3075cd7bbbfff9a31ff1f78f5c6111b50818ada",
+                      "sha256":  "de6cb8140402b935974fb3ce4e27877d55c5c23bb909281c341b4f83cacbe482"
+                  },
+                  {
+                      "path":  "src/components/home/HeroCarousel.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "aa680170a71e8605c556d89f4c73fb144126c21a00046c77090591beaa737e0c",
+                      "sha256":  "8f5295799c7c718ad5cb86ac54ee8709520f07d4a226c316bdb27e2dd4220d16"
+                  },
+                  {
+                      "path":  "src/components/home/PrincipalMessage.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "62dda456222573b6b413d75e98fe54acfa61f99022f60752f17e574423ae5040",
+                      "sha256":  "b5f1f96bb3c63dc58a8cb2e018d9993a623b6174a65a6dcc3eb18a014bee169c"
+                  },
+                  {
+                      "path":  "src/components/home/WelcomeSection.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "d9d8f0055c639798eba2d968f5dc4f490adcf2ce4475a09737f823d0f67c65e9",
+                      "sha256":  "733c3cd49f910e16426ead67f135706e5b8d477ac64bd8502a157a6d8696c238"
+                  },
+                  {
+                      "path":  "src/components/layout/AdminLayout.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "ae8c2b18dec8e328cb8daae7599fee100e409ec50c3ff2bc1e0ff989f63dfa30",
+                      "sha256":  "0612dee3b9049e1532d3a5d6a968b9e8929b3796125f916a16b25308150c5bc8"
+                  },
+                  {
+                      "path":  "src/components/layout/Footer.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "962b0df817433e88b52531f4141599a33e52f486f1bb5bc79ebe26516a82105c",
+                      "sha256":  "ad78366d915db6c5808f70c687bb4537be698fdc81cb99475f3c386ff68f52db"
+                  },
+                  {
+                      "path":  "src/components/layout/Navbar.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "12e43b636cd95aeb54cd7d680a1d0878cbbed7f18750d4a4632e5b9ee0fa0429",
+                      "sha256":  "f82a93b7d1a6e144fbece656417aac47a7b2dbc64b7b95dc8a47d37bba8918be"
+                  },
+                  {
+                      "path":  "src/components/layout/TopBar.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "7a0608a22842ab9947981efbbcf6edc374773ef880c4faf0a29f6564b66d0b0e",
+                      "sha256":  "5097720175a395e959c9e7e57b5a99642a065905e9b6ec5a66b2e1b1772b4547"
+                  },
+                  {
+                      "path":  "src/components/Providers.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "3861cac839abdc6aee6ce9d270022ac206641513fd905f3fa269a0e792c9c608",
+                      "sha256":  "87573e9448b90b9201008d636b8025bee9979c2d6b462c12b437847f30eebf09"
+                  },
+                  {
+                      "path":  "src/components/website-editor/editor-bindings.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "100ae3920f2f4b9e275573539000d8c2d976f40b914122d9960e3f41c01e58ff"
+                  },
+                  {
+                      "path":  "src/components/website-editor/editor-state.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "7bbb7b617417336f0bbeb6f6ad24e245035e17f46b41a1211c03e5dd7e6f31c4"
+                  },
+                  {
+                      "path":  "src/components/website-editor/useWebsiteContent.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "f9148c84aba12b112f6b59544efdfe0f2ca1aa7af971ad9091a0d46952e4822d"
+                  },
+                  {
+                      "path":  "src/components/website-editor/useWebsiteField.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "03bb11d037c446fe5ce7f68622e7b1aca89ac3c5ec5d791864373431b91cae00"
+                  },
+                  {
+                      "path":  "src/components/website-editor/WebsiteEditorProvider.jsx",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "be10c5eedec25c9f009166c5ffb3a92d6afb1eb27aeaa4b2506b30b084bdc141"
+                  },
+                  {
+                      "path":  "src/components/website-editor/WebsiteEditorUI.jsx",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "653066db7bf1149eff6682ab00cb554f9e177d7bdf7a348c445cb1b2a8fadf0f"
+                  },
+                  {
+                      "path":  "src/components/website-editor/WebsiteEditorUI.module.css",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "a2cab494ae043a45fff011dd6eb03a6667992962332c4d8a28d8798fcde989cf"
+                  },
+                  {
+                      "path":  "src/content/website-bindings.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "aca918ac6f2f4f50917ebbfdb0ee00ac304ef095edff1f11e5fcef9f77e64913"
+                  },
+                  {
+                      "path":  "src/server/controller/upload.controller.js",
+                      "change":  "modified",
+                      "originalSha256":  "7147fec6bf0002c7303dde73858b0c2aa622a2e93c85f2387ca443edbf9d5099",
+                      "sha256":  "2f795931415cf8bc984e6127aca2e355017cbc8901e083837440e5e103c467ae"
+                  },
+                  {
+                      "path":  "src/server/controller/website-content.controller.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "aa8b69816fd36f0cf7a3d1ed88d82c35df31183d02e3f345f1978cf6b283189d"
+                  },
+                  {
+                      "path":  "src/server/model/website-content.model.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "3b971136f23ad285939d58217644c07ce294b2956f8adea7682bdfede713fbc4"
+                  },
+                  {
+                      "path":  "src/server/model/website-content-revision.model.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "14aa6f915846dc19a80e257944176a32c1c352db3a94c27361c5686f558b6fcf"
+                  },
+                  {
+                      "path":  "src/server/route-adapter.js",
+                      "change":  "modified",
+                      "originalSha256":  "981e776aff34751c157250922a8fd377233fe6b1bc5a8479ecab7960b37bc079",
+                      "sha256":  "1e5c2575883899194f1647e1ab9c5043063e3a8a4fae63d6e6aef3e8370ca588"
+                  },
+                  {
+                      "path":  "src/server/util/publishedWebsiteContent.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "98755d69cdd602e574061490318eafb4f0944f0acdca02d197272db3291df3a9"
+                  },
+                  {
+                      "path":  "src/server/util/websiteContentApprovals.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "8922992ea020d1b2204e8ce4cc211532d537e4f690e669759d0eeb6bfc0aa609"
+                  },
+                  {
+                      "path":  "src/server/util/websiteContentPolicy.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "10739004ecccbd088ac4280664d6f7974c90a9a4458821c0797a4a9ff04ee926"
+                  },
+                  {
+                      "path":  "src/server/util/websiteContentStore.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "dedf7325293cc9d05e65cb614f477c77bea7c865277a824f2aa229789bec29c9"
+                  },
+                  {
+                      "path":  "src/server/util/websiteImageProcessor.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "c55b9f85042a848f985b5e33bf488fd813fc0e1ea1aad51284bc8af3c449325f"
+                  },
+                  {
+                      "path":  "src/services/api.js",
+                      "change":  "modified",
+                      "originalSha256":  "f1557aae616a30d7205cdf5cebc156530285406b20ed7e8817d810b1af2e70e5",
+                      "sha256":  "467bedfe291378ef852f8be2f8a2608bf7329a713190743578a80da6b9bf5e33"
+                  },
+                  {
+                      "path":  "src/site-pages/about/OurFounders.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "8375c792f2ed2f9210747a71b644db7c2e9c2e6e82574dfa2d65090d9b630b18",
+                      "sha256":  "261f8b8304e6793b167eeb4c4c9b53de743570d63df02d59206966a5d817aa52"
+                  },
+                  {
+                      "path":  "src/site-pages/about/OurJourney.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "6502f18d9885e07a7d46f8fcb0c9d6bcfb8d7861dc323b1f197fea747e1fa422",
+                      "sha256":  "69c39ef434ddc2b9942d8c275daf0e46dc0d5cffe60d95f3e00adda84f6fa178"
+                  },
+                  {
+                      "path":  "src/site-pages/about/Principal.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "f6f49b60e62876bc18951132ad415826dce4b5d4b2fa90761a6c3d5a595c06ba",
+                      "sha256":  "b2c4568aaba316891e2f1dc330e3ddd2141276d5742cfb92cc2cd3c907088a62"
+                  },
+                  {
+                      "path":  "src/site-pages/about/Superiors.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "ebf9815a1206192205e6d91b637962a97a09f04669f20b75f8202655b77232f7",
+                      "sha256":  "6e84131258752d0f7794e3ce06c92b94f3b88d2b21c074ed5185f2330c6e5cd9"
+                  },
+                  {
+                      "path":  "src/site-pages/academics/Evaluation.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "01646f29ddb1e779c7dd8eed2f5e17f089d7e32b711b36cefe3c081a12a1226a",
+                      "sha256":  "0b607689101d795055fbfbd9f56f0859c45dd0b2185694cc1db88185f863ab90"
+                  },
+                  {
+                      "path":  "src/site-pages/academics/Syllabus.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "9c61979201c8401587ba9d9ecdb198f796f26ddc3702bf8b73fcdfe83f3c7947",
+                      "sha256":  "7af39c2fb094d4d5d33c904862faaab458e6c5b2532ecdea0e85e4bfb999b77b"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/Management.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "523c463e7b36a989e7aa6b983235bb885ff203162120b27886d031d87553ed2d",
+                      "sha256":  "8754160f8ac7ddc6e5f4696891e5338dfa2422d396a63845d89c19827b1bd4f4"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/NonTeachingStaff.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "cf92fdea5cc08a66b2f679e9d83191b114fe6e457bd265011daa0be3fd232e6d",
+                      "sha256":  "8db278db8e82966243db9e8262c3f73d9313a4fe4784c32deab2ea5ffa53f177"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "6ed28e1c9322298262de65e140c0b390067898f357406c13d0de59e1f38aa650",
+                      "sha256":  "67aea7eb7c1837ffa6517d3090ca71b24dcd5aecb65b6b9dbc0d1500b02ed152"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "e835dd41c119fa84df2264ac28744ef76761bbe12399860e29db07ac25c56f86",
+                      "sha256":  "c8ba702196522a61662cb81c1e74e6f638fc4c0bdb7e8db31dd203cac8a08596"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "8555394c01960ad2a9f563d5c93fe8033b157d48db094bbbba892b7f5ba315f0",
+                      "sha256":  "e093aa65a775628507039fa8a41c04adbc58b2f882a6ee822bdae5d04c2e97ce"
+                  },
+                  {
+                      "path":  "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "9d629bb1619869fc77c878533b38b8863a7ff3534cbd91bfcf7f961f54b3e851",
+                      "sha256":  "aea5565de256ace783af0de3ffa4d826e9ca418953bd1cdea1e8a7f8ab6ef92e"
+                  },
+                  {
+                      "path":  "src/site-pages/admissions/Admission.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "f92c49784c61a26f62daf2298944ca4ac689f405ca35c45d364b9695a3a5cbb0",
+                      "sha256":  "1aec09b2efeb034c67ebc0dd95849bb5e364ca14108c853c6ce0841c227ea086"
+                  },
+                  {
+                      "path":  "src/site-pages/admissions/AdmissionInquiry.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "d8b60523bad5c82a54caf93c668878dd9eeaa23facaa21c62badae6207a25275",
+                      "sha256":  "d3ac8e2022f9cce2e2241f8d79616a425e783a76752aa4b3d37dbd71b44dbf31"
+                  },
+                  {
+                      "path":  "src/site-pages/ContactUs.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "89af302b8c5df54ff6877519d799f1c2962ea558a05f89913b52abb067515cfc",
+                      "sha256":  "948d64cb6c6ae5fd710eb39392e9bfc5d697621e2aeee1f3423db6cd7b3b4bf3"
+                  },
+                  {
+                      "path":  "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "9a00279ea3f3737efea37d9d226c4415588ea43fa11c3312f5eb2e6befa87ae9",
+                      "sha256":  "d7c058e5f99ddae8a526a7bc1b7394badbed86d36b653eea8b5088d4921280f0"
+                  },
+                  {
+                      "path":  "src/site-pages/extracurricular/FormativeMoments.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "b2938dbe76c823ef92f29ca2dc326dcb593e372c72dd816dee0e959d3e177231",
+                      "sha256":  "b504b5d2ed79def45032023ca1ffbce46d063d78b4e67e22f47f084e50718fdb"
+                  },
+                  {
+                      "path":  "src/site-pages/Gallery.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "82ff1da0f3b12fa8b21e19c2130241a2af1496e57fc94f7cee42d96818bf5145",
+                      "sha256":  "f0158f3d46b74a941c006a841269b377e920e93fd14172fceccf4f2a51732016"
+                  },
+                  {
+                      "path":  "src/site-pages/Home.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "6ba48270ef082917f4bb49fa8874a478b163695a52583d507da189092e793458",
+                      "sha256":  "bc48cd7de03191b7926340337b94cce25cc8fe5c5cec3fcfc16cff2a352c7203"
+                  },
+                  {
+                      "path":  "src/site-pages/Infrastructure.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "6048289c3725631c7c51a12532e5cafbad2f4904325249344dafa5e5c4699c6a",
+                      "sha256":  "0c253a8935229620d04c3503245df6d73b0afbe22861ef91a9f31d45e5f31d07"
+                  },
+                  {
+                      "path":  "src/site-pages/MandatoryDisclosure.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "e0bf1016c729e5140b7f36d70f2838d131758dc3a4417ad495bd78120a77fafd",
+                      "sha256":  "4e6d31d0570199c8e73815c6423b186428991a37dfad7d79f208c6e160f53ff7"
+                  },
+                  {
+                      "path":  "src/site-pages/PastPupilsAssociation.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "269531e6486e0e7d7b50917a2fcb669ba91451e8ff1da22121648611395c0278",
+                      "sha256":  "beac6f42d8d611ec4f41b8df818f119aedbcdf9ba2469b759eb045732793a285"
+                  },
+                  {
+                      "path":  "src/site-pages/StudentRules.jsx",
+                      "change":  "modified",
+                      "originalSha256":  "8b7a79aca1ffed949c145c37a259946039c0c3d743974160d3a430954955c0d8",
+                      "sha256":  "a4da926524a651e5f01cb709105bf8c4227fa04a5c3a0d910bd8dc41f13761fe"
+                  },
+                  {
+                      "path":  "tests/website-content.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "1fe1805b80ce70a8162490e3964bc2608f67dd0235aa0afcf96c25d7de330e32"
+                  },
+                  {
+                      "path":  "tests/website-content-integration.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "581399c2a35ad6d710411c4101cf01cb515b691da485b899c132caeb9056aa55"
+                  },
+                  {
+                      "path":  "tests/website-content-service.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "acffbeba34aef5afff17e436a1b74559addeafd572908c49a4c1de7b5646a096"
+                  },
+                  {
+                      "path":  "tests/website-editor.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "31aecdda8804ee3c1eb161838efe3b87a6822bd2ceaaf11592d655314cbb2a0d"
+                  },
+                  {
+                      "path":  "tests/website-editor-controller.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "7e3ef3b00f0f816f3cc37fe942df27e6d41af28a471e30c985f1a1663eb4edb1"
+                  },
+                  {
+                      "path":  "tests/website-editor-preservation.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "3853e58f28ae6299f47004e3db94814905636cdfb131e42af1e62f1eac31dcff"
+                  },
+                  {
+                      "path":  "tests/website-editor-ui.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "ef33e3a68d122d4fbefce6013d0ee5289a0062d1c15191c811c0e9aa3f5d2007"
+                  },
+                  {
+                      "path":  "tests/website-task04-integration.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "853a6e73c2b5ae3662f18b577ba2f150ba9ff6996dbc51c564d85e51c6a5faa7"
+                  },
+                  {
+                      "path":  "tests/website-task04-reader.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "3b562356327e6bb7d65d067a7bfa57dd5e93ade4633a84053e1033c4d3e786e4"
+                  },
+                  {
+                      "path":  "scripts/website-final-smoke.mjs",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "1f924560120bbce60f60a5dfd831f3cf21e33b2d7531f27b39e56fee0f7a853e"
+                  },
+                  {
+                      "path":  "tests/website-image-security.test.js",
+                      "change":  "added",
+                      "originalSha256":  null,
+                      "sha256":  "0ee2f1d812d1a00fd8f118ebc964af3d5c735f995af78430cbe7e52cd16227fd"
+                  }
+              ]
+}

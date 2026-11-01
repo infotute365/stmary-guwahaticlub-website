@@ -4,67 +4,70 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import SectionWrapper from '../components/common/SectionWrapper.jsx'
 import { Shield, Bell, Users, BookOpen, Clock, HeartHandshake, Sparkles, Crown } from 'lucide-react'
+import { useWebsiteContent } from '../components/website-editor/useWebsiteContent.js'
 
 const StudentRules = () => {
+  const websiteContent = useWebsiteContent()
+
   const rules = [
     {
       icon: <Shield size={28} />,
-      title: 'Discipline',
+      title: websiteContent.value("student.rules.rules.item1.title", 'Discipline'),
       rules: [
-        'Students must maintain discipline at all times within the school premises.',
-        'Respect all teachers, staff, and fellow students.',
-        'School property must be treated with care and respect.',
-        'Any form of bullying, harassment, or discrimination is strictly prohibited.'
+        websiteContent.value("student.rules.rules.item1.item1.rules", 'Students must maintain discipline at all times within the school premises.'),
+        websiteContent.value("student.rules.rules.item1.item2.rules", 'Respect all teachers, staff, and fellow students.'),
+        websiteContent.value("student.rules.rules.item1.item3.rules", 'School property must be treated with care and respect.'),
+        websiteContent.value("student.rules.rules.item1.item4.rules", 'Any form of bullying, harassment, or discrimination is strictly prohibited.')
       ]
     },
     {
       icon: <Bell size={28} />,
-      title: 'Attendance & Punctuality',
+      title: websiteContent.value("student.rules.rules.item2.title", 'Attendance & Punctuality'),
       rules: [
-        'Students must arrive at school by 8:00 AM sharp.',
-        'Attendance of at least 75% is mandatory for promotion.',
-        'Leave applications must be submitted in advance for planned absences.',
-        'Medical certificates required for absences of more than 3 days.'
+        websiteContent.value("student.rules.rules.item2.item1.rules", 'Students must arrive at school by 8:00 AM sharp.'),
+        websiteContent.value("student.rules.rules.item2.item2.rules", 'Attendance of at least 75% is mandatory for promotion.'),
+        websiteContent.value("student.rules.rules.item2.item3.rules", 'Leave applications must be submitted in advance for planned absences.'),
+        websiteContent.value("student.rules.rules.item2.item4.rules", 'Medical certificates required for absences of more than 3 days.')
       ]
     },
     {
       icon: <BookOpen size={28} />,
-      title: 'Academic Conduct',
+      title: websiteContent.value("student.rules.rules.item3.title", 'Academic Conduct'),
       rules: [
-        'Homework and assignments must be submitted on time.',
-        'Academic integrity is paramount - no cheating or plagiarism.',
-        'Students must bring all required textbooks and materials to class.',
-        'Active participation in classroom activities is encouraged.'
+        websiteContent.value("student.rules.rules.item3.item1.rules", 'Homework and assignments must be submitted on time.'),
+        websiteContent.value("student.rules.rules.item3.item2.rules", 'Academic integrity is paramount - no cheating or plagiarism.'),
+        websiteContent.value("student.rules.rules.item3.item3.rules", 'Students must bring all required textbooks and materials to class.'),
+        websiteContent.value("student.rules.rules.item3.item4.rules", 'Active participation in classroom activities is encouraged.')
       ]
     },
     {
       icon: <Users size={28} />,
-      title: 'School Uniform & Appearance',
+      title: websiteContent.value("student.rules.rules.item4.title", 'School Uniform & Appearance'),
       rules: [
-        'Prescribed school uniform must be worn on all school days.',
-        'Students must maintain clean and neat appearance.',
-        'Hair should be neatly combed and properly styled.',
-        'No jewelry or accessories beyond the permitted items.'
+        websiteContent.value("student.rules.rules.item4.item1.rules", 'Prescribed school uniform must be worn on all school days.'),
+        websiteContent.value("student.rules.rules.item4.item2.rules", 'Students must maintain clean and neat appearance.'),
+        websiteContent.value("student.rules.rules.item4.item3.rules", 'Hair should be neatly combed and properly styled.'),
+        websiteContent.value("student.rules.rules.item4.item4.rules", 'No jewelry or accessories beyond the permitted items.')
       ]
     },
     {
       icon: <Clock size={28} />,
-      title: 'School Hours & Behavior',
+      title: websiteContent.value("student.rules.rules.item5.title", 'School Hours & Behavior'),
       rules: [
-        'School hours are from 8:00 AM to 3:00 PM.',
-        'Students must not leave the school premises without permission.',
-        'Mobile phones and electronic devices are strictly prohibited.',
-        'Lunch breaks should be used responsibly.'
+        websiteContent.value("student.rules.rules.item5.item1.rules", 'School hours are from 8:00 AM to 3:00 PM.'),
+        websiteContent.value("student.rules.rules.item5.item2.rules", 'Students must not leave the school premises without permission.'),
+        websiteContent.value("student.rules.rules.item5.item3.rules", 'Mobile phones and electronic devices are strictly prohibited.'),
+        websiteContent.value("student.rules.rules.item5.item4.rules", 'Lunch breaks should be used responsibly.')
       ]
     },
     {
       icon: <HeartHandshake size={28} />,
-      title: 'Values & Ethics',
+      title: websiteContent.value("student.rules.rules.item6.title", 'Values & Ethics'),
       rules: [
-        'Practice honesty, kindness, and empathy in daily interactions.',
-        'Respect cultural and religious diversity of all students.',
-        'Maintain cleanliness in all areas of the school.',
-        'Participate actively in community service activities.'
+        websiteContent.value("student.rules.rules.item6.item1.rules", 'Practice honesty, kindness, and empathy in daily interactions.'),
+        websiteContent.value("student.rules.rules.item6.item2.rules", 'Respect cultural and religious diversity of all students.'),
+        websiteContent.value("student.rules.rules.item6.item3.rules", 'Maintain cleanliness in all areas of the school.'),
+        websiteContent.value("student.rules.rules.item6.item4.rules", 'Participate actively in community service activities.')
       ]
     }
   ]
@@ -103,9 +106,7 @@ const StudentRules = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            RULES
-          </span>
+          <span {...websiteContent.props(["student.rules.student-rules.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("student.rules.student-rules.text", "RULES")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -117,26 +118,23 @@ const StudentRules = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Shield size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Guidelines</span>
+              <span {...websiteContent.props(["student.rules.student-rules.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("student.rules.student-rules.text.2", "Guidelines")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["student.rules.student-rules.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Student <span className="text-gold-400">Rules</span>
+            >{websiteContent.value("student.rules.student-rules.heading", "Student ")}<span {...websiteContent.props(["student.rules.student-rules.text.3"])} className="text-gold-400">{websiteContent.value("student.rules.student-rules.text.3", "Rules")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["student.rules.student-rules.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Guidelines for a disciplined and enriching school life
-            </motion.p>
+            >{websiteContent.value("student.rules.student-rules.paragraph", "Guidelines for a disciplined and enriching school life")}</motion.p>
           </div>
         </div>
 
@@ -156,12 +154,9 @@ const StudentRules = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Crown size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">School Guidelines</span>
+              <span {...websiteContent.props(["student.rules.student-rules.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("student.rules.student-rules.text.4", "School Guidelines")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Our school rules are designed to create a safe, respectful, and conducive
-              learning environment where every student can thrive academically and personally.
-            </p>
+            <p {...websiteContent.props(["student.rules.student-rules.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("student.rules.student-rules.paragraph.2", "Our school rules are designed to create a safe, respectful, and conducive learning environment where every student can thrive academically and personally.")}</p>
           </motion.div>
         </div>
       </section>
@@ -185,20 +180,20 @@ const StudentRules = () => {
                 <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:border-gold-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4">
                     <div className="relative">
-                      <div className="bg-maroon-50 text-maroon-700 p-3 rounded-lg flex-shrink-0 group-hover:bg-maroon-100 group-hover:text-maroon-800 transition-all duration-300 group-hover:shadow-md">
+                      <div {...websiteContent.propsFor(rule.icon)} className="bg-maroon-50 text-maroon-700 p-3 rounded-lg flex-shrink-0 group-hover:bg-maroon-100 group-hover:text-maroon-800 transition-all duration-300 group-hover:shadow-md">
                         {rule.icon}
                       </div>
                       <div className="absolute -inset-1 bg-gold-400/10 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-serif font-bold text-maroon-800 text-xl mb-3 group-hover:text-gold-700 transition-colors duration-300">
+                      <h3 {...websiteContent.propsFor(rule.title)} className="font-serif font-bold text-maroon-800 text-xl mb-3 group-hover:text-gold-700 transition-colors duration-300">
                         {rule.title}
                       </h3>
                       <ul className="space-y-2">
                         {rule.rules.map((item, idx) => (
                           <li key={idx} className="flex gap-2 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
                             <span className="text-gold-500 font-bold group-hover:text-gold-600 transition-colors">•</span>
-                            <span>{item}</span>
+                            <span {...websiteContent.propsFor(item)}>{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -225,31 +220,20 @@ const StudentRules = () => {
             >
               <div className="flex items-center justify-center gap-2 mb-3">
                 <Sparkles size={20} className="text-gold-400" />
-                <span className="text-xs font-semibold text-gold-400 tracking-widest uppercase">Core Values</span>
+                <span {...websiteContent.props(["student.rules.student-rules.text.6"])} className="text-xs font-semibold text-gold-400 tracking-widest uppercase">{websiteContent.value("student.rules.student-rules.text.6", "Core Values")}</span>
                 <Sparkles size={20} className="text-gold-400" />
               </div>
-              <h3 className="font-serif font-bold text-2xl md:text-3xl mb-3 text-gold-300">Remember</h3>
-              <p className="text-white/80 max-w-2xl mx-auto text-base leading-relaxed">
-                These rules are not just about maintaining discipline - they are about building
-                character, fostering respect, and creating a community where everyone can succeed.
-              </p>
+              <h3 {...websiteContent.props(["student.rules.student-rules.heading.2"])} className="font-serif font-bold text-2xl md:text-3xl mb-3 text-gold-300">{websiteContent.value("student.rules.student-rules.heading.2", "Remember")}</h3>
+              <p {...websiteContent.props(["student.rules.student-rules.paragraph.3"])} className="text-white/80 max-w-2xl mx-auto text-base leading-relaxed">{websiteContent.value("student.rules.student-rules.paragraph.3", "These rules are not just about maintaining discipline - they are about building character, fostering respect, and creating a community where everyone can succeed.")}</p>
               <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-white/50">
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                  Respect
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                  Discipline
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                  Integrity
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                  Excellence
-                </span>
+                <span {...websiteContent.props(["student.rules.student-rules.text.7"])} className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />{websiteContent.value("student.rules.student-rules.text.7", "Respect")}</span>
+                <span {...websiteContent.props(["student.rules.student-rules.text.8"])} className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />{websiteContent.value("student.rules.student-rules.text.8", "Discipline")}</span>
+                <span {...websiteContent.props(["student.rules.student-rules.text.9"])} className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />{websiteContent.value("student.rules.student-rules.text.9", "Integrity")}</span>
+                <span {...websiteContent.props(["student.rules.student-rules.text.10"])} className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />{websiteContent.value("student.rules.student-rules.text.10", "Excellence")}</span>
               </div>
             </motion.div>
           </SectionWrapper>

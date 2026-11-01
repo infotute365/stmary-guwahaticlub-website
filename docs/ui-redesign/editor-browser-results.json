@@ -1,0 +1,72 @@
+{
+  "actions": {
+    "login": "PASS",
+    "editWebsite": "PASS",
+    "cancel": "PASS",
+    "saveAndFreshAnonymousRead": "PASS",
+    "restoreOriginal": "PASS",
+    "previewAtEveryViewport": "PASS",
+    "imageUploadAndSave": "PASS",
+    "imageRestored": "PASS",
+    "exit": "PASS"
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "overflows": []
+    },
+    {
+      "width": 360,
+      "scroll": 360,
+      "overflows": []
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "overflows": []
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "overflows": []
+    },
+    {
+      "width": 430,
+      "scroll": 430,
+      "overflows": []
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "overflows": []
+    },
+    {
+      "width": 820,
+      "scroll": 820,
+      "overflows": []
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "overflows": []
+    },
+    {
+      "width": 1280,
+      "scroll": 1280,
+      "overflows": []
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "overflows": []
+    },
+    {
+      "width": 1920,
+      "scroll": 1920,
+      "overflows": []
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

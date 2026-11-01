@@ -1,0 +1,52 @@
+{
+    "authorization":  "User requested these two public content changes after the master preservation audit",
+    "note":  "Original baselines and prior evidence remain unchanged. The three existing content values are published with revision history; amended conditional markup permits genuinely empty content without an empty badge or heart.",
+    "modifiedFiles":  [
+                          {
+                              "path":  "src/components/home/PrincipalMessage.jsx",
+                              "beforeSha256":  "b5f1f96bb3c63dc58a8cb2e018d9993a623b6174a65a6dcc3eb18a014bee169c",
+                              "afterSha256":  "d9ad93b3155c2b2f9c40c74bfb2ed9be162bcd850bf5a296cbc49301f3a35429",
+                              "review":  "Explicit user request: principal photo badge removal and footer design credit; exact conditional rendering amendments and unchanged historical defaults"
+                          },
+                          {
+                              "path":  "src/components/layout/Footer.jsx",
+                              "beforeSha256":  "ad78366d915db6c5808f70c687bb4537be698fdc81cb99475f3c386ff68f52db",
+                              "afterSha256":  "3a4c2c5cce782a4bd482f1bea1b57c74657ce4d392f7a7a0339d6ffd61902d94",
+                              "review":  "Explicit user request: principal photo badge removal and footer design credit; exact conditional rendering amendments and unchanged historical defaults"
+                          },
+                          {
+                              "path":  "scripts/task04-bindings.mjs",
+                              "beforeSha256":  "5935484823750d02bee292b94d0a92c112073793421bea3b65975b6ee518f25c",
+                              "afterSha256":  "ce710b3f8172a8a85cb8e660751edc65d956acb339f86b0be4fa4300b21e2e21",
+                              "review":  "Explicit user request: principal photo badge removal and footer design credit; exact conditional rendering amendments and unchanged historical defaults"
+                          },
+                          {
+                              "path":  "scripts/verify-website-editor.mjs",
+                              "beforeSha256":  "58aad732b840753958b7b0c8690b4153da09d39674f07c8afe5ddfbb8c144c74",
+                              "afterSha256":  "26b66f86f529415af457ddd879050e47b8bd533bdb5196b96b21c9d83e3f10ea",
+                              "review":  "Explicit user request: principal photo badge removal and footer design credit; exact conditional rendering amendments and unchanged historical defaults"
+                          },
+                          {
+                              "path":  "docs/verification/approved-website-editor.json",
+                              "beforeSha256":  "1cf0a349dc8aac1af5799c24381fc8291210f3b94b99aa3ccb2633ee5c87a367",
+                              "afterSha256":  "bb22ff684b51e1f808d35a72ae40667549eb4debccaafabfe9d223dc83223fb3",
+                              "review":  "Explicit user request: principal photo badge removal and footer design credit; exact conditional rendering amendments and unchanged historical defaults"
+                          }
+                      ],
+    "newFiles":  [
+                     {
+                         "path":  "scripts/public-copy-amendments.mjs",
+                         "sha256":  "30caff1a2bb4028b5f1f38ee05878d17d33667533bef276c1e05eee88a2a448d"
+                     },
+                     {
+                         "path":  "docs/website-editor/public-copy-amendments.json",
+                         "sha256":  "91549762cd047b9d6007708bfb64aef3ed234b9204b9fa700b25ba79d006ce20"
+                     }
+                 ],
+    "previousEvidence":  [
+                             {
+                                 "path":  "docs/website-editor/master-changes.json",
+                                 "sha256":  "af597130684391c3689139a2fcbca348c0ddc3486feb3fd268d1b720b2530289"
+                             }
+                         ]
+}

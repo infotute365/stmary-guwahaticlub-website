@@ -4,32 +4,35 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionWrapper from '../../components/common/SectionWrapper.jsx'
 import { Mail, Phone, GraduationCap, Award, Calendar, ChevronLeft, ChevronRight, Crown } from 'lucide-react'
+import { useWebsiteContent } from '../../components/website-editor/useWebsiteContent.js'
 
 const Principal = () => {
+  const websiteContent = useWebsiteContent()
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const principals = [
-    { number: 1, name: "Sr. Catherine Susngi" },
-    { number: 2, name: "Sr. Lydia Dias" },
-    { number: 3, name: "Sr. Maria Rodrigues" },
-    { number: 4, name: "Sr. Rosy Devassy" },
-    { number: 5, name: "Sr. Anna Varkey" },
-    { number: 6, name: "Sr. Beatrice Gonsalves" },
-    { number: 7, name: "Sr. Mary George" },
-    { number: 8, name: "Sr. Bridget Kurian" },
-    { number: 9, name: "Sr. Mary Parekatt" },
-    { number: 10, name: "Sr. Ivy D'Souza" },
-    { number: 11, name: "Sr. Elizabeth Joseph" },
-    { number: 12, name: "Sr. Teresa Kurian" },
-    { number: 13, name: "Sr. Elizabeth George" },
-    { number: 14, name: "Sr. Celine Porinchu" },
-    { number: 15, name: "Sr. Catherine Kanannampuzha" },
-    { number: 16, name: "Sr. Annie Villuviruthil" },
-    { number: 17, name: "Sr. Lucy Nedumala" },
-    { number: 18, name: "Sr. Jessy Nedumala" },
-    { number: 19, name: "Sr. (Dr) Molly Kaniampadickal" },
-    { number: 20, name: "Sr. Kathreena Kannapuzha" },
-    { number: 21, name: "Sr. Tessy Davis" }
+    { number: websiteContent.value("about.principal.principals.item1.number", 1), name: websiteContent.value("about.principal.principals.item1.name", "Sr. Catherine Susngi") },
+    { number: websiteContent.value("about.principal.principals.item2.number", 2), name: websiteContent.value("about.principal.principals.item2.name", "Sr. Lydia Dias") },
+    { number: websiteContent.value("about.principal.principals.item3.number", 3), name: websiteContent.value("about.principal.principals.item3.name", "Sr. Maria Rodrigues") },
+    { number: websiteContent.value("about.principal.principals.item4.number", 4), name: websiteContent.value("about.principal.principals.item4.name", "Sr. Rosy Devassy") },
+    { number: websiteContent.value("about.principal.principals.item5.number", 5), name: websiteContent.value("about.principal.principals.item5.name", "Sr. Anna Varkey") },
+    { number: websiteContent.value("about.principal.principals.item6.number", 6), name: websiteContent.value("about.principal.principals.item6.name", "Sr. Beatrice Gonsalves") },
+    { number: websiteContent.value("about.principal.principals.item7.number", 7), name: websiteContent.value("about.principal.principals.item7.name", "Sr. Mary George") },
+    { number: websiteContent.value("about.principal.principals.item8.number", 8), name: websiteContent.value("about.principal.principals.item8.name", "Sr. Bridget Kurian") },
+    { number: websiteContent.value("about.principal.principals.item9.number", 9), name: websiteContent.value("about.principal.principals.item9.name", "Sr. Mary Parekatt") },
+    { number: websiteContent.value("about.principal.principals.item10.number", 10), name: websiteContent.value("about.principal.principals.item10.name", "Sr. Ivy D'Souza") },
+    { number: websiteContent.value("about.principal.principals.item11.number", 11), name: websiteContent.value("about.principal.principals.item11.name", "Sr. Elizabeth Joseph") },
+    { number: websiteContent.value("about.principal.principals.item12.number", 12), name: websiteContent.value("about.principal.principals.item12.name", "Sr. Teresa Kurian") },
+    { number: websiteContent.value("about.principal.principals.item13.number", 13), name: websiteContent.value("about.principal.principals.item13.name", "Sr. Elizabeth George") },
+    { number: websiteContent.value("about.principal.principals.item14.number", 14), name: websiteContent.value("about.principal.principals.item14.name", "Sr. Celine Porinchu") },
+    { number: websiteContent.value("about.principal.principals.item15.number", 15), name: websiteContent.value("about.principal.principals.item15.name", "Sr. Catherine Kanannampuzha") },
+    { number: websiteContent.value("about.principal.principals.item16.number", 16), name: websiteContent.value("about.principal.principals.item16.name", "Sr. Annie Villuviruthil") },
+    { number: websiteContent.value("about.principal.principals.item17.number", 17), name: websiteContent.value("about.principal.principals.item17.name", "Sr. Lucy Nedumala") },
+    { number: websiteContent.value("about.principal.principals.item18.number", 18), name: websiteContent.value("about.principal.principals.item18.name", "Sr. Jessy Nedumala") },
+    { number: websiteContent.value("about.principal.principals.item19.number", 19), name: websiteContent.value("about.principal.principals.item19.name", "Sr. (Dr) Molly Kaniampadickal") },
+    { number: websiteContent.value("about.principal.principals.item20.number", 20), name: websiteContent.value("about.principal.principals.item20.name", "Sr. Kathreena Kannapuzha") },
+    { number: websiteContent.value("about.principal.principals.item21.number", 21), name: websiteContent.value("about.principal.principals.item21.name", "Sr. Tessy Davis") }
   ]
 
   const currentPrincipal = principals[currentIndex]
@@ -58,9 +61,7 @@ const Principal = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            PRINCIPALS
-          </span>
+          <span {...websiteContent.props(["about.principal.principal.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("about.principal.principal.text", "PRINCIPALS")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -72,26 +73,23 @@ const Principal = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Crown size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Leadership Legacy</span>
+              <span {...websiteContent.props(["about.principal.principal.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("about.principal.principal.text.2", "Leadership Legacy")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["about.principal.principal.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Headmistresses / <span className="text-gold-400">Principals</span>
+            >{websiteContent.value("about.principal.principal.heading", "Headmistresses / ")}<span {...websiteContent.props(["about.principal.principal.text.3"])} className="text-gold-400">{websiteContent.value("about.principal.principal.text.3", "Principals")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["about.principal.principal.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Our esteemed leaders through the years
-            </motion.p>
+            >{websiteContent.value("about.principal.principal.paragraph", "Our esteemed leaders through the years")}</motion.p>
           </div>
         </div>
 
@@ -111,13 +109,9 @@ const Principal = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <GraduationCap size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Our Leadership</span>
+              <span {...websiteContent.props(["about.principal.principal.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("about.principal.principal.text.4", "Our Leadership")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              St. Mary's Higher Secondary School has been blessed with visionary leaders who 
-              have guided the institution with wisdom, dedication, and grace. Here is the 
-              complete list of Headmistresses and Principals who have shaped our school's legacy.
-            </p>
+            <p {...websiteContent.props(["about.principal.principal.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("about.principal.principal.paragraph.2", "St. Mary's Higher Secondary School has been blessed with visionary leaders who have guided the institution with wisdom, dedication, and grace. Here is the complete list of Headmistresses and Principals who have shaped our school's legacy.")}</p>
           </motion.div>
         </div>
       </section>
@@ -135,35 +129,26 @@ const Principal = () => {
             >
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="relative flex-shrink-0">
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-maroon-700 to-maroon-900 flex items-center justify-center text-white text-5xl font-bold shadow-2xl border-4 border-gold-400/50">
+                  <div {...websiteContent.propsFor(currentPrincipal.number)} className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-maroon-700 to-maroon-900 flex items-center justify-center text-white text-5xl font-bold shadow-2xl border-4 border-gold-400/50">
                     {currentPrincipal.number}
                   </div>
                   <div className="absolute -inset-1 bg-gradient-to-r from-gold-400/20 to-maroon-600/20 rounded-full blur-xl opacity-50" />
                 </div>
                 
                 <div className="flex-1 text-center md:text-left">
-                  <div className="inline-block px-4 py-1 bg-gold-400/20 border border-gold-400/30 rounded-full text-xs font-bold text-gold-700 uppercase tracking-wider mb-3">
-                    Headmistress / Principal #{currentPrincipal.number}
+                  <div {...websiteContent.props(["about.principal.principal.text.5"])} className="inline-block px-4 py-1 bg-gold-400/20 border border-gold-400/30 rounded-full text-xs font-bold text-gold-700 uppercase tracking-wider mb-3">{websiteContent.value("about.principal.principal.text.5", "Headmistress / Principal #")}{currentPrincipal.number}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-900">
+                  <h2 {...websiteContent.propsFor(currentPrincipal.name)} className="text-3xl md:text-4xl font-serif font-bold text-maroon-900">
                     {currentPrincipal.name}
                   </h2>
-                  <p className="text-gold-600 font-medium mt-1">
-                    St. Mary's Higher Secondary School
-                  </p>
+                  <p {...websiteContent.props(["about.principal.principal.paragraph.3"])} className="text-gold-600 font-medium mt-1">{websiteContent.value("about.principal.principal.paragraph.3", "St. Mary's Higher Secondary School")}</p>
                   <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
-                    <span className="flex items-center gap-2">
-                      <GraduationCap size={16} className="text-maroon-700" />
-                      Visionary Leader
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <Award size={16} className="text-maroon-700" />
-                      Dedicated Service
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <Calendar size={16} className="text-maroon-700" />
-                      Legacy Builder
-                    </span>
+                    <span {...websiteContent.props(["about.principal.principal.text.6"])} className="flex items-center gap-2">
+                      <GraduationCap size={16} className="text-maroon-700" />{websiteContent.value("about.principal.principal.text.6", "Visionary Leader")}</span>
+                    <span {...websiteContent.props(["about.principal.principal.text.7"])} className="flex items-center gap-2">
+                      <Award size={16} className="text-maroon-700" />{websiteContent.value("about.principal.principal.text.7", "Dedicated Service")}</span>
+                    <span {...websiteContent.props(["about.principal.principal.text.8"])} className="flex items-center gap-2">
+                      <Calendar size={16} className="text-maroon-700" />{websiteContent.value("about.principal.principal.text.8", "Legacy Builder")}</span>
                   </div>
                 </div>
 
@@ -199,8 +184,8 @@ const Principal = () => {
               </div>
 
               {/* Counter */}
-              <div className="text-center mt-4 text-sm text-gray-400 font-medium">
-                {currentIndex + 1} of {principals.length}
+              <div {...websiteContent.props(["about.principal.principal.text.9"])} className="text-center mt-4 text-sm text-gray-400 font-medium">
+                {currentIndex + 1}{websiteContent.value("about.principal.principal.text.9", " of ")}{principals.length}
               </div>
             </motion.div>
           </SectionWrapper>
@@ -209,10 +194,8 @@ const Principal = () => {
           <SectionWrapper>
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-maroon-800 to-maroon-700 px-6 py-4">
-                <h3 className="text-white font-serif font-semibold text-lg">
-                  Complete List of Headmistresses / Principals
-                </h3>
-                <p className="text-white/60 text-sm">Celebrating 21 years of leadership legacy</p>
+                <h3 {...websiteContent.props(["about.principal.principal.heading.2"])} className="text-white font-serif font-semibold text-lg">{websiteContent.value("about.principal.principal.heading.2", "Complete List of Headmistresses / Principals")}</h3>
+                <p {...websiteContent.props(["about.principal.principal.paragraph.4"])} className="text-white/60 text-sm">{websiteContent.value("about.principal.principal.paragraph.4", "Celebrating 21 years of leadership legacy")}</p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-4">
@@ -227,14 +210,14 @@ const Principal = () => {
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
+                      <span {...websiteContent.propsFor(principal.number)} className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                         index === currentIndex
                           ? 'bg-maroon-700 text-white shadow-md'
                           : 'bg-gray-100 text-gray-500 group-hover:bg-maroon-100 group-hover:text-maroon-700'
                       }`}>
                         {principal.number}
                       </span>
-                      <span className={`text-sm font-medium transition-colors duration-300 ${
+                      <span {...websiteContent.propsFor(principal.name)} className={`text-sm font-medium transition-colors duration-300 ${
                         index === currentIndex
                           ? 'text-maroon-800'
                           : 'text-gray-700 group-hover:text-maroon-700'
@@ -252,28 +235,15 @@ const Principal = () => {
           <SectionWrapper>
             <div className="mt-12 bg-gradient-to-r from-maroon-50 to-gold-50/30 rounded-2xl p-8 border border-maroon-100/60 text-center">
               <div className="max-w-3xl mx-auto">
-                <div className="inline-block px-4 py-1 bg-maroon-100/50 border border-maroon-200/50 rounded-full text-xs font-bold text-maroon-700 uppercase tracking-wider mb-4">
-                  Our Legacy
-                </div>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  These remarkable leaders have dedicated their lives to the growth and excellence 
-                  of St. Mary's Higher Secondary School. Their vision, wisdom, and unwavering 
-                  commitment have shaped generations of students and built the foundation of 
-                  our institution's success.
-                </p>
+                <div {...websiteContent.props(["about.principal.principal.text.10"])} className="inline-block px-4 py-1 bg-maroon-100/50 border border-maroon-200/50 rounded-full text-xs font-bold text-maroon-700 uppercase tracking-wider mb-4">{websiteContent.value("about.principal.principal.text.10", "Our Legacy")}</div>
+                <p {...websiteContent.props(["about.principal.principal.paragraph.5"])} className="text-gray-700 text-lg leading-relaxed">{websiteContent.value("about.principal.principal.paragraph.5", "These remarkable leaders have dedicated their lives to the growth and excellence of St. Mary's Higher Secondary School. Their vision, wisdom, and unwavering commitment have shaped generations of students and built the foundation of our institution's success.")}</p>
                 <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-gray-500">
-                  <span className="flex items-center gap-2">
-                    <Award size={16} className="text-gold-500" />
-                    21 Leaders
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar size={16} className="text-gold-500" />
-                    Decades of Service
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <GraduationCap size={16} className="text-gold-500" />
-                    Legacy of Excellence
-                  </span>
+                  <span {...websiteContent.props(["about.principal.principal.text.11"])} className="flex items-center gap-2">
+                    <Award size={16} className="text-gold-500" />{websiteContent.value("about.principal.principal.text.11", "21 Leaders")}</span>
+                  <span {...websiteContent.props(["about.principal.principal.text.12"])} className="flex items-center gap-2">
+                    <Calendar size={16} className="text-gold-500" />{websiteContent.value("about.principal.principal.text.12", "Decades of Service")}</span>
+                  <span {...websiteContent.props(["about.principal.principal.text.13"])} className="flex items-center gap-2">
+                    <GraduationCap size={16} className="text-gold-500" />{websiteContent.value("about.principal.principal.text.13", "Legacy of Excellence")}</span>
                 </div>
               </div>
             </div>

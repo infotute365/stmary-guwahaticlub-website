@@ -75,6 +75,7 @@ const Syllabus = () => {
 
       setShowModal(false)
       resetForm()
+      await fetchSyllabus()
     } catch (err) {
       toast.error(err.response?.data?.message || 'Operation failed')
     } finally {

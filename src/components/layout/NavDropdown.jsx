@@ -3,18 +3,17 @@
 import React from 'react'
 import Link from 'next/link'
 
-const NavDropdown = ({ items, isOpen = false, onNavigate = () => {} }) => {
+const NavDropdown = ({ items, isOpen = false, onNavigate = () => {}, id, pathname }) => {
   return (
-    <div className={`absolute left-0 top-full pt-2 z-50 transition-all duration-200 ${
-      isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-    } group-hover:opacity-100 group-hover:visible`}>
-      <div className="bg-white rounded-xl shadow-xl border border-gray-100 min-w-[220px] py-2">
+    <div id={id} data-nav-popup="true" hidden={!isOpen} className="school-nav-popup">
+      <div className="school-nav-popup-surface">
         {items.map((item) => (
           <Link
             key={item.path}
             href={item.path}
             onClick={onNavigate}
-            className="block px-4 py-2.5 text-sm text-gray-700 hover:text-maroon-700 hover:bg-maroon-50 transition-colors"
+            aria-current={pathname===item.path?'page':undefined}
+            className="school-nav-popup-link"
           >
             {item.label}
           </Link>

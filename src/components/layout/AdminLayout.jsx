@@ -5,9 +5,10 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { 
   LayoutDashboard, FileText, Users, Image, BookOpen, ShieldCheck, 
-  LogOut, ChevronDown, Menu, X, School 
+  LogOut, ChevronDown, Menu, X, School, Pencil
 } from 'lucide-react'
 import { useAuth } from '../../hooks/useAuth.js'
+import { useWebsiteEditor } from '../website-editor/WebsiteEditorProvider.jsx'
 
 const AdminLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -15,6 +16,7 @@ const AdminLayout = ({ children }) => {
   const pathname = usePathname()
   const router = useRouter()
   const { user, logout } = useAuth()
+  const { startEditing } = useWebsiteEditor()
 
   const menuItems = [
     { path: '/admin/dashboard', icon: <LayoutDashboard size={20} />, label: 'Dashboard' },
@@ -22,7 +24,8 @@ const AdminLayout = ({ children }) => {
     { path: '/admin/staff', icon: <Users size={20} />, label: 'Staff' },
     { path: '/admin/gallery', icon: <Image size={20} />, label: 'Gallery' },
     { path: '/admin/syllabus', icon: <BookOpen size={20} />, label: 'Syllabus' },
-    { path: '/admin/disclosure', icon: <ShieldCheck size={20} />, label: 'Disclosure' }
+    { path: '/admin/disclosure', icon: <ShieldCheck size={20} />, label: 'Disclosure' },
+    { path: '/', icon: <Pencil size={20} />, label: 'Edit Website', editor: true }
   ]
 
   const handleLogout = async () => {
@@ -66,7 +69,7 @@ const AdminLayout = ({ children }) => {
             <Link
               key={item.path}
               href={item.path}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => { if (item.editor) startEditing(); setMobileOpen(false) }}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                 isActive(item.path)
                   ? 'bg-maroon-800 text-white shadow-md'

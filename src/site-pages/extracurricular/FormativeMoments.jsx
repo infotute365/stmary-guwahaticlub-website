@@ -4,8 +4,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import SectionWrapper from '../../components/common/SectionWrapper.jsx'
 import { Calendar, Sparkles, Users, Clock } from 'lucide-react'
+import { useWebsiteContent } from '../../components/website-editor/useWebsiteContent.js'
 
 const FormativeMoments = () => {
+  const websiteContent = useWebsiteContent()
+
   return (
     <div className="min-h-screen bg-white">
       {/* ===== HERO SECTION ===== */}
@@ -18,9 +21,7 @@ const FormativeMoments = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            MOMENTS
-          </span>
+          <span {...websiteContent.props(["extracurricular.moments.formative-moments.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("extracurricular.moments.formative-moments.text", "MOMENTS")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -32,26 +33,23 @@ const FormativeMoments = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Calendar size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">School Life</span>
+              <span {...websiteContent.props(["extracurricular.moments.formative-moments.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("extracurricular.moments.formative-moments.text.2", "School Life")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["extracurricular.moments.formative-moments.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Formative <span className="text-gold-400">Moments</span>
+            >{websiteContent.value("extracurricular.moments.formative-moments.heading", "Formative ")}<span {...websiteContent.props(["extracurricular.moments.formative-moments.text.3"])} className="text-gold-400">{websiteContent.value("extracurricular.moments.formative-moments.text.3", "Moments")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["extracurricular.moments.formative-moments.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Creating memories that last a lifetime
-            </motion.p>
+            >{websiteContent.value("extracurricular.moments.formative-moments.paragraph", "Creating memories that last a lifetime")}</motion.p>
           </div>
         </div>
 
@@ -71,13 +69,9 @@ const FormativeMoments = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Sparkles size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Coming Soon</span>
+              <span {...websiteContent.props(["extracurricular.moments.formative-moments.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("extracurricular.moments.formative-moments.text.4", "Coming Soon")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We are currently updating our formative moments gallery. Soon you'll be able to
-              explore the rich tapestry of events and activities that shape character,
-              build community, and create unforgettable memories at St. Mary's.
-            </p>
+            <p {...websiteContent.props(["extracurricular.moments.formative-moments.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("extracurricular.moments.formative-moments.paragraph.2", "We are currently updating our formative moments gallery. Soon you'll be able to explore the rich tapestry of events and activities that shape character, build community, and create unforgettable memories at St. Mary's.")}</p>
           </motion.div>
         </div>
       </section>
@@ -95,18 +89,10 @@ const FormativeMoments = () => {
             <div className="inline-flex p-6 bg-maroon-50 rounded-3xl border border-maroon-100 mb-8">
               <Clock size={64} className="text-maroon-700" />
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-maroon-800 mb-4">
-              Formative Moments
-            </h2>
+            <h2 {...websiteContent.props(["extracurricular.moments.formative-moments.heading.2"])} className="font-serif text-3xl md:text-4xl font-bold text-maroon-800 mb-4">{websiteContent.value("extracurricular.moments.formative-moments.heading.2", "Formative Moments")}</h2>
             <div className="w-16 h-0.5 bg-gold-400 mx-auto mb-4" />
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We're compiling a collection of memorable moments from school life.
-              From Annual Day celebrations to Science Exhibitions, Sports Day to Cultural Festivals,
-              every moment tells a story of growth and community.
-            </p>
-            <p className="text-gray-500 text-sm mt-4">
-              Check back soon to relive the cherished memories of St. Mary's.
-            </p>
+            <p {...websiteContent.props(["extracurricular.moments.formative-moments.paragraph.3"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("extracurricular.moments.formative-moments.paragraph.3", "We're compiling a collection of memorable moments from school life. From Annual Day celebrations to Science Exhibitions, Sports Day to Cultural Festivals, every moment tells a story of growth and community.")}</p>
+            <p {...websiteContent.props(["extracurricular.moments.formative-moments.paragraph.4"])} className="text-gray-500 text-sm mt-4">{websiteContent.value("extracurricular.moments.formative-moments.paragraph.4", "Check back soon to relive the cherished memories of St. Mary's.")}</p>
           </motion.div>
         </div>
       </section>

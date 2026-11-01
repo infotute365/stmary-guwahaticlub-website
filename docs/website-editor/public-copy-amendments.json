@@ -1,0 +1,33 @@
+{
+    "authorization":  "User requested removal of the principal photograph 100 Years badge and replacement of the Made with heart in Assam footer credit",
+    "implementation":  "Publish the three existing content keys through revisioned WebsiteContent; hide badge/credit decoration when their text is empty. Exact original fallbacks and all 959 field keys remain intact.",
+    "publishedValues":  {
+                            "home.principal-message.principal-message.text.2":  "",
+                            "global.footer.footer.text.8":  "design by Apex@spire Digicom solution",
+                            "global.footer.footer.text.9":  ""
+                        },
+    "changes":  [
+                    {
+                        "path":  "src/components/home/PrincipalMessage.jsx",
+                        "beforeSha256":  "b5f1f96bb3c63dc58a8cb2e018d9993a623b6174a65a6dcc3eb18a014bee169c",
+                        "afterSha256":  "d9ad93b3155c2b2f9c40c74bfb2ed9be162bcd850bf5a296cbc49301f3a35429",
+                        "replacements":  [
+                                             {
+                                                 "before":  "              {/* Years Badge */}\r\n              \u003cdiv className=\"absolute top-4 right-4 bg-gold-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg\"\u003e\r\n                \u003cspan {...websiteContent.props([\"home.principal-message.principal-message.text.2\"])} className=\"flex items-center gap-1.5 text-[10px] font-bold text-maroon-900\"\u003e\r\n                  \u003cAward size={12} /\u003e{websiteContent.value(\"home.principal-message.principal-message.text.2\", \"100 Years\")}\u003c/span\u003e\r\n              \u003c/div\u003e",
+                                                 "after":  "              {/* Years Badge */}\r\n              {websiteContent.value(\"home.principal-message.principal-message.text.2\", \"100 Years\") \u0026\u0026 (\r\n              \u003cdiv className=\"absolute top-4 right-4 bg-gold-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg\"\u003e\r\n                \u003cspan {...websiteContent.props([\"home.principal-message.principal-message.text.2\"])} className=\"flex items-center gap-1.5 text-[10px] font-bold text-maroon-900\"\u003e\r\n                  \u003cAward size={12} /\u003e{websiteContent.value(\"home.principal-message.principal-message.text.2\", \"100 Years\")}\u003c/span\u003e\r\n              \u003c/div\u003e\r\n              )}"
+                                             }
+                                         ]
+                    },
+                    {
+                        "path":  "src/components/layout/Footer.jsx",
+                        "beforeSha256":  "ad78366d915db6c5808f70c687bb4537be698fdc81cb99475f3c386ff68f52db",
+                        "afterSha256":  "3a4c2c5cce782a4bd482f1bea1b57c74657ce4d392f7a7a0339d6ffd61902d94",
+                        "replacements":  [
+                                             {
+                                                 "before":  "\u003cHeart size={12} className=\"text-gold-400 animate-pulse\" /\u003e",
+                                                 "after":  "{websiteContent.value(\"global.footer.footer.text.9\", \" in Assam\") \u0026\u0026 \u003cHeart size={12} className=\"text-gold-400 animate-pulse\" /\u003e}"
+                                             }
+                                         ]
+                    }
+                ]
+}

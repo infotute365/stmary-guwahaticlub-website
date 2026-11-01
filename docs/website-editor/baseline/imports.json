@@ -1,0 +1,1941 @@
+[
+  {
+    "file": "app/(site)/layout.jsx",
+    "reference": "../../src/components/layout/TopBar.jsx",
+    "names": [
+      "TopBar"
+    ]
+  },
+  {
+    "file": "app/(site)/layout.jsx",
+    "reference": "../../src/components/layout/Navbar.jsx",
+    "names": [
+      "Navbar"
+    ]
+  },
+  {
+    "file": "app/(site)/layout.jsx",
+    "reference": "../../src/components/layout/Footer.jsx",
+    "names": [
+      "Footer"
+    ]
+  },
+  {
+    "file": "app/layout.jsx",
+    "reference": "./globals.css",
+    "names": []
+  },
+  {
+    "file": "app/layout.jsx",
+    "reference": "../src/components/Providers.jsx",
+    "names": [
+      "Providers"
+    ]
+  },
+  {
+    "file": "app/layout.jsx",
+    "reference": "@vercel/analytics/next",
+    "names": [
+      "Analytics"
+    ]
+  },
+  {
+    "file": "app/not-found.jsx",
+    "reference": "../src/site-pages/NotFound.jsx",
+    "names": [
+      "NotFound"
+    ]
+  },
+  {
+    "file": "src/components/ProtectedRoute.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/ProtectedRoute.jsx",
+    "reference": "next/navigation",
+    "names": [
+      "useRouter"
+    ]
+  },
+  {
+    "file": "src/components/ProtectedRoute.jsx",
+    "reference": "../hooks/useAuth.js",
+    "names": [
+      "useAuth"
+    ]
+  },
+  {
+    "file": "src/components/ProtectedRoute.jsx",
+    "reference": "../components/ui/Loader.jsx",
+    "names": [
+      "Loader"
+    ]
+  },
+  {
+    "file": "src/components/Providers.jsx",
+    "reference": "../context/AuthContext.jsx",
+    "names": [
+      "AuthProvider"
+    ]
+  },
+  {
+    "file": "src/components/Providers.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "ToastContainer"
+    ]
+  },
+  {
+    "file": "src/components/Providers.jsx",
+    "reference": "react-toastify/dist/ReactToastify.css",
+    "names": []
+  },
+  {
+    "file": "src/components/admin/Circulars.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/admin/Circulars.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Plus",
+      "Edit",
+      "Trash2",
+      "Eye",
+      "EyeOff",
+      "Calendar",
+      "Clock",
+      "X",
+      "FileText"
+    ]
+  },
+  {
+    "file": "src/components/admin/Circulars.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/components/admin/Circulars.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getCirculars",
+      "createCircular",
+      "updateCircular",
+      "deleteCircular",
+      "uploadPDF",
+      "getFileUrl"
+    ]
+  },
+  {
+    "file": "src/components/admin/Dashboard.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/admin/Dashboard.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "FileText",
+      "Users",
+      "Image",
+      "BookOpen",
+      "ShieldCheck",
+      "Plus",
+      "ArrowUp",
+      "ArrowDown"
+    ]
+  },
+  {
+    "file": "src/components/admin/Dashboard.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/admin/Dashboard.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getCirculars",
+      "getStaff",
+      "getGallery",
+      "getSyllabus"
+    ]
+  },
+  {
+    "file": "src/components/admin/Gallery.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/admin/Gallery.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Plus",
+      "Edit",
+      "Trash2",
+      "X",
+      "ImageIcon",
+      "Upload",
+      "FolderPlus",
+      "Trash"
+    ]
+  },
+  {
+    "file": "src/components/admin/Gallery.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/components/admin/Gallery.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getGalleryEvents",
+      "createGalleryEvent",
+      "updateGalleryEvent",
+      "deleteGalleryEvent",
+      "addImagesToEvent",
+      "deleteImageFromEvent",
+      "uploadMultipleImages",
+      "uploadImage",
+      "getImageUrl"
+    ]
+  },
+  {
+    "file": "src/components/admin/Staff.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/admin/Staff.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Plus",
+      "Edit",
+      "Trash2",
+      "X",
+      "Users"
+    ]
+  },
+  {
+    "file": "src/components/admin/Staff.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/components/admin/Staff.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getStaff",
+      "createStaff",
+      "updateStaff",
+      "deleteStaff",
+      "uploadImage"
+    ]
+  },
+  {
+    "file": "src/components/admin/Syllabus.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/admin/Syllabus.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Plus",
+      "Edit",
+      "Trash2",
+      "X",
+      "BookOpen",
+      "FileText"
+    ]
+  },
+  {
+    "file": "src/components/admin/Syllabus.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/components/admin/Syllabus.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getSyllabus",
+      "createSyllabus",
+      "updateSyllabus",
+      "deleteSyllabus",
+      "uploadPDF",
+      "getFileUrl"
+    ]
+  },
+  {
+    "file": "src/components/common/Accordion.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/common/Accordion.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "ChevronDown"
+    ]
+  },
+  {
+    "file": "src/components/common/Breadcrumb.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/common/Breadcrumb.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/common/Breadcrumb.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "ChevronRight"
+    ]
+  },
+  {
+    "file": "src/components/common/Card.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/common/Card.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/common/ContactForm.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/common/ContactForm.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Send"
+    ]
+  },
+  {
+    "file": "src/components/common/GalleryGrid.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/common/GalleryGrid.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/common/GalleryGrid.jsx",
+    "reference": "./Lightbox.jsx",
+    "names": [
+      "Lightbox"
+    ]
+  },
+  {
+    "file": "src/components/common/Lightbox.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/common/Lightbox.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "X",
+      "ChevronLeft",
+      "ChevronRight"
+    ]
+  },
+  {
+    "file": "src/components/common/PageHeader.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/common/PageHeader.jsx",
+    "reference": "./Breadcrumb.jsx",
+    "names": [
+      "Breadcrumb"
+    ]
+  },
+  {
+    "file": "src/components/common/SectionWrapper.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/common/SectionWrapper.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/common/StaffCard.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/common/StaffCard.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Mail",
+      "Phone"
+    ]
+  },
+  {
+    "file": "src/components/common/StaffCard.jsx",
+    "reference": "./Card.jsx",
+    "names": [
+      "Card"
+    ]
+  },
+  {
+    "file": "src/components/home/CircularsPanel.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/home/CircularsPanel.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Bell",
+      "Calendar",
+      "Clock",
+      "Download",
+      "ChevronRight",
+      "X",
+      "FileText"
+    ]
+  },
+  {
+    "file": "src/components/home/CircularsPanel.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getCirculars",
+      "getFileUrl"
+    ]
+  },
+  {
+    "file": "src/components/home/CircularsPanel.jsx",
+    "reference": "../../utils/helpers.js",
+    "names": [
+      "formatDate"
+    ]
+  },
+  {
+    "file": "src/components/home/FeatureCard.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/home/FeatureCard.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "GraduationCap",
+      "Building2",
+      "FlaskConical",
+      "Code",
+      "Users",
+      "Trophy",
+      "ArrowRight",
+      "Star",
+      "Sparkles",
+      "Award"
+    ]
+  },
+  {
+    "file": "src/components/home/FeatureCard.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "swiper/react",
+    "names": [
+      "Swiper",
+      "SwiperSlide"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "swiper/modules",
+    "names": [
+      "Autoplay",
+      "Pagination",
+      "EffectFade"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "ArrowRight",
+      "Award",
+      "GraduationCap",
+      "Users",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "swiper/css",
+    "names": []
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "swiper/css/pagination",
+    "names": []
+  },
+  {
+    "file": "src/components/home/HeroCarousel.jsx",
+    "reference": "swiper/css/effect-fade",
+    "names": []
+  },
+  {
+    "file": "src/components/home/PrincipalMessage.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/home/PrincipalMessage.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Mail",
+      "Phone",
+      "Sparkles",
+      "Pen",
+      "Quote",
+      "Star",
+      "Award",
+      "Heart"
+    ]
+  },
+  {
+    "file": "src/components/home/PrincipalMessage.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/home/StatsCounter.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useEffect",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/home/StatsCounter.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/home/WelcomeSection.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/home/WelcomeSection.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/home/WelcomeSection.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Sparkles",
+      "ArrowRight",
+      "TrendingUp",
+      "BookOpen",
+      "Award",
+      "GraduationCap",
+      "Heart",
+      "Calendar",
+      "Rocket",
+      "Shield",
+      "Star",
+      "Compass",
+      "Crown",
+      "Gem",
+      "Zap"
+    ]
+  },
+  {
+    "file": "src/components/home/WelcomeSection.jsx",
+    "reference": "../common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/components/layout/AdminLayout.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/components/layout/AdminLayout.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/layout/AdminLayout.jsx",
+    "reference": "next/navigation",
+    "names": [
+      "usePathname",
+      "useRouter"
+    ]
+  },
+  {
+    "file": "src/components/layout/AdminLayout.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "LayoutDashboard",
+      "FileText",
+      "Users",
+      "Image",
+      "BookOpen",
+      "ShieldCheck",
+      "LogOut",
+      "ChevronDown",
+      "Menu",
+      "X",
+      "School"
+    ]
+  },
+  {
+    "file": "src/components/layout/AdminLayout.jsx",
+    "reference": "../../hooks/useAuth.js",
+    "names": [
+      "useAuth"
+    ]
+  },
+  {
+    "file": "src/components/layout/Footer.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/layout/Footer.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/layout/Footer.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "School",
+      "Phone",
+      "Mail",
+      "MapPin",
+      "Globe2",
+      "MessageCircle",
+      "Send",
+      "Play",
+      "Heart",
+      "ChevronRight",
+      "LogIn"
+    ]
+  },
+  {
+    "file": "src/components/layout/Footer.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/components/layout/NavDropdown.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/layout/NavDropdown.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/layout/NavNestedDropdown.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/layout/NavNestedDropdown.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/layout/NavNestedDropdown.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "ChevronRight"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "next/navigation",
+    "names": [
+      "usePathname"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Menu",
+      "X",
+      "ChevronDown",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "./NavDropdown.jsx",
+    "names": [
+      "NavDropdown"
+    ]
+  },
+  {
+    "file": "src/components/layout/Navbar.jsx",
+    "reference": "./NavNestedDropdown.jsx",
+    "names": [
+      "NavNestedDropdown"
+    ]
+  },
+  {
+    "file": "src/components/layout/TopBar.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useRef",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/components/layout/TopBar.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Phone",
+      "Mail",
+      "MapPin",
+      "CreditCard",
+      "ChevronDown",
+      "ExternalLink",
+      "Sparkles",
+      "ArrowRight"
+    ]
+  },
+  {
+    "file": "src/components/ui/Badge.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/ui/Button.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/components/ui/Loader.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/ContactUs.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/site-pages/ContactUs.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "MapPin",
+      "Phone",
+      "Mail",
+      "Clock",
+      "Send",
+      "Heart",
+      "MessageCircle",
+      "Headphones",
+      "Globe",
+      "Building2",
+      "Loader",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/site-pages/ContactUs.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/ContactUs.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/site-pages/ContactUs.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion",
+      "AnimatePresence"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Search",
+      "X",
+      "Grid3x3",
+      "LayoutGrid",
+      "Calendar",
+      "Tag",
+      "Eye",
+      "Heart",
+      "Share2",
+      "Download",
+      "ChevronLeft",
+      "ChevronRight",
+      "ZoomIn",
+      "ZoomOut",
+      "RotateCw",
+      "Camera",
+      "Loader",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "../services/api.js",
+    "names": [
+      "getGallery"
+    ]
+  },
+  {
+    "file": "src/site-pages/Gallery.jsx",
+    "reference": "../utils/helpers.js",
+    "names": [
+      "formatDate"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/HeroCarousel.jsx",
+    "names": [
+      "HeroCarousel"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/StatsCounter.jsx",
+    "names": [
+      "StatsCounter"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/CircularsPanel.jsx",
+    "names": [
+      "CircularsPanel"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/WelcomeSection.jsx",
+    "names": [
+      "WelcomeSection"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/FeatureCard.jsx",
+    "names": [
+      "FeatureCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/Home.jsx",
+    "reference": "../components/home/PrincipalMessage.jsx",
+    "names": [
+      "PrincipalMessage"
+    ]
+  },
+  {
+    "file": "src/site-pages/Infrastructure.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/site-pages/Infrastructure.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/Infrastructure.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/Infrastructure.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Building2",
+      "Library",
+      "Microscope",
+      "Code2",
+      "Users",
+      "Trophy",
+      "BookOpen",
+      "Monitor",
+      "ArrowRight",
+      "Wifi",
+      "Coffee",
+      "Shield",
+      "Sun",
+      "Wind",
+      "Clock",
+      "Award",
+      "Star",
+      "Crown",
+      "Theater"
+    ]
+  },
+  {
+    "file": "src/site-pages/Login.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/Login.jsx",
+    "reference": "next/navigation",
+    "names": [
+      "useRouter"
+    ]
+  },
+  {
+    "file": "src/site-pages/Login.jsx",
+    "reference": "../hooks/useAuth.js",
+    "names": [
+      "useAuth"
+    ]
+  },
+  {
+    "file": "src/site-pages/Login.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "School",
+      "Mail",
+      "Lock"
+    ]
+  },
+  {
+    "file": "src/site-pages/Login.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Shield",
+      "FileCheck",
+      "Award",
+      "BadgeCheck",
+      "Building2",
+      "ClipboardCheck",
+      "Loader",
+      "Sparkles",
+      "Crown"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "../services/api.js",
+    "names": [
+      "getDisclosures"
+    ]
+  },
+  {
+    "file": "src/site-pages/MandatoryDisclosure.jsx",
+    "reference": "react-toastify",
+    "names": [
+      "toast"
+    ]
+  },
+  {
+    "file": "src/site-pages/NotFound.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/NotFound.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/site-pages/NotFound.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Home"
+    ]
+  },
+  {
+    "file": "src/site-pages/PastPupilsAssociation.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/PastPupilsAssociation.jsx",
+    "reference": "../components/common/PageHeader.jsx",
+    "names": [
+      "PageHeader"
+    ]
+  },
+  {
+    "file": "src/site-pages/PastPupilsAssociation.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/PastPupilsAssociation.jsx",
+    "reference": "../components/common/Card.jsx",
+    "names": [
+      "Card"
+    ]
+  },
+  {
+    "file": "src/site-pages/PastPupilsAssociation.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "Mail",
+      "Calendar",
+      "Building2",
+      "Award",
+      "Heart"
+    ]
+  },
+  {
+    "file": "src/site-pages/StudentRules.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/StudentRules.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/StudentRules.jsx",
+    "reference": "../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/StudentRules.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Shield",
+      "Bell",
+      "Users",
+      "BookOpen",
+      "Clock",
+      "HeartHandshake",
+      "Sparkles",
+      "Crown"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurFounders.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurFounders.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurFounders.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Calendar",
+      "Quote",
+      "Sparkles",
+      "Heart",
+      "Cross",
+      "Users",
+      "Award",
+      "BookOpen",
+      "Crown"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurJourney.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurJourney.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/OurJourney.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Calendar",
+      "Award",
+      "Building2",
+      "GraduationCap",
+      "Computer",
+      "Sparkles",
+      "Crown",
+      "Heart",
+      "MapPin",
+      "Users",
+      "BookOpen",
+      "Star",
+      "Rocket"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Principal.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Principal.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Principal.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Principal.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Mail",
+      "Phone",
+      "GraduationCap",
+      "Award",
+      "Calendar",
+      "ChevronLeft",
+      "ChevronRight",
+      "Crown"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Superiors.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Superiors.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Superiors.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Cross",
+      "Users",
+      "Sparkles",
+      "ListOrdered"
+    ]
+  },
+  {
+    "file": "src/site-pages/about/Superiors.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Evaluation.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Evaluation.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Evaluation.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Evaluation.jsx",
+    "reference": "../../components/common/Accordion.jsx",
+    "names": [
+      "Accordion"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Evaluation.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "ClipboardCheck",
+      "BookOpen",
+      "GraduationCap",
+      "BarChart",
+      "Award",
+      "Calendar",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Syllabus.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Syllabus.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Syllabus.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Syllabus.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getSyllabus",
+      "getAcademicYears",
+      "getSyllabusClasses",
+      "getSyllabusStreams",
+      "getFileUrl"
+    ]
+  },
+  {
+    "file": "src/site-pages/academics/Syllabus.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "FileText",
+      "Loader",
+      "Calendar",
+      "GraduationCap",
+      "Download",
+      "Eye",
+      "BookOpen"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Building2",
+      "Users",
+      "Clock",
+      "Award",
+      "Crown"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/Management.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "Briefcase",
+      "Clock"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "reference": "../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "BookOpen",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "../../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "../../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "reference": "../../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "BookOpen",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "../../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "../../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "reference": "../../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "BookOpen",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "../../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "../../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "reference": "../../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState",
+      "useEffect"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "BookOpen",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "../../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "../../../components/common/StaffCard.jsx",
+    "names": [
+      "StaffCard"
+    ]
+  },
+  {
+    "file": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "reference": "../../../services/api.js",
+    "names": [
+      "getStaff"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/Admission.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/Admission.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/Admission.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "FileText",
+      "Users",
+      "BookOpen",
+      "CheckCircle",
+      "Calendar",
+      "IndianRupee",
+      "Download",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/Admission.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/Admission.jsx",
+    "reference": "../../components/common/Accordion.jsx",
+    "names": [
+      "Accordion"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "reference": "react",
+    "names": [
+      "React",
+      "useState"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "reference": "next/link",
+    "names": [
+      "Link"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Phone",
+      "Mail",
+      "Calendar",
+      "User",
+      "CalendarIcon",
+      "Users",
+      "BookOpen",
+      "MapPin",
+      "Send",
+      "Sparkles",
+      "GraduationCap"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Users",
+      "Clock",
+      "Sparkles"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/FormativeMoments.jsx",
+    "reference": "react",
+    "names": [
+      "React"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/FormativeMoments.jsx",
+    "reference": "framer-motion",
+    "names": [
+      "motion"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/FormativeMoments.jsx",
+    "reference": "../../components/common/SectionWrapper.jsx",
+    "names": [
+      "SectionWrapper"
+    ]
+  },
+  {
+    "file": "src/site-pages/extracurricular/FormativeMoments.jsx",
+    "reference": "lucide-react",
+    "names": [
+      "Calendar",
+      "Sparkles",
+      "Users",
+      "Clock"
+    ]
+  }
+]

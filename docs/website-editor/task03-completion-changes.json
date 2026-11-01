@@ -1,0 +1,110 @@
+{
+    "task":  "03 completion",
+    "captured":  "2026-11-01",
+    "note":  "Exact reviewed completion transitions. Original Task 01/02/03 evidence is retained; no baselines are regenerated. Manifest/result log excluded from self-hashing.",
+    "modifiedFiles":  [
+                          {
+                              "path":  "scripts/preview-website-editor.mjs",
+                              "beforeSha256":  "932593392a3810f3319114c1223247966b5d19a81789701bd5cefcc87ad9caa3",
+                              "afterSha256":  "d9e67c12a9ad57bf765f5ee63a8c5fd9f5eb178dd031d41de87473fc2028b7c7"
+                          },
+                          {
+                              "path":  "scripts/verify-preservation.mjs",
+                              "beforeSha256":  "789cd437ad7b43d3ea73018306f0e711d963bae332ac655ec6bb8ab75f644200",
+                              "afterSha256":  "09cde7436e8cc3de59917d3ff3e10f0b241f67b28def9117823f45dea6596c1b"
+                          },
+                          {
+                              "path":  "scripts/verify-website-editor.mjs",
+                              "beforeSha256":  "0b2494a51e10711e52cccef7208b2ff1b1ae47eab31c666d954c9a6fa816fac8",
+                              "afterSha256":  "6d0129e7f6ab892c89118bb13ba0f6ff1de364b7be332578e7d41abb84548cfb"
+                          },
+                          {
+                              "path":  "src/components/home/HeroCarousel.jsx",
+                              "beforeSha256":  "2f687b37878d2f714a574aaa1a3ffc546ee615dc15126e2fbcd91c6148109652",
+                              "afterSha256":  "25c8e74a298f167cf4ca81f5e7d54fce16ff25b27e444139d4ff8a35e196d3bd"
+                          },
+                          {
+                              "path":  "src/components/website-editor/editor-bindings.js",
+                              "beforeSha256":  "012a0e92a99615b0652e85bce9ca7d6cf4c055adaef1caf0f6d0dd896cf4d050",
+                              "afterSha256":  "100ae3920f2f4b9e275573539000d8c2d976f40b914122d9960e3f41c01e58ff"
+                          },
+                          {
+                              "path":  "src/components/website-editor/useWebsiteField.js",
+                              "beforeSha256":  "611c186350fc26e58ef85dfb1c9c45648055c5dc1b097735c8bad07a35f19532",
+                              "afterSha256":  "5337db19177c8f3e51be0db2dd6774b946c54574ec729d0247d441842ecd7aac"
+                          },
+                          {
+                              "path":  "src/components/website-editor/WebsiteEditorProvider.jsx",
+                              "beforeSha256":  "3e241d942a4df06ac5d857cf28dfd21de1fcad6d2291274697b646a482570272",
+                              "afterSha256":  "7d24df2f234029dd4d90a6727a80c2228a712675e27dc0f764cdd14d7418020b"
+                          },
+                          {
+                              "path":  "src/components/website-editor/WebsiteEditorUI.jsx",
+                              "beforeSha256":  "2142632ee5ac53d3f093436ff74376135be9c2af5472e94b1770f289c51d635c",
+                              "afterSha256":  "84921c58fd4f8244efbf92b23dd75ec9ac2f7f51c14b8d8b38ea66e6bd3dc12a"
+                          },
+                          {
+                              "path":  "src/components/website-editor/WebsiteEditorUI.module.css",
+                              "beforeSha256":  "9ef78758ee40f054276f3fb58b26a3c927422f3ad6ffdd3973748caa3cacd73d",
+                              "afterSha256":  "814e68fb56c40cee30f5fed6e4f43d907cb99b2c2dab14f52a2ea5569e96306d"
+                          },
+                          {
+                              "path":  "src/server/model/website-content.model.js",
+                              "beforeSha256":  "78c03418398a150a58df9766bc8d18a490479d73a894c852c3d09634d5b70c03",
+                              "afterSha256":  "3b971136f23ad285939d58217644c07ce294b2956f8adea7682bdfede713fbc4"
+                          },
+                          {
+                              "path":  "src/server/util/websiteContentPolicy.js",
+                              "beforeSha256":  "bf40cc12606dab346e9ee75c835351d86c6a69c49ceca516cf2eb9cb31012948",
+                              "afterSha256":  "21c33d18ca416f7c89db21367c3b2808470ae6695d793eaf872b5f6cc99da7ec"
+                          },
+                          {
+                              "path":  "src/site-pages/Home.jsx",
+                              "beforeSha256":  "a2c5b1319650ce7f152fb5156bfa9f7e818fa74e5181d1688a4399c0271ba2c4",
+                              "afterSha256":  "ed96f9258181a5573fcb2557b565ea3082731341a7637439a57c7ebeafbaadcf"
+                          },
+                          {
+                              "path":  "tests/website-content.test.js",
+                              "beforeSha256":  "518ac9c93d73111d7a638962fd8910ce83bfd3a98ca41fc6847e936202cef6aa",
+                              "afterSha256":  "7b9c21a706a9cd83ad7df18b135f5a347c23077688a526e525f04c5efc3f4d59"
+                          },
+                          {
+                              "path":  "tests/website-content-integration.test.js",
+                              "beforeSha256":  "1b4df8513492542b9190f1c921df4d23932c82b22dc6cb2ca27ee5202ebb3d2b",
+                              "afterSha256":  "efcb1fa26f720a4687491180036cfa64bb6c84c571b201c233ea115ac5c613e9"
+                          },
+                          {
+                              "path":  "tests/website-editor.test.js",
+                              "beforeSha256":  "d37aeabaf7162c204d701552adb1bab42085687e6a374c1dfedfc8dec48fcd62",
+                              "afterSha256":  "31aecdda8804ee3c1eb161838efe3b87a6822bd2ceaaf11592d655314cbb2a0d"
+                          },
+                          {
+                              "path":  "tests/website-editor-controller.test.js",
+                              "beforeSha256":  "2889e76ddc5a26d31596ae6271c5cabfe44706b4efae50fc09e65ef310114c8f",
+                              "afterSha256":  "943bbd63bb8a7b5fe8b65224b239fa946c1a52602e5954578ab44c9d82ead112"
+                          },
+                          {
+                              "path":  "tests/website-editor-preservation.test.js",
+                              "beforeSha256":  "e75f750663661ec2e01ba5a1d43e03622c158ef259af3c218a16ebc2d9687711",
+                              "afterSha256":  "f8a9f628a73fdb5e3bcdccfc7b1944ba9be4d688b7779359f44ee53c8db0d403"
+                          }
+                      ],
+    "newFiles":  [
+                     {
+                         "path":  "src/server/util/websiteContentApprovals.js",
+                         "sha256":  "7041a0df4cad512606ad0de4177240afd5288b7aab6a4643fd667d9748a8488e"
+                     },
+                     {
+                         "path":  "tests/website-editor-ui.test.js",
+                         "sha256":  "f0229464f402b0294742493253524cc7e239014b08e6d1fcf04b2e36968f771d"
+                     },
+                     {
+                         "path":  "docs/verification/approved-website-editor.json",
+                         "sha256":  "3acba086ef66d7260fc3c1973a70f52b09486315d7d32b83ce29f5070201d07f"
+                     },
+                     {
+                         "path":  "docs/website-editor/10-TASK03-COMPLETION.md",
+                         "sha256":  "855dfc6630f4ae84670f4c924b1a06eedf7d24bfb8f2e7ee541b86674e232560"
+                     }
+                 ]
+}

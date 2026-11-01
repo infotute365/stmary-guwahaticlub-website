@@ -6,8 +6,11 @@ import SectionWrapper from '../components/common/SectionWrapper.jsx'
 import { Shield, FileCheck, Award, BadgeCheck, Building2, ClipboardCheck, Loader, Sparkles, Crown } from 'lucide-react'
 import { getDisclosures } from '../services/api.js'
 import { toast } from 'react-toastify'
+import { useWebsiteContent } from '../components/website-editor/useWebsiteContent.js'
 
 const MandatoryDisclosure = () => {
+  const websiteContent = useWebsiteContent()
+
   const [certificates, setCertificates] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -20,7 +23,7 @@ const MandatoryDisclosure = () => {
       const data = await getDisclosures()
       setCertificates(data)
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Failed to load disclosures')
+      toast.error(err.response?.data?.message || websiteContent.value("mandatory.disclosure.fetch-disclosures.text", 'Failed to load disclosures'))
     } finally {
       setLoading(false)
     }
@@ -93,20 +96,17 @@ const MandatoryDisclosure = () => {
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-300 rounded-full translate-y-1/2 -translate-x-1/3" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-              DISCLOSURE
-            </span>
+            <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text", "DISCLOSURE")}</span>
           </div>
           <div className="container-custom relative h-full flex items-center">
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <Shield size={18} className="text-gold-400" />
-                <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Official</span>
+                <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.2", "Official")}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
-                Mandatory <span className="text-gold-400">Disclosure</span>
+              <h1 {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.heading"])} className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.heading", "Mandatory ")}<span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.3"])} className="text-gold-400">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.3", "Disclosure")}</span>
               </h1>
-              <p className="text-white/50 text-sm mt-1">Official Certificates & Documents</p>
+              <p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph"])} className="text-white/50 text-sm mt-1">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph", "Official Certificates & Documents")}</p>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-500/50" />
@@ -135,9 +135,7 @@ const MandatoryDisclosure = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            DISCLOSURE
-          </span>
+          <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.4"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.4", "DISCLOSURE")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -149,26 +147,23 @@ const MandatoryDisclosure = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Shield size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Official</span>
+              <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.5"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.5", "Official")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.heading.2"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Mandatory <span className="text-gold-400">Disclosure</span>
+            >{websiteContent.value("mandatory.disclosure.mandatory-disclosure.heading.2", "Mandatory ")}<span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.6"])} className="text-gold-400">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.6", "Disclosure")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph.2"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Official Certificates & Documents
-            </motion.p>
+            >{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph.2", "Official Certificates & Documents")}</motion.p>
           </div>
         </div>
 
@@ -188,12 +183,9 @@ const MandatoryDisclosure = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Crown size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Official Documents</span>
+              <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.7"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.7", "Official Documents")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures
-              as required by regulatory authorities.
-            </p>
+            <p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph.3"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph.3", "St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures as required by regulatory authorities.")}</p>
           </motion.div>
         </div>
       </section>
@@ -204,16 +196,12 @@ const MandatoryDisclosure = () => {
           <SectionWrapper className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-maroon-100/50 border border-maroon-200/50 rounded-full mb-4">
               <Shield size={14} className="text-maroon-600" />
-              <span className="text-xs font-semibold text-maroon-600 tracking-wider uppercase">Official Documents</span>
+              <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.8"])} className="text-xs font-semibold text-maroon-600 tracking-wider uppercase">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.8", "Official Documents")}</span>
             </div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-maroon-900">
-              Certificates & <span className="text-gold-600">Disclosures</span>
+            <h2 {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.heading.3"])} className="font-display text-3xl md:text-4xl font-bold text-maroon-900">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.heading.3", "Certificates & ")}<span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.9"])} className="text-gold-600">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.9", "Disclosures")}</span>
             </h2>
             <div className="w-16 h-[3px] bg-gold-400 mx-auto mt-4 rounded-full" />
-            <p className="text-gray-600 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-              St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures
-              as required by regulatory authorities.
-            </p>
+            <p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph.4"])} className="text-gray-600 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph.4", "St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures as required by regulatory authorities.")}</p>
           </SectionWrapper>
 
           {certificates.length === 0 ? (
@@ -225,8 +213,8 @@ const MandatoryDisclosure = () => {
                 className="text-center py-16 bg-white rounded-2xl shadow-lg"
               >
                 <Shield size={48} className="mx-auto text-gray-300 mb-4" />
-                <h3 className="text-lg font-medium text-gray-600">No disclosures found</h3>
-                <p className="text-gray-400 text-sm mt-1">No certificates or disclosures have been uploaded yet.</p>
+                <h3 {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.heading.4"])} className="text-lg font-medium text-gray-600">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.heading.4", "No disclosures found")}</h3>
+                <p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph.5"])} className="text-gray-400 text-sm mt-1">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph.5", "No certificates or disclosures have been uploaded yet.")}</p>
               </motion.div>
             </SectionWrapper>
           ) : (
@@ -249,41 +237,38 @@ const MandatoryDisclosure = () => {
                       {getIconForTitle(cert.title)}
                     </div>
                     
-                    <h3 className="font-display font-bold text-lg text-maroon-900 mb-2 group-hover:text-gold-700 transition-colors duration-300">
+                    <h3 {...websiteContent.propsFor(cert.title)} className="font-display font-bold text-lg text-maroon-900 mb-2 group-hover:text-gold-700 transition-colors duration-300">
                       {cert.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p {...websiteContent.propsFor(cert.description)} className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                       {cert.description}
                     </p>
                     
                     {/* Status Badge */}
                     <div className="mt-4 flex items-center gap-2">
-                      <span className={`inline-flex items-center gap-1.5 px-3 py-1 border rounded-full text-xs font-semibold ${getStatusBadgeColor(cert.status)}`}>
+                      <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.10"])} className={`inline-flex items-center gap-1.5 px-3 py-1 border rounded-full text-xs font-semibold ${getStatusBadgeColor(cert.status)}`}>
                         <span className={`w-1.5 h-1.5 ${getStatusDotColor(cert.status)} rounded-full animate-pulse`} />
-                        {cert.status || 'Valid'}
+                        {cert.status || websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.10", 'Valid')}
                       </span>
-                      <span className="text-xs text-gray-400">✓ Verified</span>
+                      <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.11"])} className="text-xs text-gray-400">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.11", "✓ Verified")}</span>
                     </div>
 
                     {/* File Download */}
                     {cert.fileUrl && (
                       <div className="mt-3 pt-3 border-t border-gray-100 group-hover:border-gold-200 transition-colors duration-300">
-                        <a
+                        <a {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.12"])}
                           href={`${process.env.NEXT_PUBLIC_API_URL || '/api'}${cert.fileUrl}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 text-xs font-medium text-maroon-700 hover:text-gold-600 transition-colors"
                         >
-                          <FileCheck size={14} />
-                          View Document
-                        </a>
+                          <FileCheck size={14} />{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.12", "View Document")}</a>
                       </div>
                     )}
 
                     {/* Expiry Date */}
                     {cert.expiryDate && (
-                      <div className="mt-2 text-xs text-gray-400">
-                        Expires: {new Date(cert.expiryDate).toLocaleDateString('en-IN', {
+                      <div {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.13"])} className="mt-2 text-xs text-gray-400">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.13", "Expires: ")}{new Date(cert.expiryDate).toLocaleDateString('en-IN', {
                           day: '2-digit',
                           month: 'short',
                           year: 'numeric'
@@ -312,22 +297,19 @@ const MandatoryDisclosure = () => {
             >
               <div className="flex items-center justify-center gap-2 mb-3">
                 <Sparkles size={16} className="text-gold-500" />
-                <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Verified & Authentic</span>
+                <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.14"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.14", "Verified & Authentic")}</span>
                 <Sparkles size={16} className="text-gold-500" />
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                <span className="font-semibold text-maroon-800">Note:</span> All certificates are valid and maintained 
-                as per the requirements of the education board and government regulations. 
-                For any queries, please contact the school administration.
-              </p>
+              <p {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.paragraph.6"])} className="text-gray-600 text-sm leading-relaxed">
+                <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.15"])} className="font-semibold text-maroon-800">{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.15", "Note:")}</span>{websiteContent.value("mandatory.disclosure.mandatory-disclosure.paragraph.6", " All certificates are valid and maintained as per the requirements of the education board and government regulations. For any queries, please contact the school administration.")}</p>
               <div className="flex flex-wrap justify-center gap-4 mt-4 text-xs text-gray-500">
-                <span>📅 Last Updated: {new Date().toLocaleDateString('en-IN', {
+                <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.16"])}>{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.16", "📅 Last Updated: ")}{new Date().toLocaleDateString('en-IN', {
                   day: '2-digit',
                   month: 'short',
                   year: 'numeric'
                 })}</span>
                 <span className="hidden sm:inline">|</span>
-                <span>🔒 Verified by: School Administration</span>
+                <span {...websiteContent.props(["mandatory.disclosure.mandatory-disclosure.text.18"])}>{websiteContent.value("mandatory.disclosure.mandatory-disclosure.text.18", "🔒 Verified by: School Administration")}</span>
               </div>
             </motion.div>
           </SectionWrapper>

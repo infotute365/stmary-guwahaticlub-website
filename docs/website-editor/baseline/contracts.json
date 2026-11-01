@@ -1,0 +1,681 @@
+{
+  "note": "Exact routeFor dispatch, including permissive fallthrough methods on reserved-name paths. Canonical CRUD URLs use :id; do not infer additional public pages.",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "handler": "handler",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "handler": "login",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "handler": "logout",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/session",
+      "handler": "getSession",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh-token",
+      "handler": "refreshToken",
+      "authenticated": false,
+      "refresh": true,
+      "params": {}
+    },
+    {
+      "method": "PUT",
+      "path": "/api/auth/change-password",
+      "handler": "changePassword",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/circulars",
+      "handler": "getCirculars",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/circulars",
+      "handler": "createCircular",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/circulars/:id",
+      "handler": "getCircularById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/circulars/:id",
+      "handler": "updateCircular",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/circulars/:id",
+      "handler": "deleteCircular",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/staff",
+      "handler": "getStaff",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/staff",
+      "handler": "createStaff",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/staff/:id",
+      "handler": "getStaffById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/staff/:id",
+      "handler": "updateStaff",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/staff/:id",
+      "handler": "deleteStaff",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/gallery",
+      "handler": "getEvents",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/gallery",
+      "handler": "createEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/gallery/:id",
+      "handler": "getEventById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/gallery/:id",
+      "handler": "updateEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/gallery/:id",
+      "handler": "deleteEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/gallery/slug/:slug",
+      "handler": "getEventBySlug",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "slug": ":slug"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/gallery/slug/:slug",
+      "handler": "updateEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "slug"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/gallery/slug/:slug",
+      "handler": "deleteEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "slug"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/gallery/:id/images",
+      "handler": "getEventById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/gallery/:id/images",
+      "handler": "addImagesToEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/gallery/:id/images",
+      "handler": "updateEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/gallery/:id/images",
+      "handler": "deleteEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/gallery/:eventId/images/:imageId",
+      "handler": "getEventById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":eventId"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/gallery/:eventId/images/:imageId",
+      "handler": "addImagesToEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":eventId"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/gallery/:eventId/images/:imageId",
+      "handler": "updateImageTitle",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "eventId": ":eventId",
+        "imageId": ":imageId"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/gallery/:eventId/images/:imageId",
+      "handler": "deleteImageFromEvent",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "eventId": ":eventId",
+        "imageId": ":imageId"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/syllabus",
+      "handler": "getSyllabus",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/syllabus",
+      "handler": "createSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "GET",
+      "path": "/api/syllabus/:id",
+      "handler": "getSyllabusById",
+      "authenticated": false,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/syllabus/:id",
+      "handler": "updateSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/syllabus/:id",
+      "handler": "deleteSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": ":id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/syllabus/academic-years",
+      "handler": "getAcademicYears",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "PUT",
+      "path": "/api/syllabus/academic-years",
+      "handler": "updateSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "academic-years"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/syllabus/academic-years",
+      "handler": "deleteSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "academic-years"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/syllabus/classes",
+      "handler": "getClasses",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "PUT",
+      "path": "/api/syllabus/classes",
+      "handler": "updateSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "classes"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/syllabus/classes",
+      "handler": "deleteSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "classes"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/syllabus/streams",
+      "handler": "getStreams",
+      "authenticated": false,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "PUT",
+      "path": "/api/syllabus/streams",
+      "handler": "updateSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "streams"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/syllabus/streams",
+      "handler": "deleteSyllabus",
+      "authenticated": true,
+      "refresh": false,
+      "params": {
+        "id": "streams"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/upload/image",
+      "handler": "uploadImage",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/upload/images",
+      "handler": "uploadMultipleImages",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/upload/pdf",
+      "handler": "uploadPDF",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/upload/file",
+      "handler": "deleteFile",
+      "authenticated": true,
+      "refresh": false,
+      "params": {}
+    }
+  ],
+  "mediaRoutes": [
+    "/uploads/[...path]",
+    "/api/uploads/[...path]"
+  ],
+  "bankLinks": [
+    "https://epay.federalbank.co.in/easypayments/DIRECTPAYMENT.ASPX?CODE=DABB4QLY4Q1O4",
+    "https://eacademia.southindianbank.bank.in/feeuser/org?id=3037",
+    "https://maps.google.com"
+  ],
+  "protectedFiles": [
+    {
+      "path": "deploy/ecosystem.config.cjs",
+      "sha256": "50ff553eb3e6bdb539f0a2eee2f4b23d178a84786a577622d8eaecdf5825d3e3",
+      "bytes": 744
+    },
+    {
+      "path": "deploy/nginx-proxy.conf.example",
+      "sha256": "f0a5b11b1dfb1af8103366545bca1b0d750eb9bbf4d63515942f08ddb14bd742",
+      "bytes": 509
+    },
+    {
+      "path": "deploy/nginx.conf.example",
+      "sha256": "a12d0f2bc4f65d86db23451750572210f301d5cf2d153e1bf4942ccca3781149",
+      "bytes": 1823
+    },
+    {
+      "path": "next.config.mjs",
+      "sha256": "c5355fc2611ed34bae5eed6f439eed1f315133e4fe918462a55067a5fbd304da",
+      "bytes": 642
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "2c81831a8dda97e25ff7707d95adc42105f091d7e7f6232227a52d90272891aa",
+      "bytes": 86682
+    },
+    {
+      "path": "package.json",
+      "sha256": "ca371f480b752300a662c6f4a78ab552bebf6b809de0f571a695dd98f67fe644",
+      "bytes": 1156
+    },
+    {
+      "path": "scripts/production-smoke.mjs",
+      "sha256": "13fc9a9859b513a8958be93b18d716ecc497362a86c50b6ee17d672b91430394",
+      "bytes": 8288
+    },
+    {
+      "path": "scripts/seed-admin.mjs",
+      "sha256": "7993ea1340464e5c0d72f7c7cd040595af58d21371988dc7ec2a5f070b2d766c",
+      "bytes": 2905
+    },
+    {
+      "path": "scripts/start.mjs",
+      "sha256": "eb71084609e0423161bd890742a0cdef85235b8dc0f1a1de85a139062f5ef567",
+      "bytes": 1096
+    },
+    {
+      "path": "scripts/verify-preservation.mjs",
+      "sha256": "789cd437ad7b43d3ea73018306f0e711d963bae332ac655ec6bb8ab75f644200",
+      "bytes": 1644
+    },
+    {
+      "path": "src/server/config/auth.js",
+      "sha256": "75c8bbd3e8291e59c49865bb34a99d73d349d0038bd8133f2c396a1629dabbbd",
+      "bytes": 2388
+    },
+    {
+      "path": "src/server/config/database.js",
+      "sha256": "83144d23f96f09ea56f956865dd548e84a87bb033fba522786395189b7fe1422",
+      "bytes": 1866
+    },
+    {
+      "path": "src/server/config/localStorage.js",
+      "sha256": "11a1939f98f8ca2f1f17a844f283d44a29a0ab289e44f5019e750f20fe48e08b",
+      "bytes": 3839
+    },
+    {
+      "path": "src/server/controller/auth.controller.js",
+      "sha256": "d0f745592a249edb0a97f871c4dce06e4e3f1d9e229329e5374cc2c67631f0d3",
+      "bytes": 5323
+    },
+    {
+      "path": "src/server/controller/circular.controller.js",
+      "sha256": "0792a91705d2e69b80d2a32a75dc7651d4d7212a57ee6d7b0874ddad2a6118bc",
+      "bytes": 9170
+    },
+    {
+      "path": "src/server/controller/gallery.controller.js",
+      "sha256": "f54162ea0468d7d0b7b7f4c0706869d7051cb6d68fbba3577b44a60dd863e571",
+      "bytes": 20432
+    },
+    {
+      "path": "src/server/controller/staff.controller.js",
+      "sha256": "434d3297e02f80757999bcfe1949ed3cd3ed084c6e129b65517bf64c498f0934",
+      "bytes": 13323
+    },
+    {
+      "path": "src/server/controller/syllabus.controller.js",
+      "sha256": "a7138097ad59a7c63992ed020a922c27c8901abd04521667179d9e4e6234f0c3",
+      "bytes": 13747
+    },
+    {
+      "path": "src/server/controller/upload.controller.js",
+      "sha256": "7147fec6bf0002c7303dde73858b0c2aa622a2e93c85f2387ca443edbf9d5099",
+      "bytes": 6094
+    },
+    {
+      "path": "src/server/middleware/auth.middleware.js",
+      "sha256": "43e8614ac1cff10bfbf5df2c2d812fa12ac2b2ce5132cd2a2db6ceaa23b1d58c",
+      "bytes": 429
+    },
+    {
+      "path": "src/server/middleware/refresh.middleware.js",
+      "sha256": "e4a95e5a69b950823ffad37514bfa58010b157e3000ba1fb8c0895327930e1a9",
+      "bytes": 1453
+    },
+    {
+      "path": "src/server/model/auth.model.js",
+      "sha256": "ae74450628a5e59525bb7c1c0361fd38631e7bf2410faf35a065df48ce86b479",
+      "bytes": 1496
+    },
+    {
+      "path": "src/server/model/circular.model.js",
+      "sha256": "66f8ac7ede62ed2989db64225e66a5bc51a4185a7ae22a041a986e639c1702e3",
+      "bytes": 791
+    },
+    {
+      "path": "src/server/model/gallery.model.js",
+      "sha256": "af73d65de706e54bf589a791315dd6ee9fabf3a0116a44bc2685edea25f5f557",
+      "bytes": 1326
+    },
+    {
+      "path": "src/server/model/staff.model.js",
+      "sha256": "c98e1f761bee47a8a7a83ded08b510f0f1cabb51c24ae7189341b95b34b5abd5",
+      "bytes": 1555
+    },
+    {
+      "path": "src/server/model/syllabus.model.js",
+      "sha256": "e6e977f9cccf22d89e6e1380a89f4bd6eed79b7d8bf36f679bd8ea90428c7f0a",
+      "bytes": 1057
+    },
+    {
+      "path": "src/server/route-adapter.js",
+      "sha256": "981e776aff34751c157250922a8fd377233fe6b1bc5a8479ecab7960b37bc079",
+      "bytes": 12158
+    },
+    {
+      "path": "src/server/route-path.js",
+      "sha256": "cf54dc1dc7607ff02ebf481d60d6fd83123ea30cd7d3eaecde5de034b8fd6187",
+      "bytes": 463
+    },
+    {
+      "path": "src/server/util/error.js",
+      "sha256": "3b8c9cdd6804999cb65b48c32c871d8a43f8d33c0824c7e322afc5195350ca81",
+      "bytes": 543
+    },
+    {
+      "path": "src/server/util/imageProcessor.js",
+      "sha256": "3bd9e9cb4e367ce1b0680553bae098b3b92b4ac054f51e9c539c213052671520",
+      "bytes": 1726
+    },
+    {
+      "path": "src/server/util/provisionAdmin.js",
+      "sha256": "212d1cb33e35cbab485d32f311fc0eff6168c395a2b78d11f2d642e481195673",
+      "bytes": 1713
+    },
+    {
+      "path": "src/server/util/requestSecurity.js",
+      "sha256": "97bdd1a8cfb49a9d74c7bfc687d8654506b8734ceb40bd108d6c33e1b6adcaa6",
+      "bytes": 3851
+    },
+    {
+      "path": "src/server/util/serveUpload.js",
+      "sha256": "49979c684ae1a5043d65ddc74cbf0cacb55a5f9c5ccc95d7346ce4d548a0f544",
+      "bytes": 1583
+    },
+    {
+      "path": "src/server/util/validation.mjs",
+      "sha256": "d8c90cc8fe957d77d3541e997b97144f0eda7c654b730ae308b0c7848f5e51dc",
+      "bytes": 3269
+    },
+    {
+      "path": "src/services/api.js",
+      "sha256": "f1557aae616a30d7205cdf5cebc156530285406b20ed7e8817d810b1af2e70e5",
+      "bytes": 12349
+    },
+    {
+      "path": "tests/auth-security.test.js",
+      "sha256": "00e8c896c98d80f6c7f1899b068f07f4c80cb58cd36bd6a12d7bdf2017ac2675",
+      "bytes": 1613
+    },
+    {
+      "path": "tests/backend-security.test.js",
+      "sha256": "703c0aa9b5f71a22d89709655ac03265c61fe77c4df0cb5e459ee71e04ea1fde",
+      "bytes": 7020
+    },
+    {
+      "path": "tests/database.test.js",
+      "sha256": "94fb07742bb7409acf1702222a838f17ebdc00b88a701a96292104e968b27e8c",
+      "bytes": 2416
+    },
+    {
+      "path": "tests/frontend-auth.test.js",
+      "sha256": "d302dbb6203e517d994d56e19d976edd9d65753df0edb8aea666709d0fbbe817",
+      "bytes": 1478
+    },
+    {
+      "path": "tests/integration.test.js",
+      "sha256": "72d464a490d5584c722c870a5587ce3e4311bcd11bda5bb3c9a87916b14121f8",
+      "bytes": 14868
+    },
+    {
+      "path": "tests/seed-cli.test.js",
+      "sha256": "8481b247655092d5a7b1d635b8187d982964cf285099a435b1824a585bfebb64",
+      "bytes": 2133
+    }
+  ]
+}

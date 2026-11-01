@@ -1,11 +1,19 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { Bell, Calendar, Clock, Download, ChevronRight, X, FileText } from 'lucide-react'
 import { getCirculars, getFileUrl } from '../../services/api.js'
 import { formatDate } from '../../utils/helpers.js'
+import { useManagedRecord } from '../website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
 const CircularsPanel = () => {
+  const websiteContent = useWebsiteContent()
+  const dialogRef = useRef(null)
+  const openerRef = useRef(null)
+
+  const recordProps = useManagedRecord('circulars')
   const [circulars, setCirculars] = useState([])
   const [loading, setLoading] = useState(true)
   const [selectedCircular, setSelectedCircular] = useState(null)
@@ -32,20 +40,20 @@ const CircularsPanel = () => {
     element.innerHTML = `
       <div style="font-family: Arial, sans-serif; padding: 40px; max-width: 800px; margin: 0 auto; background: white;">
         <div style="text-align: center; border-bottom: 3px solid #7A0C1E; padding-bottom: 20px; margin-bottom: 20px;">
-          <h1 style="color: #7A0C1E; font-size: 28px; margin: 0;">St. Mary's Higher Secondary School</h1>
-          <p style="color: #666; margin: 5px 0;">M.C.Road, Chenikuthi, Guwahati - 781003</p>
-          <p style="color: #D9A441; font-weight: bold; margin: 5px 0;">NOTICE</p>
+          <h1 style="color: #7A0C1E; font-size: 28px; margin: 0;">${websiteContent.html("home.circulars-panel.notice-print.text1", "St. Mary's Higher Secondary School")}</h1>
+          <p style="color: #666; margin: 5px 0;">${websiteContent.html("home.circulars-panel.notice-print.text2", "M.C.Road, Chenikuthi, Guwahati - 781003")}</p>
+          <p style="color: #D9A441; font-weight: bold; margin: 5px 0;">${websiteContent.html("home.circulars-panel.notice-print.text3", "NOTICE")}</p>
         </div>
         <div style="margin-bottom: 20px;">
           <h2 style="color: #7A0C1E; font-size: 22px;">${circular.title}</h2>
-          <p style="color: #666; font-size: 14px;">Date: ${formatDate(circular.date)} | Time: ${circular.time || '10:00 AM'}</p>
+          <p style="color: #666; font-size: 14px;">${websiteContent.html("home.circulars-panel.notice-print.text4", "Date: ")}${formatDate(circular.date)}${websiteContent.html("home.circulars-panel.notice-print.text5", " | Time: ")}${circular.time || '10:00 AM'}</p>
         </div>
         <div style="line-height: 1.8; color: #333; font-size: 16px;">
           ${circular.content}
         </div>
         <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee; text-align: center; color: #999; font-size: 12px;">
-          <p>This is a system-generated notice from St. Mary's Higher Secondary School</p>
-          <p>Generated on: ${new Date().toLocaleDateString()}</p>
+          <p>${websiteContent.html("home.circulars-panel.notice-print.text6", "This is a system-generated notice from St. Mary's Higher Secondary School")}</p>
+          <p>${websiteContent.html("home.circulars-panel.notice-print.text7", "Generated on: ")}${new Date().toLocaleDateString()}</p>
         </div>
       </div>
     `
@@ -76,35 +84,44 @@ const CircularsPanel = () => {
   }
 
   const openModal = (circular) => {
+    openerRef.current = document.activeElement
     setSelectedCircular(circular)
     setIsModalOpen(true)
-    document.body.style.overflow = 'hidden'
   }
 
   const closeModal = () => {
     setIsModalOpen(false)
-    document.body.style.overflow = 'auto'
     setTimeout(() => setSelectedCircular(null), 300)
   }
 
   useEffect(() => {
+    if (!isModalOpen) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    dialogRef.current?.focus()
     const handleEsc = (e) => {
-      if (e.key === 'Escape') closeModal()
+      if (e.target.closest?.('[data-website-editor-ui]')) return
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return }
+      if (e.key !== 'Tab') return
+      const controls = [...dialogRef.current.querySelectorAll('button,a[href]')].filter(node=>node.getClientRects().length)
+      const first = controls[0], last = controls.at(-1)
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === dialogRef.current)) { e.preventDefault(); last?.focus() }
+      else if (!e.shiftKey && (document.activeElement === last || document.activeElement === dialogRef.current)) { e.preventDefault(); first?.focus() }
     }
     window.addEventListener('keydown', handleEsc)
-    return () => window.removeEventListener('keydown', handleEsc)
-  }, [])
+    return () => { window.removeEventListener('keydown', handleEsc); document.body.style.overflow = previous; openerRef.current?.focus() }
+  }, [isModalOpen])
 
   if (loading) {
     return (
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-        <div className="bg-maroon-800 p-4 flex items-center gap-3">
+      <div className="school-notice-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+        <div className="school-notice-header bg-maroon-800 p-4 flex items-center gap-3">
           <div className="bg-white/20 p-2 rounded-lg">
             <Bell size={20} className="text-white" />
           </div>
-          <h3 className="text-white font-serif font-semibold text-lg">Latest Notices</h3>
+          <h3 {...websiteContent.props(["home.circulars-panel.circulars-panel.heading"])} className="text-white font-serif font-semibold text-lg">{websiteContent.value("home.circulars-panel.circulars-panel.heading", "Latest Notices")}</h3>
         </div>
-        <div className="p-4 space-y-3">
+        <div className="school-notice-skeleton p-4 space-y-3">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="animate-pulse">
               <div className="h-16 bg-gray-100 rounded-lg"></div>
@@ -117,30 +134,34 @@ const CircularsPanel = () => {
 
   return (
     <>
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 h-full">
+      <div className="school-notice-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 h-full">
         {/* Header - Solid Maroon (No Gradient) */}
-        <div className="bg-maroon-800 p-4 flex items-center gap-3">
+        <div className="school-notice-header bg-maroon-800 p-4 flex items-center gap-3">
           <div className="bg-white/20 p-2 rounded-lg">
             <Bell size={20} className="text-white" />
           </div>
-          <h3 className="text-white font-serif font-semibold text-lg flex-1">Latest Notices</h3>
-          <span className="bg-gold-400 text-maroon-900 text-xs font-bold px-3 py-1 rounded-full">
-            {circulars.length} New
-          </span>
+          <h3 {...websiteContent.props(["home.circulars-panel.circulars-panel.heading.2"])} className="text-white font-serif font-semibold text-lg flex-1">{websiteContent.value("home.circulars-panel.circulars-panel.heading.2", "Latest Notices")}</h3>
+          <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text"])} className="bg-gold-400 text-maroon-900 text-xs font-bold px-3 py-1 rounded-full">
+            {circulars.length}{websiteContent.value("home.circulars-panel.circulars-panel.text", " New")}</span>
         </div>
 
         {/* Circulars List */}
-        <div className="divide-y divide-gray-100 max-h-[420px] overflow-y-auto scrollbar-thin">
+        <div className="school-notice-list divide-y divide-gray-100 max-h-[420px] overflow-y-auto scrollbar-thin">
           {circulars.length === 0 ? (
-            <div className="p-8 text-center">
+            <div className="school-notice-empty p-8 text-center">
               <Bell size={32} className="mx-auto text-gray-300 mb-2" />
-              <p className="text-gray-400 text-sm">No notices available</p>
+              <p {...websiteContent.props(["home.circulars-panel.circulars-panel.paragraph"])} className="text-gray-400 text-sm">{websiteContent.value("home.circulars-panel.circulars-panel.paragraph", "No notices available")}</p>
             </div>
           ) : (
             circulars.map((circular) => (
               <div
+                {...recordProps(circular._id, circular.title)}
                 key={circular._id}
                 className="p-4 hover:bg-gray-50/80 transition-all duration-200 cursor-pointer group border-l-4 border-transparent hover:border-gold-400"
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(circular)}}}
                 onClick={() => openModal(circular)}
               >
                 <div className="flex items-start gap-3">
@@ -150,10 +171,10 @@ const CircularsPanel = () => {
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-semibold text-gray-800 group-hover:text-maroon-800 transition-colors duration-200 line-clamp-1">
+                    <h4 {...websiteContent.propsFor(circular.title)} className="text-sm font-semibold text-gray-800 group-hover:text-maroon-800 transition-colors duration-200 line-clamp-1">
                       {circular.title}
                     </h4>
-                    <p className="text-xs text-gray-500 mt-0.5 line-clamp-2 group-hover:text-gray-600 transition-colors">
+                    <p {...websiteContent.propsFor(circular.content)} className="text-xs text-gray-500 mt-0.5 line-clamp-2 group-hover:text-gray-600 transition-colors">
                       {circular.content}
                     </p>
                     <div className="flex items-center gap-3 mt-1.5 text-xs text-gray-400">
@@ -161,9 +182,9 @@ const CircularsPanel = () => {
                         <Calendar size={12} className="text-gold-500" />
                         {formatDate(circular.date)}
                       </span>
-                      <span className="flex items-center gap-1">
+                      <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text.2"])} className="flex items-center gap-1">
                         <Clock size={12} className="text-gold-500" />
-                        {circular.time || '10:00 AM'}
+                        {circular.time || websiteContent.value("home.circulars-panel.circulars-panel.text.2", '10:00 AM')}
                       </span>
                     </div>
                   </div>
@@ -177,25 +198,30 @@ const CircularsPanel = () => {
         </div>
 
         {/* Footer */}
-        <div className="p-3 bg-gray-50/80 border-t border-gray-100 text-center">
-          <a
-            href="#"
+        <div className="school-notice-footer p-3 bg-gray-50/80 border-t border-gray-100 text-center">
+          <a {...websiteContent.props(["home.circulars-panel.circulars-panel.href"])}
+            href={websiteContent.value("home.circulars-panel.circulars-panel.href", "#")}
             className="inline-flex items-center gap-2 text-sm font-medium text-maroon-700 hover:text-maroon-900 transition-colors group"
           >
-            <span>View All Notices</span>
+            <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text.3"])}>{websiteContent.value("home.circulars-panel.circulars-panel.text.3", "View All Notices")}</span>
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>
 
       {/* ===== MODAL ===== */}
-      {isModalOpen && selectedCircular && (
+      {isModalOpen && selectedCircular && createPortal(
         <div 
-          className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+          className="school-notice-modal fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
           onClick={closeModal}
         >
           <div 
-            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-slide-up"
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="school-notice-title"
+            tabIndex={-1}
+            className="school-notice-dialog bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-slide-up"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header - Solid Maroon (No Gradient) */}
@@ -205,7 +231,7 @@ const CircularsPanel = () => {
                   <FileText size={20} className="text-gold-400" />
                 </div>
                 <div>
-                  <h2 className="text-white font-serif font-bold text-xl leading-tight">
+                  <h2 id="school-notice-title" {...websiteContent.propsFor(selectedCircular.title)} className="text-white font-serif font-bold text-xl leading-tight">
                     {selectedCircular.title}
                   </h2>
                   <div className="flex items-center gap-3 mt-1 text-xs text-gold-300/80">
@@ -213,14 +239,15 @@ const CircularsPanel = () => {
                       <Calendar size={13} />
                       {formatDate(selectedCircular.date)}
                     </span>
-                    <span className="flex items-center gap-1">
+                    <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text.4"])} className="flex items-center gap-1">
                       <Clock size={13} />
-                      {selectedCircular.time || '10:00 AM'}
+                      {selectedCircular.time || websiteContent.value("home.circulars-panel.circulars-panel.text.4", '10:00 AM')}
                     </span>
                   </div>
                 </div>
               </div>
               <button
+                aria-label="Close"
                 onClick={closeModal}
                 className="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all duration-200"
               >
@@ -230,7 +257,7 @@ const CircularsPanel = () => {
 
             {/* Modal Body */}
             <div className="p-6 overflow-y-auto max-h-[60vh]">
-              <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+              <div {...websiteContent.propsFor(selectedCircular.content)} className="text-gray-700 leading-relaxed whitespace-pre-wrap">
                 {selectedCircular.content}
               </div>
               <div className="my-5 border-t border-gray-100" />
@@ -238,46 +265,39 @@ const CircularsPanel = () => {
                 <div className="flex items-center gap-4">
                   <span className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                    <span>Published</span>
+                    <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text.5"])}>{websiteContent.value("home.circulars-panel.circulars-panel.text.5", "Published")}</span>
                   </span>
                   {selectedCircular.createdAt && (
-                    <span>
-                      Posted: {formatDate(selectedCircular.createdAt)}
+                    <span {...websiteContent.props(["home.circulars-panel.circulars-panel.text.6"])}>{websiteContent.value("home.circulars-panel.circulars-panel.text.6", "Posted: ")}{formatDate(selectedCircular.createdAt)}
                     </span>
                   )}
                 </div>
                 {selectedCircular.fileUrl && (
-                  <a
+                  <a {...websiteContent.props(["home.circulars-panel.circulars-panel.text.7"])}
                     href={getFileUrl(selectedCircular.fileUrl)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-maroon-700 hover:text-maroon-900 font-medium transition-colors"
                   >
-                    <Download size={14} />
-                    Download PDF
-                  </a>
+                    <Download size={14} />{websiteContent.value("home.circulars-panel.circulars-panel.text.7", "Download PDF")}</a>
                 )}
               </div>
             </div>
 
             {/* Modal Footer */}
             <div className="px-6 py-4 bg-gray-50/80 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
-              <button
+              <button {...websiteContent.props(["home.circulars-panel.circulars-panel.button-label"])}
                 onClick={() => downloadPDF(selectedCircular)}
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-maroon-800 hover:bg-maroon-700 text-white rounded-lg font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg"
               >
-                <Download size={16} />
-                Download Notice
-              </button>
-              <button
+                <Download size={16} />{websiteContent.value("home.circulars-panel.circulars-panel.button-label", "Download Notice")}</button>
+              <button {...websiteContent.props(["home.circulars-panel.circulars-panel.button-label.2"])}
                 onClick={closeModal}
                 className="px-5 py-2.5 border border-gray-200 hover:bg-gray-50 rounded-lg text-gray-600 text-sm font-medium transition-colors duration-200"
-              >
-                Close
-              </button>
+              >{websiteContent.value("home.circulars-panel.circulars-panel.button-label.2", "Close")}</button>
             </div>
           </div>
-        </div>
+        </div>, document.body
       )}
 
       <style>{`

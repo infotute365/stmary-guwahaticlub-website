@@ -1,0 +1,5637 @@
+{
+  "files": [
+    {
+      "path": "app/globals.css",
+      "sha256": "47e0d41a5d41243987aef9483b95a66db5001b2d0f5060748027c8484bfa9a92"
+    },
+    {
+      "path": "app/layout.jsx",
+      "sha256": "8179fad6262d4163a4f15c1641f361e22549ab86247c5a8deee482c36f8df272",
+      "content": []
+    },
+    {
+      "path": "app/not-found.jsx",
+      "sha256": "24d39ed9024b001d4d2d73a8c20caec16867553821e57ec2ebc1192a2dd3e468",
+      "content": []
+    },
+    {
+      "path": "app/(site)/layout.jsx",
+      "sha256": "a20efc37228fd0d40e59d2554e23334137fd1e0251cab5028ccd55b00383add9",
+      "content": []
+    },
+    {
+      "path": "app/(site)/page.jsx",
+      "sha256": "39f630ad78b8f4e7fd89c96db7b6bcc49761c38596787ed71dd8de7b151230fe",
+      "content": []
+    },
+    {
+      "path": "app/admin/layout.jsx",
+      "sha256": "3c51fd9001993630721356eb76853fc38d40637cbe52023cd370261124b7793d",
+      "content": []
+    },
+    {
+      "path": "app/admin/page.jsx",
+      "sha256": "35dad280372a275ddd031deccf871b0695b41b078b41a1192ea65561b238877a",
+      "content": []
+    },
+    {
+      "path": "app/login/page.jsx",
+      "sha256": "7c79d86e4b09863bc9edff37c14f4c175c611d6df437e98ec19ef25baa82831a",
+      "content": []
+    },
+    {
+      "path": "app/(site)/admissions/page.jsx",
+      "sha256": "1f28a0957470b9f14bc2400af10bb2dc300e2ce12ee8d1d50ec9aead7615ceb0",
+      "content": []
+    },
+    {
+      "path": "app/(site)/contact/page.jsx",
+      "sha256": "3762722f8a42837e9dca24a1be728c7b06b71921ceae7576e2ccb45b58c70504",
+      "content": []
+    },
+    {
+      "path": "app/(site)/gallery/page.jsx",
+      "sha256": "946c473a5bb0c39162fc8c8c8d55380f8f6b89030a19f0f880ad4a23b2e2377c",
+      "content": []
+    },
+    {
+      "path": "app/(site)/infrastructure/page.jsx",
+      "sha256": "446977cc774079cf69015f12651a18acd8a7caf232eda21985feaa12eb0a28b1",
+      "content": []
+    },
+    {
+      "path": "app/(site)/mandatory-disclosure/page.jsx",
+      "sha256": "2e80df4f2f504a7ac1be6e8b181b6749e6aceb9b932d8914c8495e8b623db740",
+      "content": []
+    },
+    {
+      "path": "app/(site)/past-pupils/page.jsx",
+      "sha256": "f48d0dacb3f85d93d050e2e6eee6d47248ed5273cf163b795ff7e54b9fb571df",
+      "content": []
+    },
+    {
+      "path": "app/(site)/student-rules/page.jsx",
+      "sha256": "5850cac8599c05c1c8af866daa864b7f3949ca7d553d42c6343688d86df15e34",
+      "content": []
+    },
+    {
+      "path": "app/admin/circulars/page.jsx",
+      "sha256": "74b8b5fb983308257094d7757fdc9faa28ffb0ea63f9ebdc1e1f0fe23bcf9e3c",
+      "content": []
+    },
+    {
+      "path": "app/admin/dashboard/page.jsx",
+      "sha256": "7ca812f9a7f35adf348ed9a2f46f79f0d391619ae483111084c5bbef97a54cc9",
+      "content": []
+    },
+    {
+      "path": "app/admin/disclosure/page.jsx",
+      "sha256": "3dff7a9a5e458cb6e21d305d78c8777fd6da7f511dec98f84b5507d0045ffe58",
+      "content": []
+    },
+    {
+      "path": "app/admin/gallery/page.jsx",
+      "sha256": "8002240137b446da06c9777bb306a04ed6052aedb3fc11500c1112abc769bfc4",
+      "content": []
+    },
+    {
+      "path": "app/admin/staff/page.jsx",
+      "sha256": "f4b5a8683c5474acae57af202f718874bc99813bf09b3c209ead03cd1e1a109d",
+      "content": []
+    },
+    {
+      "path": "app/admin/syllabus/page.jsx",
+      "sha256": "34b8ce69822c92d42cba0e7be86d210e5d238e223bfee31f4ab3b20e25fb0e52",
+      "content": []
+    },
+    {
+      "path": "app/api/[...path]/route.js",
+      "sha256": "aaa442eed6a83f7b1104781856d9d9a60cf7040c2ff00e3431a6cb81b6135382"
+    },
+    {
+      "path": "app/uploads/[...path]/route.js",
+      "sha256": "9b042f7ccba71ba99b8e8f95ba01618fbe2cdd7e622ac95687c3f6ee4a59cf93"
+    },
+    {
+      "path": "app/(site)/about/founders/page.jsx",
+      "sha256": "87b3a9470ac0bbffceb4678667cee86a73a33389a39329d299723e438a5dfdf1",
+      "content": []
+    },
+    {
+      "path": "app/(site)/about/journey/page.jsx",
+      "sha256": "01f2090026ebbdea4875fe4e821f9b57cdea17809f73a811c5fe46c8215707d2",
+      "content": []
+    },
+    {
+      "path": "app/(site)/about/principal/page.jsx",
+      "sha256": "94b00ac47166266afeecffa63f384695348f12fae7bbe60a9636c114a65c9d18",
+      "content": []
+    },
+    {
+      "path": "app/(site)/about/superiors/page.jsx",
+      "sha256": "522e29a252aeb28ca7bafa220fae99a2c54c83194f9b337d88677224bf5c232b",
+      "content": []
+    },
+    {
+      "path": "app/(site)/academics/evaluation/page.jsx",
+      "sha256": "1da3b4867b32251874614b7f01de5c56df4850bc2deebd4f9d95df76ae940aaf",
+      "content": []
+    },
+    {
+      "path": "app/(site)/academics/syllabus/page.jsx",
+      "sha256": "d4845e4115aa90e9d57d8d9efab8c82f7a99e8f6cbfcb87f0d8f2cbdeb5e5a02",
+      "content": []
+    },
+    {
+      "path": "app/(site)/administration/management/page.jsx",
+      "sha256": "70c7c361eb0724ca9a7693de91a5ecf9369c79c3b1de008c73314dc18e29260d",
+      "content": []
+    },
+    {
+      "path": "app/(site)/administration/non-teaching/page.jsx",
+      "sha256": "c09705e5dd87d0e69d889ffc04e096911ee02bdef4fb988d6b73859d8eff757b",
+      "content": []
+    },
+    {
+      "path": "app/(site)/admissions/inquiry/page.jsx",
+      "sha256": "f70702cb7fa8f92d5f0db0f84fa41b66cf9d6e5cf01deb957bc78a5ce5b2a5fb",
+      "content": []
+    },
+    {
+      "path": "app/(site)/extracurricular/clubs/page.jsx",
+      "sha256": "84d569a5663b0b358a47e46d16961b3b8f80f2361f3c661d0cce2fa5027caf22",
+      "content": []
+    },
+    {
+      "path": "app/(site)/extracurricular/moments/page.jsx",
+      "sha256": "44b5e8f7b6fc3f3d5a012c0539b20fe139f75f48562e48da34e357b3d173ebf4",
+      "content": []
+    },
+    {
+      "path": "app/api/uploads/[...path]/route.js",
+      "sha256": "b0866abe0f469bfab8f57afffd7fbeabe0b308ef5c4b880c6afccc139744db81"
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/high/page.jsx",
+      "sha256": "378478d330eb0ccba253a8c1f7c346451496151b4ea1e4398bd0c71da05fdfce",
+      "content": []
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/higher-secondary/page.jsx",
+      "sha256": "6782c4afaaef37d3c8b7c58981318ca0752833450f1dce8656759d6f61bdc344",
+      "content": []
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/middle/page.jsx",
+      "sha256": "bfe40e8673a86a36916f7d080743489787a221264010d142a0c41356cb6e1687",
+      "content": []
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/primary/page.jsx",
+      "sha256": "99ed7d078e1d36a4bf2ed9556257687e8de132acfba9cdcd538a3fc58affe5b3",
+      "content": []
+    },
+    {
+      "path": "src/assets/hero.png",
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c"
+    },
+    {
+      "path": "src/components/ProtectedRoute.jsx",
+      "sha256": "f7bd2cd5611a24cf052a9825cb2cb174df1f4f364f652baadfc18f721edb19cd",
+      "content": []
+    },
+    {
+      "path": "src/components/Providers.jsx",
+      "sha256": "87573e9448b90b9201008d636b8025bee9979c2d6b462c12b437847f30eebf09",
+      "content": []
+    },
+    {
+      "path": "src/content/website-bindings.js",
+      "sha256": "aca918ac6f2f4f50917ebbfdb0ee00ac304ef095edff1f11e5fcef9f77e64913"
+    },
+    {
+      "path": "src/context/AuthContext.jsx",
+      "sha256": "af21f6c2f69a68f03095d33d0e7995a7f0d51d36ec02edcc2efcbbc5d2348fd8",
+      "content": []
+    },
+    {
+      "path": "src/hooks/useAuth.js",
+      "sha256": "68c403893093f749da0b6bf5165f4adacada5db555fe1113f93eebee4123c33c"
+    },
+    {
+      "path": "src/server/route-adapter.js",
+      "sha256": "8654f6ec1fcacab6aae7a526fa434313776f9a999f1fd6f8a84ad83558f30cdc"
+    },
+    {
+      "path": "src/server/route-path.js",
+      "sha256": "cf54dc1dc7607ff02ebf481d60d6fd83123ea30cd7d3eaecde5de034b8fd6187"
+    },
+    {
+      "path": "src/services/api.js",
+      "sha256": "d001f33f392d111d02f803c3892f60614d94e9a52faf9992e97bb1e7e2e8f1fb"
+    },
+    {
+      "path": "src/site-pages/ContactUs.jsx",
+      "sha256": "948d64cb6c6ae5fd710eb39392e9bfc5d697621e2aeee1f3423db6cd7b3b4bf3",
+      "content": [
+        [
+          "binding",
+          "contact.contact-info.item1.details|St. Mary's Higher Secondary School\nM.C.Road, Chenikuthi\nGuwahati - 781003"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item1.title|Visit Us"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item2.details|+91 9435190537"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item2.title|Call Us"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item3.details|stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item3.title|Email Us"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item4.details|Monday - Saturday\n7:45 AM - 2:00 PM"
+        ],
+        [
+          "binding",
+          "contact.contact-info.item4.title|Office Hours"
+        ],
+        [
+          "binding",
+          "contact.contact-us.button-label.2|Send Message"
+        ],
+        [
+          "binding",
+          "contact.contact-us.button-label|Sending..."
+        ],
+        [
+          "binding",
+          "contact.contact-us.heading.2|Send Us a "
+        ],
+        [
+          "binding",
+          "contact.contact-us.heading.3|Connect With Us"
+        ],
+        [
+          "binding",
+          "contact.contact-us.heading|Contact "
+        ],
+        [
+          "binding",
+          "contact.contact-us.href|#"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.2|Have questions about admissions, academics, or anything else? We'd love to hear from you. Fill out the form and we'll get back to you soon."
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.3|Have questions about admissions, academics, or anything else? We'd love to hear from you. Fill out the form and we'll get back to you soon."
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.4|We'll get back to you within 24 hours"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.5|Need immediate assistance?"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.6|Call our emergency helpline available 24/7"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.7|+91 9435190537"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.8|Available 24/7"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph.9| M.C.Road, Chenikuthi, Guwahati - 781003"
+        ],
+        [
+          "binding",
+          "contact.contact-us.paragraph|Get in touch with us"
+        ],
+        [
+          "binding",
+          "contact.contact-us.placeholder.2|you@example.com"
+        ],
+        [
+          "binding",
+          "contact.contact-us.placeholder.3|+91-XXXXX-XXXXX"
+        ],
+        [
+          "binding",
+          "contact.contact-us.placeholder.4|Subject of inquiry"
+        ],
+        [
+          "binding",
+          "contact.contact-us.placeholder.5|Your message here..."
+        ],
+        [
+          "binding",
+          "contact.contact-us.placeholder|Your full name"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.11|Phone Number"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.12|Subject"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.13|Message "
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.15|Contact Information"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.16|Emergency"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.17|Visit us:"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.18|St. Mary's Higher Secondary School"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.2|Reach Out"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.3|Us"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.4|We'd Love to Hear From You"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.5|Get in Touch"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.6|Message"
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.7|Full Name "
+        ],
+        [
+          "binding",
+          "contact.contact-us.text.9|Email Address "
+        ],
+        [
+          "binding",
+          "contact.contact-us.text|CONTACT"
+        ],
+        [
+          "binding",
+          "contact.contact-us.title|St. Mary's School Location"
+        ],
+        [
+          "binding",
+          "contact.handle-submit.text.2|Failed to send message. Please try again."
+        ],
+        [
+          "binding",
+          "contact.handle-submit.text|Thank you for your message! We will get back to you soon."
+        ],
+        [
+          "binding",
+          "contact.social-links.item1.label|Website"
+        ],
+        [
+          "binding",
+          "contact.social-links.item2.label|WhatsApp"
+        ],
+        [
+          "binding",
+          "contact.social-links.item3.label|Telegram"
+        ],
+        [
+          "binding",
+          "contact.social-links.item4.label|Support"
+        ],
+        [
+          "src",
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.456789012345!2d91.7!3d26.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA2JzAwLjAiTiA5McKwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/Gallery.jsx",
+      "sha256": "f0158f3d46b74a941c006a841269b377e920e93fd14172fceccf4f2a51732016",
+      "content": [
+        [
+          "binding",
+          "gallery.fetch-gallery.text|Failed to load gallery"
+        ],
+        [
+          "binding",
+          "gallery.gallery.button-label|All"
+        ],
+        [
+          "binding",
+          "gallery.gallery.heading.2|Our "
+        ],
+        [
+          "binding",
+          "gallery.gallery.heading.3|No photos found"
+        ],
+        [
+          "binding",
+          "gallery.gallery.heading|Our "
+        ],
+        [
+          "binding",
+          "gallery.gallery.item1.label|Zoom In"
+        ],
+        [
+          "binding",
+          "gallery.gallery.item2.label|Zoom Out"
+        ],
+        [
+          "binding",
+          "gallery.gallery.item3.label|Rotate"
+        ],
+        [
+          "binding",
+          "gallery.gallery.item4.label|Like"
+        ],
+        [
+          "binding",
+          "gallery.gallery.item5.label|Share"
+        ],
+        [
+          "binding",
+          "gallery.gallery.item6.label|Download"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.2|Moments captured at St. Mary's"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.3|Explore the vibrant life at St. Mary's through our gallery. From academic events to cultural celebrations, every moment tells a story of growth and community."
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.4|Try adjusting your search or filter"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.5|You've seen all photos 🎉"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.6|Showing "
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.7|photo"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.8|photos"
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph.9| in "
+        ],
+        [
+          "binding",
+          "gallery.gallery.paragraph|Moments captured at St. Mary's"
+        ],
+        [
+          "binding",
+          "gallery.gallery.placeholder|Search images..."
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.10|Scroll for more"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.11|General"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.2|Memories"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.3|Gallery"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.4|GALLERY"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.5|Memories"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.6|Gallery"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.7|Moments That Matter"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.8|General"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text.9|View"
+        ],
+        [
+          "binding",
+          "gallery.gallery.text|GALLERY"
+        ],
+        [
+          "binding",
+          "gallery.gallery.title|Refresh Gallery"
+        ],
+        [
+          "binding",
+          "gallery.handle-download.text.2|Failed to download image"
+        ],
+        [
+          "binding",
+          "gallery.handle-download.text|Image downloaded successfully"
+        ],
+        [
+          "binding",
+          "gallery.handle-share.text.2|Image URL copied to clipboard"
+        ],
+        [
+          "binding",
+          "gallery.handle-share.text.3|Failed to share image"
+        ],
+        [
+          "binding",
+          "gallery.handle-share.text|Check out this image from St. Mary's: "
+        ],
+        [
+          "binding",
+          "gallery.handle-share.title|St. Mary's Gallery"
+        ],
+        [
+          "binding",
+          "gallery.load-more.text|Failed to load more images"
+        ],
+        [
+          "binding",
+          "gallery.toggle-like.text.2|Added to favorites"
+        ],
+        [
+          "binding",
+          "gallery.toggle-like.text|Removed from favorites"
+        ],
+        [
+          "binding",
+          "gallery"
+        ],
+        [
+          "text",
+          "/"
+        ],
+        [
+          "text",
+          "/"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/Home.jsx",
+      "sha256": "1f6b1f40400d68bfad78d7e570058b450cd9b816255aa778073654b54cad8c60",
+      "content": [
+        [
+          "binding",
+          "home.home.heading.2|Why Choose "
+        ],
+        [
+          "binding",
+          "home.home.heading.3|Ready to Join "
+        ],
+        [
+          "binding",
+          "home.home.heading|Quick Facts"
+        ],
+        [
+          "binding",
+          "home.home.href.2|/contact"
+        ],
+        [
+          "binding",
+          "home.home.href|/about/founders"
+        ],
+        [
+          "binding",
+          "home.home.item1.label|Established"
+        ],
+        [
+          "binding",
+          "home.home.item1.value|1924"
+        ],
+        [
+          "binding",
+          "home.home.item2.label|Students"
+        ],
+        [
+          "binding",
+          "home.home.item2.value|2,000+"
+        ],
+        [
+          "binding",
+          "home.home.item3.label|Teachers"
+        ],
+        [
+          "binding",
+          "home.home.item3.value|85+"
+        ],
+        [
+          "binding",
+          "home.home.item4.label|Years Legacy"
+        ],
+        [
+          "binding",
+          "home.home.item4.value|100+"
+        ],
+        [
+          "binding",
+          "home.home.item5.label|Awards Won"
+        ],
+        [
+          "binding",
+          "home.home.item5.value|100+"
+        ],
+        [
+          "binding",
+          "home.home.paragraph.2|Take the first step towards a bright future. Be with us for upcoming admission notification details."
+        ],
+        [
+          "binding",
+          "home.home.paragraph|For over a century, St. Mary's has been shaping young minds into responsible citizens and future leaders through quality education and values."
+        ],
+        [
+          "binding",
+          "home.home.text.10|📍 M.C.Road, Chenikuthi, Guwahati"
+        ],
+        [
+          "binding",
+          "home.home.text.11|📞 +91-94351-90537"
+        ],
+        [
+          "binding",
+          "home.home.text.12|✉️ stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "home.home.text.2|Discover Our Legacy"
+        ],
+        [
+          "binding",
+          "home.home.text.4|Why Choose Us"
+        ],
+        [
+          "binding",
+          "home.home.text.5|St. Mary's?"
+        ],
+        [
+          "binding",
+          "home.home.text.6|Join Our Family"
+        ],
+        [
+          "binding",
+          "home.home.text.7|St. Mary's?"
+        ],
+        [
+          "binding",
+          "home.home.text.8|Contact Us"
+        ],
+        [
+          "text",
+          "→"
+        ],
+        [
+          "text",
+          "→"
+        ],
+        [
+          "text",
+          "✦"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/Infrastructure.jsx",
+      "sha256": "0c253a8935229620d04c3503245df6d73b0afbe22861ef91a9f31d45e5f31d07",
+      "content": [
+        [
+          "binding",
+          "infrastructure.facilities.item1.description|Spacious, well-ventilated classrooms equipped with smart boards and modern teaching aids for an enhanced learning experience."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item1.tag|Smart Learning"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item1.title|Modern Classrooms"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item2.description|A well-stocked library with thousands of books, reference materials, and digital resources to support academic excellence."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item2.tag|Knowledge Hub"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item2.title|Library"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item3.description|State-of-the-art laboratories for Physics, Chemistry, and Biology with modern equipment for hands-on learning."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item3.tag|Innovation"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item3.title|Science Laboratories"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item4.description|Fully equipped computer labs with high-speed internet, latest software, and programming tools for computer science education."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item4.tag|Digital Ready"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item4.title|Computer Labs"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item5.description|Technology-enabled classrooms with interactive displays, digital content, and audio-visual facilities for engaging lessons."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item5.tag|Tech Enabled"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item5.title|Smart Classrooms"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item6.description|Dedicated rooms for various activities including arts and crafts, music, dance, and debate to nurture creative talents."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item6.tag|Creative Space"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item6.title|Activity Rooms"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item7.description|Extensive sports facilities including playgrounds, courts, and indoor sports facilities for holistic physical development."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item7.tag|Sports Excellence"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item7.title|Sports Facilities"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item8.description|A well equipped set up stage for our students to explore and display their potential with great enthusiasm."
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item8.tag|Hall area"
+        ],
+        [
+          "binding",
+          "infrastructure.facilities.item8.title|Auditorium"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.heading.2|World-Class "
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.heading|Our "
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.paragraph.2|St. Mary's Higher Secondary School boasts modern infrastructure designed to provide students with the best possible environment for learning and personal growth."
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.paragraph.3| World-Class Facilities"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.paragraph.4| Access"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.paragraph.5| Student Satisfaction"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.paragraph|State-of-the-art facilities for holistic education"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.11|100%"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.2|Our Campus"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.3|Infrastructure"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.4|Our Campus"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.5|Infrastructure"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.6|Learn More"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.7|8+"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text.9|24/7"
+        ],
+        [
+          "binding",
+          "infrastructure.infrastructure.text|CAMPUS"
+        ],
+        [
+          "text",
+          "|"
+        ],
+        [
+          "text",
+          "|"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/Login.jsx",
+      "sha256": "bfe93a79fd2ce7443e7497c37ad8ee0221eccd1a9c59f403a8043dafb71d5c39",
+      "content": [
+        [
+          "text",
+          "Contact administrator if you need access"
+        ],
+        [
+          "text",
+          "Email Address"
+        ],
+        [
+          "text",
+          "Password"
+        ],
+        [
+          "text",
+          "Sign in to manage your school website"
+        ],
+        [
+          "text",
+          "St. Mary's Admin"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/MandatoryDisclosure.jsx",
+      "sha256": "4e6d31d0570199c8e73815c6423b186428991a37dfad7d79f208c6e160f53ff7",
+      "content": [
+        [
+          "binding",
+          "mandatory.disclosure.fetch-disclosures.text|Failed to load disclosures"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.heading.2|Mandatory "
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.heading.3|Certificates & "
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.heading.4|No disclosures found"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.heading|Mandatory "
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph.2|Official Certificates & Documents"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph.3|St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures as required by regulatory authorities."
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph.4|St. Mary's Higher Secondary School maintains all mandatory certificates and disclosures as required by regulatory authorities."
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph.5|No certificates or disclosures have been uploaded yet."
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph.6| All certificates are valid and maintained as per the requirements of the education board and government regulations. For any queries, please contact the school administration."
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.paragraph|Official Certificates & Documents"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.10|Valid"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.11|✓ Verified"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.12|View Document"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.13|Expires: "
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.14|Verified & Authentic"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.15|Note:"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.16|📅 Last Updated: "
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.18|🔒 Verified by: School Administration"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.2|Official"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.3|Disclosure"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.4|DISCLOSURE"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.5|Official"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.6|Disclosure"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.7|Official Documents"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.8|Official Documents"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text.9|Disclosures"
+        ],
+        [
+          "binding",
+          "mandatory.disclosure.mandatory-disclosure.text|DISCLOSURE"
+        ],
+        [
+          "text",
+          "|"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/NotFound.jsx",
+      "sha256": "c0875966caddb77ae08d130f984a8a5523252f6d51242406c8cff2ccf4a6acaa",
+      "content": [
+        [
+          "href",
+          "/"
+        ],
+        [
+          "text",
+          "404"
+        ],
+        [
+          "text",
+          "Back to Home"
+        ],
+        [
+          "text",
+          "Oops! The page you're looking for doesn't exist or has been moved."
+        ],
+        [
+          "text",
+          "Page Not Found"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/PastPupilsAssociation.jsx",
+      "sha256": "beac6f42d8d611ec4f41b8df818f119aedbcdf9ba2469b759eb045732793a285",
+      "content": [
+        [
+          "binding",
+          "past.pupils.past-pupils-association.heading.2|Alumni Testimonials"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.heading|Why Join the Past Pupils Association?"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.href|/contact"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item1.breadcrumb|Past Pupils Association"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item1.description|Connect with old friends, teachers, and stay updated on school events and developments."
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item1.label|Active Members"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item1.title|Stay Connected"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item1.value|500+"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item2.description|Access to a network of professionals across various fields and opportunities to mentor current students."
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item2.label|Annual Reunions"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item2.title|Network & Mentor"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item2.value|10+"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item3.description|Contribute to school development, scholarships, and support initiatives that benefit current students."
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item3.label|Scholarships"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item3.title|Give Back"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item3.value|25+"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item4.label|Years of Legacy"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.item4.value|50"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.paragraph.2|Hear from our distinguished alumni"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.paragraph.5|Batch: "
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.paragraph|The Past Pupils Association (PPA) of St. Mary's is a vibrant community of former students who continue to contribute to the school's growth and maintain lifelong bonds with their alma mater."
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.subtitle|Alumni network connecting generations"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.text|Join the Association"
+        ],
+        [
+          "binding",
+          "past.pupils.past-pupils-association.title|Past Pupils Association"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item1.message|St. Mary's gave me the foundation that made my career in technology possible. The values and discipline I learned here continue to guide me."
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item1.name|Dr. Ritu Sharma"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item1.profession|Software Engineer at Google"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item1.year|2005"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item2.message|The entrepreneurial spirit was nurtured at St. Mary's. The teachers encouraged us to think beyond textbooks and explore real-world applications."
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item2.name|Mr. Anupam Das"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item2.profession|Entrepreneur & CEO"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item2.year|2008"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item3.message|The emphasis on science education and ethical values at St. Mary's inspired me to pursue a career in healthcare and serve the community."
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item3.name|Ms. Priya Patel"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item3.profession|Medical Professional"
+        ],
+        [
+          "binding",
+          "past.pupils.testimonials.item3.year|2010"
+        ],
+        [
+          "text",
+          "\""
+        ],
+        [
+          "text",
+          "\""
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/StudentRules.jsx",
+      "sha256": "a4da926524a651e5f01cb709105bf8c4227fa04a5c3a0d910bd8dc41f13761fe",
+      "content": [
+        [
+          "binding",
+          "student.rules.rules.item1.item1.rules|Students must maintain discipline at all times within the school premises."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item1.item2.rules|Respect all teachers, staff, and fellow students."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item1.item3.rules|School property must be treated with care and respect."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item1.item4.rules|Any form of bullying, harassment, or discrimination is strictly prohibited."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item1.title|Discipline"
+        ],
+        [
+          "binding",
+          "student.rules.rules.item2.item1.rules|Students must arrive at school by 8:00 AM sharp."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item2.item2.rules|Attendance of at least 75% is mandatory for promotion."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item2.item3.rules|Leave applications must be submitted in advance for planned absences."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item2.item4.rules|Medical certificates required for absences of more than 3 days."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item2.title|Attendance & Punctuality"
+        ],
+        [
+          "binding",
+          "student.rules.rules.item3.item1.rules|Homework and assignments must be submitted on time."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item3.item2.rules|Academic integrity is paramount - no cheating or plagiarism."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item3.item3.rules|Students must bring all required textbooks and materials to class."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item3.item4.rules|Active participation in classroom activities is encouraged."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item3.title|Academic Conduct"
+        ],
+        [
+          "binding",
+          "student.rules.rules.item4.item1.rules|Prescribed school uniform must be worn on all school days."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item4.item2.rules|Students must maintain clean and neat appearance."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item4.item3.rules|Hair should be neatly combed and properly styled."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item4.item4.rules|No jewelry or accessories beyond the permitted items."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item4.title|School Uniform & Appearance"
+        ],
+        [
+          "binding",
+          "student.rules.rules.item5.item1.rules|School hours are from 8:00 AM to 3:00 PM."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item5.item2.rules|Students must not leave the school premises without permission."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item5.item3.rules|Mobile phones and electronic devices are strictly prohibited."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item5.item4.rules|Lunch breaks should be used responsibly."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item5.title|School Hours & Behavior"
+        ],
+        [
+          "binding",
+          "student.rules.rules.item6.item1.rules|Practice honesty, kindness, and empathy in daily interactions."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item6.item2.rules|Respect cultural and religious diversity of all students."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item6.item3.rules|Maintain cleanliness in all areas of the school."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item6.item4.rules|Participate actively in community service activities."
+        ],
+        [
+          "binding",
+          "student.rules.rules.item6.title|Values & Ethics"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.heading.2|Remember"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.heading|Student "
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.paragraph.2|Our school rules are designed to create a safe, respectful, and conducive learning environment where every student can thrive academically and personally."
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.paragraph.3|These rules are not just about maintaining discipline - they are about building character, fostering respect, and creating a community where everyone can succeed."
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.paragraph|Guidelines for a disciplined and enriching school life"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.10|Excellence"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.2|Guidelines"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.3|Rules"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.4|School Guidelines"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.6|Core Values"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.7|Respect"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.8|Discipline"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text.9|Integrity"
+        ],
+        [
+          "binding",
+          "student.rules.student-rules.text|RULES"
+        ],
+        [
+          "text",
+          "•"
+        ]
+      ]
+    },
+    {
+      "path": "src/styles/public-redesign.css",
+      "sha256": "f657e5beba212bfc199d0a3f08e137c663c19ef2908f5af2d5f32ad5fa2a8a58"
+    },
+    {
+      "path": "src/utils/helpers.js",
+      "sha256": "18ae1b9a9371fedebf027cf20ddaf099469dd10ec88c9439a74956cce38848fe"
+    },
+    {
+      "path": "src/components/admin/Circulars.jsx",
+      "sha256": "d10789fdcf9a02c722b39bf545648b3f2534c20d0c796ddbaa2b7571205808ee",
+      "content": [
+        [
+          "text",
+          "Add Circular"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Circulars"
+        ],
+        [
+          "text",
+          "Content *"
+        ],
+        [
+          "text",
+          "Create your first circular"
+        ],
+        [
+          "text",
+          "Date"
+        ],
+        [
+          "text",
+          "Download PDF"
+        ],
+        [
+          "text",
+          "Leave empty to keep existing file"
+        ],
+        [
+          "text",
+          "No circulars added yet"
+        ],
+        [
+          "text",
+          "Publish immediately"
+        ],
+        [
+          "text",
+          "Time"
+        ],
+        [
+          "text",
+          "Title *"
+        ],
+        [
+          "text",
+          "Upload PDF (Optional)"
+        ],
+        [
+          "title",
+          ""
+        ],
+        [
+          "title",
+          ""
+        ]
+      ]
+    },
+    {
+      "path": "src/components/admin/Dashboard.jsx",
+      "sha256": "4c88b0c94df62a8ab15dbbfc552ffd475c840b0f78d0e49b2a4eafbe51560c93",
+      "content": [
+        [
+          "href",
+          "/admin/circulars"
+        ],
+        [
+          "href",
+          "/admin/circulars"
+        ],
+        [
+          "href",
+          "/admin/circulars"
+        ],
+        [
+          "path",
+          "/admin/circulars"
+        ],
+        [
+          "path",
+          "/admin/gallery"
+        ],
+        [
+          "path",
+          "/admin/staff"
+        ],
+        [
+          "path",
+          "/admin/syllabus"
+        ],
+        [
+          "text",
+          "Create your first circular →"
+        ],
+        [
+          "text",
+          "Dashboard"
+        ],
+        [
+          "text",
+          "No circulars yet"
+        ],
+        [
+          "text",
+          "Recent Circulars"
+        ],
+        [
+          "text",
+          "View All →"
+        ],
+        [
+          "text",
+          "Welcome back, Admin"
+        ],
+        [
+          "title",
+          "Circulars"
+        ],
+        [
+          "title",
+          "Gallery Images"
+        ],
+        [
+          "title",
+          "Staff Members"
+        ],
+        [
+          "title",
+          "Syllabus"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/admin/Disclosure.jsx",
+      "sha256": "26947c5e1be15dc211b0c94a047c6cc7146a441f7bdc807663aa95e0533047af",
+      "content": [
+        [
+          "description",
+          ""
+        ],
+        [
+          "text",
+          "Actions"
+        ],
+        [
+          "text",
+          "Add Disclosure"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Certificate status"
+        ],
+        [
+          "text",
+          "Description"
+        ],
+        [
+          "text",
+          "Disclosure"
+        ],
+        [
+          "text",
+          "Document"
+        ],
+        [
+          "text",
+          "Expires:"
+        ],
+        [
+          "text",
+          "Expiry date (optional)"
+        ],
+        [
+          "text",
+          "Loading disclosures…"
+        ],
+        [
+          "text",
+          "Manage existing certificates and disclosure PDFs."
+        ],
+        [
+          "text",
+          "No disclosures yet."
+        ],
+        [
+          "text",
+          "PDF document"
+        ],
+        [
+          "text",
+          "PDF only, up to 15 MiB. Use the school's actual document; no sample certificates are created."
+        ],
+        [
+          "text",
+          "Publish on the existing disclosure page after reviewing the document and its details."
+        ],
+        [
+          "text",
+          "Reload records"
+        ],
+        [
+          "text",
+          "Status"
+        ],
+        [
+          "text",
+          "Title"
+        ],
+        [
+          "text",
+          "View saved PDF"
+        ],
+        [
+          "text",
+          "Visibility"
+        ],
+        [
+          "title",
+          ""
+        ]
+      ]
+    },
+    {
+      "path": "src/components/admin/Gallery.jsx",
+      "sha256": "e4a7509b428116f9dd41cc33c32071cd867e1959120395f00c98514586d84674",
+      "content": [
+        [
+          "alt",
+          ""
+        ],
+        [
+          "description",
+          ""
+        ],
+        [
+          "description",
+          ""
+        ],
+        [
+          "text",
+          "+"
+        ],
+        [
+          "text",
+          "360x360px recommended, will be resized automatically"
+        ],
+        [
+          "text",
+          "Active"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Create Event"
+        ],
+        [
+          "text",
+          "Create your first event"
+        ],
+        [
+          "text",
+          "Description"
+        ],
+        [
+          "text",
+          "Event Date"
+        ],
+        [
+          "text",
+          "Event Name *"
+        ],
+        [
+          "text",
+          "Event:"
+        ],
+        [
+          "text",
+          "file(s) selected"
+        ],
+        [
+          "text",
+          "Gallery Events"
+        ],
+        [
+          "text",
+          "images"
+        ],
+        [
+          "text",
+          "Inactive"
+        ],
+        [
+          "text",
+          "Manage events and upload up to 4 images per event"
+        ],
+        [
+          "text",
+          "No events created yet"
+        ],
+        [
+          "text",
+          "Select Images (up to 4)"
+        ],
+        [
+          "text",
+          "Upload Images"
+        ],
+        [
+          "text",
+          "Upload Images"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/admin/Staff.jsx",
+      "sha256": "5d769a3f40ab09348a045e76f10f3a1cc87056eb77d4be32cd1af4223639a8a2",
+      "content": [
+        [
+          "text",
+          "Active"
+        ],
+        [
+          "text",
+          "Add Staff"
+        ],
+        [
+          "text",
+          "Add your first staff member"
+        ],
+        [
+          "text",
+          "All"
+        ],
+        [
+          "text",
+          "Bio (Optional)"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Category *"
+        ],
+        [
+          "text",
+          "Designation *"
+        ],
+        [
+          "text",
+          "Display Order"
+        ],
+        [
+          "text",
+          "Email"
+        ],
+        [
+          "text",
+          "Experience"
+        ],
+        [
+          "text",
+          "Full Name *"
+        ],
+        [
+          "text",
+          "Leave empty to keep existing image"
+        ],
+        [
+          "text",
+          "Manage your teaching and non-teaching staff"
+        ],
+        [
+          "text",
+          "No staff members found"
+        ],
+        [
+          "text",
+          "No Subject"
+        ],
+        [
+          "text",
+          "Phone"
+        ],
+        [
+          "text",
+          "Profile Image (360x360)"
+        ],
+        [
+          "text",
+          "Qualification *"
+        ],
+        [
+          "text",
+          "Recommended: 360x360 pixels, will be resized automatically"
+        ],
+        [
+          "text",
+          "Staff"
+        ],
+        [
+          "text",
+          "Subject (Optional)"
+        ],
+        [
+          "text",
+          "Subject:"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/admin/Syllabus.jsx",
+      "sha256": "c97dd0f5cd8f2e3811fa789e2bf2f6a40fee0973365ceeaeac704e7d1025513c",
+      "content": [
+        [
+          "text",
+          "Academic Year *"
+        ],
+        [
+          "text",
+          "Add Syllabus"
+        ],
+        [
+          "text",
+          "Add your first syllabus entry"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Class *"
+        ],
+        [
+          "text",
+          "Class"
+        ],
+        [
+          "text",
+          "Class"
+        ],
+        [
+          "text",
+          "Leave empty to keep existing file"
+        ],
+        [
+          "text",
+          "Manage class-wise syllabus PDFs"
+        ],
+        [
+          "text",
+          "No syllabus entries"
+        ],
+        [
+          "text",
+          "Only PDF files are allowed (Max 10MB)"
+        ],
+        [
+          "text",
+          "Publish immediately"
+        ],
+        [
+          "text",
+          "Select Stream"
+        ],
+        [
+          "text",
+          "Stream *"
+        ],
+        [
+          "text",
+          "Stream is required for Class 11 and 12"
+        ],
+        [
+          "text",
+          "Syllabus"
+        ],
+        [
+          "text",
+          "Upload PDF *"
+        ],
+        [
+          "text",
+          "View PDF"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/common/Accordion.jsx",
+      "sha256": "61e0ddd93310e87a1f6441471fc4a33084d10b1515a373a51983e435c81dd71b",
+      "content": []
+    },
+    {
+      "path": "src/components/common/Breadcrumb.jsx",
+      "sha256": "67bf7d44eab2b2f63a867e60a007c4e6d47d2b83927fcb8aa255e12fda2be803",
+      "content": [
+        [
+          "binding",
+          "global.breadcrumb.breadcrumb.href|/"
+        ],
+        [
+          "binding",
+          "global.breadcrumb.breadcrumb.text|Home"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/common/Card.jsx",
+      "sha256": "fd518432b6a4f89dd79ee2254df1f655127387ab3b425b64e87ac81de51436b7",
+      "content": []
+    },
+    {
+      "path": "src/components/common/ContactForm.jsx",
+      "sha256": "36f41c8a994c458f7235a468e444e74fb6ec31ee7160be8d583b0b2a5b695a13",
+      "content": [
+        [
+          "text",
+          "Email Address *"
+        ],
+        [
+          "text",
+          "Full Name *"
+        ],
+        [
+          "text",
+          "Message *"
+        ],
+        [
+          "text",
+          "Phone Number"
+        ],
+        [
+          "text",
+          "Subject"
+        ],
+        [
+          "text",
+          "Thank you for your message! We'll get back to you soon."
+        ]
+      ]
+    },
+    {
+      "path": "src/components/common/GalleryGrid.jsx",
+      "sha256": "808094b563250f790d948884114143c68d6ee2c91d719bd5be69963268a01a65",
+      "content": []
+    },
+    {
+      "path": "src/components/common/Lightbox.jsx",
+      "sha256": "6704fe2865aa2f28dceea4c9d7704f42aa20d7e8ff94c08fe7c1ef504e0a7bf8",
+      "content": [
+        [
+          "text",
+          "("
+        ],
+        [
+          "text",
+          ")"
+        ],
+        [
+          "text",
+          "/"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/common/PageHeader.jsx",
+      "sha256": "8f928f76f5ea697e5504ca3ebbd7d7960f444ef543699286b1726013d89a3400",
+      "content": []
+    },
+    {
+      "path": "src/components/common/SchoolMotion.jsx",
+      "sha256": "c85a700aa04eff0c7491bf4a654d54c6438d2291fff7ae0178349e8de511dfdf",
+      "content": []
+    },
+    {
+      "path": "src/components/common/SectionWrapper.jsx",
+      "sha256": "86e88666a28a6220c07e50dcdcdca09522eac4c9328e66928e25d703ceac1039",
+      "content": []
+    },
+    {
+      "path": "src/components/common/StaffCard.jsx",
+      "sha256": "5792b67fca6d14f4061ffca01b52b68dd2e648438bb6029c805d2fe3a4991a4c",
+      "content": [
+        [
+          "binding",
+          "global.staff-card.staff-card.paragraph|Experience: "
+        ],
+        [
+          "binding",
+          "staff"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/home/CircularsPanel.jsx",
+      "sha256": "8c0fc8645aea9d1f90b67d592758fa190ab94d3f62bfbba3ea5d6c4da65255c3",
+      "content": [
+        [
+          "binding",
+          "circulars"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.button-label.2|Close"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.button-label|Download Notice"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.heading.2|Latest Notices"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.heading|Latest Notices"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.href|#"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.paragraph|No notices available"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.2|10:00 AM"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.3|View All Notices"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.4|10:00 AM"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.5|Published"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.6|Posted: "
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text.7|Download PDF"
+        ],
+        [
+          "binding",
+          "home.circulars-panel.circulars-panel.text| New"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/home/FeatureCard.jsx",
+      "sha256": "de6cb8140402b935974fb3ce4e27877d55c5c23bb909281c341b4f83cacbe482",
+      "content": [
+        [
+          "binding",
+          "home.feature-card.feature-card.text.2|Learn More"
+        ],
+        [
+          "binding",
+          "home.feature-card.feature-card.text|Featured"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item1.description|Our curriculum is designed to foster critical thinking, creativity, and a love for learning in every student."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item1.image|https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item1.stats|98% Pass Rate"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item1.tag|Top Rated"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item1.title|Academic Excellence"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item2.description|State-of-the-art classrooms, laboratories, library, and sports facilities for holistic development."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item2.image|https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item2.stats|25+ Facilities"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item2.tag|Smart Campus"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item2.title|Modern Infrastructure"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item3.description|Well-equipped science labs and innovation centers to nurture young scientists and inventors."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item3.image|https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item3.stats|12+ Labs"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item3.tag|Innovation Hub"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item3.title|Science & Innovation"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item4.description|Comprehensive computer science education from basic programming to advanced AI concepts."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item4.image|https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item4.stats|AI & ML Ready"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item4.tag|Future Ready"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item4.title|Computer Education"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item5.description|A nurturing environment that promotes values, discipline, and social responsibility."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item5.image|https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item5.stats|2,500+ Students"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item5.tag|Family First"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item5.title|Community & Values"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item6.description|Wide range of activities including sports, arts, clubs, and cultural events for overall growth."
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item6.image|https://images.unsplash.com/photo-1461896836934-bd09ba8b1782?w=800&q=80"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item6.stats|50+ Activities"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item6.tag|All Rounder"
+        ],
+        [
+          "binding",
+          "home.feature-card.features.item6.title|Extracurricular Activities"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/home/HeroCarousel.jsx",
+      "sha256": "6aed739c6d3e2bd0e9106eb96bafaa39310e21f1712fa2070f298840a29eb887",
+      "content": [
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.href.2|/about/founders"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.href|/admissions"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.style|url('/walpaper.png')"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.2|Our Legacy"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.3|100+"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.4|Years Legacy"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.5|KG-XII"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.6|Classes"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.7|2000+"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text.8|Students"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.hero-carousel.text|Start Journey"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item1.badge|SINCE 1924"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item1.description|MemberExpression"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item1.subtitle|Higher Secondary School, Guwahati"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item1.title|MemberExpression"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item2.badge|100+ YEARS LEGACY"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item2.description|\"From a child's first alphabet to a young adult's final examination — one campus, one continuous journey.\""
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item2.subtitle|KG to Class XII"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item2.title|Every Age, Every Ambition"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item3.badge|EST. 1924"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item3.description|\"Education here is not a subject to be studied, but a life to be lived — fully, kindly, and with purpose.\""
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item3.subtitle|Mind, Body & Character"
+        ],
+        [
+          "binding",
+          "home.hero-carousel.slides.item3.title|Beyond the Classroom"
+        ],
+        [
+          "description",
+          "\"If you are seeking a secondary school, St. Mary's School is the place to be.\""
+        ],
+        [
+          "title",
+          "St. Mary's"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/home/PrincipalMessage.jsx",
+      "sha256": "d9ad93b3155c2b2f9c40c74bfb2ed9be162bcd850bf5a296cbc49301f3a35429",
+      "content": [
+        [
+          "binding",
+          "home.principal-message.principal-message.alt|Principal Sr. Jessy Nedumala"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.heading|A Word From Our "
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.10|Sr. Jessy Nedumala"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.11|Principal"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.2|Principal"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.3|The legacy and excellence of "
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.4| has carved a niche for itself through "
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.5|. The essence of the institution lies in its focus on virtue, knowledge, and discipline — each day striving to produce women of quality and stature."
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.6|We believe that schools are centres that harness power — the power to mould, to direct, to change. The pivot of the institution is the relationship between teachers, students, parents, and management, all essential in creating an environment for the holistic development of a child."
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.7|\"We aim to create a safe, nurturing yet challenging space — preparing each student to be academically excellent, spiritually enlightened, emotionally balanced, socially committed, and eco-conscious.\""
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.8|As an inclusive institution, we understand, acknowledge, and respect every student's unique individuality. Our teachers ensure every student leaves with respect, cooperation, kindness, empathy, and tolerance — a positive attitude to navigate the world with confidence."
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph.9|As you explore our website, you'll see our commitment to academic excellence and to giving every student the opportunities they deserve. Our teachers and management work together to nurture competent, upright, and empowered young women."
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.paragraph|Sr. Jessy Nedumala"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.src|/principal.png"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.src|/principal.png"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.2|100 Years"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.2|100 Years"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.3|Dear Parents and Students,"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.4|St. Mary's Higher Secondary School, Guwahati"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.5|100 glorious years"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.6|God Bless us all."
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text.7|Est. 1924"
+        ],
+        [
+          "binding",
+          "home.principal-message.principal-message.text|Principal"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/home/StatsCounter.jsx",
+      "sha256": "74ab554ac7385e997b960cf1314892292562ddec57d0b8a001be2990c9025b20",
+      "content": []
+    },
+    {
+      "path": "src/components/home/WelcomeSection.jsx",
+      "sha256": "733c3cd49f910e16426ead67f135706e5b8d477ac64bd8502a157a6d8696c238",
+      "content": [
+        [
+          "binding",
+          "home.welcome-section.welcome-section.href.2|/about/founders"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.href.3|/academics/syllabus"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.href.4|/gallery"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.href|/admissions"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.item1.label|100+ Years Legacy"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.item2.label|Class KG-12"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.item3.label|2026-27 Session"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.paragraph|Where every student discovers their potential, builds character, and achieves excellence. Join us for a transformative educational journey."
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.2|Since 1924"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.3|Your Journey Begins Here"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.4|Start Your"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.5|Golden Journey"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.6|Begin Your Journey"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.7|Discover Our Heritage"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.8|Download Syllabus"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text.9|Explore Gallery"
+        ],
+        [
+          "binding",
+          "home.welcome-section.welcome-section.text|Welcome to St. Mary's"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/layout/AdminLayout.jsx",
+      "sha256": "0612dee3b9049e1532d3a5d6a968b9e8929b3796125f916a16b25308150c5bc8",
+      "content": [
+        [
+          "path",
+          "/"
+        ],
+        [
+          "path",
+          "/admin/circulars"
+        ],
+        [
+          "path",
+          "/admin/dashboard"
+        ],
+        [
+          "path",
+          "/admin/disclosure"
+        ],
+        [
+          "path",
+          "/admin/gallery"
+        ],
+        [
+          "path",
+          "/admin/staff"
+        ],
+        [
+          "path",
+          "/admin/syllabus"
+        ],
+        [
+          "text",
+          "Logout"
+        ],
+        [
+          "text",
+          "St. Mary's Admin"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "sha256": "3a4c2c5cce782a4bd482f1bea1b57c74657ce4d392f7a7a0339d6ffd61902d94",
+      "content": [
+        [
+          "binding",
+          "global.footer.footer.heading.2|Quick Links"
+        ],
+        [
+          "binding",
+          "global.footer.footer.heading.3|Academics"
+        ],
+        [
+          "binding",
+          "global.footer.footer.heading.4|Contact"
+        ],
+        [
+          "binding",
+          "global.footer.footer.heading|St. Mary's"
+        ],
+        [
+          "binding",
+          "global.footer.footer.href.3|/contact"
+        ],
+        [
+          "binding",
+          "global.footer.footer.href|#"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item1.label.2|About Us"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item1.label.3|Syllabus"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item1.label|Website"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item1.to.2|/academics/syllabus"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item1.to|/about/founders"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item2.label.2|Admissions"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item2.label.3|Evaluation System"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item2.label|WhatsApp"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item2.to.2|/academics/evaluation"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item2.to|/admissions"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item3.label.2|Syllabus"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item3.label.3|Primary School"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item3.label|Telegram"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item3.to.2|/administration/teaching-staff/primary"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item3.to|/academics/syllabus"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item4.label.2|Gallery"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item4.label.3|Higher Secondary"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item4.label|YouTube"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item4.to.2|/administration/teaching-staff/higher-secondary"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item4.to|/gallery"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item5.label|Contact Us"
+        ],
+        [
+          "binding",
+          "global.footer.footer.item5.to|/contact"
+        ],
+        [
+          "binding",
+          "global.footer.footer.paragraph.2|St. Mary's Higher Secondary School, Guwahati, is committed to providing quality education and fostering holistic development of students since 1924."
+        ],
+        [
+          "binding",
+          "global.footer.footer.paragraph.4| St. Mary's Higher Secondary School. All rights reserved."
+        ],
+        [
+          "binding",
+          "global.footer.footer.paragraph|Higher Secondary School"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.2|Guwahati, Assam - 781001"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.3|+91 9435190537"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.4|stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.5|Get in Touch"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.6|Privacy Policy"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.7|Terms of Service"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.8|Made with "
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.9| in Assam"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text.9| in Assam"
+        ],
+        [
+          "binding",
+          "global.footer.footer.text|Admin Login"
+        ],
+        [
+          "href",
+          "/login"
+        ],
+        [
+          "text",
+          "©"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "sha256": "8983efb75af76d294278f63bcfadc50eb40532a980846b917af0b27be023022c",
+      "content": [
+        [
+          "binding",
+          "global.navbar.nav-items.item1.label|Home"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item1.path|/"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item10.label|Contact"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item10.path|/contact"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item1.label|Our Founders"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item1.path|/about/founders"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item2.label|Our Journey"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item2.path|/about/journey"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item3.label|Superiors"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item3.path|/about/superiors"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item4.label|Principal"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.item4.path|/about/principal"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item2.label|About"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item1.label|Management"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item1.path|/administration/management"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item1.label|Primary School"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item1.path|/administration/teaching-staff/primary"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item2.label|Middle School"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item2.path|/administration/teaching-staff/middle"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item3.label|High School"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item3.path|/administration/teaching-staff/high"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item4.label|Higher Secondary"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.item4.path|/administration/teaching-staff/higher-secondary"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item2.label|Teaching Staff"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item3.label|Non-Teaching Staff"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.item3.path|/administration/non-teaching"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item3.label|Administration"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item4.label|Infrastructure"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item4.path|/infrastructure"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.item1.label|Admission Process"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.item1.path|/admissions"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.item2.label|Enquiry Form"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.item2.path|/admissions/inquiry"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.label|Admissions"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item5.path|/admissions"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item6.item1.label|Syllabus"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item6.item1.path|/academics/syllabus"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item6.item2.label|Evaluation System"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item6.item2.path|/academics/evaluation"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item6.label|Academics"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item7.label|Student Rules"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item7.path|/student-rules"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item8.item1.label|Clubs & Associations"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item8.item1.path|/extracurricular/clubs"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item8.item2.label|Formative Moments"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item8.item2.path|/extracurricular/moments"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item8.label|Activities"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item9.label|Gallery"
+        ],
+        [
+          "binding",
+          "global.navbar.nav-items.item9.path|/gallery"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.alt|St. Mary's School Logo"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.heading|St. Mary's"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.href|/"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.paragraph|Higher Secondary School"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.src|/logo.jpeg"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.src|/logo.jpeg"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.text.2|📚 Guwahati"
+        ],
+        [
+          "binding",
+          "global.navbar.navbar.text|🏫 St. Mary's"
+        ],
+        [
+          "path",
+          "/about"
+        ],
+        [
+          "path",
+          "/academics"
+        ],
+        [
+          "path",
+          "/administration"
+        ],
+        [
+          "path",
+          "/administration/teaching-staff"
+        ],
+        [
+          "path",
+          "/extracurricular"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/layout/NavDropdown.jsx",
+      "sha256": "85a7bfb870ec22f2f3948ea48f05b84653f563adf96e0b5da0a48d62762cf9ea",
+      "content": []
+    },
+    {
+      "path": "src/components/layout/navigation-state.js",
+      "sha256": "f8cb723d78ef1b525bd7607b441361aa1f44091191e1359215e148bf750dcd95"
+    },
+    {
+      "path": "src/components/layout/NavNestedDropdown.jsx",
+      "sha256": "3d3516d75e6f9a0b1261b5082277b663f0a2a9e0aeea4a6bc7bd75f843dad190",
+      "content": []
+    },
+    {
+      "path": "src/components/layout/TopBar.jsx",
+      "sha256": "b19dc3e8a4aa3a3fe7d4d89fc9ddfd82236f2443927af9b2fa213f57824acca9",
+      "content": [
+        [
+          "binding",
+          "global.top-bar.fee-options.item1.bank|Federal Bank, Silpukhuri Branch"
+        ],
+        [
+          "binding",
+          "global.top-bar.fee-options.item1.label|Class KG – VIII"
+        ],
+        [
+          "binding",
+          "global.top-bar.fee-options.item2.bank|South Indian Bank, Ambari Branch"
+        ],
+        [
+          "binding",
+          "global.top-bar.fee-options.item2.label|Class IX – XII"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.href.2|mailto:stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.href.3|https://maps.google.com"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.href|tel:+919435190537"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.paragraph|Select Your Class Group"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text.2|stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text.3|Guwahati, Assam"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text.4|Pay Fees Online"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text.5|Pay Fees"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text.6|Pay Now"
+        ],
+        [
+          "binding",
+          "global.top-bar.top-bar.text|+91-94351-90537"
+        ],
+        [
+          "url",
+          "https://eacademia.southindianbank.bank.in/feeuser/org?id=3037"
+        ],
+        [
+          "url",
+          "https://epay.federalbank.co.in/easypayments/DIRECTPAYMENT.ASPX?CODE=DABB4QLY4Q1O4"
+        ]
+      ]
+    },
+    {
+      "path": "src/components/ui/Badge.jsx",
+      "sha256": "48fdb9c54b10e61f7704c692213138c51af19ac554a01a0b6dee9db80eb53643",
+      "content": []
+    },
+    {
+      "path": "src/components/ui/Button.jsx",
+      "sha256": "780edc99676075315d5b06f3d385dd23df22900851b8e370f301fa99837f1fc0",
+      "content": []
+    },
+    {
+      "path": "src/components/ui/Loader.jsx",
+      "sha256": "a41e4b6e1ffde60140cee1b7179521b7590996f041dbe3a1eff66afd4c4aa28f",
+      "content": []
+    },
+    {
+      "path": "src/components/website-editor/editor-bindings.js",
+      "sha256": "91f231d4c942450f904742c31877108da923caee79018e260668e6d54835fc3f"
+    },
+    {
+      "path": "src/components/website-editor/editor-state.js",
+      "sha256": "7bbb7b617417336f0bbeb6f6ad24e245035e17f46b41a1211c03e5dd7e6f31c4"
+    },
+    {
+      "path": "src/components/website-editor/useWebsiteContent.js",
+      "sha256": "f9148c84aba12b112f6b59544efdfe0f2ca1aa7af971ad9091a0d46952e4822d"
+    },
+    {
+      "path": "src/components/website-editor/useWebsiteField.js",
+      "sha256": "03bb11d037c446fe5ce7f68622e7b1aca89ac3c5ec5d791864373431b91cae00"
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorProvider.jsx",
+      "sha256": "810c0b9e90ab6b52a56e93aac399c9376cfd5958e3789cef21580bc021048b7b",
+      "content": []
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorUI.jsx",
+      "sha256": "fce10b2d1d9ddba0155b4f3d988b44eda6d9a27bbd1e3c1a9916090dea307234",
+      "content": [
+        [
+          "alt",
+          "Current website image"
+        ],
+        [
+          "text",
+          ". Choose what to do before leaving the website editor."
+        ],
+        [
+          "text",
+          "Another administrator saved a newer value. Reloading replaces your unsaved edit for this field."
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Cancel"
+        ],
+        [
+          "text",
+          "Change only this field. Its position and styling stay the same."
+        ],
+        [
+          "text",
+          "Checking editor access…"
+        ],
+        [
+          "text",
+          "Confirm restore"
+        ],
+        [
+          "text",
+          "Content in this element"
+        ],
+        [
+          "text",
+          "Current page:"
+        ],
+        [
+          "text",
+          "Currently saved"
+        ],
+        [
+          "text",
+          "Discard and Exit"
+        ],
+        [
+          "text",
+          "Discard Changes"
+        ],
+        [
+          "text",
+          "Edit fields"
+        ],
+        [
+          "text",
+          "Edit Website"
+        ],
+        [
+          "text",
+          "editable fields, including shared website content."
+        ],
+        [
+          "text",
+          "Empty value"
+        ],
+        [
+          "text",
+          "Empty value"
+        ],
+        [
+          "text",
+          "Existing content"
+        ],
+        [
+          "text",
+          "Existing content"
+        ],
+        [
+          "text",
+          "Exit Editor"
+        ],
+        [
+          "text",
+          "Fields on this page"
+        ],
+        [
+          "text",
+          "Find content"
+        ],
+        [
+          "text",
+          "I confirm changing this destination, including any restoration I select below."
+        ],
+        [
+          "text",
+          "JPEG, PNG or WebP, up to 10 MB. Images are resized without cropping; originals and saved revisions are retained."
+        ],
+        [
+          "text",
+          "Load older revisions"
+        ],
+        [
+          "text",
+          "Loading saved revisions…"
+        ],
+        [
+          "text",
+          "Manage"
+        ],
+        [
+          "text",
+          "No content matches this search."
+        ],
+        [
+          "text",
+          "No saved revisions yet."
+        ],
+        [
+          "text",
+          "Open the existing tools to manage these records."
+        ],
+        [
+          "text",
+          "Open"
+        ],
+        [
+          "text",
+          "Original and saved content"
+        ],
+        [
+          "text",
+          "Original"
+        ],
+        [
+          "text",
+          "Preview"
+        ],
+        [
+          "text",
+          "Protected content"
+        ],
+        [
+          "text",
+          "Reload saved value"
+        ],
+        [
+          "text",
+          "Restore original content"
+        ],
+        [
+          "text",
+          "Restore this revision"
+        ],
+        [
+          "text",
+          "Restore this saved content?"
+        ],
+        [
+          "text",
+          "Retry"
+        ],
+        [
+          "text",
+          "Return to editing"
+        ],
+        [
+          "text",
+          "Revision"
+        ],
+        [
+          "text",
+          "Save your changes before leaving?"
+        ],
+        [
+          "text",
+          "Saved revision history"
+        ],
+        [
+          "text",
+          "Saved:"
+        ],
+        [
+          "text",
+          "Select outlined text or use Tab and Enter to edit. On a managed record, use Alt and Enter to open its existing content tools."
+        ],
+        [
+          "text",
+          "Selected:"
+        ],
+        [
+          "text",
+          "This image or destination is protected by the website’s content policy."
+        ],
+        [
+          "text",
+          "unsaved"
+        ],
+        [
+          "text",
+          "Upload a replacement"
+        ],
+        [
+          "text",
+          "with the existing school administration tools."
+        ],
+        [
+          "text",
+          "You can also select outlined content on the page. Use Tab, then Enter, to edit with your keyboard."
+        ],
+        [
+          "text",
+          "You have"
+        ],
+        [
+          "text",
+          "Your website changes will be checked before leaving the editor."
+        ]
+      ]
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorUI.module.css",
+      "sha256": "a2cab494ae043a45fff011dd6eb03a6667992962332c4d8a28d8798fcde989cf"
+    },
+    {
+      "path": "src/server/config/auth.js",
+      "sha256": "75c8bbd3e8291e59c49865bb34a99d73d349d0038bd8133f2c396a1629dabbbd"
+    },
+    {
+      "path": "src/server/config/database.js",
+      "sha256": "83144d23f96f09ea56f956865dd548e84a87bb033fba522786395189b7fe1422"
+    },
+    {
+      "path": "src/server/config/localStorage.js",
+      "sha256": "11a1939f98f8ca2f1f17a844f283d44a29a0ab289e44f5019e750f20fe48e08b"
+    },
+    {
+      "path": "src/server/controller/auth.controller.js",
+      "sha256": "d0f745592a249edb0a97f871c4dce06e4e3f1d9e229329e5374cc2c67631f0d3"
+    },
+    {
+      "path": "src/server/controller/circular.controller.js",
+      "sha256": "0792a91705d2e69b80d2a32a75dc7651d4d7212a57ee6d7b0874ddad2a6118bc"
+    },
+    {
+      "path": "src/server/controller/disclosure.controller.js",
+      "sha256": "22195c72a3b9fdfc6a8db280e47c33321f81d067b3f2dab674b3f40febdc6edd"
+    },
+    {
+      "path": "src/server/controller/gallery.controller.js",
+      "sha256": "f54162ea0468d7d0b7b7f4c0706869d7051cb6d68fbba3577b44a60dd863e571"
+    },
+    {
+      "path": "src/server/controller/staff.controller.js",
+      "sha256": "434d3297e02f80757999bcfe1949ed3cd3ed084c6e129b65517bf64c498f0934"
+    },
+    {
+      "path": "src/server/controller/syllabus.controller.js",
+      "sha256": "a7138097ad59a7c63992ed020a922c27c8901abd04521667179d9e4e6234f0c3"
+    },
+    {
+      "path": "src/server/controller/upload.controller.js",
+      "sha256": "2f795931415cf8bc984e6127aca2e355017cbc8901e083837440e5e103c467ae"
+    },
+    {
+      "path": "src/server/controller/website-content.controller.js",
+      "sha256": "aa8b69816fd36f0cf7a3d1ed88d82c35df31183d02e3f345f1978cf6b283189d"
+    },
+    {
+      "path": "src/server/middleware/auth.middleware.js",
+      "sha256": "43e8614ac1cff10bfbf5df2c2d812fa12ac2b2ce5132cd2a2db6ceaa23b1d58c"
+    },
+    {
+      "path": "src/server/middleware/refresh.middleware.js",
+      "sha256": "e4a95e5a69b950823ffad37514bfa58010b157e3000ba1fb8c0895327930e1a9"
+    },
+    {
+      "path": "src/server/model/auth.model.js",
+      "sha256": "ae74450628a5e59525bb7c1c0361fd38631e7bf2410faf35a065df48ce86b479"
+    },
+    {
+      "path": "src/server/model/circular.model.js",
+      "sha256": "66f8ac7ede62ed2989db64225e66a5bc51a4185a7ae22a041a986e639c1702e3"
+    },
+    {
+      "path": "src/server/model/disclosure.model.js",
+      "sha256": "7bbdc2ebe636eb1db9b068fdbb8d14dc55b28ba264646c17fac9d1997e3cab99"
+    },
+    {
+      "path": "src/server/model/gallery.model.js",
+      "sha256": "af73d65de706e54bf589a791315dd6ee9fabf3a0116a44bc2685edea25f5f557"
+    },
+    {
+      "path": "src/server/model/staff.model.js",
+      "sha256": "c98e1f761bee47a8a7a83ded08b510f0f1cabb51c24ae7189341b95b34b5abd5"
+    },
+    {
+      "path": "src/server/model/syllabus.model.js",
+      "sha256": "e6e977f9cccf22d89e6e1380a89f4bd6eed79b7d8bf36f679bd8ea90428c7f0a"
+    },
+    {
+      "path": "src/server/model/website-content-revision.model.js",
+      "sha256": "14aa6f915846dc19a80e257944176a32c1c352db3a94c27361c5686f558b6fcf"
+    },
+    {
+      "path": "src/server/model/website-content.model.js",
+      "sha256": "3b971136f23ad285939d58217644c07ce294b2956f8adea7682bdfede713fbc4"
+    },
+    {
+      "path": "src/server/util/error.js",
+      "sha256": "3b8c9cdd6804999cb65b48c32c871d8a43f8d33c0824c7e322afc5195350ca81"
+    },
+    {
+      "path": "src/server/util/imageProcessor.js",
+      "sha256": "3bd9e9cb4e367ce1b0680553bae098b3b92b4ac054f51e9c539c213052671520"
+    },
+    {
+      "path": "src/server/util/provisionAdmin.js",
+      "sha256": "212d1cb33e35cbab485d32f311fc0eff6168c395a2b78d11f2d642e481195673"
+    },
+    {
+      "path": "src/server/util/publishedWebsiteContent.js",
+      "sha256": "98755d69cdd602e574061490318eafb4f0944f0acdca02d197272db3291df3a9"
+    },
+    {
+      "path": "src/server/util/requestSecurity.js",
+      "sha256": "97bdd1a8cfb49a9d74c7bfc687d8654506b8734ceb40bd108d6c33e1b6adcaa6"
+    },
+    {
+      "path": "src/server/util/serveUpload.js",
+      "sha256": "49979c684ae1a5043d65ddc74cbf0cacb55a5f9c5ccc95d7346ce4d548a0f544"
+    },
+    {
+      "path": "src/server/util/validation.mjs",
+      "sha256": "d8c90cc8fe957d77d3541e997b97144f0eda7c654b730ae308b0c7848f5e51dc"
+    },
+    {
+      "path": "src/server/util/websiteContentApprovals.js",
+      "sha256": "8922992ea020d1b2204e8ce4cc211532d537e4f690e669759d0eeb6bfc0aa609"
+    },
+    {
+      "path": "src/server/util/websiteContentPolicy.js",
+      "sha256": "10739004ecccbd088ac4280664d6f7974c90a9a4458821c0797a4a9ff04ee926"
+    },
+    {
+      "path": "src/server/util/websiteContentStore.js",
+      "sha256": "dedf7325293cc9d05e65cb614f477c77bea7c865277a824f2aa229789bec29c9"
+    },
+    {
+      "path": "src/server/util/websiteImageProcessor.js",
+      "sha256": "c55b9f85042a848f985b5e33bf488fd813fc0e1ea1aad51284bc8af3c449325f"
+    },
+    {
+      "path": "src/site-pages/about/OurFounders.jsx",
+      "sha256": "261f8b8304e6793b167eeb4c4c9b53de743570d63df02d59206966a5d817aa52",
+      "content": [
+        [
+          "binding",
+          "about.founders.founders.item1.description|St. John Bosco, popularly known as Don Bosco (Italian for Father Bosco) was born at Becchi, in Piedmont, Italy on August 16, 1815. From a very young age he was inspired to work for the poor young people of his time, when Europe was under the grip of the Industrial Revolution and many a young person who came to the cities to study or in search of work, fell an easy prey to the many social evils of his time.\n\nHe lost his father at the age of 2 and was brought up by his mother Mama Margherita, who was truly his guide, his model and his educator. From early years of life he discovered his leadership qualities especially among his peers. At the age of nine little John Bosco was given a mission in a vision. He was to transform young people \"NOT WITH BLOWS BUT WITH KINDNESS\" that became the goal of his life. Overcoming untold hardships and hostility he became a priest on June 5th, 1841. His determination to be a priest for young people combined with his dynamic optimism resulted in the flowering of his long cherished goal.\n\nDon Bosco was an educational practitioner rather than an educational theorist. It is impossible to understand his approach to education without reference to his experiences in life, because he actually incorporated the lessons of his own life experiences into his pedagogy. This style of education consists in involving young people, their parents or guardians and the educators in a family atmosphere. This system is based on Reason, Religion (Faith in God) and Loving Kindness. The goal is integral formation. It embraces developing physical, intellectual, moral, social and spiritual aspects of a person's life.\n\nIn spite of initial poverty, hardships, opposition of all sorts, soon his works flourished. The little seed planted by him grew into a mighty tree, and now there are hundreds of educational institutions catering to thousands of young people all over the world. Rightly, Don Bosco is recognized as the Father, Friend and Teacher of young people. He is the Founder of the Salesian Fathers (SDB), Salesian Sisters (FMA), and Salesian Cooperators (SC)."
+        ],
+        [
+          "binding",
+          "about.founders.founders.item1.feast-day|January 31"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item1.image|/john.png"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item1.name|St. John Bosco"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item1.role|Founder"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item1.years|1815 - 1888"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.description|God's ways are marvellous. Contemporaneously with Don Bosco, Mary Mazzarello in the hamlet of Mornese a little village in Piedmont, Italy thirsted with the same desire to help girls. She was born on May 9, 1837.\n\nShe too received a heavenly mandate. While walking down the uninhabited slopes of Borgo Alto she saw a group of girls playing in the non existent playground and a strong voice-firm and steady, communicated to her the divine mission : \"I entrust them to you\" Was it a dream, a hallucination? Yet, there she was fully awake. Walking in full consciousness...\n\nIn 1864 came the momentous meeting with Don Bosco, \"He is a saint! I can feel it!\" She said to all. Don Bosco too saw something exceptional in her. In Mary Mazzarello a likeminded soul, Salesian by instinct Don Bosco found a ready, active and creative collaborator. In 1872, he founded the Society of the Salesian Sisters (FMA) with Mary Mazzarello at their head. Imbibed with the spirit of the Founder they would march forward in the quest of providing integral formation and education for girls. 1875 saw the first expansion of the Salesian work outside Europe. India welcomed the first Salesian Sisters in 1922."
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.feast-day|May 13"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.image|/domenica.png"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.name|St. Mary Domenica Mazzarello"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.role|Co-Founder"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item2.years|1837 - 1881"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item3.description|Sr. Innocenza Vallino, Sr. Cecilia Da Roit, Sr. Clotilde Appiano, Sr. Maria Bricarello, Sr. Rosetti Antonietta and Sr. Giulia Berra formed the first batch of sisters destined for Assam. These courageous women ventured into the unknown, bringing education and hope to the people of Assam. Their pioneering spirit and dedication to the Salesian mission laid the foundation for St. Mary's Higher Secondary School and the countless educational institutions that followed."
+        ],
+        [
+          "binding",
+          "about.founders.founders.item3.image|/sister.jpg"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item3.name|Pioneering Sisters"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item3.role|First Missionaries to Assam"
+        ],
+        [
+          "binding",
+          "about.founders.founders.item3.years|1922"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.heading|Our "
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.href.2|/about/principal"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.href|/about/journey"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph.2|St. Mary's Higher Secondary School was established with a vision to provide quality education rooted in Christian values. Our founders dedicated their lives to building an institution that would serve the community for generations."
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph.4|NOT WITH BLOWS BUT WITH KINDNESS"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph.5|I entrust them to you"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph.6|Courage to venture into the unknown"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph.8|The legacy of our founders continues to inspire generations of students. Their vision of quality education rooted in values remains the cornerstone of St. Mary's Higher Secondary School."
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.paragraph|The visionaries who laid the foundation of St. Mary's Higher Secondary School"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.2|Est. 1924"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.3|Founders"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.4|Feast: "
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.5|Carrying Forward the Vision"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.6|Explore Our Journey"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text.7|Principal's Message"
+        ],
+        [
+          "binding",
+          "about.founders.our-founders.text|FOUNDERS"
+        ],
+        [
+          "text",
+          "\""
+        ],
+        [
+          "text",
+          "\""
+        ],
+        [
+          "text",
+          "→"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/about/OurJourney.jsx",
+      "sha256": "69c39ef434ddc2b9942d8c275daf0e46dc0d5cffe60d95f3e00adda84f6fa178",
+      "content": [
+        [
+          "binding",
+          "about.journey.milestones.item1.description|St. Mary's Higher Secondary School was established with a vision to provide quality education rooted in Christian values."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item1.image|https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item1.title|Foundation"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item1.year|1924"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item2.description|The first batch of students graduated from the school, marking the beginning of a legacy of academic excellence."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item2.image|https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item2.title|First Batch"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item2.year|1930"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item3.description|New buildings, classrooms, and facilities were added to accommodate the growing student population."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item3.image|https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item3.title|Infrastructure Expansion"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item3.year|1950"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item4.description|Celebrated 50 years of excellence in education with the entire school community and alumni."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item4.image|https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item4.title|Golden Jubilee"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item4.year|1975"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item5.description|Introduced computer science education with state-of-the-art computer labs and IT infrastructure."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item5.image|https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item5.title|Computer Education"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item5.year|1990"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item6.description|Modernized teaching methods with smart classrooms, digital content, and technology-enabled learning."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item6.image|https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item6.title|Digital Transformation"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item6.year|2000"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item7.description|St. Mary's achieved recognition as one of the top educational institutions in the region."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item7.image|https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item7.title|Global Recognition"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item7.year|2010"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item8.description|Celebrating 100 years of educational excellence, shaping young minds and building a legacy for generations to come."
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item8.image|https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop&crop=center"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item8.title|Century Legacy"
+        ],
+        [
+          "binding",
+          "about.journey.milestones.item8.year|2024"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.heading.2|Join Us in "
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.heading|Our "
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.href.2|/admissions"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.href|/about/founders"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item1.label|Founded"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item1.value|1924"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item2.label|Students"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item2.value|2500+"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item3.label|Awards Won"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item3.value|100+"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item4.label|Years Legacy"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.item4.value|50+"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.paragraph.2|Since 1924, St. Mary's Higher Secondary School has been on a remarkable journey of educational excellence. From humble beginnings to becoming a premier institution, our story is one of dedication, growth, and unwavering commitment to quality education."
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.paragraph.3|As we celebrate our rich history, we continue to build on our legacy of excellence, nurturing young minds and preparing them for the challenges of tomorrow."
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.paragraph|100 years of educational excellence"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.10|Join Our Family"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.2|1924 - 2024"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.3|Journey"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.4|Our Legacy"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.6|Legacy Milestone"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.7|Continuing the Legacy"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.8|Shaping the Future"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text.9|Meet Our Founders"
+        ],
+        [
+          "binding",
+          "about.journey.our-journey.text|JOURNEY"
+        ],
+        [
+          "text",
+          "→"
+        ],
+        [
+          "text",
+          "●"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/about/Principal.jsx",
+      "sha256": "b2c4568aaba316891e2f1dc330e3ddd2141276d5742cfb92cc2cd3c907088a62",
+      "content": [
+        [
+          "binding",
+          "about.principal.principal.heading.2|Complete List of Headmistresses / Principals"
+        ],
+        [
+          "binding",
+          "about.principal.principal.heading|Headmistresses / "
+        ],
+        [
+          "binding",
+          "about.principal.principal.paragraph.2|St. Mary's Higher Secondary School has been blessed with visionary leaders who have guided the institution with wisdom, dedication, and grace. Here is the complete list of Headmistresses and Principals who have shaped our school's legacy."
+        ],
+        [
+          "binding",
+          "about.principal.principal.paragraph.3|St. Mary's Higher Secondary School"
+        ],
+        [
+          "binding",
+          "about.principal.principal.paragraph.4|Celebrating 21 years of leadership legacy"
+        ],
+        [
+          "binding",
+          "about.principal.principal.paragraph.5|These remarkable leaders have dedicated their lives to the growth and excellence of St. Mary's Higher Secondary School. Their vision, wisdom, and unwavering commitment have shaped generations of students and built the foundation of our institution's success."
+        ],
+        [
+          "binding",
+          "about.principal.principal.paragraph|Our esteemed leaders through the years"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.10|Our Legacy"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.11|21 Leaders"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.12|Decades of Service"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.13|Legacy of Excellence"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.2|Leadership Legacy"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.3|Principals"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.4|Our Leadership"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.5|Headmistress / Principal #"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.6|Visionary Leader"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.7|Dedicated Service"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.8|Legacy Builder"
+        ],
+        [
+          "binding",
+          "about.principal.principal.text.9| of "
+        ],
+        [
+          "binding",
+          "about.principal.principal.text|PRINCIPALS"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item1.name|Sr. Catherine Susngi"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item1.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item10.name|Sr. Ivy D'Souza"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item10.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item11.name|Sr. Elizabeth Joseph"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item11.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item12.name|Sr. Teresa Kurian"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item12.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item13.name|Sr. Elizabeth George"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item13.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item14.name|Sr. Celine Porinchu"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item14.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item15.name|Sr. Catherine Kanannampuzha"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item15.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item16.name|Sr. Annie Villuviruthil"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item16.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item17.name|Sr. Lucy Nedumala"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item17.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item18.name|Sr. Jessy Nedumala"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item18.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item19.name|Sr. (Dr) Molly Kaniampadickal"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item19.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item2.name|Sr. Lydia Dias"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item2.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item20.name|Sr. Kathreena Kannapuzha"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item20.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item21.name|Sr. Tessy Davis"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item21.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item3.name|Sr. Maria Rodrigues"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item3.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item4.name|Sr. Rosy Devassy"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item4.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item5.name|Sr. Anna Varkey"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item5.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item6.name|Sr. Beatrice Gonsalves"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item6.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item7.name|Sr. Mary George"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item7.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item8.name|Sr. Bridget Kurian"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item8.number|NumericLiteral"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item9.name|Sr. Mary Parekatt"
+        ],
+        [
+          "binding",
+          "about.principal.principals.item9.number|NumericLiteral"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/about/Superiors.jsx",
+      "sha256": "6e84131258752d0f7794e3ce06c92b94f3b88d2b21c074ed5185f2330c6e5cd9",
+      "content": [
+        [
+          "binding",
+          "about.superiors.superiors-list.item1.name|Sr. Innocenza Vallino"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item10.name|Sr. Cleofe Fassa"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item11.name|Sr. Margaret Greppi"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item12.name|Sr. Lydia Dias"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item13.name|Sr. Rosy Devassy"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item14.name|Sr. Margaret Greppi"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item15.name|Sr. Rosy Devassy"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item16.name|Sr. Mary Mampilly"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item17.name|Sr. Celine Michael"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item18.name|Sr. Annie Adichirayil"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item19.name|Sr. Alphonsa Kurisinkal"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item2.name|Sr. Maria Avio"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item20.name|Sr. Lucy Rose Ozhukayil"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item21.name|Sr. Grace Ottalankal"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item22.name|Sr. Bridget Chittappanattu"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item3.name|Sr. Clotilde Appiano"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item4.name|Sr. Luigina Saletta"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item5.name|Sr. Clotilde Appiano"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item6.name|Sr. Teresa Villa"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item7.name|Sr. Francesca Martina"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item8.name|Sr. Severina Schiapparelli"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors-list.item9.name|Sr. Clotilde Appiano"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.heading.2|Spiritual & Administrative "
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.heading|Our "
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.paragraph.2|Our superiors provide the spiritual and administrative guidance that keeps our institution aligned with its founding vision and values."
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.paragraph|Spiritual & administrative leadership guiding our institution"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.2|Our Leadership"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.3|Superiors"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.4|Our Superiors"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.5|Leadership"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.6|Superiors"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.7|Serving with "
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text.9| and dedication"
+        ],
+        [
+          "binding",
+          "about.superiors.superiors.text|SUPERIORS"
+        ],
+        [
+          "text",
+          "❤️"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/academics/Evaluation.jsx",
+      "sha256": "0b607689101d795055fbfbd9f56f0859c45dd0b2185694cc1db88185f863ab90",
+      "content": [
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item1.description|Conducted throughout the academic session through observations, worksheets, quizzes, and class activities to monitor day-to-day learning progress."
+        ],
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item1.title|Formative Assessment"
+        ],
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item2.description|End-term evaluations that test the cumulative knowledge and understanding of the subjects covered during the academic period."
+        ],
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item2.title|Summative Assessment"
+        ],
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item3.description|For subjects like Science, Computer Science, and AI, practical assessments evaluate hands-on skills, experimentation, and application of concepts."
+        ],
+        [
+          "binding",
+          "academics.evaluation.assessment-types.item3.title|Practical Assessment"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item1.content|Contineous assessment consists of various projects assignment and co-curricular activities taken part by the student throughout the academic year"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item1.title|Continuous Assessment (CA)"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item2.content|The unit test one examination is conducted in the month of june out of 50 marks."
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item2.title|Unit-Test-One"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item3.content|The half yearly examination is conducted in the month of September/October. The examination is being conducted out of 100 marks."
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item3.title|Half yearly examination"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item4.content|The unit test one examination is conducted in the month of December out of 50 marks."
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item4.title|Unit-test-two"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item5.content|The Annual examination is conducted in the month of mid Feb to march , out of 100 marks"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation-details.item5.title|Annual examination"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.heading.2|Detailed Evaluation Structure"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.heading.3|Assessment Weightage Distribution"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.heading|Evaluation of "
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph.2|At St. Mary's, we follow a comprehensive evaluation system designed to assess students' knowledge, understanding, and application skills effectively."
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph.3|Continuous Assessment"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph.4|Half-Yearly"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph.5|Annual Examination"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph.6|Total Marks"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.paragraph|Understanding our assessment system"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.2|Assessment"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.3|Examination"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.4|Assessment System"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.5|20%"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.6|30%"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.7|50%"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text.8|100%"
+        ],
+        [
+          "binding",
+          "academics.evaluation.evaluation.text|EVALUATION"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/academics/Syllabus.jsx",
+      "sha256": "7af39c2fb094d4d5d33c904862faaab458e6c5b2532ecdea0e85e4bfb999b77b",
+      "content": [
+        [
+          "binding",
+          "academics.syllabus.stream-options.item1.label|Arts"
+        ],
+        [
+          "binding",
+          "academics.syllabus.stream-options.item2.label|Science"
+        ],
+        [
+          "binding",
+          "academics.syllabus.stream-options.item3.label|Commerce"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.heading.2|No syllabus found"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.heading|Our "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph.2|No syllabus available for "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph.3| - Class "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph.5|Showing "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph.6| syllabus entries"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph.7|Uploaded: "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.paragraph|Class-wise curriculum overview"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.10|Class "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.11|View PDF"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.2|Curriculum"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.3|Syllabus"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.4|Academic Year"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.5|Class"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.6|Class "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.7|Stream"
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text.8| · Class "
+        ],
+        [
+          "binding",
+          "academics.syllabus.syllabus-public.text|SYLLABUS"
+        ],
+        [
+          "binding",
+          "syllabus"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/Management.jsx",
+      "sha256": "8754160f8ac7ddc6e5f4696891e5338dfa2422d396a63845d89c19827b1bd4f4",
+      "content": [
+        [
+          "binding",
+          "administration.management.management.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.management.management.heading.3| Team"
+        ],
+        [
+          "binding",
+          "administration.management.management.heading.4|Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.management.management.heading|Our "
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph.2|Our management team consists of dedicated professionals committed to providing the best educational experience for our students."
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph.3|We are currently updating our management team details. Please check back later for the complete list of our dedicated leadership team."
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph.4|Team Members"
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph.6|Years of Service"
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph.8|Management details will be available soon"
+        ],
+        [
+          "binding",
+          "administration.management.management.paragraph|Dedicated leadership team guiding our institution"
+        ],
+        [
+          "binding",
+          "administration.management.management.text.2|Our Leadership"
+        ],
+        [
+          "binding",
+          "administration.management.management.text.3|Management"
+        ],
+        [
+          "binding",
+          "administration.management.management.text.4|Our Leaders"
+        ],
+        [
+          "binding",
+          "administration.management.management.text.5|Management"
+        ],
+        [
+          "binding",
+          "administration.management.management.text|MANAGEMENT"
+        ],
+        [
+          "text",
+          "—"
+        ],
+        [
+          "text",
+          "—"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/NonTeachingStaff.jsx",
+      "sha256": "8db278db8e82966243db9e8262c3f73d9313a4fe4784c32deab2ea5ffa53f177",
+      "content": [
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.heading.3| Staff"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.heading.4|Staff List Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.heading|Non-Teaching "
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.paragraph.2|Our dedicated non-teaching staff plays a crucial role in the smooth functioning of the school, supporting teachers and students in every possible way."
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.paragraph.3|We are currently updating our non-teaching staff details. Please check back later."
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.paragraph|The dedicated support team behind our success"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.text.2|Support Team"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.text.3|Staff"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.text.4|Support Staff"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.text.5|Non-Teaching"
+        ],
+        [
+          "binding",
+          "administration.non.teaching.non-teaching-staff.text|SUPPORT"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/admissions/Admission.jsx",
+      "sha256": "1aec09b2efeb034c67ebc0dd95849bb5e364ca14108c853c6ce0841c227ea086",
+      "content": [
+        [
+          "binding",
+          "admissions.admission.button-label.2|Admission Prospectus"
+        ],
+        [
+          "binding",
+          "admissions.admission.button-label|Eligibility Criteria"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.10|Frequently Asked Questions"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.2|Welcome to "
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.3|Cut-off Marks"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.4|Admission Procedure"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.5|Documents Required"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.6| For KG to Class 8"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.7| For Class 9 & 10 (HSLC)"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.8|⚠️ Important Notes:"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading.9|Admission Prospectus"
+        ],
+        [
+          "binding",
+          "admissions.admission.heading|Our "
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.10|⚠️ NO REFUND OF ANY KIND SHALL BE MADE ONCE ADMISSION IS TAKEN."
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.11|The following self-attested documents are to be submitted along with the application."
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.12|The admission prospectus will be available for download soon. Please check back later or contact the school office for more information."
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.13|📞 Contact: "
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.14|✉️ Email: "
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.2|St. Mary's Higher Secondary School welcomes students from Class 5 to 10. Our admission process is designed to be transparent and student-friendly."
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.3|CGPA or equivalent marks"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.4|Humanities"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.5|English & Social Science"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.6|Science Stream"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.7|Science & Mathematics"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.8|Commerce Stream"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph.9|Social Science & Mathematics"
+        ],
+        [
+          "binding",
+          "admissions.admission.paragraph|Join the St. Mary's family"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.10|Submit the duly filled admission form and take admission on or within 3 days of the issue of form."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.12|Admission will be granted into preferred streams according to the availability of seats."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.14|Admission will stand automatically cancelled if admission is not taken on the dates announced."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.2|Join Us"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.20|INCOMPLETE FORMS WILL BE REJECTED UPON SCRUTINY."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.22|SUBMISSION OF FORMS DOES NOT RESERVE THE RIGHT TO ADMISSION."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.24|FINAL DISCRETION LIES WITH THE PRINCIPAL IN ALL MATTERS."
+        ],
+        [
+          "binding",
+          "admissions.admission.text.25|9435190537"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.26|stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.3|Admissions"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.4|Admissions Open"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.5|St. Mary's"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.6|45%"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.7|45%"
+        ],
+        [
+          "binding",
+          "admissions.admission.text.8|45%"
+        ],
+        [
+          "binding",
+          "admissions.admission.text|ADMISSIONS"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item1.text|HSLC Marksheet"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item2.text|Registration Card"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item3.text|Transfer Certificate from previous school"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item4.text|Migration Certificate (for CBSE students)"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item5.text|Admit Card of Class 10"
+        ],
+        [
+          "binding",
+          "admissions.documents-hs.item6.text|Pass Certificate of Class 10"
+        ],
+        [
+          "binding",
+          "admissions.documents-kg-to8.item1.text|Birth Certificate"
+        ],
+        [
+          "binding",
+          "admissions.documents-kg-to8.item2.text|Aadhar Card"
+        ],
+        [
+          "binding",
+          "admissions.documents-kg-to8.item3.text|Previous Class Marksheet"
+        ],
+        [
+          "binding",
+          "admissions.documents-kg-to8.item4.text|Transfer Certificate from previous school (other than KG)"
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item1.content|The admission process includes filling out the application form, submission of required documents, and an entrance test (if applicable). Contact the school office for more details."
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item1.title|What is the admission process?"
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item2.content|Required documents include: Birth certificate, Previous academic records, Transfer certificate (if applicable), Aadhar card, Passport size photographs, and Parent's ID proof."
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item2.title|What are the documents required?"
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item3.content|The fee structure varies by class. Please contact the school office or visit the admission office for the detailed fee schedule."
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item3.title|What is the fee structure?"
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item4.content|Yes, students seeking admission to higher classes may need to take an entrance test. The test assesses the student's academic readiness."
+        ],
+        [
+          "binding",
+          "admissions.faq-items.item4.title|Is there any entrance test?"
+        ],
+        [
+          "text",
+          "."
+        ],
+        [
+          "text",
+          "."
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "•"
+        ],
+        [
+          "text",
+          "🎓"
+        ],
+        [
+          "text",
+          "📘"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/admissions/AdmissionInquiry.jsx",
+      "sha256": "d3ac8e2022f9cce2e2241f8d79616a425e783a76752aa4b3d37dbd71b44dbf31",
+      "content": [
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.heading.2|Admission "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.heading.3|Contact Details"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.heading.4|Admission Office"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.heading.5|Important Dates"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.heading|Admission "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.href.2|/#latest-notices"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.href.3|/#latest-notices"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.href|/#latest-notices"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.2|Fill in the details below and our admissions team will get back to you within 24 hours. We're here to help you take the first step towards a brighter future."
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.3|Fill in the details below and our admissions team will get back to you within 24 hours."
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.4|Visit our admission office for a campus tour and to learn more about the admission process in detail."
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.5|For immediate assistance"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.6|+91-94351-90537"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph.7|Available 24/7"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.paragraph|Your journey begins here"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.2|Enter current school name"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.3|Enter father's full name"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.4|Enter mother's full name"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.5|Enter contact number"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.6|Enter email address"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder.7|Enter complete correspondence address"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.placeholder|Enter student's full name"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.11|Gender "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.13|Male"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.14|Female"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.15|Choice of Board"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.16|Select Board"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.17|CBSE"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.18|SEBA"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.19|ICSE"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.2|Begin Your Journey"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.20|Other"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.21|Admission into (Grade) "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.23|Select Grade"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.24|Class 5"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.25|Class 6"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.26|Class 7"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.27|Class 8"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.28|Class 9"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.29|Class 10"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.3|Inquiry"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.30|Academic Year"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.31|Select Academic Year"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.32|2025-26"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.33|2026-27"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.34|School Currently studying in (with the curriculum)"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.35|Father's Name "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.37|Mother's Name "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.39|Contact No. "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.4|Enquiry Form"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.41|E-mail "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.43|Correspondence Address "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.45|Submitting..."
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.46|Submit Enquiry"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.47|✅ Thank you for your enquiry! Our admissions team will get back to you within 24 hours."
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.48|+91 9435190537"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.49|stmarysghy1924@yahoo.com"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.5|Enquiry Form"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.50|Mon-Sat: 7:45 AM - 2:00 PM"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.51|Application Form Available For KG"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.52|August/September"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.53|Last Date of Submission"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.54|Check for updates"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.55|Entrance dates"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.56|Check for updates"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.57|Admission List"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.58|Check for updates"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.6|Enquiry"
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.7|Student Name "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text.9|Date of Birth "
+        ],
+        [
+          "binding",
+          "admissions.inquiry.admission-inquiry.text|INQUIRY"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "*"
+        ],
+        [
+          "text",
+          "📞"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+      "sha256": "d7c058e5f99ddae8a526a7bc1b7394badbed86d36b653eea8b5088d4921280f0",
+      "content": [
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.heading.2|Clubs & Associations"
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.heading|Clubs & "
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.paragraph.2|We are currently updating our clubs and associations. Stay tuned for exciting new opportunities to explore your interests, develop new skills, and build lasting friendships."
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.paragraph.3|We're preparing an exciting lineup of clubs and associations for our students. From music and art to coding and sports, there will be something for everyone."
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.paragraph.4|Check back soon for the complete list and how to join."
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.paragraph|Pursue your passions beyond the classroom"
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.text.2|Extracurricular"
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.text.3|Associations"
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.text.4|Coming Soon"
+        ],
+        [
+          "binding",
+          "extracurricular.clubs.clubs-and-associations.text|CLUBS"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/extracurricular/FormativeMoments.jsx",
+      "sha256": "b504b5d2ed79def45032023ca1ffbce46d063d78b4e67e22f47f084e50718fdb",
+      "content": [
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.heading.2|Formative Moments"
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.heading|Formative "
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.paragraph.2|We are currently updating our formative moments gallery. Soon you'll be able to explore the rich tapestry of events and activities that shape character, build community, and create unforgettable memories at St. Mary's."
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.paragraph.3|We're compiling a collection of memorable moments from school life. From Annual Day celebrations to Science Exhibitions, Sports Day to Cultural Festivals, every moment tells a story of growth and community."
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.paragraph.4|Check back soon to relive the cherished memories of St. Mary's."
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.paragraph|Creating memories that last a lifetime"
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.text.2|School Life"
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.text.3|Moments"
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.text.4|Coming Soon"
+        ],
+        [
+          "binding",
+          "extracurricular.moments.formative-moments.text|MOMENTS"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+      "sha256": "67aea7eb7c1837ffa6517d3090ca71b24dcd5aecb65b6b9dbc0d1500b02ed152",
+      "content": [
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.heading.3| Teachers"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.heading.4|Staff List Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.heading|Higher "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.paragraph.2|Experienced subject specialists guiding students through board preparation, ensuring academic excellence and career readiness."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.paragraph.3|We are currently updating our higher secondary staff details. Please check back later."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.paragraph|Experienced subject specialists guiding board preparation"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.text.2|Class 10"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.text.3|Secondary Staff"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.text.4|Higher Secondary"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.text.5|Higher Secondary"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.higher.secondary.higher-secondary.text|HIGHER SEC"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+      "sha256": "c8ba702196522a61662cb81c1e74e6f638fc4c0bdb7e8db31dd203cac8a08596",
+      "content": [
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.heading.3| Teachers"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.heading.4|Staff List Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.heading|High "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.paragraph.2|Expert teachers preparing students for board examinations and higher studies, equipping them with the knowledge and skills for future success."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.paragraph.3|We are currently updating our high school staff details. Please check back later."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.paragraph|Expert teachers preparing students for excellence"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.text.2|Class 9"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.text.3|School Staff"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.text.4|High Section"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.text.5|High School"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.high.high-school.text|HIGH"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+      "sha256": "e093aa65a775628507039fa8a41c04adbc58b2f882a6ee822bdae5d04c2e97ce",
+      "content": [
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.heading.3| Teachers"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.heading.4|Staff List Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.heading|Middle "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.paragraph.2|Experienced educators who guide students through their critical middle school years, preparing them for the challenges of higher education."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.paragraph.3|We are currently updating our middle school staff details. Please check back later."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.paragraph|Experienced educators guiding young minds"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.text.2|Classes 7-8"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.text.3|School Staff"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.text.4|Middle Section"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.text.5|Middle"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.middle.middle-school.text|MIDDLE"
+        ]
+      ]
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+      "sha256": "aea5565de256ace783af0de3ffa4d826e9ca418953bd1cdea1e8a7f8ab6ef92e",
+      "content": [
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.heading.2|Dedicated "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.heading.3| Teachers"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.heading.4|Staff List Coming Soon"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.heading|Primary "
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.paragraph.2|Dedicated teachers who nurture and guide students in their formative years, building a strong foundation for their educational journey."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.paragraph.3|We are currently updating our primary school staff details. Please check back later."
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.paragraph|Dedicated teachers nurturing young minds"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.text.2|Classes 5-6"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.text.3|School Staff"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.text.4|Primary Section"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.text.5|Primary"
+        ],
+        [
+          "binding",
+          "administration.teaching.staff.primary.primary-school.text|PRIMARY"
+        ]
+      ]
+    },
+    {
+      "path": "public/domenica.png",
+      "sha256": "56f23e948a4b900de76f0b22e76d00ed59694dc08863f118fa753c4011457521"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "path": "public/icons.svg",
+      "sha256": "7ca2d67c9c3aebf50cdc8709ee8aacf8cdb8cc7ea6325ea94939caef5da1c53d"
+    },
+    {
+      "path": "public/john.png",
+      "sha256": "a0fe590343f116b112220453930005c55f311b1a6cb2064b9f51ecc3c285585c"
+    },
+    {
+      "path": "public/logo.jpeg",
+      "sha256": "bc80e9c6fbe27544bd53fce5febbc85a96f991eb2e5994deb496c32660534635"
+    },
+    {
+      "path": "public/principal.png",
+      "sha256": "d1392ba05f6d8420d2462042f4e13726cd88bab414d266b605a2a4c7fcc74b89"
+    },
+    {
+      "path": "public/sister.jpg",
+      "sha256": "00fb8c815eead2f0a015fdc8b785ebaa227c26f46f3fc9be62362a102c99bcce"
+    },
+    {
+      "path": "public/walpaper.png",
+      "sha256": "feae3ca6c9dee7d1b45b04b913be2c9ecef0bb6fd2e661d01be598bc8dab69bd"
+    },
+    {
+      "path": "public/uploads/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/uploads/gallery/33263314-ff97-4ddd-bfcb-74a9fac3b026.webp",
+      "sha256": "56bdf9e63a910332d49d77241529f94f94c99713b1ec52e4d8db2fcfa8dfec7a"
+    },
+    {
+      "path": "public/uploads/gallery/6132cde2-7bce-484a-808c-c6f1cb615ecb.webp",
+      "sha256": "4031d1edb0cfcdbaf897d0e44e29d43d76960c74f4cce8d0a0e5dc6ff27f087d"
+    },
+    {
+      "path": "public/uploads/gallery/73306072-ec98-49c2-aacf-49e563047452.webp",
+      "sha256": "30a5b9b27a20b3fad28e9ac2bb91b4ff48e4dee6206c05cda094c3027e256d70"
+    },
+    {
+      "path": "public/uploads/gallery/980fd352-0607-43dd-bb89-e9be47dbe348.webp",
+      "sha256": "10319d050984abd4939d76ee11aaa78ce38803c9363ecfbe91b6510af0f97a04"
+    }
+  ]
+}

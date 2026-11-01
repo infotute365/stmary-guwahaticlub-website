@@ -1,0 +1,14 @@
+﻿[
+    {
+        "title":  "Fixture school photograph",
+        "status":  200,
+        "contentType":  "image/webp",
+        "bytes":  115656
+    },
+    {
+        "title":  "Fixture historical portrait",
+        "status":  200,
+        "contentType":  "image/webp",
+        "bytes":  107126
+    }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "path": "/",
+    "routeFile": "app/(site)/page.jsx",
+    "component": "Home",
+    "sourceFile": "src/site-pages/Home.jsx"
+  },
+  {
+    "path": "/about/founders",
+    "routeFile": "app/(site)/about/founders/page.jsx",
+    "component": "OurFounders",
+    "sourceFile": "src/site-pages/about/OurFounders.jsx"
+  },
+  {
+    "path": "/about/journey",
+    "routeFile": "app/(site)/about/journey/page.jsx",
+    "component": "OurJourney",
+    "sourceFile": "src/site-pages/about/OurJourney.jsx"
+  },
+  {
+    "path": "/about/principal",
+    "routeFile": "app/(site)/about/principal/page.jsx",
+    "component": "Principal",
+    "sourceFile": "src/site-pages/about/Principal.jsx"
+  },
+  {
+    "path": "/about/superiors",
+    "routeFile": "app/(site)/about/superiors/page.jsx",
+    "component": "Superiors",
+    "sourceFile": "src/site-pages/about/Superiors.jsx"
+  },
+  {
+    "path": "/academics/evaluation",
+    "routeFile": "app/(site)/academics/evaluation/page.jsx",
+    "component": "Evaluation",
+    "sourceFile": "src/site-pages/academics/Evaluation.jsx"
+  },
+  {
+    "path": "/academics/syllabus",
+    "routeFile": "app/(site)/academics/syllabus/page.jsx",
+    "component": "Syllabus",
+    "sourceFile": "src/site-pages/academics/Syllabus.jsx"
+  },
+  {
+    "path": "/administration/management",
+    "routeFile": "app/(site)/administration/management/page.jsx",
+    "component": "Management",
+    "sourceFile": "src/site-pages/administration/Management.jsx"
+  },
+  {
+    "path": "/administration/non-teaching",
+    "routeFile": "app/(site)/administration/non-teaching/page.jsx",
+    "component": "NonTeachingStaff",
+    "sourceFile": "src/site-pages/administration/NonTeachingStaff.jsx"
+  },
+  {
+    "path": "/administration/teaching-staff/high",
+    "routeFile": "app/(site)/administration/teaching-staff/high/page.jsx",
+    "component": "HighSchool",
+    "sourceFile": "src/site-pages/administration/teaching-staff/HighSchool.jsx"
+  },
+  {
+    "path": "/administration/teaching-staff/higher-secondary",
+    "routeFile": "app/(site)/administration/teaching-staff/higher-secondary/page.jsx",
+    "component": "HigherSecondery",
+    "sourceFile": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+  },
+  {
+    "path": "/administration/teaching-staff/middle",
+    "routeFile": "app/(site)/administration/teaching-staff/middle/page.jsx",
+    "component": "MiddleSchool",
+    "sourceFile": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx"
+  },
+  {
+    "path": "/administration/teaching-staff/primary",
+    "routeFile": "app/(site)/administration/teaching-staff/primary/page.jsx",
+    "component": "PrimarySchool",
+    "sourceFile": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx"
+  },
+  {
+    "path": "/admissions",
+    "routeFile": "app/(site)/admissions/page.jsx",
+    "component": "Admission",
+    "sourceFile": "src/site-pages/admissions/Admission.jsx"
+  },
+  {
+    "path": "/admissions/inquiry",
+    "routeFile": "app/(site)/admissions/inquiry/page.jsx",
+    "component": "AdmissionInquiry",
+    "sourceFile": "src/site-pages/admissions/AdmissionInquiry.jsx"
+  },
+  {
+    "path": "/contact",
+    "routeFile": "app/(site)/contact/page.jsx",
+    "component": "ContactUs",
+    "sourceFile": "src/site-pages/ContactUs.jsx"
+  },
+  {
+    "path": "/extracurricular/clubs",
+    "routeFile": "app/(site)/extracurricular/clubs/page.jsx",
+    "component": "ClubsAndAssociations",
+    "sourceFile": "src/site-pages/extracurricular/ClubsAndAssociations.jsx"
+  },
+  {
+    "path": "/extracurricular/moments",
+    "routeFile": "app/(site)/extracurricular/moments/page.jsx",
+    "component": "FormativeMoments",
+    "sourceFile": "src/site-pages/extracurricular/FormativeMoments.jsx"
+  },
+  {
+    "path": "/gallery",
+    "routeFile": "app/(site)/gallery/page.jsx",
+    "component": "Gallery",
+    "sourceFile": "src/site-pages/Gallery.jsx"
+  },
+  {
+    "path": "/infrastructure",
+    "routeFile": "app/(site)/infrastructure/page.jsx",
+    "component": "Infrastructure",
+    "sourceFile": "src/site-pages/Infrastructure.jsx"
+  },
+  {
+    "path": "/mandatory-disclosure",
+    "routeFile": "app/(site)/mandatory-disclosure/page.jsx",
+    "component": "MandatoryDisclosure",
+    "sourceFile": "src/site-pages/MandatoryDisclosure.jsx"
+  },
+  {
+    "path": "/past-pupils",
+    "routeFile": "app/(site)/past-pupils/page.jsx",
+    "component": "PastPupilsAssociation",
+    "sourceFile": "src/site-pages/PastPupilsAssociation.jsx"
+  },
+  {
+    "path": "/student-rules",
+    "routeFile": "app/(site)/student-rules/page.jsx",
+    "component": "StudentRules",
+    "sourceFile": "src/site-pages/StudentRules.jsx"
+  }
+]

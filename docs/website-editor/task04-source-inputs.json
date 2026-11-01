@@ -1,0 +1,175 @@
+{
+  "captured": "2026-11-01",
+  "files": [
+    {
+      "path": "app/layout.jsx",
+      "sha256": "a06de08fa7ab168dba1d966e1d06db0381dac49b3cca16dbb567a59f4ba1ce71",
+      "snapshot": "docs/website-editor/task04-source-inputs/app/layout.jsx.txt"
+    },
+    {
+      "path": "src/components/common/Breadcrumb.jsx",
+      "sha256": "b89ef5dab73da65a7893b423d0b27c4961a1edfd2b75cbd5b57b80bb745170ab",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/common/Breadcrumb.jsx.txt"
+    },
+    {
+      "path": "src/components/common/StaffCard.jsx",
+      "sha256": "f9b1ff2ec000d2a14faa9a80918c4d2a3d83a9095268a9d11e3d4abdbd528232",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/common/StaffCard.jsx.txt"
+    },
+    {
+      "path": "src/components/home/CircularsPanel.jsx",
+      "sha256": "484f66ff74b9cff5c192a2300d271a31ac031dad3f7447ebfb328e6c91739265",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/home/CircularsPanel.jsx.txt"
+    },
+    {
+      "path": "src/components/home/FeatureCard.jsx",
+      "sha256": "bb13d94863e37bb6174f2b57e3075cd7bbbfff9a31ff1f78f5c6111b50818ada",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/home/FeatureCard.jsx.txt"
+    },
+    {
+      "path": "src/components/home/HeroCarousel.jsx",
+      "sha256": "25c8e74a298f167cf4ca81f5e7d54fce16ff25b27e444139d4ff8a35e196d3bd",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/home/HeroCarousel.jsx.txt"
+    },
+    {
+      "path": "src/components/home/PrincipalMessage.jsx",
+      "sha256": "62dda456222573b6b413d75e98fe54acfa61f99022f60752f17e574423ae5040",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/home/PrincipalMessage.jsx.txt"
+    },
+    {
+      "path": "src/components/home/WelcomeSection.jsx",
+      "sha256": "b677bab5f4509b35b86e957af741208f6868e5223fb5b18afadc5ad2e55cdd3b",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/home/WelcomeSection.jsx.txt"
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "sha256": "962b0df817433e88b52531f4141599a33e52f486f1bb5bc79ebe26516a82105c",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/layout/Footer.jsx.txt"
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "sha256": "12e43b636cd95aeb54cd7d680a1d0878cbbed7f18750d4a4632e5b9ee0fa0429",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/layout/Navbar.jsx.txt"
+    },
+    {
+      "path": "src/components/layout/TopBar.jsx",
+      "sha256": "7a0608a22842ab9947981efbbcf6edc374773ef880c4faf0a29f6564b66d0b0e",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/components/layout/TopBar.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/ContactUs.jsx",
+      "sha256": "89af302b8c5df54ff6877519d799f1c2962ea558a05f89913b52abb067515cfc",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/ContactUs.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/Gallery.jsx",
+      "sha256": "91cc5e4ca298cec2889d0458be909a0791971f212769c3d630021cf16a4d6d40",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/Gallery.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/Home.jsx",
+      "sha256": "ed96f9258181a5573fcb2557b565ea3082731341a7637439a57c7ebeafbaadcf",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/Home.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/Infrastructure.jsx",
+      "sha256": "6048289c3725631c7c51a12532e5cafbad2f4904325249344dafa5e5c4699c6a",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/Infrastructure.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/MandatoryDisclosure.jsx",
+      "sha256": "e0bf1016c729e5140b7f36d70f2838d131758dc3a4417ad495bd78120a77fafd",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/MandatoryDisclosure.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/PastPupilsAssociation.jsx",
+      "sha256": "269531e6486e0e7d7b50917a2fcb669ba91451e8ff1da22121648611395c0278",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/PastPupilsAssociation.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/StudentRules.jsx",
+      "sha256": "8b7a79aca1ffed949c145c37a259946039c0c3d743974160d3a430954955c0d8",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/StudentRules.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/about/OurFounders.jsx",
+      "sha256": "8375c792f2ed2f9210747a71b644db7c2e9c2e6e82574dfa2d65090d9b630b18",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/about/OurFounders.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/about/OurJourney.jsx",
+      "sha256": "6502f18d9885e07a7d46f8fcb0c9d6bcfb8d7861dc323b1f197fea747e1fa422",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/about/OurJourney.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/about/Principal.jsx",
+      "sha256": "f6f49b60e62876bc18951132ad415826dce4b5d4b2fa90761a6c3d5a595c06ba",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/about/Principal.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/about/Superiors.jsx",
+      "sha256": "ebf9815a1206192205e6d91b637962a97a09f04669f20b75f8202655b77232f7",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/about/Superiors.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/academics/Evaluation.jsx",
+      "sha256": "01646f29ddb1e779c7dd8eed2f5e17f089d7e32b711b36cefe3c081a12a1226a",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/academics/Evaluation.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/academics/Syllabus.jsx",
+      "sha256": "1d63db1db9e54fd1f7c1952760b0b9d499e771545e9c60ebcb487e2901225ddb",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/academics/Syllabus.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/Management.jsx",
+      "sha256": "523c463e7b36a989e7aa6b983235bb885ff203162120b27886d031d87553ed2d",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/Management.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/NonTeachingStaff.jsx",
+      "sha256": "cf92fdea5cc08a66b2f679e9d83191b114fe6e457bd265011daa0be3fd232e6d",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/NonTeachingStaff.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+      "sha256": "e835dd41c119fa84df2264ac28744ef76761bbe12399860e29db07ac25c56f86",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/teaching-staff/HighSchool.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+      "sha256": "6ed28e1c9322298262de65e140c0b390067898f357406c13d0de59e1f38aa650",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/teaching-staff/HigherSecondery.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+      "sha256": "8555394c01960ad2a9f563d5c93fe8033b157d48db094bbbba892b7f5ba315f0",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/teaching-staff/MiddleSchool.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+      "sha256": "9d629bb1619869fc77c878533b38b8863a7ff3534cbd91bfcf7f961f54b3e851",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/administration/teaching-staff/PrimarySchool.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/admissions/Admission.jsx",
+      "sha256": "f92c49784c61a26f62daf2298944ca4ac689f405ca35c45d364b9695a3a5cbb0",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/admissions/Admission.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/admissions/AdmissionInquiry.jsx",
+      "sha256": "d8b60523bad5c82a54caf93c668878dd9eeaa23facaa21c62badae6207a25275",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/admissions/AdmissionInquiry.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+      "sha256": "9a00279ea3f3737efea37d9d226c4415588ea43fa11c3312f5eb2e6befa87ae9",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/extracurricular/ClubsAndAssociations.jsx.txt"
+    },
+    {
+      "path": "src/site-pages/extracurricular/FormativeMoments.jsx",
+      "sha256": "b2938dbe76c823ef92f29ca2dc326dcb593e372c72dd816dee0e959d3e177231",
+      "snapshot": "docs/website-editor/task04-source-inputs/src/site-pages/extracurricular/FormativeMoments.jsx.txt"
+    }
+  ]
+}

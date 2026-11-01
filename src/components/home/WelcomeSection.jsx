@@ -8,6 +8,8 @@ import {
   Star, Compass, Crown, Gem, Zap
 } from 'lucide-react'
 import SectionWrapper from '../common/SectionWrapper.jsx'
+import { useWebsiteField } from '../website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
 const containerVariants = {
   hidden: {},
@@ -29,6 +31,9 @@ const itemVariants = {
 }
 
 const WelcomeSection = () => {
+  const websiteContent = useWebsiteContent()
+
+  const welcomeParagraph = useWebsiteField('home.welcome-section.welcome-section.paragraph', 'Where every student discovers their potential, builds character, and achieves excellence. Join us for a transformative educational journey.')
   return (
     <SectionWrapper>
       <motion.div
@@ -55,14 +60,10 @@ const WelcomeSection = () => {
         <motion.div variants={itemVariants} className="mb-5">
           <div className="inline-flex items-center gap-2.5 px-5 py-2 bg-maroon-800 rounded-full shadow-lg shadow-maroon-900/25 border border-maroon-700">
             <Sparkles size={12} className="text-gold-300" />
-            <span className="text-[10px] font-bold text-white tracking-[0.18em] uppercase">
-              Welcome to St. Mary's
-            </span>
+            <span {...websiteContent.props(["home.welcome-section.welcome-section.text"])} className="text-[10px] font-bold text-white tracking-[0.18em] uppercase">{websiteContent.value("home.welcome-section.welcome-section.text", "Welcome to St. Mary's")}</span>
             <div className="w-px h-3.5 bg-gold-400/30" />
-            <span className="flex items-center gap-1.5 text-[9px] font-semibold text-white tracking-wider">
-              <Rocket size={11} />
-              Since 1924
-            </span>
+            <span {...websiteContent.props(["home.welcome-section.welcome-section.text.2"])} className="flex items-center gap-1.5 text-[9px] font-semibold text-white tracking-wider">
+              <Rocket size={11} />{websiteContent.value("home.welcome-section.welcome-section.text.2", "Since 1924")}</span>
           </div>
         </motion.div>
 
@@ -71,63 +72,55 @@ const WelcomeSection = () => {
           <motion.div variants={itemVariants} className="mb-3">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-8 h-0.5 bg-gold-400 rounded-full" />
-              <span className="text-[10px] font-bold text-gold-600 tracking-[0.2em] uppercase flex items-center gap-1.5">
-                <Compass size={12} className="text-gold-500" />
-                Your Journey Begins Here
-              </span>
+              <span {...websiteContent.props(["home.welcome-section.welcome-section.text.3"])} className="text-[10px] font-bold text-gold-600 tracking-[0.2em] uppercase flex items-center gap-1.5">
+                <Compass size={12} className="text-gold-500" />{websiteContent.value("home.welcome-section.welcome-section.text.3", "Your Journey Begins Here")}</span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1]">
-              <span className="text-maroon-900">Start Your</span>
+              <span {...websiteContent.props(["home.welcome-section.welcome-section.text.4"])} className="text-maroon-900">{websiteContent.value("home.welcome-section.welcome-section.text.4", "Start Your")}</span>
               <br />
-              <span className="inline-block mt-0.5 text-gold-600 text-3xl md:text-4xl lg:text-5xl font-bold">
-                Golden Journey
-              </span>
+              <span {...websiteContent.props(["home.welcome-section.welcome-section.text.5"])} className="inline-block mt-0.5 text-gold-600 text-3xl md:text-4xl lg:text-5xl font-bold">{websiteContent.value("home.welcome-section.welcome-section.text.5", "Golden Journey")}</span>
             </h2>
           </motion.div>
 
           {/* Description - Well Balanced */}
-          <motion.p 
+          <motion.p {...websiteContent.propsFor(welcomeParagraph.value)}
+            {...welcomeParagraph.editorProps}
             variants={itemVariants} 
             className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed max-w-lg"
           >
-            Where every student discovers their potential, builds character, 
-            and achieves excellence. Join us for a transformative educational journey.
+            {welcomeParagraph.value}
           </motion.p>
 
           {/* Stats Row - Premium Design */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-4">
             {[
-              { icon: <Crown size={14} />, label: '100+ Years Legacy', color: 'text-maroon-600', bg: 'bg-maroon-50' },
-              { icon: <Gem size={14} />, label: 'Class KG-12', color: 'text-emerald-600', bg: 'bg-emerald-50' },
-              { icon: <Star size={14} />, label: '2026-27 Session', color: 'text-gold-600', bg: 'bg-gold-50' }
+              { icon: <Crown size={14} />, label: websiteContent.value("home.welcome-section.welcome-section.item1.label", '100+ Years Legacy'), color: 'text-maroon-600', bg: 'bg-maroon-50' },
+              { icon: <Gem size={14} />, label: websiteContent.value("home.welcome-section.welcome-section.item2.label", 'Class KG-12'), color: 'text-emerald-600', bg: 'bg-emerald-50' },
+              { icon: <Star size={14} />, label: websiteContent.value("home.welcome-section.welcome-section.item3.label", '2026-27 Session'), color: 'text-gold-600', bg: 'bg-gold-50' }
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-1.5 text-xs">
                 <div className={`p-1.5 rounded-lg ${item.bg} border border-${item.color.split('-')[1]}-100/30`}>
-                  <span className={item.color}>{item.icon}</span>
+                  <span {...websiteContent.propsFor(item.icon)} className={item.color}>{item.icon}</span>
                 </div>
-                <span className="font-semibold text-gray-700 text-xs">{item.label}</span>
+                <span {...websiteContent.propsFor(item.label)} className="font-semibold text-gray-700 text-xs">{item.label}</span>
               </div>
             ))}
           </motion.div>
 
           {/* CTA Buttons - Solid Colors */}
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 mt-5">
-            <a
-              href="/admissions"
+            <a {...websiteContent.props(["home.welcome-section.welcome-section.href","home.welcome-section.welcome-section.text.6"])}
+              href={websiteContent.value("home.welcome-section.welcome-section.href", "/admissions")}
               className="group relative inline-flex items-center gap-2 text-white px-7 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 bg-maroon-800 hover:bg-maroon-800 border border-maroon-600"
             >
-              <Rocket size={16} />
-              Begin Your Journey
-              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <Rocket size={16} />{websiteContent.value("home.welcome-section.welcome-section.text.6", "Begin Your Journey")}<ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
 
-            <a
-              href="/about/founders"
+            <a {...websiteContent.props(["home.welcome-section.welcome-section.href.2","home.welcome-section.welcome-section.text.7"])}
+              href={websiteContent.value("home.welcome-section.welcome-section.href.2", "/about/founders")}
               className="group inline-flex items-center gap-1.5 px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 bg-white hover:bg-maroon-50 shadow-md hover:shadow-lg hover:-translate-y-0.5 border-2 border-maroon-200/50 hover:border-maroon-300/80 text-maroon-700"
             >
-              <Shield size={16} />
-              Discover Our Heritage
-              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <Shield size={16} />{websiteContent.value("home.welcome-section.welcome-section.text.7", "Discover Our Heritage")}<ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </motion.div>
 
@@ -144,21 +137,17 @@ const WelcomeSection = () => {
               </span>
             </a> */}
 
-            <a
-              href="/academics/syllabus"
+            <a {...websiteContent.props(["home.welcome-section.welcome-section.href.3","home.welcome-section.welcome-section.text.8"])}
+              href={websiteContent.value("home.welcome-section.welcome-section.href.3", "/academics/syllabus")}
               className="group inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-semibold text-xs tracking-wide transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 text-white bg-blue-500 hover:bg-blue-600"
             >
-              <BookOpen size={13} />
-              Download Syllabus
-            </a>
+              <BookOpen size={13} />{websiteContent.value("home.welcome-section.welcome-section.text.8", "Download Syllabus")}</a>
 
-            <a
-              href="/gallery"
+            <a {...websiteContent.props(["home.welcome-section.welcome-section.href.4","home.welcome-section.welcome-section.text.9"])}
+              href={websiteContent.value("home.welcome-section.welcome-section.href.4", "/gallery")}
               className="group inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-semibold text-xs tracking-wide transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 text-white bg-purple-500 hover:bg-purple-600"
             >
-              <Award size={13} />
-              Explore Gallery
-            </a>
+              <Award size={13} />{websiteContent.value("home.welcome-section.welcome-section.text.9", "Explore Gallery")}</a>
           </motion.div>
         </div>
 

@@ -18,6 +18,11 @@ const GalleryGrid = ({ images }) => {
             transition={{ duration: 0.4, delay: index * 0.05 }}
             viewport={{ once: true }}
             className="relative group cursor-pointer overflow-hidden rounded-xl"
+            role="button"
+            tabIndex={0}
+            aria-label={image.title}
+            aria-haspopup="dialog"
+            onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();setSelectedIndex(index)}}}
             onClick={() => setSelectedIndex(index)}
           >
             <img

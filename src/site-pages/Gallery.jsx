@@ -12,8 +12,13 @@ import { toast } from 'react-toastify'
 import SectionWrapper from '../components/common/SectionWrapper.jsx'
 import { getGallery } from '../services/api.js'
 import { formatDate } from '../utils/helpers.js'
+import { useManagedRecord } from '../components/website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../components/website-editor/useWebsiteContent.js'
 
 const Gallery = () => {
+  const websiteContent = useWebsiteContent()
+
+  const recordProps = useManagedRecord('gallery')
   // ---------- STATE ----------
   const [images, setImages] = useState([])           // all loaded images
   const [loading, setLoading] = useState(true)      // initial load
@@ -31,6 +36,7 @@ const Gallery = () => {
   const [likedImages, setLikedImages] = useState([])
 
   const loaderRef = useRef(null)
+  const lightboxRef = useRef(null)
 
   // ---------- FETCH FUNCTIONS ----------
   const fetchGallery = async (reset = false) => {
@@ -42,7 +48,7 @@ const Gallery = () => {
       setHasMore(res.pagination?.page < res.pagination?.totalPages)
       setPage(2)                                    // next page to load
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Failed to load gallery')
+      toast.error(err.response?.data?.message || websiteContent.value("gallery.fetch-gallery.text", 'Failed to load gallery'))
     } finally {
       setLoading(false)
     }
@@ -59,7 +65,7 @@ const Gallery = () => {
       setHasMore(res.pagination?.page < res.pagination?.totalPages)
       setPage(prev => prev + 1)
     } catch (err) {
-      toast.error('Failed to load more images')
+      toast.error(websiteContent.value("gallery.load-more.text", 'Failed to load more images'))
     } finally {
       setLoadingMore(false)
     }
@@ -110,12 +116,10 @@ const Gallery = () => {
     setCurrentIndex(index)
     setSelectedImage(filteredImages[index])
     setIsLightboxOpen(true)
-    document.body.style.overflow = 'hidden'
   }
 
   const closeLightbox = () => {
     setIsLightboxOpen(false)
-    document.body.style.overflow = 'auto'
     setTimeout(() => setSelectedImage(null), 300)
   }
 
@@ -134,7 +138,7 @@ const Gallery = () => {
         ? prev.filter(id => id !== imageId)
         : [...prev, imageId]
     )
-    toast.success(likedImages.includes(imageId) ? 'Removed from favorites' : 'Added to favorites')
+    toast.success(likedImages.includes(imageId) ? websiteContent.value("gallery.toggle-like.text", 'Removed from favorites') : websiteContent.value("gallery.toggle-like.text.2", 'Added to favorites'))
   }
 
   const handleDownload = async (image) => {
@@ -155,9 +159,9 @@ const Gallery = () => {
       document.body.removeChild(a)
       URL.revokeObjectURL(url)
       
-      toast.success('Image downloaded successfully')
+      toast.success(websiteContent.value("gallery.handle-download.text", 'Image downloaded successfully'))
     } catch (err) {
-      toast.error('Failed to download image')
+      toast.error(websiteContent.value("gallery.handle-download.text.2", 'Failed to download image'))
     }
   }
 
@@ -165,8 +169,8 @@ const Gallery = () => {
     try {
       if (navigator.share) {
         await navigator.share({
-          title: image.title || "St. Mary's Gallery",
-          text: `Check out this image from St. Mary's: ${image.title}`,
+          title: image.title || websiteContent.value("gallery.handle-share.title", "St. Mary's Gallery"),
+          text: `${websiteContent.value("gallery.handle-share.text", "Check out this image from St. Mary's: ")}${image.title}`,
           url: image.image.startsWith('http') 
             ? image.image 
             : `${window.location.origin}${image.image}`
@@ -176,10 +180,10 @@ const Gallery = () => {
           ? image.image 
           : `${window.location.origin}${image.image}`
         await navigator.clipboard.writeText(url)
-        toast.success('Image URL copied to clipboard')
+        toast.success(websiteContent.value("gallery.handle-share.text.2", 'Image URL copied to clipboard'))
       }
     } catch (err) {
-      toast.error('Failed to share image')
+      toast.error(websiteContent.value("gallery.handle-share.text.3", 'Failed to share image'))
     }
   }
 
@@ -201,7 +205,25 @@ const Gallery = () => {
 
   // Keyboard events for lightbox
   useEffect(() => {
+    if (!isLightboxOpen) return
+    const previous = document.body.style.overflow
+    const opener = document.activeElement
+    document.body.style.overflow = 'hidden'
+    lightboxRef.current?.focus()
+    const trap = event => {
+      if (event.key !== 'Tab' || event.target.closest?.('[data-website-editor-ui]')) return
+      const controls = [...lightboxRef.current.querySelectorAll('button')].filter(node=>node.getClientRects().length)
+      const first = controls[0], last = controls.at(-1)
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === lightboxRef.current)) { event.preventDefault(); last?.focus() }
+      else if (!event.shiftKey && (document.activeElement === last || document.activeElement === lightboxRef.current)) { event.preventDefault(); first?.focus() }
+    }
+    document.addEventListener('keydown',trap)
+    return () => { document.body.style.overflow = previous; document.removeEventListener('keydown',trap); opener?.focus() }
+  }, [isLightboxOpen])
+
+  useEffect(() => {
     const handleKeyDown = (e) => {
+      if (e.target.closest?.('[data-website-editor-ui]')) return
       if (isLightboxOpen) {
         if (e.key === 'Escape') closeLightbox()
         if (e.key === 'ArrowRight') navigateLightbox(1)
@@ -245,18 +267,17 @@ const Gallery = () => {
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-300 rounded-full translate-y-1/2 -translate-x-1/3" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">GALLERY</span>
+            <span {...websiteContent.props(["gallery.gallery.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("gallery.gallery.text", "GALLERY")}</span>
           </div>
           <div className="container-custom relative h-full flex items-center">
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <Camera size={18} className="text-gold-400" />
-                <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Memories</span>
+                <span {...websiteContent.props(["gallery.gallery.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("gallery.gallery.text.2", "Memories")}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
-                Our <span className="text-gold-400">Gallery</span>
+              <h1 {...websiteContent.props(["gallery.gallery.heading"])} className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">{websiteContent.value("gallery.gallery.heading", "Our ")}<span {...websiteContent.props(["gallery.gallery.text.3"])} className="text-gold-400">{websiteContent.value("gallery.gallery.text.3", "Gallery")}</span>
               </h1>
-              <p className="text-white/50 text-sm mt-1">Moments captured at St. Mary's</p>
+              <p {...websiteContent.props(["gallery.gallery.paragraph"])} className="text-white/50 text-sm mt-1">{websiteContent.value("gallery.gallery.paragraph", "Moments captured at St. Mary's")}</p>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-500/50" />
@@ -282,7 +303,7 @@ const Gallery = () => {
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-300 rounded-full translate-y-1/2 -translate-x-1/3" />
         </div>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">GALLERY</span>
+          <span {...websiteContent.props(["gallery.gallery.text.4"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("gallery.gallery.text.4", "GALLERY")}</span>
         </div>
         <div className="container-custom relative h-full flex items-center">
           <div>
@@ -293,24 +314,21 @@ const Gallery = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Camera size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Memories</span>
+              <span {...websiteContent.props(["gallery.gallery.text.5"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("gallery.gallery.text.5", "Memories")}</span>
             </motion.div>
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["gallery.gallery.heading.2"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Our <span className="text-gold-400">Gallery</span>
+            >{websiteContent.value("gallery.gallery.heading.2", "Our ")}<span {...websiteContent.props(["gallery.gallery.text.6"])} className="text-gold-400">{websiteContent.value("gallery.gallery.text.6", "Gallery")}</span>
             </motion.h1>
-            <motion.p
+            <motion.p {...websiteContent.props(["gallery.gallery.paragraph.2"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Moments captured at St. Mary's
-            </motion.p>
+            >{websiteContent.value("gallery.gallery.paragraph.2", "Moments captured at St. Mary's")}</motion.p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-500/50" />
@@ -328,12 +346,9 @@ const Gallery = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Sparkles size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Moments That Matter</span>
+              <span {...websiteContent.props(["gallery.gallery.text.7"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("gallery.gallery.text.7", "Moments That Matter")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Explore the vibrant life at St. Mary's through our gallery. From academic events
-              to cultural celebrations, every moment tells a story of growth and community.
-            </p>
+            <p {...websiteContent.props(["gallery.gallery.paragraph.3"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("gallery.gallery.paragraph.3", "Explore the vibrant life at St. Mary's through our gallery. From academic events to cultural celebrations, every moment tells a story of growth and community.")}</p>
           </motion.div>
         </div>
       </section>
@@ -346,7 +361,7 @@ const Gallery = () => {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-10">
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => (
-                  <button
+                  <button {...websiteContent.props(["gallery.gallery.button-label"])}
                     key={cat}
                     onClick={() => setFilter(cat)}
                     className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -355,16 +370,16 @@ const Gallery = () => {
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800'
                     }`}
                   >
-                    {cat === 'all' ? 'All' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                    {cat === 'all' ? websiteContent.value("gallery.gallery.button-label", 'All') : cat.charAt(0).toUpperCase() + cat.slice(1)}
                   </button>
                 ))}
               </div>
               <div className="flex items-center gap-3 w-full lg:w-auto">
                 <div className="relative flex-1 lg:w-48">
                   <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                  <input
+                  <input {...websiteContent.props(["gallery.gallery.placeholder"])}
                     type="text"
-                    placeholder="Search images..."
+                    placeholder={websiteContent.value("gallery.gallery.placeholder", "Search images...")}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-9 pr-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-maroon-800 focus:border-transparent transition-all"
@@ -375,7 +390,7 @@ const Gallery = () => {
                     { icon: <Grid3x3 size={15} />, mode: 'grid' },
                     { icon: <LayoutGrid size={15} />, mode: 'masonry' }
                   ].map(({ icon, mode }) => (
-                    <button
+                    <button {...websiteContent.propsFor(icon)}
                       key={mode}
                       onClick={() => setViewMode(mode)}
                       className={`p-1.5 rounded-full transition-all duration-300 ${
@@ -400,8 +415,8 @@ const Gallery = () => {
               className="text-center py-20"
             >
               <Camera size={40} className="mx-auto text-gray-300 mb-4" />
-              <h3 className="text-lg font-medium text-gray-600">No photos found</h3>
-              <p className="text-gray-400 text-sm mt-1">Try adjusting your search or filter</p>
+              <h3 {...websiteContent.props(["gallery.gallery.heading.3"])} className="text-lg font-medium text-gray-600">{websiteContent.value("gallery.gallery.heading.3", "No photos found")}</h3>
+              <p {...websiteContent.props(["gallery.gallery.paragraph.4"])} className="text-gray-400 text-sm mt-1">{websiteContent.value("gallery.gallery.paragraph.4", "Try adjusting your search or filter")}</p>
             </motion.div>
           ) : (
             <motion.div
@@ -412,9 +427,15 @@ const Gallery = () => {
             >
               {filteredImages.map((image, index) => (
                 <motion.div
+                  {...recordProps(image.eventId, image.eventName || image.title)}
                   key={image._id || image.id}
                   variants={itemVariants}
-                  className="group relative rounded-xl overflow-hidden cursor-pointer bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-gold-300"
+                  className="school-gallery-card group relative rounded-xl overflow-hidden cursor-pointer bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-gold-300"
+                  role="group"
+                  tabIndex={0}
+                  aria-label={image.title}
+                  aria-haspopup="dialog"
+                  onKeyDown={event=>{if(event.target===event.currentTarget&&(event.key==='Enter'||event.key===' ')){event.preventDefault();openLightbox(index)}}}
                   onClick={() => openLightbox(index)}
                 >
                   <div className={`relative overflow-hidden ${getImageHeight(index)}`}>
@@ -429,14 +450,14 @@ const Gallery = () => {
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                      <h3 className="text-white text-sm font-medium leading-tight">{image.title}</h3>
+                      <h3 {...websiteContent.propsFor(image.title)} className="text-white text-sm font-medium leading-tight">{image.title}</h3>
                       <p className="text-white/70 text-xs mt-0.5 flex items-center gap-1">
                         <Calendar size={11} />
                         {formatDate(image.date)}
                       </p>
                     </div>
-                    <div className="absolute top-3 left-3 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {image.category || 'General'}
+                    <div {...websiteContent.props(["gallery.gallery.text.8"])} className="absolute top-3 left-3 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {image.category || websiteContent.value("gallery.gallery.text.8", 'General')}
                     </div>
                     <div className="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <button
@@ -476,7 +497,7 @@ const Gallery = () => {
                     </div>
                     <div className="absolute bottom-3 left-3 flex items-center gap-1 text-white/60 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Eye size={11} />
-                      <span>View</span>
+                      <span {...websiteContent.props(["gallery.gallery.text.9"])}>{websiteContent.value("gallery.gallery.text.9", "View")}</span>
                     </div>
                   </div>
                 </motion.div>
@@ -490,13 +511,13 @@ const Gallery = () => {
               {loadingMore ? (
                 <Loader size={28} className="animate-spin text-maroon-700" />
               ) : (
-                <span className="text-sm text-gray-400">Scroll for more</span>
+                <span {...websiteContent.props(["gallery.gallery.text.10"])} className="text-sm text-gray-400">{websiteContent.value("gallery.gallery.text.10", "Scroll for more")}</span>
               )}
             </div>
           )}
 
           {!hasMore && filteredImages.length > 0 && (
-            <p className="text-center text-sm text-gray-400 mt-4">You've seen all photos 🎉</p>
+            <p {...websiteContent.props(["gallery.gallery.paragraph.5"])} className="text-center text-sm text-gray-400 mt-4">{websiteContent.value("gallery.gallery.paragraph.5", "You've seen all photos 🎉")}</p>
           )}
 
           {!loading && filteredImages.length > 0 && (
@@ -506,9 +527,8 @@ const Gallery = () => {
               transition={{ delay: 0.4 }}
               className="text-center mt-6"
             >
-              <p className="text-sm text-gray-400">
-                Showing {filteredImages.length} {filteredImages.length === 1 ? 'photo' : 'photos'}
-                {filter !== 'all' && ` in ${filter}`}
+              <p {...websiteContent.props(["gallery.gallery.paragraph.6","gallery.gallery.paragraph.7","gallery.gallery.paragraph.8","gallery.gallery.paragraph.9"])} className="text-sm text-gray-400">{websiteContent.value("gallery.gallery.paragraph.6", "Showing ")}{filteredImages.length} {filteredImages.length === 1 ? websiteContent.value("gallery.gallery.paragraph.7", 'photo') : websiteContent.value("gallery.gallery.paragraph.8", 'photos')}
+                {filter !== 'all' && `${websiteContent.value("gallery.gallery.paragraph.9", " in ")}${filter}`}
               </p>
             </motion.div>
           )}
@@ -519,25 +539,33 @@ const Gallery = () => {
       <AnimatePresence>
         {isLightboxOpen && selectedImage && (
           <motion.div
+            ref={lightboxRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedImage.title}
+            tabIndex={-1}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center"
+            className="school-gallery-lightbox fixed inset-0 z-[999] bg-black/95 flex items-center justify-center"
           >
             <button
               onClick={closeLightbox}
+              aria-label="Close"
               className="absolute top-6 right-6 z-10 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
             >
               <X size={24} className="text-white" />
             </button>
             <button
               onClick={() => navigateLightbox(-1)}
+              aria-label="Previous image"
               className="absolute left-6 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hidden md:flex"
             >
               <ChevronLeft size={24} className="text-white" />
             </button>
             <button
               onClick={() => navigateLightbox(1)}
+              aria-label="Next image"
               className="absolute right-6 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hidden md:flex"
             >
               <ChevronRight size={24} className="text-white" />
@@ -561,19 +589,19 @@ const Gallery = () => {
               <div className="absolute bottom-0 left-0 right-0 p-5 bg-black/70 rounded-b-lg">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <h3 className="text-white font-medium text-lg">{selectedImage.title}</h3>
+                    <h3 {...websiteContent.propsFor(selectedImage.title)} className="text-white font-medium text-lg">{selectedImage.title}</h3>
                     <div className="flex items-center gap-3 mt-0.5 text-white/60 text-sm">
                       <span className="flex items-center gap-1.5">
                         <Calendar size={13} />
                         {formatDate(selectedImage.date)}
                       </span>
-                      <span className="flex items-center gap-1.5">
+                      <span {...websiteContent.props(["gallery.gallery.text.11"])} className="flex items-center gap-1.5">
                         <Tag size={13} />
-                        {selectedImage.category || 'General'}
+                        {selectedImage.category || websiteContent.value("gallery.gallery.text.11", 'General')}
                       </span>
                     </div>
                   </div>
-                  <span className="text-white/40 text-sm">
+                  <span {...websiteContent.propsFor(currentIndex + 1, filteredImages.length)} className="text-white/40 text-sm">
                     {currentIndex + 1} / {filteredImages.length}
                   </span>
                 </div>
@@ -581,18 +609,18 @@ const Gallery = () => {
             </motion.div>
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/50 backdrop-blur-sm px-3 py-2 rounded-full border border-white/10">
               {[
-                { icon: <ZoomIn size={18} />, label: 'Zoom In' },
-                { icon: <ZoomOut size={18} />, label: 'Zoom Out' },
-                { icon: <RotateCw size={18} />, label: 'Rotate' },
+                { icon: <ZoomIn size={18} />, label: websiteContent.value("gallery.gallery.item1.label", 'Zoom In') },
+                { icon: <ZoomOut size={18} />, label: websiteContent.value("gallery.gallery.item2.label", 'Zoom Out') },
+                { icon: <RotateCw size={18} />, label: websiteContent.value("gallery.gallery.item3.label", 'Rotate') },
                 { 
                   icon: <Heart size={18} className={likedImages.includes(selectedImage._id || selectedImage.id) ? 'fill-red-500 text-red-500' : ''} />, 
-                  label: 'Like',
+                  label: websiteContent.value("gallery.gallery.item4.label", 'Like'),
                   onClick: () => toggleLike(selectedImage._id || selectedImage.id)
                 },
-                { icon: <Share2 size={18} />, label: 'Share', onClick: () => handleShare(selectedImage) },
-                { icon: <Download size={18} />, label: 'Download', onClick: () => handleDownload(selectedImage) }
+                { icon: <Share2 size={18} />, label: websiteContent.value("gallery.gallery.item5.label", 'Share'), onClick: () => handleShare(selectedImage) },
+                { icon: <Download size={18} />, label: websiteContent.value("gallery.gallery.item6.label", 'Download'), onClick: () => handleDownload(selectedImage) }
               ].map((item, index) => (
-                <button
+                <button {...websiteContent.propsFor(item.icon)}
                   key={index}
                   onClick={item.onClick}
                   className="p-1.5 hover:bg-white/20 rounded-full transition-all duration-300 text-white/60 hover:text-white"
@@ -602,7 +630,7 @@ const Gallery = () => {
                 </button>
               ))}
             </div>
-            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/40 text-xs md:hidden">
+            <div {...websiteContent.propsFor(currentIndex + 1, filteredImages.length)} className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/40 text-xs md:hidden">
               {currentIndex + 1} / {filteredImages.length}
             </div>
           </motion.div>
@@ -611,7 +639,7 @@ const Gallery = () => {
 
       {/* Refresh Button */}
       <div className="fixed bottom-6 right-6 z-40">
-        <button
+        <button {...websiteContent.props(["gallery.gallery.title"])}
           onClick={() => {
             setPage(1)
             setHasMore(true)
@@ -619,7 +647,7 @@ const Gallery = () => {
             fetchGallery(true)
           }}
           className="bg-maroon-800 hover:bg-maroon-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
-          title="Refresh Gallery"
+          title={websiteContent.value("gallery.gallery.title", "Refresh Gallery")}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

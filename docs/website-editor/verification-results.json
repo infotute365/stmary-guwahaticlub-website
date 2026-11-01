@@ -1,0 +1,94 @@
+{
+  "captured": "2026-10-31",
+  "timezone": "Asia/Calcutta",
+  "task": "01 of 05 — audit and foundation only",
+  "publicRoutesInspected": 23,
+  "editablePublicStaticFields": 883,
+  "staticRegistryEntries": 1288,
+  "existingDynamicModules": ["Circulars", "Staff", "Gallery", "Syllabus"],
+  "dynamicFieldTemplates": 40,
+  "originalTrackedFilesUnchanged": 157,
+  "modifiedOriginalFiles": [],
+  "applicationOrDatabaseChanges": false,
+  "checks": [
+    {
+      "command": "npm run verify:preservation",
+      "status": "FAIL_PRE_EXISTING",
+      "message": "Preserved website file changed: src/components/layout/TopBar.jsx",
+      "observedBeforeApplicationChanges": true,
+      "existingGateChangedOrWaived": false
+    },
+    {
+      "command": "npm test",
+      "status": "PASS_WITH_SKIP",
+      "tests": 25,
+      "passed": 24,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "Opt-in MongoDB integration test requires TEST_MONGODB_URI; none supplied."
+    },
+    {
+      "command": "node --test scripts/website-editor-audit.test.mjs",
+      "status": "PASS",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "scope": "Isolated fixtures only; exact binding acceptance and rejection of extra layout changes, rewritten fallbacks, protected fields, duplicate keys and unlisted modifications. Included in final npm test count."
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "nextVersion": "15.5.28",
+      "publicPageRoutes": 23,
+      "loginAndAdminPageRoutes": 7
+    },
+    {
+      "command": "node scripts/website-editor-audit.mjs verify",
+      "status": "CURRENT_BASELINE_PASS_LEGACY_FAILURE",
+      "exitCode": 1,
+      "originalFilesUnchanged": 157,
+      "publicRoutes": 23,
+      "uniqueRegistryKeys": 1288,
+      "sourceStructure": "unchanged",
+      "expressionsAndReferences": "unchanged",
+      "sealedArtifactHashesVerified": 125,
+      "legacyPreservation": "FAIL (pre-existing; not waived)"
+    },
+    {
+      "command": "node scripts/website-editor-audit.mjs review-bindings docs/website-editor/binding-plan.example.json",
+      "status": "REVIEW_CANDIDATE_ONLY",
+      "files": 0,
+      "bindings": 0,
+      "approved": false
+    },
+    { "command": "git diff --exit-code", "status": "PASS", "meaning": "No changes to any pre-existing tracked file." },
+    { "command": "git diff --check", "status": "PASS", "scope": "Tracked-file diff." }
+  ],
+  "appearanceEvidence": {
+    "productionBuildSsrSnapshots": 23,
+    "desktopMobileScreenshots": "NOT_CAPTURED",
+    "reason": "No installed project Playwright/Puppeteer browser harness or screenshot tooling.",
+    "hydratedDomAndBrowserInteractions": "NOT_VERIFIED",
+    "liveMongoDbRecordInventory": "NOT_QUERIED"
+  },
+  "existingGaps": [
+    "Mandatory Disclosure service returns []; no model/controller/API/admin page exists despite the admin navigation link.",
+    "Contact and admission inquiry submissions simulate success with timers; no persistence or email backend exists.",
+    "The old immutable TopBar hash does not match the current clean tracked source."
+  ],
+  "filesCreated": {
+    "requiredDocuments": [
+      "docs/website-editor/01-PAGE-INVENTORY.md",
+      "docs/website-editor/02-CONTENT-REGISTRY.md",
+      "docs/website-editor/03-PRESERVATION-BASELINE.md",
+      "docs/website-editor/04-IMPLEMENTATION-ARCHITECTURE.md",
+      "docs/website-editor/05-EXISTING-DYNAMIC-MODULES.md"
+    ],
+    "scripts": ["scripts/website-editor-audit.mjs", "scripts/website-editor-audit.test.mjs"],
+    "evidenceIndex": "docs/website-editor/artifact-hashes.json",
+    "other": ["docs/website-editor/binding-plan.example.json", "docs/website-editor/verification-results.json", "docs/website-editor/baseline/**"],
+    "totalNewFiles": 127
+  },
+  "preExistingUntrackedArchive": "stmary-guwahaticlub-website.rar — untouched and excluded",
+  "nextPromptStarted": false
+}

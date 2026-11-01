@@ -3,13 +3,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import {schoolSubmenuId} from './navigation-state.js'
 
-const NavNestedDropdown = ({ items, isOpen = false, onToggle = () => {}, onNavigate = () => {} }) => {
+const NavNestedDropdown = ({ items, isOpen = false, openPaths = {}, onToggle = () => {}, onNavigate = () => {}, id, pathname }) => {
   return (
-    <div className={`absolute left-0 top-full pt-2 z-50 transition-all duration-200 ${
-      isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-    } group-hover:opacity-100 group-hover:visible`}>
-      <div className="bg-white rounded-xl shadow-xl border border-gray-100 min-w-[220px] py-2">
+    <div id={id} data-nav-popup="true" hidden={!isOpen} className="school-nav-popup">
+      <div className="school-nav-popup-surface">
         {items.map((item) => (
           <div key={item.path} className="relative group/sub">
             {item.nested ? (
@@ -17,21 +16,22 @@ const NavNestedDropdown = ({ items, isOpen = false, onToggle = () => {}, onNavig
                 <button
                   type="button"
                   onClick={() => onToggle(item.path)}
-                  className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:text-maroon-700 hover:bg-maroon-50 transition-colors"
+                  aria-expanded={!!openPaths[item.path]}
+                  aria-controls={schoolSubmenuId(item.path)}
+                  className="school-nav-popup-link school-nav-popup-trigger"
                 >
                   <span>{item.label}</span>
                   <ChevronRight size={16} className="text-gray-400" />
                 </button>
-                <div className={`absolute left-full top-0 pt-0 pl-2 z-50 transition-all duration-200 ${
-                  isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                } group-hover/sub:opacity-100 group-hover/sub:visible`}>
-                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 min-w-[200px] py-2">
+                <div id={schoolSubmenuId(item.path)} hidden={!openPaths[item.path]} className="school-nav-nested">
+                  <div>
                     {item.nested.map((nested) => (
                       <Link
                         key={nested.path}
                         href={nested.path}
                         onClick={onNavigate}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:text-maroon-700 hover:bg-maroon-50 transition-colors"
+                        aria-current={pathname===nested.path?'page':undefined}
+                        className="school-nav-popup-link"
                       >
                         {nested.label}
                       </Link>
@@ -43,7 +43,8 @@ const NavNestedDropdown = ({ items, isOpen = false, onToggle = () => {}, onNavig
               <Link
                 href={item.path}
                 onClick={onNavigate}
-                className="block px-4 py-2.5 text-sm text-gray-700 hover:text-maroon-700 hover:bg-maroon-50 transition-colors"
+                aria-current={pathname===item.path?'page':undefined}
+                className="school-nav-popup-link"
               >
                 {item.label}
               </Link>

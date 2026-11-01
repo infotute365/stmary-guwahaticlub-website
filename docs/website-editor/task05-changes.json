@@ -1,0 +1,83 @@
+{
+    "task":  "05 of 05",
+    "captured":  "2026-11-01",
+    "note":  "Exact final-audit transitions on the immutable Task 01-04 chain. Only six existing test/verification harnesses change. New final HTTP/image tests and requested reports are sealed; this manifest and generated execution logs/results are excluded from self-hashing.",
+    "modifiedFiles":  [
+                          {
+                              "path":  "scripts/preview-website-editor.mjs",
+                              "beforeSha256":  "b85a9c0a06ebb9ea59d539079443f8e2431926cac0584561ad46e2016fe588c8",
+                              "afterSha256":  "2b36cb0a2140f48e541c560dea7ad1934b5cbc4336aa2e4b1f793c06d9520bd6",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          },
+                          {
+                              "path":  "scripts/run-website-content-tests.mjs",
+                              "beforeSha256":  "539b486cef43e42cd97a8d5e03431a12814cc028687d2595cd6bd80fb82c1e11",
+                              "afterSha256":  "a9ffcf8a41e222c2b9f6e288aa38f47e94058cc3496721791e9955acd4cb0dcc",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          },
+                          {
+                              "path":  "scripts/verify-website-editor.mjs",
+                              "beforeSha256":  "5f5658bf7e41292b6e194941a4416972bb1df778dc2e3ee9b72dc42663104e2c",
+                              "afterSha256":  "aa15212d31abca4e080f6995daf15c6b750b3eb5a44ea7bc271d4be404dee787",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          },
+                          {
+                              "path":  "scripts/website-pages-smoke.mjs",
+                              "beforeSha256":  "2ccc284894a402e9540c7f09832cb6eec41b58f587268cdf6c80b627ed8b1584",
+                              "afterSha256":  "3d56f9c9c7e8a0b49e5b5cd7a571356ac0c01cf9f55014a97414ac5d404e244d",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          },
+                          {
+                              "path":  "tests/website-editor-controller.test.js",
+                              "beforeSha256":  "72913b62942c7b30d6c7a2528f9f912be0da8e2a28568676ae03e299174a0d69",
+                              "afterSha256":  "7e3ef3b00f0f816f3cc37fe942df27e6d41af28a471e30c985f1a1663eb4edb1",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          },
+                          {
+                              "path":  "tests/website-task04-integration.test.js",
+                              "beforeSha256":  "f08702ea4464962f0166760d6cb16b7c8bb0173da367fcbcde0ea2650dd5eff4",
+                              "afterSha256":  "853a6e73c2b5ae3662f18b577ba2f150ba9ff6996dbc51c564d85e51c6a5faa7",
+                              "review":  "Task 05 test/report harness only; no public layout, school data or existing business contract change"
+                          }
+                      ],
+    "newFiles":  [
+                     {
+                         "path":  "scripts/website-final-smoke.mjs",
+                         "sha256":  "1f924560120bbce60f60a5dfd831f3cf21e33b2d7531f27b39e56fee0f7a853e"
+                     },
+                     {
+                         "path":  "tests/website-image-security.test.js",
+                         "sha256":  "0ee2f1d812d1a00fd8f118ebc964af3d5c735f995af78430cbe7e52cd16227fd"
+                     },
+                     {
+                         "path":  "docs/website-editor/FINAL-IMPLEMENTATION-REPORT.md",
+                         "sha256":  "94659a110f2f495433aeda314994cfe4020323b8ce54b86a67cb9d24cff25292"
+                     },
+                     {
+                         "path":  "docs/website-editor/ADMIN-USER-GUIDE.md",
+                         "sha256":  "9f8bb1ad93a9dd260f07a9242578e60e9603f6ff8206031d31b8233060f1a161"
+                     },
+                     {
+                         "path":  "docs/website-editor/API-DOCUMENTATION.md",
+                         "sha256":  "140685552e87a469bf9b1e0af982887c44b9a434c21c4b1b472352a4d8868248"
+                     },
+                     {
+                         "path":  "docs/website-editor/TEST-RESULTS.md",
+                         "sha256":  "d63e86ed31e0be5ac5447806fc9c6b1efd6049141ebd8d7859b79472a6fb0e4b"
+                     },
+                     {
+                         "path":  "docs/website-editor/DEPLOYMENT-AND-ROLLBACK.md",
+                         "sha256":  "81fa51fed70cc0e956959b7e5207bf34888dd6b6c86c829052f6294f3e58fba9"
+                     },
+                     {
+                         "path":  "docs/website-editor/task05-source-changes.json",
+                         "sha256":  "45f39a4f2e5b17d5cc3c6ab4506704e56b36b0b58b18a19182796959ff927372"
+                     }
+                 ],
+    "previousEvidence":  [
+                             {
+                                 "path":  "docs/website-editor/task04-changes.json",
+                                 "sha256":  "c0debffc27f78da70c6bbe7c457644e0464eb419c941b6ad0f16bbad6f0baaf3"
+                             }
+                         ]
+}

@@ -5,8 +5,11 @@ import { MapPin, Phone, Mail, Clock, Send, Heart, MessageCircle, Headphones, Glo
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
 import SectionWrapper from '../components/common/SectionWrapper.jsx'
+import { useWebsiteContent } from '../components/website-editor/useWebsiteContent.js'
 
 const ContactUs = () => {
+  const websiteContent = useWebsiteContent()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +33,7 @@ const ContactUs = () => {
     try {
       await new Promise(resolve => setTimeout(resolve, 1500))
       
-      toast.success('Thank you for your message! We will get back to you soon.')
+      toast.success(websiteContent.value("contact.handle-submit.text", 'Thank you for your message! We will get back to you soon.'))
       setFormData({
         name: '',
         email: '',
@@ -39,7 +42,7 @@ const ContactUs = () => {
         message: ''
       })
     } catch (err) {
-      toast.error('Failed to send message. Please try again.')
+      toast.error(websiteContent.value("contact.handle-submit.text.2", 'Failed to send message. Please try again.'))
     } finally {
       setIsSubmitting(false)
     }
@@ -48,32 +51,32 @@ const ContactUs = () => {
   const contactInfo = [
     {
       icon: <MapPin size={22} />,
-      title: 'Visit Us',
-      details: "St. Mary's Higher Secondary School\nM.C.Road, Chenikuthi\nGuwahati - 781003",
+      title: websiteContent.value("contact.contact-info.item1.title", 'Visit Us'),
+      details: websiteContent.value("contact.contact-info.item1.details", "St. Mary's Higher Secondary School\nM.C.Road, Chenikuthi\nGuwahati - 781003"),
       color: 'text-maroon-700',
       bg: 'bg-maroon-50',
       border: 'border-maroon-100'
     },
     {
       icon: <Phone size={22} />,
-      title: 'Call Us',
-      details: '+91 9435190537',
+      title: websiteContent.value("contact.contact-info.item2.title", 'Call Us'),
+      details: websiteContent.value("contact.contact-info.item2.details", '+91 9435190537'),
       color: 'text-blue-700',
       bg: 'bg-blue-50',
       border: 'border-blue-100'
     },
     {
       icon: <Mail size={22} />,
-      title: 'Email Us',
-      details: 'stmarysghy1924@yahoo.com',
+      title: websiteContent.value("contact.contact-info.item3.title", 'Email Us'),
+      details: websiteContent.value("contact.contact-info.item3.details", 'stmarysghy1924@yahoo.com'),
       color: 'text-emerald-700',
       bg: 'bg-emerald-50',
       border: 'border-emerald-100'
     },
     {
       icon: <Clock size={22} />,
-      title: 'Office Hours',
-      details: 'Monday - Saturday\n7:45 AM - 2:00 PM',
+      title: websiteContent.value("contact.contact-info.item4.title", 'Office Hours'),
+      details: websiteContent.value("contact.contact-info.item4.details", 'Monday - Saturday\n7:45 AM - 2:00 PM'),
       color: 'text-amber-700',
       bg: 'bg-amber-50',
       border: 'border-amber-100'
@@ -81,10 +84,10 @@ const ContactUs = () => {
   ]
 
   const socialLinks = [
-    { icon: <Globe size={18} />, label: 'Website', color: 'hover:bg-gray-100' },
-    { icon: <MessageCircle size={18} />, label: 'WhatsApp', color: 'hover:bg-green-50 hover:text-green-600' },
-    { icon: <Send size={18} />, label: 'Telegram', color: 'hover:bg-blue-50 hover:text-blue-600' },
-    { icon: <Headphones size={18} />, label: 'Support', color: 'hover:bg-purple-50 hover:text-purple-600' }
+    { icon: <Globe size={18} />, label: websiteContent.value("contact.social-links.item1.label", 'Website'), color: 'hover:bg-gray-100' },
+    { icon: <MessageCircle size={18} />, label: websiteContent.value("contact.social-links.item2.label", 'WhatsApp'), color: 'hover:bg-green-50 hover:text-green-600' },
+    { icon: <Send size={18} />, label: websiteContent.value("contact.social-links.item3.label", 'Telegram'), color: 'hover:bg-blue-50 hover:text-blue-600' },
+    { icon: <Headphones size={18} />, label: websiteContent.value("contact.social-links.item4.label", 'Support'), color: 'hover:bg-purple-50 hover:text-purple-600' }
   ]
 
   const fadeInUp = {
@@ -127,9 +130,7 @@ const ContactUs = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            CONTACT
-          </span>
+          <span {...websiteContent.props(["contact.contact-us.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("contact.contact-us.text", "CONTACT")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -141,26 +142,23 @@ const ContactUs = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Phone size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Reach Out</span>
+              <span {...websiteContent.props(["contact.contact-us.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("contact.contact-us.text.2", "Reach Out")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["contact.contact-us.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Contact <span className="text-gold-400">Us</span>
+            >{websiteContent.value("contact.contact-us.heading", "Contact ")}<span {...websiteContent.props(["contact.contact-us.text.3"])} className="text-gold-400">{websiteContent.value("contact.contact-us.text.3", "Us")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["contact.contact-us.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Get in touch with us
-            </motion.p>
+            >{websiteContent.value("contact.contact-us.paragraph", "Get in touch with us")}</motion.p>
           </div>
         </div>
 
@@ -180,12 +178,9 @@ const ContactUs = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Heart size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">We'd Love to Hear From You</span>
+              <span {...websiteContent.props(["contact.contact-us.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("contact.contact-us.text.4", "We'd Love to Hear From You")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Have questions about admissions, academics, or anything else?
-              We'd love to hear from you. Fill out the form and we'll get back to you soon.
-            </p>
+            <p {...websiteContent.props(["contact.contact-us.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("contact.contact-us.paragraph.2", "Have questions about admissions, academics, or anything else? We'd love to hear from you. Fill out the form and we'll get back to you soon.")}</p>
           </motion.div>
         </div>
       </section>
@@ -206,114 +201,97 @@ const ContactUs = () => {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-0.5 bg-gold-400" />
-                    <span className="text-xs font-semibold text-maroon-800 tracking-widest uppercase">Get in Touch</span>
+                    <span {...websiteContent.props(["contact.contact-us.text.5"])} className="text-xs font-semibold text-maroon-800 tracking-widest uppercase">{websiteContent.value("contact.contact-us.text.5", "Get in Touch")}</span>
                   </div>
                   
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">
-                    Send Us a <span className="text-gold-600">Message</span>
+                  <h2 {...websiteContent.props(["contact.contact-us.heading.2"])} className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">{websiteContent.value("contact.contact-us.heading.2", "Send Us a ")}<span {...websiteContent.props(["contact.contact-us.text.6"])} className="text-gold-600">{websiteContent.value("contact.contact-us.text.6", "Message")}</span>
                   </h2>
                   
-                  <p className="text-gray-600 mb-8 leading-relaxed">
-                    Have questions about admissions, academics, or anything else?
-                    We'd love to hear from you. Fill out the form and we'll get back to you soon.
-                  </p>
+                  <p {...websiteContent.props(["contact.contact-us.paragraph.3"])} className="text-gray-600 mb-8 leading-relaxed">{websiteContent.value("contact.contact-us.paragraph.3", "Have questions about admissions, academics, or anything else? We'd love to hear from you. Fill out the form and we'll get back to you soon.")}</p>
                   
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Full Name <span className="text-red-500">*</span>
+                        <label {...websiteContent.props(["contact.contact-us.text.7"])} className="block text-sm font-medium text-gray-700 mb-1">{websiteContent.value("contact.contact-us.text.7", "Full Name ")}<span className="text-red-500">*</span>
                         </label>
-                        <input
+                        <input {...websiteContent.props(["contact.contact-us.placeholder"])}
                           type="text"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent transition-all hover:border-gold-300"
-                          placeholder="Your full name"
+                          placeholder={websiteContent.value("contact.contact-us.placeholder", "Your full name")}
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Email Address <span className="text-red-500">*</span>
+                        <label {...websiteContent.props(["contact.contact-us.text.9"])} className="block text-sm font-medium text-gray-700 mb-1">{websiteContent.value("contact.contact-us.text.9", "Email Address ")}<span className="text-red-500">*</span>
                         </label>
-                        <input
+                        <input {...websiteContent.props(["contact.contact-us.placeholder.2"])}
                           type="email"
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent transition-all hover:border-gold-300"
-                          placeholder="you@example.com"
+                          placeholder={websiteContent.value("contact.contact-us.placeholder.2", "you@example.com")}
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Phone Number
-                        </label>
-                        <input
+                        <label {...websiteContent.props(["contact.contact-us.text.11"])} className="block text-sm font-medium text-gray-700 mb-1">{websiteContent.value("contact.contact-us.text.11", "Phone Number")}</label>
+                        <input {...websiteContent.props(["contact.contact-us.placeholder.3"])}
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent transition-all hover:border-gold-300"
-                          placeholder="+91-XXXXX-XXXXX"
+                          placeholder={websiteContent.value("contact.contact-us.placeholder.3", "+91-XXXXX-XXXXX")}
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Subject
-                        </label>
-                        <input
+                        <label {...websiteContent.props(["contact.contact-us.text.12"])} className="block text-sm font-medium text-gray-700 mb-1">{websiteContent.value("contact.contact-us.text.12", "Subject")}</label>
+                        <input {...websiteContent.props(["contact.contact-us.placeholder.4"])}
                           type="text"
                           name="subject"
                           value={formData.subject}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent transition-all hover:border-gold-300"
-                          placeholder="Subject of inquiry"
+                          placeholder={websiteContent.value("contact.contact-us.placeholder.4", "Subject of inquiry")}
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Message <span className="text-red-500">*</span>
+                      <label {...websiteContent.props(["contact.contact-us.text.13"])} className="block text-sm font-medium text-gray-700 mb-1">{websiteContent.value("contact.contact-us.text.13", "Message ")}<span className="text-red-500">*</span>
                       </label>
-                      <textarea
+                      <textarea {...websiteContent.props(["contact.contact-us.placeholder.5"])}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         required
                         rows="5"
                         className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent transition-all resize-none hover:border-gold-300"
-                        placeholder="Your message here..."
+                        placeholder={websiteContent.value("contact.contact-us.placeholder.5", "Your message here...")}
                       />
                     </div>
                     
                     {/* Fixed Submit Button - Dark & Visible */}
-                    <button
+                    <button {...websiteContent.props(["contact.contact-us.button-label","contact.contact-us.button-label.2"])}
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full flex items-center justify-center gap-2 bg-maroon-800 hover:bg-maroon-900 text-white font-semibold px-6 py-3.5 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-[1.02] border-2 border-maroon-700"
                     >
                       {isSubmitting ? (
                         <>
-                          <Loader size={18} className="animate-spin" />
-                          Sending...
-                        </>
+                          <Loader size={18} className="animate-spin" />{websiteContent.value("contact.contact-us.button-label", "Sending...")}</>
                       ) : (
                         <>
-                          <Send size={18} />
-                          Send Message
-                        </>
+                          <Send size={18} />{websiteContent.value("contact.contact-us.button-label.2", "Send Message")}</>
                       )}
                     </button>
 
-                    <p className="text-xs text-gray-400 text-center mt-2">
-                      We'll get back to you within 24 hours
-                    </p>
+                    <p {...websiteContent.props(["contact.contact-us.paragraph.4"])} className="text-xs text-gray-400 text-center mt-2">{websiteContent.value("contact.contact-us.paragraph.4", "We'll get back to you within 24 hours")}</p>
                   </form>
                 </motion.div>
               </SectionWrapper>
@@ -339,7 +317,7 @@ const ContactUs = () => {
                   >
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-8 h-0.5 bg-gold-400" />
-                      <span className="text-xs font-semibold text-maroon-800 tracking-widest uppercase">Contact Information</span>
+                      <span {...websiteContent.props(["contact.contact-us.text.15"])} className="text-xs font-semibold text-maroon-800 tracking-widest uppercase">{websiteContent.value("contact.contact-us.text.15", "Contact Information")}</span>
                     </div>
 
                     {contactInfo.map((info, index) => (
@@ -349,11 +327,11 @@ const ContactUs = () => {
                         className={`flex items-start gap-4 p-4 rounded-2xl border ${info.border} ${info.bg} transition-all duration-300 hover:shadow-md`}
                       >
                         <div className={`p-3 rounded-xl ${info.bg} border ${info.border}`}>
-                          <span className={info.color}>{info.icon}</span>
+                          <span {...websiteContent.propsFor(info.icon)} className={info.color}>{info.icon}</span>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800 text-sm">{info.title}</h4>
-                          <p className="text-gray-600 text-sm whitespace-pre-line leading-relaxed">
+                          <h4 {...websiteContent.propsFor(info.title)} className="font-semibold text-gray-800 text-sm">{info.title}</h4>
+                          <p {...websiteContent.propsFor(info.details)} className="text-gray-600 text-sm whitespace-pre-line leading-relaxed">
                             {info.details}
                           </p>
                         </div>
@@ -369,12 +347,12 @@ const ContactUs = () => {
                     viewport={{ once: true }}
                     className="p-6 bg-gray-50 rounded-2xl border border-gray-100"
                   >
-                    <h4 className="font-semibold text-gray-800 text-sm mb-4">Connect With Us</h4>
+                    <h4 {...websiteContent.props(["contact.contact-us.heading.3"])} className="font-semibold text-gray-800 text-sm mb-4">{websiteContent.value("contact.contact-us.heading.3", "Connect With Us")}</h4>
                     <div className="flex gap-3">
                       {socialLinks.map((social, index) => (
-                        <motion.a
+                        <motion.a {...websiteContent.props(["contact.contact-us.href"])}
                           key={index}
-                          href="#"
+                          href={websiteContent.value("contact.contact-us.href", "#")}
                           whileHover={{ y: -3 }}
                           whileTap={{ scale: 0.95 }}
                           className={`p-3 bg-white rounded-xl border border-gray-200 text-gray-500 transition-all duration-300 ${social.color}`}
@@ -399,21 +377,17 @@ const ContactUs = () => {
                     <div className="relative">
                       <div className="flex items-center gap-2 mb-2">
                         <Heart size={16} className="text-gold-400" />
-                        <span className="text-xs font-semibold text-gold-300 tracking-widest uppercase">Emergency</span>
+                        <span {...websiteContent.props(["contact.contact-us.text.16"])} className="text-xs font-semibold text-gold-300 tracking-widest uppercase">{websiteContent.value("contact.contact-us.text.16", "Emergency")}</span>
                       </div>
-                      <p className="text-white font-medium text-lg">
-                        Need immediate assistance?
-                      </p>
-                      <p className="text-white/70 text-sm mt-1">
-                        Call our emergency helpline available 24/7
-                      </p>
+                      <p {...websiteContent.props(["contact.contact-us.paragraph.5"])} className="text-white font-medium text-lg">{websiteContent.value("contact.contact-us.paragraph.5", "Need immediate assistance?")}</p>
+                      <p {...websiteContent.props(["contact.contact-us.paragraph.6"])} className="text-white/70 text-sm mt-1">{websiteContent.value("contact.contact-us.paragraph.6", "Call our emergency helpline available 24/7")}</p>
                       <div className="flex items-center gap-3 mt-4">
                         <div className="bg-white/10 p-2.5 rounded-xl">
                           <Phone size={20} className="text-gold-400" />
                         </div>
                         <div>
-                          <p className="text-white font-semibold text-lg">+91 9435190537</p>
-                          <p className="text-white/40 text-xs">Available 24/7</p>
+                          <p {...websiteContent.props(["contact.contact-us.paragraph.7"])} className="text-white font-semibold text-lg">{websiteContent.value("contact.contact-us.paragraph.7", "+91 9435190537")}</p>
+                          <p {...websiteContent.props(["contact.contact-us.paragraph.8"])} className="text-white/40 text-xs">{websiteContent.value("contact.contact-us.paragraph.8", "Available 24/7")}</p>
                         </div>
                       </div>
                     </div>
@@ -428,9 +402,8 @@ const ContactUs = () => {
                     className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"
                   >
                     <Building2 size={18} className="text-maroon-700 flex-shrink-0" />
-                    <p className="text-xs text-gray-500 leading-relaxed">
-                      <span className="font-semibold text-gray-700">Visit us:</span> M.C.Road, Chenikuthi, Guwahati - 781003
-                    </p>
+                    <p {...websiteContent.props(["contact.contact-us.paragraph.9"])} className="text-xs text-gray-500 leading-relaxed">
+                      <span {...websiteContent.props(["contact.contact-us.text.17"])} className="font-semibold text-gray-700">{websiteContent.value("contact.contact-us.text.17", "Visit us:")}</span>{websiteContent.value("contact.contact-us.paragraph.9", " M.C.Road, Chenikuthi, Guwahati - 781003")}</p>
                   </motion.div>
                 </motion.div>
               </SectionWrapper>
@@ -450,7 +423,7 @@ const ContactUs = () => {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <div className="w-full h-80 md:h-96 bg-gray-200 relative">
-              <iframe
+              <iframe {...websiteContent.props(["contact.contact-us.title"])}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.456789012345!2d91.7!3d26.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA2JzAwLjAiTiA5McKwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
@@ -458,7 +431,7 @@ const ContactUs = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="St. Mary's School Location"
+                title={websiteContent.value("contact.contact-us.title", "St. Mary's School Location")}
               />
               <div className="absolute inset-0 pointer-events-none bg-black/5" />
               
@@ -466,7 +439,7 @@ const ContactUs = () => {
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg">
                 <div className="flex items-center gap-2">
                   <MapPin size={16} className="text-maroon-700" />
-                  <span className="text-sm font-medium text-gray-800">St. Mary's Higher Secondary School</span>
+                  <span {...websiteContent.props(["contact.contact-us.text.18"])} className="text-sm font-medium text-gray-800">{websiteContent.value("contact.contact-us.text.18", "St. Mary's Higher Secondary School")}</span>
                 </div>
               </div>
             </div>

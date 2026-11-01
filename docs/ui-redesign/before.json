@@ -1,0 +1,70 @@
+{
+    "purpose":  "Exact current UI before user-authorized styling/responsiveness changes. Prior Task 01-05, master audit, and published copy changes retained.",
+    "files":  [
+                  {
+                      "path":  "app/globals.css",
+                      "sha256":  "958d0814853949e51ce796effb9982c859d7101d3a1ae7007b6716c7a3e09999",
+                      "snapshot":  "docs/ui-redesign/before/app/globals.css.txt"
+                  },
+                  {
+                      "path":  "app/(site)/layout.jsx",
+                      "sha256":  "202c1a5adeb199973cce4a5a84a94704aa2046041c1f2c9d80858c4efc047c81",
+                      "snapshot":  "docs/ui-redesign/before/app/(site)/layout.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/layout/Navbar.jsx",
+                      "sha256":  "f82a93b7d1a6e144fbece656417aac47a7b2dbc64b7b95dc8a47d37bba8918be",
+                      "snapshot":  "docs/ui-redesign/before/src/components/layout/Navbar.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/layout/TopBar.jsx",
+                      "sha256":  "5097720175a395e959c9e7e57b5a99642a065905e9b6ec5a66b2e1b1772b4547",
+                      "snapshot":  "docs/ui-redesign/before/src/components/layout/TopBar.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/layout/NavDropdown.jsx",
+                      "sha256":  "7216db2d3faa3397709695be54d42131749a73bf5c1076b2c2ef7f50b89599f5",
+                      "snapshot":  "docs/ui-redesign/before/src/components/layout/NavDropdown.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/layout/NavNestedDropdown.jsx",
+                      "sha256":  "79e9a296e6409867a7983cbf0fcc4d343da4e61ac8ab4f34284b9796a514893c",
+                      "snapshot":  "docs/ui-redesign/before/src/components/layout/NavNestedDropdown.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/layout/Footer.jsx",
+                      "sha256":  "3a4c2c5cce782a4bd482f1bea1b57c74657ce4d392f7a7a0339d6ffd61902d94",
+                      "snapshot":  "docs/ui-redesign/before/src/components/layout/Footer.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/home/HeroCarousel.jsx",
+                      "sha256":  "8f5295799c7c718ad5cb86ac54ee8709520f07d4a226c316bdb27e2dd4220d16",
+                      "snapshot":  "docs/ui-redesign/before/src/components/home/HeroCarousel.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/home/CircularsPanel.jsx",
+                      "sha256":  "8c0fc8645aea9d1f90b67d592758fa190ab94d3f62bfbba3ea5d6c4da65255c3",
+                      "snapshot":  "docs/ui-redesign/before/src/components/home/CircularsPanel.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/common/Lightbox.jsx",
+                      "sha256":  "6704fe2865aa2f28dceea4c9d7704f42aa20d7e8ff94c08fe7c1ef504e0a7bf8",
+                      "snapshot":  "docs/ui-redesign/before/src/components/common/Lightbox.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/website-editor/WebsiteEditorUI.jsx",
+                      "sha256":  "fce10b2d1d9ddba0155b4f3d988b44eda6d9a27bbd1e3c1a9916090dea307234",
+                      "snapshot":  "docs/ui-redesign/before/src/components/website-editor/WebsiteEditorUI.jsx.txt"
+                  },
+                  {
+                      "path":  "src/components/website-editor/WebsiteEditorUI.module.css",
+                      "sha256":  "a2cab494ae043a45fff011dd6eb03a6667992962332c4d8a28d8798fcde989cf",
+                      "snapshot":  "docs/ui-redesign/before/src/components/website-editor/WebsiteEditorUI.module.css.txt"
+                  },
+                  {
+                      "path":  "src/site-pages/Home.jsx",
+                      "sha256":  "bc48cd7de03191b7926340337b94cce25cc8fe5c5cec3fcfc16cff2a352c7203",
+                      "snapshot":  "docs/ui-redesign/before/src/site-pages/Home.jsx.txt"
+                  }
+              ]
+}

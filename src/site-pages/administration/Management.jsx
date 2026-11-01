@@ -6,8 +6,11 @@ import { Building2, Users, Clock, Award, Crown } from 'lucide-react'
 import SectionWrapper from '../../components/common/SectionWrapper.jsx'
 import StaffCard from '../../components/common/StaffCard.jsx'
 import { getStaff } from '../../services/api.js'
+import { useWebsiteContent } from '../../components/website-editor/useWebsiteContent.js'
 
 const Management = () => {
+  const websiteContent = useWebsiteContent()
+
   const [staff, setStaff] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -32,9 +35,7 @@ const Management = () => {
 
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            MANAGEMENT
-          </span>
+          <span {...websiteContent.props(["administration.management.management.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("administration.management.management.text", "MANAGEMENT")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -46,26 +47,23 @@ const Management = () => {
               className="flex items-center gap-3 mb-2"
             >
               <Building2 size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Our Leadership</span>
+              <span {...websiteContent.props(["administration.management.management.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("administration.management.management.text.2", "Our Leadership")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["administration.management.management.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Our <span className="text-gold-400">Management</span>
+            >{websiteContent.value("administration.management.management.heading", "Our ")}<span {...websiteContent.props(["administration.management.management.text.3"])} className="text-gold-400">{websiteContent.value("administration.management.management.text.3", "Management")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["administration.management.management.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Dedicated leadership team guiding our institution
-            </motion.p>
+            >{websiteContent.value("administration.management.management.paragraph", "Dedicated leadership team guiding our institution")}</motion.p>
           </div>
         </div>
 
@@ -85,12 +83,9 @@ const Management = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-maroon-50 border border-maroon-100 rounded-full mb-4">
               <Building2 size={14} className="text-maroon-700" />
-              <span className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">Our Leaders</span>
+              <span {...websiteContent.props(["administration.management.management.text.4"])} className="text-xs font-semibold text-maroon-700 tracking-widest uppercase">{websiteContent.value("administration.management.management.text.4", "Our Leaders")}</span>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Our management team consists of dedicated professionals committed to
-              providing the best educational experience for our students.
-            </p>
+            <p {...websiteContent.props(["administration.management.management.paragraph.2"])} className="text-gray-600 text-lg leading-relaxed">{websiteContent.value("administration.management.management.paragraph.2", "Our management team consists of dedicated professionals committed to providing the best educational experience for our students.")}</p>
           </motion.div>
         </div>
       </section>
@@ -100,9 +95,7 @@ const Management = () => {
         <div className="container-custom">
           <SectionWrapper>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">
-                Dedicated <span className="text-gold-600">Management</span> Team
-              </h2>
+              <h2 {...websiteContent.props(["administration.management.management.heading.2","administration.management.management.heading.3"])} className="text-3xl md:text-4xl font-serif font-bold text-maroon-800 mb-4">{websiteContent.value("administration.management.management.heading.2", "Dedicated ")}<span {...websiteContent.props(["administration.management.management.text.5"])} className="text-gold-600">{websiteContent.value("administration.management.management.text.5", "Management")}</span>{websiteContent.value("administration.management.management.heading.3", " Team")}</h2>
               <div className="w-16 h-0.5 bg-gold-400 mx-auto mb-4" />
             </div>
           </SectionWrapper>
@@ -140,38 +133,30 @@ const Management = () => {
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-3xl font-serif font-bold text-maroon-800 mb-3">
-                  Coming Soon
-                </h3>
+                <h3 {...websiteContent.props(["administration.management.management.heading.4"])} className="text-3xl font-serif font-bold text-maroon-800 mb-3">{websiteContent.value("administration.management.management.heading.4", "Coming Soon")}</h3>
                 
                 {/* Decorative Line */}
                 <div className="w-16 h-0.5 bg-gold-400 mx-auto mb-4" />
                 
                 {/* Description */}
-                <p className="text-gray-600 text-base leading-relaxed">
-                  We are currently updating our management team details. 
-                  Please check back later for the complete list of our 
-                  dedicated leadership team.
-                </p>
+                <p {...websiteContent.props(["administration.management.management.paragraph.3"])} className="text-gray-600 text-base leading-relaxed">{websiteContent.value("administration.management.management.paragraph.3", "We are currently updating our management team details. Please check back later for the complete list of our dedicated leadership team.")}</p>
 
                 {/* Stats or Placeholder Info */}
                 <div className="mt-6 grid grid-cols-2 gap-4 max-w-xs mx-auto">
                   <div className="bg-white rounded-xl p-4 border border-gray-200">
                     <Users size={20} className="text-maroon-600 mx-auto mb-1" />
-                    <p className="text-xs text-gray-500">Team Members</p>
+                    <p {...websiteContent.props(["administration.management.management.paragraph.4"])} className="text-xs text-gray-500">{websiteContent.value("administration.management.management.paragraph.4", "Team Members")}</p>
                     <p className="text-lg font-bold text-maroon-800">—</p>
                   </div>
                   <div className="bg-white rounded-xl p-4 border border-gray-200">
                     <Award size={20} className="text-maroon-600 mx-auto mb-1" />
-                    <p className="text-xs text-gray-500">Years of Service</p>
+                    <p {...websiteContent.props(["administration.management.management.paragraph.6"])} className="text-xs text-gray-500">{websiteContent.value("administration.management.management.paragraph.6", "Years of Service")}</p>
                     <p className="text-lg font-bold text-maroon-800">—</p>
                   </div>
                 </div>
 
                 {/* Small note */}
-                <p className="text-xs text-gray-400 mt-6">
-                  Management details will be available soon
-                </p>
+                <p {...websiteContent.props(["administration.management.management.paragraph.8"])} className="text-xs text-gray-400 mt-6">{websiteContent.value("administration.management.management.paragraph.8", "Management details will be available soon")}</p>
               </div>
             </motion.div>
           )}

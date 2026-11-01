@@ -1,0 +1,79 @@
+{
+  "task": "03 completion",
+  "captured": "2026-11-01",
+  "status": "IMPLEMENTATION_AND_AUTOMATED_CHECKS_PASS_BROWSER_ACCEPTANCE_BLOCKED",
+  "implementation": {
+    "originalFourHomepageTextFieldsRetained": true,
+    "approvedHeroBackgroundImageSelector": true,
+    "approvedHomepageInternalDestinationSelector": true,
+    "choicesEnforcedByServer": true,
+    "paymentLinksRemainProtected": true,
+    "plainInternalAnchorsPreserveEditorDrafts": true,
+    "selectionLockedDuringSaves": true,
+    "originalPublicLayoutStylesAndDefaultsPreserved": true,
+    "historicalBaselineRetained": true,
+    "dynamicRecordsDuplicated": false,
+    "task04Started": false
+  },
+  "checks": [
+    {
+      "command": "node scripts/run-website-content-tests.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "tests": 83,
+      "passed": 83,
+      "failed": 0,
+      "skipped": 0,
+      "database": "Owned temporary standalone MongoDB and fenced disposable test databases",
+      "log": "task03-completion-tests.tap"
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "exitCode": 0,
+      "nextVersion": "15.5.28",
+      "publicRoutes": 23
+    },
+    {
+      "command": "node scripts/verify-website-editor.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "exactFilesVerified": 315,
+      "reviewedCompletionChanges": 17,
+      "historicalPreservationGate": "PASS; invoked unchanged baseline with exact reviewed per-file approvals",
+      "originalTask01Evidence": "unchanged"
+    },
+    {
+      "command": "git diff --check",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "Local disposable Next preview and direct HTTP smoke checks",
+      "status": "PASS",
+      "fixtureOrigin": "http://localhost:3210",
+      "scope": "Real HTTP: administrator login, anonymous catalog rejection, editor-free public SSR, text/image/internal-destination save with independent published reads, reset and local Gallery image serving",
+      "report": "task03-completion-http-smoke.json",
+      "browserAutomation": false
+    }
+  ],
+  "browserAcceptance": {
+    "status": "BLOCKED",
+    "browserHost": "Discovery reported the browser access host unavailable",
+    "nativeChrome": "Minimized window; supported restore/inspection stopped because Computer Use could not determine the current browser URL confidently enough to enforce policy",
+    "furtherBrowserInputAttempted": false,
+    "policyBypassed": false,
+    "desktopTabletMobileClickThroughVerified": false,
+    "screenshotsCaptured": false,
+    "actualGalleryLightboxVerified": false,
+    "manualChecklist": "10-TASK03-COMPLETION.md"
+  },
+  "cleanup": {
+    "ownedPreviewProcessTreeStopped": true,
+    "exactCheckedTemporaryDirectoryRemoved": true,
+    "note": "Retained tool session closed stdin; verified owned process identities and temporary path before cleanup. A stopped-process file lock cleared before the final successful directory removal.",
+    "schoolDatabaseOrAccountsUsed": false,
+    "schoolContentChanged": false,
+    "productionPublished": false
+  }
+}

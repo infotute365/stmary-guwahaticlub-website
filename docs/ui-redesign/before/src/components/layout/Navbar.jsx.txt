@@ -1,0 +1,357 @@
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Menu, X, ChevronDown, Sparkles } from 'lucide-react'
+import NavDropdown from './NavDropdown.jsx'
+import NavNestedDropdown from './NavNestedDropdown.jsx'
+import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
+
+const Navbar = () => {
+  const websiteContent = useWebsiteContent()
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [openDropdowns, setOpenDropdowns] = useState({})
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setIsOpen(false)
+    setOpenDropdowns({})
+  }, [pathname])
+
+  const toggleDropdown = (path) => {
+    setOpenDropdowns(prev => {
+      const isAlreadyOpen = !!prev[path]
+      const nextState = {}
+
+      Object.keys(prev).forEach((key) => {
+        nextState[key] = false
+      })
+
+      return {
+        ...nextState,
+        [path]: !isAlreadyOpen
+      }
+    })
+  }
+
+  const navItems = [
+    { label: websiteContent.value("global.navbar.nav-items.item1.label", 'Home'), path: websiteContent.value("global.navbar.nav-items.item1.path", '/') },
+    {
+      label: websiteContent.value("global.navbar.nav-items.item2.label", 'About'),
+      path: '/about',
+      dropdown: [
+        { label: websiteContent.value("global.navbar.nav-items.item2.item1.label", 'Our Founders'), path: websiteContent.value("global.navbar.nav-items.item2.item1.path", '/about/founders') },
+        { label: websiteContent.value("global.navbar.nav-items.item2.item2.label", 'Our Journey'), path: websiteContent.value("global.navbar.nav-items.item2.item2.path", '/about/journey') },
+        { label: websiteContent.value("global.navbar.nav-items.item2.item3.label", 'Superiors'), path: websiteContent.value("global.navbar.nav-items.item2.item3.path", '/about/superiors') },
+        { label: websiteContent.value("global.navbar.nav-items.item2.item4.label", 'Principal'), path: websiteContent.value("global.navbar.nav-items.item2.item4.path", '/about/principal') }
+      ]
+    },
+    {
+      label: websiteContent.value("global.navbar.nav-items.item3.label", 'Administration'),
+      path: '/administration',
+      dropdown: [
+        { label: websiteContent.value("global.navbar.nav-items.item3.item1.label", 'Management'), path: websiteContent.value("global.navbar.nav-items.item3.item1.path", '/administration/management') },
+        {
+          label: websiteContent.value("global.navbar.nav-items.item3.item2.label", 'Teaching Staff'),
+          path: '/administration/teaching-staff',
+          nested: [
+            { label: websiteContent.value("global.navbar.nav-items.item3.item2.item1.label", 'Primary School'), path: websiteContent.value("global.navbar.nav-items.item3.item2.item1.path", '/administration/teaching-staff/primary') },
+            { label: websiteContent.value("global.navbar.nav-items.item3.item2.item2.label", 'Middle School'), path: websiteContent.value("global.navbar.nav-items.item3.item2.item2.path", '/administration/teaching-staff/middle') },
+            { label: websiteContent.value("global.navbar.nav-items.item3.item2.item3.label", 'High School'), path: websiteContent.value("global.navbar.nav-items.item3.item2.item3.path", '/administration/teaching-staff/high') },
+            { label: websiteContent.value("global.navbar.nav-items.item3.item2.item4.label", 'Higher Secondary'), path: websiteContent.value("global.navbar.nav-items.item3.item2.item4.path", '/administration/teaching-staff/higher-secondary') }
+          ]
+        },
+        { label: websiteContent.value("global.navbar.nav-items.item3.item3.label", 'Non-Teaching Staff'), path: websiteContent.value("global.navbar.nav-items.item3.item3.path", '/administration/non-teaching') }
+      ]
+    },
+    { label: websiteContent.value("global.navbar.nav-items.item4.label", 'Infrastructure'), path: websiteContent.value("global.navbar.nav-items.item4.path", '/infrastructure') },
+    {
+      label: websiteContent.value("global.navbar.nav-items.item5.label", 'Admissions'),
+      path: websiteContent.value("global.navbar.nav-items.item5.path", '/admissions'),
+      dropdown: [
+        { label: websiteContent.value("global.navbar.nav-items.item5.item1.label", 'Admission Process'), path: websiteContent.value("global.navbar.nav-items.item5.item1.path", '/admissions') },
+        { label: websiteContent.value("global.navbar.nav-items.item5.item2.label", 'Enquiry Form'), path: websiteContent.value("global.navbar.nav-items.item5.item2.path", '/admissions/inquiry') }
+      ]
+    },
+    {
+      label: websiteContent.value("global.navbar.nav-items.item6.label", 'Academics'),
+      path: '/academics',
+      dropdown: [
+        { label: websiteContent.value("global.navbar.nav-items.item6.item1.label", 'Syllabus'), path: websiteContent.value("global.navbar.nav-items.item6.item1.path", '/academics/syllabus') },
+        { label: websiteContent.value("global.navbar.nav-items.item6.item2.label", 'Evaluation System'), path: websiteContent.value("global.navbar.nav-items.item6.item2.path", '/academics/evaluation') }
+      ]
+    },
+    { label: websiteContent.value("global.navbar.nav-items.item7.label", 'Student Rules'), path: websiteContent.value("global.navbar.nav-items.item7.path", '/student-rules') },
+    {
+      label: websiteContent.value("global.navbar.nav-items.item8.label", 'Activities'),
+      path: '/extracurricular',
+      dropdown: [
+        { label: websiteContent.value("global.navbar.nav-items.item8.item1.label", 'Clubs & Associations'), path: websiteContent.value("global.navbar.nav-items.item8.item1.path", '/extracurricular/clubs') },
+        { label: websiteContent.value("global.navbar.nav-items.item8.item2.label", 'Formative Moments'), path: websiteContent.value("global.navbar.nav-items.item8.item2.path", '/extracurricular/moments') }
+      ]
+    },
+    { label: websiteContent.value("global.navbar.nav-items.item9.label", 'Gallery'), path: websiteContent.value("global.navbar.nav-items.item9.path", '/gallery') },
+    { label: websiteContent.value("global.navbar.nav-items.item10.label", 'Contact'), path: websiteContent.value("global.navbar.nav-items.item10.path", '/contact') }
+  ]
+
+  const isActive = (path) => {
+    if (path === '/') return pathname === '/'
+    return pathname.startsWith(path)
+  }
+
+  return (
+    <nav className={`sticky top-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'glass-morphism shadow-2xl py-1' 
+        : 'bg-white/95 shadow-sm py-3'
+    }`}>
+      <div className="container-custom">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link {...websiteContent.props(["global.navbar.navbar.href"])} href={websiteContent.value("global.navbar.navbar.href", "/")} className="flex items-center gap-3 group shrink-0">
+            <div className={`relative transition-all duration-500 ${
+              isScrolled ? 'scale-95' : 'scale-100'
+            }`}>
+              <div className="bg-linear-to-br from-maroon-700 to-maroon-900 p-2 rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105 overflow-hidden">
+                <img {...websiteContent.imageProps(websiteContent.value("global.navbar.navbar.src", "/logo.jpeg"))} {...websiteContent.props(["global.navbar.navbar.src","global.navbar.navbar.alt"])}
+                  src={websiteContent.value("global.navbar.navbar.src", "/logo.jpeg")}
+                  alt={websiteContent.value("global.navbar.navbar.alt", "St. Mary's School Logo")}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+              <div className="absolute -inset-1 bg-linear-to-r from-gold-400/20 to-maroon-600/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+            <div>
+              <h1 {...websiteContent.props(["global.navbar.navbar.heading"])} className={`font-display font-bold text-maroon-900 transition-all duration-300 tracking-tight ${
+                isScrolled ? 'text-lg' : 'text-2xl'
+              }`}>{websiteContent.value("global.navbar.navbar.heading", "St. Mary's")}<span className="inline-block ml-1">
+                  <Sparkles size={12} className="text-gold-400 fill-gold-400 inline" />
+                </span>
+              </h1>
+              <p {...websiteContent.props(["global.navbar.navbar.paragraph"])} className={`text-[13px] text-gray-700 leading-tight tracking-widest uppercase font-label transition-all duration-300 ${
+                isScrolled ? 'text-[8px]' : ''
+              }`}>{websiteContent.value("global.navbar.navbar.paragraph", "Higher Secondary School")}</p>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden xl:flex items-center gap-0.5 flex-nowrap overflow-visible">
+            {navItems.map((item) => (
+              <div key={item.path} className="relative group shrink-0">
+                {item.dropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => toggleDropdown(item.path)}
+                      aria-expanded={!!openDropdowns[item.path]}
+                      className={`relative px-2.5 py-2 text-xs font-black uppercase tracking-wider transition-all duration-300 rounded-xl whitespace-nowrap
+                        ${isActive(item.path)
+                          ? 'text-maroon-700 bg-linear-to-r from-maroon-50/80 to-gold-50/80 shadow-sm'
+                          : 'text-gray-700 hover:text-gold-500'
+                        }`}
+                    >
+                      <span {...websiteContent.propsFor(item.label)} className="relative z-10 flex items-center gap-1">
+                        {item.label}
+                        <ChevronDown size={11} className={`transition-all duration-300 ${
+                          openDropdowns[item.path] ? 'rotate-180 text-gold-500' : ''
+                        } ${isActive(item.path) ? 'text-gold-500' : 'text-gray-400'} group-hover:rotate-180 group-hover:text-gold-500`} />
+                      </span>
+                      <span className={`absolute inset-x-2 -bottom-1 h-0.5 bg-linear-to-r from-gold-400 to-maroon-600 rounded-full 
+                        transition-all duration-500 ease-out
+                        scale-x-0 group-hover:scale-x-100
+                        group-hover:shadow-[0_0_12px_rgba(212,175,55,0.6)]`} 
+                      />
+                    </button>
+                    {item.dropdown.some(d => d.nested) ? (
+                      <NavNestedDropdown
+                        items={item.dropdown}
+                        isOpen={!!openDropdowns[item.path]}
+                        onToggle={toggleDropdown}
+                        onNavigate={() => setOpenDropdowns({})}
+                      />
+                    ) : (
+                      <NavDropdown
+                        items={item.dropdown}
+                        isOpen={!!openDropdowns[item.path]}
+                        onNavigate={() => setOpenDropdowns({})}
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.path}
+                    className={`relative px-2.5 py-2 text-xs font-black uppercase tracking-wider transition-all duration-300 rounded-xl whitespace-nowrap
+                      ${isActive(item.path)
+                        ? 'text-maroon-700 bg-linear-to-r from-maroon-50/80 to-gold-50/80 shadow-sm'
+                        : 'text-gray-700 hover:text-gold-500'
+                      }`}
+                  >
+                    <span {...websiteContent.propsFor(item.label)} className="relative z-10">{item.label}</span>
+                    <span className={`absolute inset-x-2 -bottom-1 h-0.5 bg-linear-to-r from-gold-400 to-maroon-600 rounded-full 
+                      transition-all duration-500 ease-out
+                      scale-x-0 group-hover:scale-x-100
+                      group-hover:shadow-[0_0_12px_rgba(212,175,55,0.6)]`} 
+                    />
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="xl:hidden p-2.5 rounded-xl bg-linear-to-r from-maroon-50 to-gold-50/30 hover:from-maroon-100 hover:to-gold-100/50 transition-all duration-300 border border-maroon-100/50"
+          >
+            {isOpen ? (
+              <X size={22} className="text-maroon-700" />
+            ) : (
+              <Menu size={22} className="text-maroon-700" />
+            )}
+          </button>
+        </div>
+
+        {/* ============ MOBILE MENU – SUBMENU EXPANDS UPWARD ============ */}
+        <div className={`xl:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? 'max-h-[85vh] opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="pt-6 pb-4 space-y-1 overflow-y-auto max-h-[80vh] border-t border-dashed border-maroon-100/60 mt-4">
+            {navItems.map((item) => (
+              <div key={item.path} className="space-y-0.5">
+                {item.dropdown ? (
+                  <>
+                    {/* Parent Item */}
+                    <button
+                      onClick={() => toggleDropdown(item.path)}
+                      className={`w-full flex items-center justify-between px-4 py-3 text-sm font-black uppercase tracking-wider rounded-xl transition-all duration-300 ${
+                        isActive(item.path)
+                          ? 'text-maroon-700 bg-linear-to-r from-maroon-50/80 to-gold-50/80'
+                          : 'text-gray-700 hover:text-gold-500 hover:bg-maroon-50/50'
+                      }`}
+                    >
+                      <span {...websiteContent.propsFor(item.label)}>{item.label}</span>
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform duration-300 ${
+                          openDropdowns[item.path] ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+
+                    {/* Submenu – Expands Upward, No Scrolling */}
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      openDropdowns[item.path] ? 'max-h-[9999px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="pl-5 space-y-1 border-l-2 border-gold-200/50 ml-3">
+                        {item.dropdown.map((sub) => (
+                          <div key={sub.path}>
+                            {sub.nested ? (
+                              <>
+                                {/* Nested Parent */}
+                                <button
+                                  onClick={() => toggleDropdown(sub.path)}
+                                  className="w-full flex items-center justify-between px-4 py-2 text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-gold-500 rounded-lg hover:bg-maroon-50/50 transition-colors"
+                                >
+                                  <span {...websiteContent.propsFor(sub.label)}>{sub.label}</span>
+                                  <ChevronDown 
+                                    size={14} 
+                                    className={`transition-transform duration-300 ${
+                                      openDropdowns[sub.path] ? 'rotate-180' : ''
+                                    }`}
+                                  />
+                                </button>
+
+                                {/* Nested Submenu – Full Expansion, No Scrolling */}
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                  openDropdowns[sub.path] ? 'max-h-[9999px] opacity-100' : 'max-h-0 opacity-0'
+                                }`}>
+                                  <div className="pl-4 space-y-0.5">
+                                    {sub.nested.map((nested) => (
+                                      <Link {...websiteContent.propsFor(nested.label)}
+                                        key={nested.path}
+                                        href={nested.path}
+                                        className="block text-sm font-semibold text-gray-600 hover:text-gold-500 px-4 py-2 rounded-lg hover:bg-maroon-50/50 transition-colors"
+                                        onClick={() => setIsOpen(false)}
+                                      >
+                                        {nested.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
+                              <Link {...websiteContent.propsFor(sub.label)}
+                                href={sub.path}
+                                className="block text-sm font-semibold text-gray-600 hover:text-gold-500 px-4 py-2 rounded-lg hover:bg-maroon-50/50 transition-colors"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link {...websiteContent.propsFor(item.label)}
+                    href={item.path}
+                    className={`flex items-center gap-2 px-4 py-3 text-sm font-black uppercase tracking-wider rounded-xl transition-all duration-300 ${
+                      isActive(item.path)
+                        ? 'text-maroon-700 bg-linear-to-r from-maroon-50 to-gold-50/50 shadow-sm'
+                        : 'text-gray-700 hover:text-gold-500 hover:bg-maroon-50/50'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <div className="pt-4 mt-2 border-t border-dashed border-maroon-100/60">
+              <div className="flex items-center justify-center gap-3 text-xs text-gray-400 font-label">
+                <span {...websiteContent.props(["global.navbar.navbar.text"])}>{websiteContent.value("global.navbar.navbar.text", "🏫 St. Mary's")}</span>
+                <span className="w-px h-3 bg-gray-300" />
+                <span {...websiteContent.props(["global.navbar.navbar.text.2"])}>{websiteContent.value("global.navbar.navbar.text.2", "📚 Guwahati")}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .glass-morphism {
+          background: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .font-display {
+          font-family: 'Fraunces', ui-serif, Georgia, serif;
+        }
+        .font-label {
+          font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
+    </nav>
+  )
+}
+
+export default Navbar

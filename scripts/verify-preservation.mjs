@@ -10,6 +10,20 @@ const approvedUiHashes = {
   'src/components/layout/Footer.jsx': '962b0df817433e88b52531f4141599a33e52f486f1bb5bc79ebe26516a82105c',
 }
 const approvedUiChanges = []
+// Exact Task 03 integrations and the already committed bank-link fix.
+// Retain the historical baseline; unlisted changes still fail closed.
+const editorApprovals = JSON.parse(await fs.readFile(new URL('../docs/verification/approved-website-editor.json', import.meta.url), 'utf8'))
+const seenApprovals = new Set()
+for (const approval of editorApprovals.files) {
+  const original = baseline.files.find(item => item.path === approval.path)
+  assert.equal(approval.baselineSha256, original?.sha256, `Wrong approval base: ${approval.path}`)
+  assert.ok(approval.reason?.trim(), `Missing review rationale: ${approval.path}`)
+  assert.match(approval.sha256, /^[a-f\d]{64}$/)
+  assert.ok(!seenApprovals.has(approval.path), `Duplicate UI approval: ${approval.path}`)
+  seenApprovals.add(approval.path)
+  if (Object.hasOwn(approvedUiHashes, approval.path)) assert.equal(approval.previousApprovedSha256, approvedUiHashes[approval.path], `Incorrect prior UI approval: ${approval.path}`)
+  approvedUiHashes[approval.path] = approval.sha256
+}
 let preserved = 0
 for (const item of baseline.files) {
   const current = await fs.readFile(item.path).catch(() => null)

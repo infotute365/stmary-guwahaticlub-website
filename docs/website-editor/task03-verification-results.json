@@ -1,0 +1,93 @@
+{
+  "task": "03 of 05",
+  "captured": "2026-10-31",
+  "status": "IMPLEMENTED_AUTOMATED_CHECKS_PASS_BROWSER_ACCEPTANCE_UNVERIFIED",
+  "newNavigationItems": ["Edit Website"],
+  "boundHomepageFields": [
+    "home.hero-carousel.slides.item1.title",
+    "home.hero-carousel.slides.item1.description",
+    "home.welcome-section.welcome-section.paragraph",
+    "home.home.item1.value"
+  ],
+  "modifiedOriginalFilesThisStage": 10,
+  "newFilesThisStage": 14,
+  "checks": [
+    {
+      "command": "node scripts/run-website-content-tests.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "tests": 76,
+      "passed": 76,
+      "failed": 0,
+      "skipped": 0,
+      "database": "Separate temporary standalone MongoDB process; fenced disposable stmary_gc_test_* databases only"
+    },
+    {
+      "command": "node --test tests/website-editor.test.js tests/website-editor-preservation.test.js",
+      "status": "PASS",
+      "passed": 10,
+      "failed": 0,
+      "scope": "Defaults, immutable drafts, error handling, protected navigation, original JSX attributes/elements, inactive SSR markup and actual field-hook fallback behavior"
+    },
+    {
+      "command": "Editor controller tests included in the complete suite",
+      "status": "PASS",
+      "passed": 3,
+      "failed": 0,
+      "scope": "Actual provider executed with deterministic hook/API/browser-state mocks: spoofed intent rejection, selected-only save, double-save lock, conflicts, preview, cancel, navigation and exit choices",
+      "browserAutomation": false
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "exitCode": 0,
+      "nextVersion": "15.5.28",
+      "existingPublicRoutes": 23,
+      "existingLoginAndAdminRoutes": 7
+    },
+    { "command": "git diff --check", "status": "PASS", "exitCode": 0 },
+    {
+      "command": "node scripts/verify-website-editor.mjs",
+      "task03Preservation": "PASS",
+      "unchangedOriginalFiles": 145,
+      "exactHomepageAndEditorIntegrations": 10,
+      "backendIntegrationsUnchanged": 2,
+      "task01ArtifactsUnchanged": 125,
+      "task02ImplementationUnchanged": 13,
+      "originalStylesAssetsAndUrls": "unchanged",
+      "legacyPreservation": "FAIL; unchanged historical script rejects newly authorized Providers/binding integrations; historical TopBar drift also remains; not waived",
+      "exitCode": 1,
+      "firstLegacyAssertion": "Preserved website file changed: src/components/Providers.jsx"
+    }
+  ],
+  "browserAttempt": {
+    "fixtureStarted": true,
+    "fixtureOrigin": "http://localhost:3210",
+    "fixtureUsesSchoolDatabase": false,
+    "chromeInspection": "Unavailable because the window was minimized",
+    "fallbackBrowserInspection": "Computer Use ended because it could not determine the current Windows browser URL confidently enough to enforce policy",
+    "policyBypassed": false,
+    "actualClickThroughTestsPerformed": false,
+    "desktopMobileScreenshotsCaptured": false,
+    "mobileViewportAcceptanceVerified": false,
+    "cleanup": "Owned preview process tree stopped and exact temporary fixture directory removed"
+  },
+  "preservation": {
+    "duplicateWebsiteCreated": false,
+    "originalPublicStylesheetChanged": false,
+    "originalImagesOrDestinationsChanged": false,
+    "originalContentDefaultsChanged": false,
+    "publicWrapperElementsAddedByBindings": false,
+    "dynamicRecordsDuplicatedInWebsiteContent": false,
+    "schoolDataAccessedOrChanged": false,
+    "priorAuditEvidenceRewritten": false,
+    "oldPreservationGateDisabled": false
+  },
+  "remainingAcceptance": [
+    "Interactive desktop/tablet/mobile browser verification remains unperformed because Computer Use stopped at its URL policy check.",
+    "Full public static-field coverage belongs to Task 04 and was not implemented.",
+    "Existing image and destination fields remain protected; no fee-payment URL change is enabled.",
+    "The historical preservation gate requires a reviewed integration/binding update; it still exits nonzero."
+  ],
+  "nextPromptStarted": false
+}

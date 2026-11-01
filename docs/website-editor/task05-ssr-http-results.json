@@ -1,0 +1,318 @@
+{
+  "captured": "2026-11-01",
+  "scope": "Production Next HTTP responses; actual visible SSR text after removing scripts, styles and serialized RSC data",
+  "routes": [
+    {
+      "route": "/",
+      "key": "home.home.heading.3",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/about/founders",
+      "key": "about.founders.our-founders.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/about/journey",
+      "key": "about.journey.our-journey.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/about/principal",
+      "key": "about.principal.principal.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/about/superiors",
+      "key": "about.superiors.superiors.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/academics/evaluation",
+      "key": "academics.evaluation.evaluation.heading.3",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/academics/syllabus",
+      "key": "academics.syllabus.syllabus-public.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/management",
+      "key": "administration.management.management.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/non-teaching",
+      "key": "administration.non.teaching.non-teaching-staff.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/high",
+      "key": "administration.teaching.staff.high.high-school.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/higher-secondary",
+      "key": "administration.teaching.staff.higher.secondary.higher-secondary.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/middle",
+      "key": "administration.teaching.staff.middle.middle-school.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/primary",
+      "key": "administration.teaching.staff.primary.primary-school.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/admissions",
+      "key": "admissions.admission.heading.10",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/admissions/inquiry",
+      "key": "admissions.inquiry.admission-inquiry.heading.4",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/contact",
+      "key": "contact.contact-us.heading.3",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/extracurricular/clubs",
+      "key": "extracurricular.clubs.clubs-and-associations.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/extracurricular/moments",
+      "key": "extracurricular.moments.formative-moments.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/gallery",
+      "key": "gallery.gallery.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/infrastructure",
+      "key": "infrastructure.infrastructure.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/mandatory-disclosure",
+      "key": "mandatory.disclosure.mandatory-disclosure.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/past-pupils",
+      "key": "past.pupils.past-pupils-association.heading",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    },
+    {
+      "route": "/student-rules",
+      "key": "student.rules.student-rules.heading.2",
+      "save": "PASS",
+      "freshPublicAPI": "PASS",
+      "initialVisitorHTML": "PASS",
+      "resetToOriginal": "PASS"
+    }
+  ],
+  "shared": [
+    {
+      "route": "/",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/about/founders",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/about/journey",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/about/principal",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/about/superiors",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/academics/evaluation",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/academics/syllabus",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/management",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/non-teaching",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/high",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/higher-secondary",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/middle",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/primary",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/admissions",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/admissions/inquiry",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/contact",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/extracurricular/clubs",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/extracurricular/moments",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/gallery",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/infrastructure",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/mandatory-disclosure",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/past-pupils",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    },
+    {
+      "route": "/student-rules",
+      "key": "global.footer.footer.paragraph",
+      "initialVisitorHTML": "PASS"
+    }
+  ],
+  "metadata": "PASS",
+  "image": {
+    "slot": "global.navbar.navbar.src",
+    "upload": "PASS",
+    "optimizedVariants": 4,
+    "initialVisitorHTML": "PASS",
+    "persistentMedia": "PASS",
+    "resetOriginalLogo": "PASS"
+  },
+  "browserAutomation": false,
+  "status": "PASS"
+}

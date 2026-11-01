@@ -244,24 +244,25 @@ export const deleteSyllabus = async (id) => {
 }
 
 // ==================== DISCLOSURE ====================
-export const getDisclosures = async () => {
-  return []
+export const getDisclosures = async (all = false) => {
+  const records=[],seen=new Set()
+  let before
+  // The public component keeps its original array contract. Fetch bounded
+  // cursor pages rather than silently dropping documents after the first page.
+  for(let page=0;page<100;page++){
+    const params={limit:100,...(all?{all:'true'}:{}),...(before?{before}:{})}
+    const {data}=await api.get('/disclosure',{params})
+    if(!Array.isArray(data?.disclosures))throw new Error('Invalid disclosure response')
+    records.push(...data.disclosures)
+    if(!data.nextBefore)return records
+    if(typeof data.nextBefore!=='string'||seen.has(data.nextBefore))throw new Error('Invalid disclosure cursor')
+    seen.add(data.nextBefore);before=data.nextBefore
+  }
+  throw new Error('Disclosure list exceeds the supported paging limit')
 }
-
-// export const createDisclosure = async (disclosureData) => {
-//   const { data } = await api.post('/disclosure', disclosureData)
-//   return data
-// }
-
-// export const updateDisclosure = async (id, disclosureData) => {
-//   const { data } = await api.put(`/disclosure/${id}`, disclosureData)
-//   return data
-// }
-
-// export const deleteDisclosure = async (id) => {
-//   const { data } = await api.delete(`/disclosure/${id}`)
-//   return data
-// }
+export const createDisclosure = async payload => (await api.post('/disclosure',payload)).data
+export const updateDisclosure = async (id,payload) => (await api.put(`/disclosure/${encodeURIComponent(id)}`,payload)).data
+export const deleteDisclosure = async (id,expectedVersion) => (await api.delete(`/disclosure/${encodeURIComponent(id)}`,{data:{expectedVersion}})).data
 
 // ==================== UPLOAD ====================
 export const uploadImage = async (file, folder = 'gallery') => {
@@ -374,6 +375,52 @@ export const getFullImagePath = (path) => {
   return path.startsWith('/') ? path : `/uploads/${path}`
 }
 
+// ==================== WEBSITE CONTENT ====================
+export const getWebsiteContent = async (path = '/') => {
+  const { data } = await api.get('/website-content', { params: { path } })
+  return data
+}
+
+export const getWebsiteContentCatalog = async (path = '/') => {
+  const { data } = await api.get('/website-content/catalog', { params: { path } })
+  return data
+}
+
+export const saveWebsiteContent = async (key, value, expectedRevision, contentType, { confirmDestination = false } = {}) => {
+  const payload = { value, expectedRevision }
+  if (contentType !== undefined) payload.contentType = contentType
+  if (confirmDestination) payload.confirmDestination = true
+  const { data } = await api.put(`/website-content/${encodeURIComponent(key)}`, payload)
+  return data
+}
+
+export const getWebsiteContentHistory = async (key, { before, limit } = {}) => {
+  const params = {}
+  if (before !== undefined) params.before = before
+  if (limit !== undefined) params.limit = limit
+  const { data } = await api.get(`/website-content/history/${encodeURIComponent(key)}`, { params })
+  return data
+}
+
+export const restoreWebsiteContent = async (key, revision, expectedRevision, { confirmDestination = false } = {}) => {
+  const { data } = await api.post(`/website-content/${encodeURIComponent(key)}/restore`, { revision, expectedRevision, ...(confirmDestination ? { confirmDestination: true } : {}) })
+  return data
+}
+
+export const resetWebsiteContent = async (key, expectedRevision, { confirmDestination = false } = {}) => {
+  const { data } = await api.post(`/website-content/${encodeURIComponent(key)}/reset`, { expectedRevision, ...(confirmDestination ? { confirmDestination: true } : {}) })
+  return data
+}
+
+export const uploadWebsiteImage = async (key, file) => {
+  const body = new FormData()
+  body.append('image', file)
+  const response = await uploadRequest(`${API_URL}/website-content/images/${encodeURIComponent(key)}`, {method:'POST',body,credentials:'include'})
+  const data = await response.json()
+  if (!response.ok) { const error=new Error(data.message||'Image upload failed'); error.response={status:response.status,data}; throw error }
+  return data
+}
+
 // ==================== DEFAULT EXPORT ====================
 export default {
   // Auth
@@ -418,6 +465,12 @@ export default {
   createSyllabus,
   updateSyllabus,
   deleteSyllabus,
+
+  // Disclosure
+  getDisclosures,
+  createDisclosure,
+  updateDisclosure,
+  deleteDisclosure,
   
   
   // Upload
@@ -426,6 +479,15 @@ export default {
   uploadPDF,
   deleteFile,
   
+  // Website content
+  getWebsiteContent,
+  getWebsiteContentCatalog,
+  saveWebsiteContent,
+  getWebsiteContentHistory,
+  restoreWebsiteContent,
+  resetWebsiteContent,
+  uploadWebsiteImage,
+
   // Helpers
   getImageUrl,
   getFileUrl,

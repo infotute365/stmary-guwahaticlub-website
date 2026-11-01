@@ -12,6 +12,8 @@ import { createStaff, getStaff, getStaffById, updateStaff, deleteStaff } from '.
 import { createEvent, getEvents, getEventById, getEventBySlug, updateEvent, deleteEvent, addImagesToEvent, deleteImageFromEvent, updateImageTitle } from './controller/gallery.controller.js'
 import { createSyllabus, getSyllabus, getSyllabusById, getAcademicYears, getClasses, getStreams, updateSyllabus, deleteSyllabus } from './controller/syllabus.controller.js'
 import { uploadImage, uploadMultipleImages, uploadPDF, deleteFile } from './controller/upload.controller.js'
+import { getPublishedWebsiteContent, getWebsiteContentCatalog, saveWebsiteContent, getWebsiteContentRevisions, restoreWebsiteContent, resetWebsiteContent, uploadWebsiteContentImage } from './controller/website-content.controller.js'
+import {getDisclosures,getDisclosureById,createDisclosure,updateDisclosure,deleteDisclosure} from './controller/disclosure.controller.js'
 
 const normalizeCookieOptions = (options = {}) => ({
   httpOnly: options.httpOnly ?? true,
@@ -38,10 +40,10 @@ const createMockResponse = () => {
   }
 }
 
-async function parseRequest(request, params, parseBody = true) {
+async function parseRequest(request, params, parseBody = true, ignoreCookies = false, websiteImage = false) {
   const url = new URL(request.url)
   const cookies = {}
-  for (const item of (request.headers.get('cookie') || '').split(';')) {
+  for (const item of (ignoreCookies ? '' : request.headers.get('cookie') || '').split(';')) {
     if (!item.trim()) continue
     const [name, ...value] = item.trim().split('=')
     try { cookies[name] = decodeURIComponent(value.join('=')) } catch { throw TryError('Invalid cookie', 400) }
@@ -54,7 +56,7 @@ async function parseRequest(request, params, parseBody = true) {
 
   if (parseBody && !['GET', 'HEAD'].includes(request.method)) {
     const multipart = contentType.includes('multipart/form-data')
-    if (multipart && !url.pathname.startsWith('/api/upload/')) throw TryError('Unsupported content type', 415)
+    if (multipart && !url.pathname.startsWith('/api/upload/') && !websiteImage) throw TryError('Unsupported content type', 415)
     const bytes = await boundedBody(request, multipart ? 21 * 1024 * 1024 : 128 * 1024)
     if (contentType.includes('multipart/form-data')) {
       let form
@@ -74,7 +76,7 @@ async function parseRequest(request, params, parseBody = true) {
         return { buffer: Buffer.from(await value.arrayBuffer()), originalname: value.name, mimetype: value.type, size: fileSize }
       }
 
-      const uploadMaxImage = 5 * 1024 * 1024
+      const uploadMaxImage = (websiteImage ? 10 : 5) * 1024 * 1024
       const uploadMaxPdf = 15 * 1024 * 1024
 
       file = await asFile(form.get('image'), uploadMaxImage) || await asFile(form.get('pdf'), uploadMaxPdf) || undefined
@@ -115,6 +117,29 @@ async function parseRequest(request, params, parseBody = true) {
 export function routeFor(method, parts) {
   const [resource, first, second, third] = parts
   if (resource === 'health' && method === 'GET') return { handler: (_req, res) => res.json({ status: 'OK', timestamp: new Date().toISOString() }) }
+  if(resource==='disclosure'){
+    if(parts.length===1){
+      if(method==='GET')return {handler:getDisclosures}
+      if(method==='POST')return {handler:createDisclosure,auth:true}
+    }
+    if(parts.length===2&&first){
+      if(method==='GET')return {handler:getDisclosureById,params:{id:first}}
+      if(method==='PUT')return {handler:updateDisclosure,auth:true,params:{id:first}}
+      if(method==='DELETE')return {handler:deleteDisclosure,auth:true,params:{id:first}}
+    }
+    return null
+  }
+
+  if (resource === 'website-content') {
+    if (method === 'POST' && parts.length === 3 && first === 'images' && second) return { handler: uploadWebsiteContentImage, auth: true, websiteImage: true, params: { key: second } }
+    if (method === 'GET' && parts.length === 1) return { handler: getPublishedWebsiteContent, publicContent: true }
+    if (method === 'GET' && parts.length === 2 && first === 'catalog') return { handler: getWebsiteContentCatalog, auth: true }
+    if (method === 'GET' && parts.length === 3 && first === 'history' && second) return { handler: getWebsiteContentRevisions, auth: true, params: { key: second } }
+    if (method === 'PUT' && parts.length === 2 && first) return { handler: saveWebsiteContent, auth: true, params: { key: first } }
+    if (method === 'POST' && parts.length === 3 && first && second === 'restore') return { handler: restoreWebsiteContent, auth: true, params: { key: first } }
+    if (method === 'POST' && parts.length === 3 && first && second === 'reset') return { handler: resetWebsiteContent, auth: true, params: { key: first } }
+    return null
+  }
 
   if (resource === 'auth') {
     if (method === 'POST' && first === 'login') return { handler: login }
@@ -190,7 +215,11 @@ export async function handleApiRequest(request, context) {
     if (resolvedPath.join('/') === 'auth/login') rateLimit(request, 'login', 10, 15 * 60 * 1000)
     if (resolvedPath.join('/') === 'auth/refresh-token') rateLimit(request, 'refresh', 60, 60 * 1000)
     if (resolvedPath[0] === 'upload') rateLimit(request, 'upload', 60, 60 * 1000)
-    const req = await parseRequest(request, route.params || {}, false)
+    if (resolvedPath[0] === 'website-content') rateLimit(request, route.publicContent ? 'website-content-public' : request.method === 'GET' ? 'website-content-admin-read' : 'website-content-write', route.publicContent ? 300 : 120, 60 * 1000)
+    if(resolvedPath[0]==='disclosure')rateLimit(request,'disclosure',300,60000)
+    const req = await parseRequest(request, route.params || {}, false, Boolean(route.publicContent))
+    if (resolvedPath[0] === 'website-content') req.websiteContentQuery = [...new URL(request.url).searchParams.entries()]
+    if(resolvedPath[0]==='disclosure')req.disclosureQuery=[...new URL(request.url).searchParams.entries()]
     const res = createMockResponse()
     if (resolvedPath[0] !== 'health') {
       try { await connectDB() } catch { throw TryError('Database unavailable', 503) }
@@ -201,16 +230,16 @@ export async function handleApiRequest(request, context) {
     if (route.auth) await AuthMiddleware(req, res, next)
     if (route.refresh) await RefreshMiddleware(req, res, next)
     if (!nextCalled) return toNextResponse(res.state)
-    if (request.method === 'GET' && !['auth', 'health'].includes(resolvedPath[0]) && req.cookies.accessToken) {
+    if (request.method === 'GET' && !route.publicContent && !(route.auth && resolvedPath[0] === 'website-content') && !['auth', 'health'].includes(resolvedPath[0]) && req.cookies.accessToken) {
       try { req.session = sessionUser(await readAccessUser(req.cookies.accessToken)) }
       catch (err) { if (err.status !== 401) throw err }
     }
-    if (resolvedPath[0] === 'upload' && request.method === 'POST') {
+    if ((resolvedPath[0] === 'upload' || route.websiteImage) && request.method === 'POST') {
       if ((globalThis.__guwahatiActiveUploads || 0) >= 2) throw TryError('Too many concurrent uploads', 429)
       globalThis.__guwahatiActiveUploads = (globalThis.__guwahatiActiveUploads || 0) + 1
       uploadSlot = true
     }
-    if (!['GET', 'HEAD'].includes(request.method)) Object.assign(req, await parseRequest(request, route.params || {}), { session: req.session })
+    if (!['GET', 'HEAD'].includes(request.method)) Object.assign(req, await parseRequest(request, route.params || {}, true, false, Boolean(route.websiteImage)), { session: req.session })
     for (const [name, value] of Object.entries(req.params)) {
       if (name.toLowerCase().endsWith('id') && !/^[a-f\d]{24}$/i.test(value)) throw TryError('Invalid ID', 400)
     }

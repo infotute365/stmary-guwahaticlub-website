@@ -1,0 +1,141 @@
+{
+    "task":  "Master audit and fixes",
+    "captured":  "2026-11-01",
+    "note":  "Exact additive follow-up transitions. All Task 01-05 evidence remains immutable; generated execution results and this manifest excluded from self-hashing.",
+    "modifiedFiles":  [
+                          {
+                              "path":  "scripts/preview-website-editor.mjs",
+                              "beforeSha256":  "2b36cb0a2140f48e541c560dea7ad1934b5cbc4336aa2e4b1f793c06d9520bd6",
+                              "afterSha256":  "81e4b54718433117ea5ad634be7112c484e9da912fd094dddb21c29a782a28bf",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "scripts/run-website-content-tests.mjs",
+                              "beforeSha256":  "a9ffcf8a41e222c2b9f6e288aa38f47e94058cc3496721791e9955acd4cb0dcc",
+                              "afterSha256":  "efed1f3a3bdf9d9c9e9c487a77d1f45a18be5646250a688c43e47c8268e051b7",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "scripts/verify-website-editor.mjs",
+                              "beforeSha256":  "aa15212d31abca4e080f6995daf15c6b750b3eb5a44ea7bc271d4be404dee787",
+                              "afterSha256":  "58aad732b840753958b7b0c8690b4153da09d39674f07c8afe5ddfbb8c144c74",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "scripts/website-final-smoke.mjs",
+                              "beforeSha256":  "1f924560120bbce60f60a5dfd831f3cf21e33b2d7531f27b39e56fee0f7a853e",
+                              "afterSha256":  "7809fe62efedfde664d65d9408ec0d3126d595752c76710f0d57e56ec5a896c5",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "scripts/website-pages-smoke.mjs",
+                              "beforeSha256":  "3d56f9c9c7e8a0b49e5b5cd7a571356ac0c01cf9f55014a97414ac5d404e244d",
+                              "afterSha256":  "c0db96cfe8df38f84a0a13c16e9b6b687eb4cf06145dc2a1a4b32ed9cd66ab66",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/components/website-editor/editor-bindings.js",
+                              "beforeSha256":  "100ae3920f2f4b9e275573539000d8c2d976f40b914122d9960e3f41c01e58ff",
+                              "afterSha256":  "91f231d4c942450f904742c31877108da923caee79018e260668e6d54835fc3f",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/components/website-editor/WebsiteEditorProvider.jsx",
+                              "beforeSha256":  "be10c5eedec25c9f009166c5ffb3a92d6afb1eb27aeaa4b2506b30b084bdc141",
+                              "afterSha256":  "810c0b9e90ab6b52a56e93aac399c9376cfd5958e3789cef21580bc021048b7b",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/components/website-editor/WebsiteEditorUI.jsx",
+                              "beforeSha256":  "653066db7bf1149eff6682ab00cb554f9e177d7bdf7a348c445cb1b2a8fadf0f",
+                              "afterSha256":  "fce10b2d1d9ddba0155b4f3d988b44eda6d9a27bbd1e3c1a9916090dea307234",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/server/route-adapter.js",
+                              "beforeSha256":  "1e5c2575883899194f1647e1ab9c5043063e3a8a4fae63d6e6aef3e8370ca588",
+                              "afterSha256":  "8654f6ec1fcacab6aae7a526fa434313776f9a999f1fd6f8a84ad83558f30cdc",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/services/api.js",
+                              "beforeSha256":  "467bedfe291378ef852f8be2f8a2608bf7329a713190743578a80da6b9bf5e33",
+                              "afterSha256":  "d001f33f392d111d02f803c3892f60614d94e9a52faf9992e97bb1e7e2e8f1fb",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "tests/website-editor-controller.test.js",
+                              "beforeSha256":  "7e3ef3b00f0f816f3cc37fe942df27e6d41af28a471e30c985f1a1663eb4edb1",
+                              "afterSha256":  "8559c949178f23e5cec5fb9ce969d1e7e3a994e1fa2ed2b948a6f28c2325bd55",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "tests/website-editor-preservation.test.js",
+                              "beforeSha256":  "3853e58f28ae6299f47004e3db94814905636cdfb131e42af1e62f1eac31dcff",
+                              "afterSha256":  "e8b061089ec79e8cdefec47fea31fff0011995ec9e6575f5ebf2c6717ce7ab5e",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "tests/website-task04-integration.test.js",
+                              "beforeSha256":  "853a6e73c2b5ae3662f18b577ba2f150ba9ff6996dbc51c564d85e51c6a5faa7",
+                              "afterSha256":  "a867f2eab4660abe39a7c46b55b54a3e7b828880dbe9affc4cacd4931cdef9e5",
+                              "review":  "Master prompt: editor session/reset correctness, additive Disclosure management, fresh regression evidence; original public components/styles/assets/defaults unchanged"
+                          },
+                          {
+                              "path":  "src/components/admin/Syllabus.jsx",
+                              "beforeSha256":  "63572157ce030c34660e0cc84697e5840fe416e4721b752f14f01e9e4cf6ba22",
+                              "afterSha256":  "c97dd0f5cd8f2e3811fa789e2bf2f6a40fee0973365ceeaeac704e7d1025513c",
+                              "review":  "Single post-save list refresh; no public/UI style changes"
+                          },
+                          {
+                              "path":  "docs/verification/approved-website-editor.json",
+                              "beforeSha256":  "24b300066f67baba220fa609acbba09321df4ce2189319cf312236ed54074129",
+                              "afterSha256":  "1cf0a349dc8aac1af5799c24381fc8291210f3b94b99aa3ccb2633ee5c87a367",
+                              "review":  "Exact per-file Syllabus behavior-fix approval; original baseline retained"
+                          }
+                      ],
+    "newFiles":  [
+                     {
+                         "path":  "app/admin/disclosure/page.jsx",
+                         "sha256":  "3dff7a9a5e458cb6e21d305d78c8777fd6da7f511dec98f84b5507d0045ffe58"
+                     },
+                     {
+                         "path":  "src/components/admin/Disclosure.jsx",
+                         "sha256":  "26947c5e1be15dc211b0c94a047c6cc7146a441f7bdc807663aa95e0533047af"
+                     },
+                     {
+                         "path":  "src/server/model/disclosure.model.js",
+                         "sha256":  "7bbdc2ebe636eb1db9b068fdbb8d14dc55b28ba264646c17fac9d1997e3cab99"
+                     },
+                     {
+                         "path":  "src/server/controller/disclosure.controller.js",
+                         "sha256":  "22195c72a3b9fdfc6a8db280e47c33321f81d067b3f2dab674b3f40febdc6edd"
+                     },
+                     {
+                         "path":  "tests/disclosure-integration.test.js",
+                         "sha256":  "1edb169a3eecf492389fee75b6ccd34e379245e3423e50fce60f6d1e5e455528"
+                     },
+                     {
+                         "path":  "tests/disclosure-service.test.js",
+                         "sha256":  "6d1d3319fc25328ddf8c0f48cddf2724204762c2a6c1da7bb1883c9f30d22854"
+                     },
+                     {
+                         "path":  "tests/master-admin-ui.test.js",
+                         "sha256":  "8963b239ea11c6ff2e41bb28d1da796f4c933bf5221d24a18c5bf5f23c0b13f5"
+                     },
+                     {
+                         "path":  "docs/website-editor/FINAL-AUDIT-AND-FIX-REPORT.md",
+                         "sha256":  "f95e976e600e139d5f75d2174c3776354c18cc543e389e6d7182872f056655ee"
+                     },
+                     {
+                         "path":  "docs/website-editor/master-content-inventory.json",
+                         "sha256":  "7d8269978cda9a26b82b0c98f72fbc6fb9a90f10a07bf9c3a2a91e9449cfa109"
+                     }
+                 ],
+    "previousEvidence":  [
+                             {
+                                 "path":  "docs/website-editor/task05-changes.json",
+                                 "sha256":  "cf75e3ef9cf29a12dcb5785723188e5ff04796aaaed319b38b0c8405c99f29bb"
+                             }
+                         ]
+}

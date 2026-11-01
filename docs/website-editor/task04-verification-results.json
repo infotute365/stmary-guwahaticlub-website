@@ -1,0 +1,136 @@
+{
+  "task": "04 of 05",
+  "captured": "2026-11-01",
+  "status": "IMPLEMENTED_AUTOMATED_ACCEPTANCE_PASS_BROWSER_VISUAL_ACCEPTANCE_UNVERIFIED",
+  "coverage": {
+    "publicRoutes": 23,
+    "originalEditableTextAndNumberFields": 883,
+    "approvedStaticImageSlots": 20,
+    "approvedDestinations": 56,
+    "manageableDistinctKeys": 959,
+    "unboundOriginalEditableFields": 0,
+    "allOriginalRegistryKeysAccountedFor": true,
+    "generatedPublicComponentFiles": 33,
+    "metadata": "Original root title/description keys bound through server metadata generation",
+    "fieldReport": "task04-coverage.json",
+    "routeSummary": "12-TASK04-COMPLETENESS.md"
+  },
+  "checks": [
+    {
+      "command": "node scripts/run-website-content-tests.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "tests": 96,
+      "passed": 96,
+      "failed": 0,
+      "skipped": 0,
+      "database": "Owned temporary standalone MongoDB; fenced disposable databases only",
+      "log": "task04-tests.tap"
+    },
+    {
+      "command": "All-field controller/database checks included in the complete suite",
+      "status": "PASS",
+      "fields": 959,
+      "scope": "Each selected field saves only itself, survives fresh public-projection and server-snapshot reads, and resets to its exact original default",
+      "report": "task04-field-save-results.json",
+      "browserAutomation": false
+    },
+    {
+      "command": "Page-specific route checks included in the complete suite",
+      "status": "PASS",
+      "routes": 23,
+      "report": "task04-route-save-results.json"
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "exitCode": 0,
+      "nextVersion": "15.5.28",
+      "publicRoutes": 23,
+      "rendering": "Dynamic server rendering with the existing routes",
+      "log": "task04-build.log"
+    },
+    {
+      "command": "node scripts/preview-website-editor.mjs --port 3210 --mode production --verify-pages true",
+      "status": "PASS",
+      "exitCode": 0,
+      "pageSpecificSaveFreshVisitorHTMLAndReset": 23,
+      "sharedFooterVisibleAcrossRoutes": 23,
+      "metadataTitle": "PASS",
+      "replacementLogoUploadActualSourceResponsiveVariantsAndOriginalReset": "PASS",
+      "scope": "Actual production Next HTTP HTML; scripts/styles/RSC serialization removed before checking page text. No browser automation or screenshot claim.",
+      "report": "task04-ssr-http-results.json"
+    },
+    {
+      "command": "Original JSX/default-render preservation tests included in the complete suite",
+      "status": "PASS",
+      "scope": "Every original presentation/behavior attribute and element hierarchy retained; inactive, loaded, expanded-navigation, form-success and Lightbox component markup compared with frozen sources using inert browser-library stubs",
+      "pixelOrHydrationEquivalenceClaimed": false
+    },
+    {
+      "command": "node scripts/verify-website-editor.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "exactFilesVerified": 364,
+      "reviewedTask04Transitions": 54,
+      "exactGeneratedBindings": "PASS",
+      "historicalPreservationGate": "PASS",
+      "oldBaselinesAndPriorStageReports": "unchanged",
+      "log": "task04-preservation.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "task04-diff-check.log"
+    },
+    {
+      "command": "node scripts/audit-website-coverage.mjs",
+      "status": "PASS",
+      "actualReadFoundForEveryApprovedKey": true,
+      "allOriginalRegistryKeysAccountedFor": true
+    }
+  ],
+  "imageVerification": {
+    "separateWebsiteProcessor": true,
+    "approvedImageSlotsSavedAndReset": 20,
+    "wideImageAspectRatioPreserved": true,
+    "exifRotationAndPortraitAspectRatio": "PASS",
+    "unsafeCorruptAndOversizedFilesRejected": true,
+    "slotOwnershipAndRevisionRollback": "PASS",
+    "originalPublicAssetsOverwritten": false,
+    "existingGalleryStaffProcessorUnchanged": true,
+    "existing360SquareOutput": "PASS",
+    "reservedWebsiteImagesProtectedFromGenericDeletion": true,
+    "caseAndEncodedPathProtection": "PASS",
+    "existingGallerySubfoldersRetainBehavior": "PASS"
+  },
+  "browserAcceptance": {
+    "status": "UNVERIFIED",
+    "discoveryResult": "No browser surface; the browser access host is unavailable",
+    "desktopTabletMobileScreenshotsCaptured": false,
+    "hydratedBrowserInteractionsVerified": false,
+    "alternativeBrowserControlAttempted": false,
+    "manualChecklist": "11-TASK04-IMPLEMENTATION.md"
+  },
+  "mandatoryDisclosure": {
+    "displayedText": "editable",
+    "existingEmptyArraySource": "retained",
+    "adminCRUD": "not implemented; intentionally separate requirements, as requested",
+    "inventedCertificatesLinksOrSections": false
+  },
+  "resolvedVerificationIssues": [
+    "Recorded the exact Footer approval transition; no historical baseline was overwritten.",
+    "Production fixture uses the existing HTTPS-origin requirement with a fixed synthetic proxy-origin header; application security was not weakened.",
+    "SSR test selection now matches entire rendered text nodes, preventing Disclosure's conditional heading from being mistaken for a substring in its loading paragraph; the visible-HTML assertion was retained.",
+    "Selection inference excludes style/script elements; redundant copied CSS arguments were removed and diff checking passed with original inline CSS preserved."
+  ],
+  "cleanup": {
+    "ownedProductionPreviewStopped": true,
+    "temporaryFixtureRemoved": true,
+    "disposableTestDatabasesRemoved": true,
+    "schoolAccountOrDatabaseUsedForMutations": false,
+    "productionPublished": false,
+    "prompt05Started": false
+  }
+}

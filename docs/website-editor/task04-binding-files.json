@@ -1,0 +1,134 @@
+[
+  {
+    "path": "src/components/common/Breadcrumb.jsx",
+    "sha256": "67bf7d44eab2b2f63a867e60a007c4e6d47d2b83927fcb8aa255e12fda2be803"
+  },
+  {
+    "path": "src/components/common/StaffCard.jsx",
+    "sha256": "5792b67fca6d14f4061ffca01b52b68dd2e648438bb6029c805d2fe3a4991a4c"
+  },
+  {
+    "path": "src/components/home/CircularsPanel.jsx",
+    "sha256": "8c0fc8645aea9d1f90b67d592758fa190ab94d3f62bfbba3ea5d6c4da65255c3"
+  },
+  {
+    "path": "src/components/home/FeatureCard.jsx",
+    "sha256": "de6cb8140402b935974fb3ce4e27877d55c5c23bb909281c341b4f83cacbe482"
+  },
+  {
+    "path": "src/components/home/HeroCarousel.jsx",
+    "sha256": "8f5295799c7c718ad5cb86ac54ee8709520f07d4a226c316bdb27e2dd4220d16"
+  },
+  {
+    "path": "src/components/home/PrincipalMessage.jsx",
+    "sha256": "b5f1f96bb3c63dc58a8cb2e018d9993a623b6174a65a6dcc3eb18a014bee169c"
+  },
+  {
+    "path": "src/components/home/WelcomeSection.jsx",
+    "sha256": "733c3cd49f910e16426ead67f135706e5b8d477ac64bd8502a157a6d8696c238"
+  },
+  {
+    "path": "src/components/layout/Footer.jsx",
+    "sha256": "ad78366d915db6c5808f70c687bb4537be698fdc81cb99475f3c386ff68f52db"
+  },
+  {
+    "path": "src/components/layout/Navbar.jsx",
+    "sha256": "f82a93b7d1a6e144fbece656417aac47a7b2dbc64b7b95dc8a47d37bba8918be"
+  },
+  {
+    "path": "src/components/layout/TopBar.jsx",
+    "sha256": "5097720175a395e959c9e7e57b5a99642a065905e9b6ec5a66b2e1b1772b4547"
+  },
+  {
+    "path": "src/site-pages/ContactUs.jsx",
+    "sha256": "948d64cb6c6ae5fd710eb39392e9bfc5d697621e2aeee1f3423db6cd7b3b4bf3"
+  },
+  {
+    "path": "src/site-pages/Gallery.jsx",
+    "sha256": "f0158f3d46b74a941c006a841269b377e920e93fd14172fceccf4f2a51732016"
+  },
+  {
+    "path": "src/site-pages/Home.jsx",
+    "sha256": "bc48cd7de03191b7926340337b94cce25cc8fe5c5cec3fcfc16cff2a352c7203"
+  },
+  {
+    "path": "src/site-pages/Infrastructure.jsx",
+    "sha256": "0c253a8935229620d04c3503245df6d73b0afbe22861ef91a9f31d45e5f31d07"
+  },
+  {
+    "path": "src/site-pages/MandatoryDisclosure.jsx",
+    "sha256": "4e6d31d0570199c8e73815c6423b186428991a37dfad7d79f208c6e160f53ff7"
+  },
+  {
+    "path": "src/site-pages/PastPupilsAssociation.jsx",
+    "sha256": "beac6f42d8d611ec4f41b8df818f119aedbcdf9ba2469b759eb045732793a285"
+  },
+  {
+    "path": "src/site-pages/StudentRules.jsx",
+    "sha256": "a4da926524a651e5f01cb709105bf8c4227fa04a5c3a0d910bd8dc41f13761fe"
+  },
+  {
+    "path": "src/site-pages/about/OurFounders.jsx",
+    "sha256": "261f8b8304e6793b167eeb4c4c9b53de743570d63df02d59206966a5d817aa52"
+  },
+  {
+    "path": "src/site-pages/about/OurJourney.jsx",
+    "sha256": "69c39ef434ddc2b9942d8c275daf0e46dc0d5cffe60d95f3e00adda84f6fa178"
+  },
+  {
+    "path": "src/site-pages/about/Principal.jsx",
+    "sha256": "b2c4568aaba316891e2f1dc330e3ddd2141276d5742cfb92cc2cd3c907088a62"
+  },
+  {
+    "path": "src/site-pages/about/Superiors.jsx",
+    "sha256": "6e84131258752d0f7794e3ce06c92b94f3b88d2b21c074ed5185f2330c6e5cd9"
+  },
+  {
+    "path": "src/site-pages/academics/Evaluation.jsx",
+    "sha256": "0b607689101d795055fbfbd9f56f0859c45dd0b2185694cc1db88185f863ab90"
+  },
+  {
+    "path": "src/site-pages/academics/Syllabus.jsx",
+    "sha256": "7af39c2fb094d4d5d33c904862faaab458e6c5b2532ecdea0e85e4bfb999b77b"
+  },
+  {
+    "path": "src/site-pages/administration/Management.jsx",
+    "sha256": "8754160f8ac7ddc6e5f4696891e5338dfa2422d396a63845d89c19827b1bd4f4"
+  },
+  {
+    "path": "src/site-pages/administration/NonTeachingStaff.jsx",
+    "sha256": "8db278db8e82966243db9e8262c3f73d9313a4fe4784c32deab2ea5ffa53f177"
+  },
+  {
+    "path": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+    "sha256": "c8ba702196522a61662cb81c1e74e6f638fc4c0bdb7e8db31dd203cac8a08596"
+  },
+  {
+    "path": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+    "sha256": "67aea7eb7c1837ffa6517d3090ca71b24dcd5aecb65b6b9dbc0d1500b02ed152"
+  },
+  {
+    "path": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+    "sha256": "e093aa65a775628507039fa8a41c04adbc58b2f882a6ee822bdae5d04c2e97ce"
+  },
+  {
+    "path": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+    "sha256": "aea5565de256ace783af0de3ffa4d826e9ca418953bd1cdea1e8a7f8ab6ef92e"
+  },
+  {
+    "path": "src/site-pages/admissions/Admission.jsx",
+    "sha256": "1aec09b2efeb034c67ebc0dd95849bb5e364ca14108c853c6ce0841c227ea086"
+  },
+  {
+    "path": "src/site-pages/admissions/AdmissionInquiry.jsx",
+    "sha256": "d3ac8e2022f9cce2e2241f8d79616a425e783a76752aa4b3d37dbd71b44dbf31"
+  },
+  {
+    "path": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+    "sha256": "d7c058e5f99ddae8a526a7bc1b7394badbed86d36b653eea8b5088d4921280f0"
+  },
+  {
+    "path": "src/site-pages/extracurricular/FormativeMoments.jsx",
+    "sha256": "b504b5d2ed79def45032023ca1ffbce46d063d78b4e67e22f47f084e50718fdb"
+  }
+]

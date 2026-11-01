@@ -1,0 +1,120 @@
+{
+  "scope": "Page-specific controller and server-snapshot checks; browser rendering is separate",
+  "results": [
+    {
+      "route": "/",
+      "key": "home.circulars-panel.notice-print.text1",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/about/founders",
+      "key": "about.founders.founders.item1.name",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/about/journey",
+      "key": "about.journey.milestones.item1.year",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/about/principal",
+      "key": "about.principal.principals.item1.name",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/about/superiors",
+      "key": "about.superiors.superiors-list.item1.name",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/academics/evaluation",
+      "key": "academics.evaluation.evaluation-details.item1.title",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/academics/syllabus",
+      "key": "academics.syllabus.stream-options.item1.label",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/management",
+      "key": "administration.management.management.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/non-teaching",
+      "key": "administration.non.teaching.non-teaching-staff.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/high",
+      "key": "administration.teaching.staff.high.high-school.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/higher-secondary",
+      "key": "administration.teaching.staff.higher.secondary.higher-secondary.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/middle",
+      "key": "administration.teaching.staff.middle.middle-school.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/administration/teaching-staff/primary",
+      "key": "administration.teaching.staff.primary.primary-school.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/admissions",
+      "key": "admissions.faq-items.item1.title",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/admissions/inquiry",
+      "key": "admissions.inquiry.admission-inquiry.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/contact",
+      "key": "contact.handle-submit.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/extracurricular/clubs",
+      "key": "extracurricular.clubs.clubs-and-associations.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/extracurricular/moments",
+      "key": "extracurricular.moments.formative-moments.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/gallery",
+      "key": "gallery.fetch-gallery.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/infrastructure",
+      "key": "infrastructure.facilities.item1.title",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/mandatory-disclosure",
+      "key": "mandatory.disclosure.fetch-disclosures.text",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/past-pupils",
+      "key": "past.pupils.testimonials.item1.name",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    },
+    {
+      "route": "/student-rules",
+      "key": "student.rules.rules.item1.title",
+      "saveFreshReadServerSnapshotReset": "PASS"
+    }
+  ]
+}

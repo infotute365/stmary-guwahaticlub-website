@@ -1,0 +1,15 @@
+{
+  "routes": 23,
+  "staticFields": 1288,
+  "editablePublicFields": 883,
+  "protectedPublicFields": 136,
+  "dormantFields": 45,
+  "adminOrSystemFields": 224,
+  "dynamicFieldTemplates": 40,
+  "originalFiles": 157,
+  "legacyDifferences": 17,
+  "unapprovedImmutableLegacyDifferences": 1,
+  "jsxElements": 2489,
+  "renderExpressions": 1608,
+  "sourceLiterals": 9784
+}

@@ -1,0 +1,963 @@
+{
+  "note": "Field templates, not a database export. Preserve existing editing ownership; no new content collection.",
+  "fields": [
+    {
+      "key": "dynamic.circular.record.title",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / title",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 4
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.content",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / content",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 9
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.date",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / date",
+      "contentType": "date",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "Date.now",
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 13
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.time",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / time",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "'10:00 AM'",
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 18
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.fileUrl",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / fileUrl",
+      "contentType": "url",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 22
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.isPublished",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / isPublished",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "true",
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 26
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.circular.record.createdBy",
+      "scope": "page",
+      "pagePath": "/",
+      "section": "circular",
+      "fieldName": "circular record / createdBy",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/circular.model.js",
+        "line": 30
+      },
+      "existingDataSource": "MongoDB / Circular via existing /api/circulars",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/home/CircularsPanel.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.name",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / name",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 4
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.designation",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / designation",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 9
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.qualification",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / qualification",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 29
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.experience",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / experience",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 34
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.email",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / email",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 44
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.phone",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / phone",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 50
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.image",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / image",
+      "contentType": "image",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 55
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.category",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / category",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 14
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.staffType",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / staffType",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 19
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.subject",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / subject",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 24
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.bio",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / bio",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 39
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.displayOrder",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / displayOrder",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "0",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 59
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.staff.record.isActive",
+      "scope": "page",
+      "pagePath": null,
+      "section": "staff",
+      "fieldName": "staff record / isActive",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "true",
+      "source": {
+        "file": "src/server/model/staff.model.js",
+        "line": 63
+      },
+      "existingDataSource": "MongoDB / Staff via existing /api/staff",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/components/common/StaffCard.jsx",
+        "src/site-pages/administration/Management.jsx",
+        "src/site-pages/administration/NonTeachingStaff.jsx",
+        "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+        "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+        "src/site-pages/administration/teaching-staff/HigherSecondery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.name",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / name",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 20
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.images.image",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / images.image",
+      "contentType": "image",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 4
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.images.title",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / images.title",
+      "contentType": "image",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 8
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.images.uploadedAt",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / images.uploadedAt",
+      "contentType": "image",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "Date.now",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 13
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.eventDate",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / eventDate",
+      "contentType": "date",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "Date.now",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 43
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.slug",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / slug",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 26
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.description",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / description",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 33
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.coverImage",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / coverImage",
+      "contentType": "image",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "null",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 39
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.isActive",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / isActive",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "true",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 47
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.displayOrder",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / displayOrder",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "0",
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 51
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.gallery.record.createdBy",
+      "scope": "page",
+      "pagePath": "/gallery",
+      "section": "gallery",
+      "fieldName": "gallery record / createdBy",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/gallery.model.js",
+        "line": 55
+      },
+      "existingDataSource": "MongoDB / Gallery via existing /api/gallery",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/Gallery.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.academicYear",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / academicYear",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 4
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.class",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / class",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 9
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.stream",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / stream",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "'general'",
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 14
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.fileUrl",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / fileUrl",
+      "contentType": "url",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 19
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.createdAt",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / createdAt",
+      "contentType": "date",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "timestamps: true",
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": null
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": true,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.fileName",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / fileName",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 23
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.isPublished",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / isPublished",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "true",
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 27
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.displayOrder",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / displayOrder",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": "0",
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 31
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    },
+    {
+      "key": "dynamic.syllabus.record.uploadedBy",
+      "scope": "page",
+      "pagePath": "/academics/syllabus",
+      "section": "syllabus",
+      "fieldName": "syllabus record / uploadedBy",
+      "contentType": "text",
+      "defaultValue": null,
+      "defaultValueStatus": "Actual record value not queried; null is an unknown marker, not a replacement default",
+      "schemaDefaultExpression": null,
+      "source": {
+        "file": "src/server/model/syllabus.model.js",
+        "line": 35
+      },
+      "existingDataSource": "MongoDB / Syllabus via existing /api/syllabus",
+      "status": "protected",
+      "editingOwner": "existing-admin-module",
+      "visible": false,
+      "consumers": [
+        "src/site-pages/academics/Syllabus.jsx"
+      ]
+    }
+  ]
+}

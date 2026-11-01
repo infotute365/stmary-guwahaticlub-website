@@ -1,0 +1,2080 @@
+{
+  "captured": "2026-11-01",
+  "scope": "Real production npm run start, loopback HTTP, owned standalone MongoDB and external temporary uploads; no browser automation",
+  "security": [
+    {
+      "name": "anonymous disclosure write",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "anonymous disclosure private list",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "stale disclosure update",
+      "status": "PASS",
+      "httpStatus": 409
+    },
+    {
+      "name": "anonymous write",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "anonymous private history",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "unknown key",
+      "status": "PASS",
+      "httpStatus": 404
+    },
+    {
+      "name": "protected payment key",
+      "status": "PASS",
+      "httpStatus": 403
+    },
+    {
+      "name": "unsafe destination",
+      "status": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "script markup",
+      "status": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "cross-site origin",
+      "status": "PASS",
+      "httpStatus": 403
+    },
+    {
+      "name": "oversized JSON",
+      "status": "PASS",
+      "httpStatus": 413
+    },
+    {
+      "name": "MongoDB operator injection",
+      "status": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "prototype pollution",
+      "status": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "history bounds",
+      "status": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "expired session write",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "stale revision conflict",
+      "status": "PASS",
+      "httpStatus": 409
+    },
+    {
+      "name": "upload traversal",
+      "status": "PASS",
+      "httpStatus": 404
+    },
+    {
+      "name": "private image manifest",
+      "status": "PASS",
+      "httpStatus": 404
+    },
+    {
+      "name": "logged-out previous cookie cannot write",
+      "status": "PASS",
+      "httpStatus": 401
+    },
+    {
+      "name": "logged-out previous cookie cannot read history",
+      "status": "PASS",
+      "httpStatus": 401
+    }
+  ],
+  "restart": {
+    "status": "PASS",
+    "launcher": "npm run start",
+    "publishedText": "PASS",
+    "imageURLAndSHA256": "PASS",
+    "privateHistory": "PASS",
+    "restoreHistoricalImage": "PASS",
+    "restoreOriginalLogoAndText": "PASS",
+    "releaseWithoutDocsTestsOrEnvFiles": "PASS",
+    "dependencies": "Installed production node_modules shared by a temporary checked junction; npm ci --omit=dev in a clean Linux image was not run"
+  },
+  "measurements": [
+    {
+      "path": "/api/website-content/catalog",
+      "method": "GET",
+      "status": 401,
+      "milliseconds": 312.1,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/auth/login",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 269.87,
+      "bytes": 168,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 12.49,
+      "bytes": 133,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 106.85,
+      "bytes": 146009,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/home.home.heading.3",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 70.51,
+      "bytes": 197,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 8.73,
+      "bytes": 124,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 44.48,
+      "bytes": 146133,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/home.home.heading.3/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 22.15,
+      "bytes": 183,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 41.4,
+      "bytes": 146009,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/founders",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 27.14,
+      "bytes": 78456,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.founders.our-founders.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 17.63,
+      "bytes": 213,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 7.75,
+      "bytes": 154,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/founders",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.65,
+      "bytes": 78606,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.founders.our-founders.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 19.44,
+      "bytes": 189,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/founders",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.51,
+      "bytes": 78456,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/journey",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.49,
+      "bytes": 83842,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.journey.our-journey.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 15.9,
+      "bytes": 213,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.57,
+      "bytes": 153,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/journey",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.64,
+      "bytes": 83985,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.journey.our-journey.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 17.19,
+      "bytes": 196,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/journey",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 27.07,
+      "bytes": 83842,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/principal",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 31.78,
+      "bytes": 81824,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.principal.principal.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 17.48,
+      "bytes": 213,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 6.5,
+      "bytes": 155,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/principal",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.88,
+      "bytes": 81934,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.principal.principal.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 17.16,
+      "bytes": 229,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/principal",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.48,
+      "bytes": 81824,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/superiors",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.87,
+      "bytes": 99068,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.superiors.superiors.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 19.12,
+      "bytes": 213,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.49,
+      "bytes": 155,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/superiors",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.6,
+      "bytes": 99191,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/about.superiors.superiors.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 18.46,
+      "bytes": 212,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/about/superiors",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.82,
+      "bytes": 99068,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/academics/evaluation",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.35,
+      "bytes": 72085,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/academics.evaluation.evaluation.heading.3",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 15.63,
+      "bytes": 219,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.98,
+      "bytes": 166,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/academics/evaluation",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.24,
+      "bytes": 72212,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/academics.evaluation.evaluation.heading.3/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 16.57,
+      "bytes": 224,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/academics/evaluation",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.87,
+      "bytes": 72085,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/academics/syllabus",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.05,
+      "bytes": 62685,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/academics.syllabus.syllabus-public.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.64,
+      "bytes": 220,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.67,
+      "bytes": 165,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/academics/syllabus",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.72,
+      "bytes": 62842,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/academics.syllabus.syllabus-public.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.59,
+      "bytes": 196,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/academics/syllabus",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.78,
+      "bytes": 62685,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/management",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.77,
+      "bytes": 63171,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.management.management.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.47,
+      "bytes": 224,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 6.35,
+      "bytes": 176,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/management",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.71,
+      "bytes": 63326,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.management.management.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.83,
+      "bytes": 206,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/management",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.26,
+      "bytes": 63171,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/non-teaching",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.75,
+      "bytes": 63976,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.non.teaching.non-teaching-staff.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.69,
+      "bytes": 232,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.33,
+      "bytes": 186,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/non-teaching",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.95,
+      "bytes": 64136,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.non.teaching.non-teaching-staff.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 17.67,
+      "bytes": 217,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/non-teaching",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.51,
+      "bytes": 63976,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/high",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.39,
+      "bytes": 64509,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.high.high-school.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 13.41,
+      "bytes": 235,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.26,
+      "bytes": 196,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/high",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.76,
+      "bytes": 64676,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.high.high-school.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.46,
+      "bytes": 216,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/high",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.34,
+      "bytes": 64509,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/higher-secondary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.61,
+      "bytes": 64582,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.higher.secondary.higher-secondary.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 20.09,
+      "bytes": 252,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 9.75,
+      "bytes": 225,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/higher-secondary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.43,
+      "bytes": 64766,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.higher.secondary.higher-secondary.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.49,
+      "bytes": 233,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/higher-secondary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.33,
+      "bytes": 64582,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/middle",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.86,
+      "bytes": 64513,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.middle.middle-school.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 16.1,
+      "bytes": 239,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.61,
+      "bytes": 202,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/middle",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.15,
+      "bytes": 64684,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.middle.middle-school.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.27,
+      "bytes": 220,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/middle",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.37,
+      "bytes": 64513,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/primary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.36,
+      "bytes": 64517,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.primary.primary-school.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 13.98,
+      "bytes": 241,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.07,
+      "bytes": 205,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/primary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.93,
+      "bytes": 64690,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/administration.teaching.staff.primary.primary-school.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.67,
+      "bytes": 222,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/administration/teaching-staff/primary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.6,
+      "bytes": 64517,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admissions",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.47,
+      "bytes": 74326,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/admissions.admission.heading.10",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 16.16,
+      "bytes": 210,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.65,
+      "bytes": 147,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/admissions",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.52,
+      "bytes": 74452,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/admissions.admission.heading.10/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.76,
+      "bytes": 207,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/admissions",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.07,
+      "bytes": 74326,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admissions/inquiry",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.43,
+      "bytes": 78920,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/admissions.inquiry.admission-inquiry.heading.4",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.67,
+      "bytes": 225,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.9,
+      "bytes": 170,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/admissions/inquiry",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.68,
+      "bytes": 79071,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/admissions.inquiry.admission-inquiry.heading.4/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.79,
+      "bytes": 212,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/admissions/inquiry",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.31,
+      "bytes": 78920,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/contact",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.8,
+      "bytes": 74996,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/contact.contact-us.heading.3",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 15.91,
+      "bytes": 207,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.41,
+      "bytes": 141,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/contact",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.78,
+      "bytes": 75130,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/contact.contact-us.heading.3/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 16.2,
+      "bytes": 193,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/contact",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.95,
+      "bytes": 74996,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/extracurricular/clubs",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.8,
+      "bytes": 62798,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/extracurricular.clubs.clubs-and-associations.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 18.04,
+      "bytes": 233,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 6.6,
+      "bytes": 181,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/extracurricular/clubs",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.25,
+      "bytes": 62949,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/extracurricular.clubs.clubs-and-associations.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 17.24,
+      "bytes": 224,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/extracurricular/clubs",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.09,
+      "bytes": 62798,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/extracurricular/moments",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.89,
+      "bytes": 62854,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/extracurricular.moments.formative-moments.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.83,
+      "bytes": 230,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.51,
+      "bytes": 180,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/extracurricular/moments",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.24,
+      "bytes": 63009,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/extracurricular.moments.formative-moments.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 14.07,
+      "bytes": 218,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/extracurricular/moments",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.47,
+      "bytes": 62854,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/gallery",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.54,
+      "bytes": 60708,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/gallery.gallery.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 16.12,
+      "bytes": 202,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.64,
+      "bytes": 136,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/gallery",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.56,
+      "bytes": 60848,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/gallery.gallery.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 13.82,
+      "bytes": 177,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/gallery",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.32,
+      "bytes": 60708,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/infrastructure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 21.49,
+      "bytes": 80712,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/infrastructure.infrastructure.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 17.09,
+      "bytes": 218,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 12.17,
+      "bytes": 159,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/infrastructure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 29.22,
+      "bytes": 80860,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/infrastructure.infrastructure.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 29.44,
+      "bytes": 201,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/infrastructure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.29,
+      "bytes": 80712,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/mandatory-disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.65,
+      "bytes": 60562,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/mandatory.disclosure.mandatory-disclosure.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 16.33,
+      "bytes": 228,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 6.82,
+      "bytes": 175,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/mandatory-disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.8,
+      "bytes": 60722,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/mandatory.disclosure.mandatory-disclosure.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 19.72,
+      "bytes": 209,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/mandatory-disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.16,
+      "bytes": 60562,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/past-pupils",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.6,
+      "bytes": 67610,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/past.pupils.past-pupils-association.heading",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.6,
+      "bytes": 222,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.24,
+      "bytes": 160,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/past-pupils",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.47,
+      "bytes": 67737,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/past.pupils.past-pupils-association.heading/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 14.92,
+      "bytes": 230,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/past-pupils",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.76,
+      "bytes": 67610,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/student-rules",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.95,
+      "bytes": 79154,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/student.rules.student-rules.heading.2",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.93,
+      "bytes": 216,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.96,
+      "bytes": 156,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/student-rules",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.35,
+      "bytes": 79304,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/student.rules.student-rules.heading.2/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 16.87,
+      "bytes": 195,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/student-rules",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.01,
+      "bytes": 79154,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/global.footer.footer.paragraph",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 14.08,
+      "bytes": 216,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 25.61,
+      "bytes": 146151,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/founders",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.31,
+      "bytes": 78598,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/journey",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.4,
+      "bytes": 83984,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/principal",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 28.47,
+      "bytes": 81966,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/about/superiors",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 19.03,
+      "bytes": 99210,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/academics/evaluation",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.46,
+      "bytes": 72227,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/academics/syllabus",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.06,
+      "bytes": 62827,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/management",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.26,
+      "bytes": 63313,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/non-teaching",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.12,
+      "bytes": 64118,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/high",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.36,
+      "bytes": 64651,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/higher-secondary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.95,
+      "bytes": 64724,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/middle",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.21,
+      "bytes": 64655,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/administration/teaching-staff/primary",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.15,
+      "bytes": 64659,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admissions",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 24.49,
+      "bytes": 74468,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admissions/inquiry",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 25.47,
+      "bytes": 79062,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/contact",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 20.53,
+      "bytes": 75138,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/extracurricular/clubs",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 15.96,
+      "bytes": 62940,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/extracurricular/moments",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 16.04,
+      "bytes": 62996,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/gallery",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 15.7,
+      "bytes": 60850,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/infrastructure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.24,
+      "bytes": 80854,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/mandatory-disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 15.97,
+      "bytes": 60704,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/past-pupils",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 18.2,
+      "bytes": 67752,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/student-rules",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17,
+      "bytes": 79296,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/global.footer.footer.paragraph/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 19.98,
+      "bytes": 203,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/global.layout.metadata.title",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 15.02,
+      "bytes": 216,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 25.21,
+      "bytes": 146176,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/website-content/global.layout.metadata.title/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 14.53,
+      "bytes": 195,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/images/global.navbar.navbar.src",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 292.44,
+      "bytes": 635,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/global.navbar.navbar.src",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 18.54,
+      "bytes": 236,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 27.75,
+      "bytes": 146865,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/uploads/website/b2533881-2388-463e-886b-d6e09a015127/640.webp",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 9.27,
+      "bytes": 334,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "path": "/api/website-content/global.navbar.navbar.src/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.91,
+      "bytes": 184,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 22.96,
+      "bytes": 146009,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/auth/login",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 228.33,
+      "bytes": 168,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/catalog",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 12.93,
+      "bytes": 168823,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/login",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 15.08,
+      "bytes": 8744,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 17.43,
+      "bytes": 6746,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/dashboard",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 14.86,
+      "bytes": 7467,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/circulars",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 13.92,
+      "bytes": 7596,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/staff",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 13.81,
+      "bytes": 7447,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/gallery",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 13.6,
+      "bytes": 7587,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/syllabus",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 14.93,
+      "bytes": 7591,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/admin/disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 14.76,
+      "bytes": 7419,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/disclosure",
+      "method": "POST",
+      "status": 401,
+      "milliseconds": 3.8,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure",
+      "method": "GET",
+      "status": 401,
+      "milliseconds": 3.64,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/upload/pdf",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 11.28,
+      "bytes": 145,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure",
+      "method": "POST",
+      "status": 201,
+      "milliseconds": 30.71,
+      "bytes": 418,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.49,
+      "bytes": 36,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure/6ae6b9c5f6708df8cedbf431",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 9.79,
+      "bytes": 417,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.45,
+      "bytes": 246,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/uploads/disclosure/db92739d-802e-41d6-897c-f980e4238729.pdf",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 6.77,
+      "bytes": 45,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "path": "/api/disclosure/6ae6b9c5f6708df8cedbf431",
+      "method": "PUT",
+      "status": 409,
+      "milliseconds": 9.91,
+      "bytes": 54,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/disclosure/6ae6b9c5f6708df8cedbf431",
+      "method": "DELETE",
+      "status": 200,
+      "milliseconds": 8.54,
+      "bytes": 45,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 401,
+      "milliseconds": 3.98,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/history/home.hero-carousel.slides.item1.title",
+      "method": "GET",
+      "status": 401,
+      "milliseconds": 4.75,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/unregistered.heading",
+      "method": "PUT",
+      "status": 404,
+      "milliseconds": 6.18,
+      "bytes": 33,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/global.top-bar.fee-options.item1.url",
+      "method": "PUT",
+      "status": 403,
+      "milliseconds": 6.28,
+      "bytes": 45,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.home.href.2",
+      "method": "PUT",
+      "status": 400,
+      "milliseconds": 6.58,
+      "bytes": 53,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 400,
+      "milliseconds": 5.64,
+      "bytes": 74,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 403,
+      "milliseconds": 3.8,
+      "bytes": 43,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 413,
+      "milliseconds": 6.47,
+      "bytes": 36,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 400,
+      "milliseconds": 5.77,
+      "bytes": 35,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 400,
+      "milliseconds": 5.51,
+      "bytes": 35,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/history/home.hero-carousel.slides.item1.title",
+      "method": "GET",
+      "status": 400,
+      "milliseconds": 5.66,
+      "bytes": 35,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 401,
+      "milliseconds": 4.69,
+      "bytes": 29,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 13.05,
+      "bytes": 212,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 409,
+      "milliseconds": 7.88,
+      "bytes": 55,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/catalog",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 10.12,
+      "bytes": 168838,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/images/global.navbar.navbar.src",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 120.31,
+      "bytes": 522,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/global.navbar.navbar.src",
+      "method": "PUT",
+      "status": 200,
+      "milliseconds": 18.19,
+      "bytes": 236,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/uploads/website/fdf9d89a-d13f-4aba-9a73-be59b58ad2cd/1800.webp",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 5.96,
+      "bytes": 2040,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "path": "/api/website-content",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 339.14,
+      "bytes": 277,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 115.08,
+      "bytes": 146945,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/uploads/website/fdf9d89a-d13f-4aba-9a73-be59b58ad2cd/1800.webp",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 11.97,
+      "bytes": 2040,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "path": "/api/website-content/history/global.navbar.navbar.src",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 24.74,
+      "bytes": 1066,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/global.navbar.navbar.src/restore",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 46.46,
+      "bytes": 248,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/uploads/website/b2533881-2388-463e-886b-d6e09a015127/2560.webp",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 7.7,
+      "bytes": 4012,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "path": "/api/website-content/global.navbar.navbar.src/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 20.05,
+      "bytes": 184,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title/reset",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 18.6,
+      "bytes": 197,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "milliseconds": 38.6,
+      "bytes": 146009,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/uploads/%2e%2e%2fpackage.json",
+      "method": "GET",
+      "status": 404,
+      "milliseconds": 5.02,
+      "bytes": 0,
+      "cacheControl": null
+    },
+    {
+      "path": "/uploads/website/fdf9d89a-d13f-4aba-9a73-be59b58ad2cd/manifest.json",
+      "method": "GET",
+      "status": 404,
+      "milliseconds": 3.76,
+      "bytes": 0,
+      "cacheControl": null
+    },
+    {
+      "path": "/api/auth/refresh-token",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 15.9,
+      "bytes": 29,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/auth/logout",
+      "method": "POST",
+      "status": 200,
+      "milliseconds": 8.69,
+      "bytes": 28,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/home.hero-carousel.slides.item1.title",
+      "method": "PUT",
+      "status": 401,
+      "milliseconds": 6.76,
+      "bytes": 29,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/website-content/history/home.hero-carousel.slides.item1.title",
+      "method": "GET",
+      "status": 401,
+      "milliseconds": 6.06,
+      "bytes": 29,
+      "cacheControl": "no-store"
+    }
+  ],
+  "status": "PASS",
+  "authentication": {
+    "productionCookieFlags": "PASS",
+    "refresh": "PASS",
+    "logoutRevokesAccess": "PASS"
+  },
+  "loginPage": {
+    "status": "PASS",
+    "anonymousFormHTML": "PASS"
+  },
+  "adminPages": [
+    {
+      "route": "/admin",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/dashboard",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/circulars",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/staff",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/gallery",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/syllabus",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    },
+    {
+      "route": "/admin/disclosure",
+      "anonymousInitialGuard": "PASS",
+      "hydratedAdminInteraction": "NOT_RUN: browser host unavailable"
+    }
+  ],
+  "disclosure": {
+    "adminRoute": "PASS",
+    "upload": "PASS",
+    "draftPrivate": "PASS",
+    "publishPublic": "PASS",
+    "updateVersion": "PASS",
+    "compatiblePublicPDF": "PASS",
+    "delete": "PASS",
+    "browserCardRendering": "NOT_RUN: browser host unavailable"
+  },
+  "database": {
+    "collections": [
+      "auths",
+      "circulars",
+      "disclosures",
+      "galleries",
+      "staffs",
+      "syllabuses",
+      "websitecontentrevisions",
+      "websitecontents"
+    ],
+    "contentIndexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "key": 1
+        },
+        "name": "website_content_key_unique",
+        "background": true,
+        "unique": true
+      },
+      {
+        "v": 2,
+        "key": {
+          "scope": 1,
+          "pagePath": 1,
+          "hasOverride": 1
+        },
+        "name": "website_content_page",
+        "background": true
+      }
+    ],
+    "historyIndexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "key": 1,
+          "revision": 1
+        },
+        "name": "website_content_revision_unique",
+        "background": true,
+        "unique": true
+      }
+    ],
+    "contentLookup": {
+      "returned": 1,
+      "documentsExamined": 1,
+      "keysExamined": 1
+    },
+    "historyLookup": {
+      "returned": 5,
+      "documentsExamined": 5,
+      "keysExamined": 5
+    }
+  },
+  "performance": {
+    "scope": "Sequential local full HTTP response consumption, fixture data, no browser/LCP/production-load claim",
+    "pageSamples": 105,
+    "minMs": 13.6,
+    "p50Ms": 19.39,
+    "p95Ms": 29.22,
+    "maxMs": 115.08,
+    "pageBytesMin": 6746,
+    "pageBytesMax": 146945,
+    "allPagesPrivateOrNoStore": true
+  }
+}

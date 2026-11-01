@@ -1,0 +1,791 @@
+{
+  "captured": "2026-10-31",
+  "gitHead": "152bacab3f76f177d498daa626f649e57791203f",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "27538dcadf2902e48625a856d132905e583e8142a58ed9faa3ccecae3f1a5047",
+      "bytes": 561
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "4c90dd887332c0129f5832ab4ca3056c2ccc4a262a763a2f8041d1af79939b6e",
+      "bytes": 135
+    },
+    {
+      "path": "README.md",
+      "sha256": "588e9ac87e4b41fdf346154f8dc76fe6cb073c86152e3c46dff89b9c1077033f",
+      "bytes": 2032
+    },
+    {
+      "path": "app/(site)/about/founders/page.jsx",
+      "sha256": "87b3a9470ac0bbffceb4678667cee86a73a33389a39329d299723e438a5dfdf1",
+      "bytes": 141
+    },
+    {
+      "path": "app/(site)/about/journey/page.jsx",
+      "sha256": "01f2090026ebbdea4875fe4e821f9b57cdea17809f73a811c5fe46c8215707d2",
+      "bytes": 138
+    },
+    {
+      "path": "app/(site)/about/principal/page.jsx",
+      "sha256": "94b00ac47166266afeecffa63f384695348f12fae7bbe60a9636c114a65c9d18",
+      "bytes": 135
+    },
+    {
+      "path": "app/(site)/about/superiors/page.jsx",
+      "sha256": "522e29a252aeb28ca7bafa220fae99a2c54c83194f9b337d88677224bf5c232b",
+      "bytes": 135
+    },
+    {
+      "path": "app/(site)/academics/evaluation/page.jsx",
+      "sha256": "1da3b4867b32251874614b7f01de5c56df4850bc2deebd4f9d95df76ae940aaf",
+      "bytes": 142
+    },
+    {
+      "path": "app/(site)/academics/syllabus/page.jsx",
+      "sha256": "d4845e4115aa90e9d57d8d9efab8c82f7a99e8f6cbfcb87f0d8f2cbdeb5e5a02",
+      "bytes": 136
+    },
+    {
+      "path": "app/(site)/administration/management/page.jsx",
+      "sha256": "70c7c361eb0724ca9a7693de91a5ecf9369c79c3b1de008c73314dc18e29260d",
+      "bytes": 147
+    },
+    {
+      "path": "app/(site)/administration/non-teaching/page.jsx",
+      "sha256": "c09705e5dd87d0e69d889ffc04e096911ee02bdef4fb988d6b73859d8eff757b",
+      "bytes": 165
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/high/page.jsx",
+      "sha256": "378478d330eb0ccba253a8c1f7c346451496151b4ea1e4398bd0c71da05fdfce",
+      "bytes": 165
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/higher-secondary/page.jsx",
+      "sha256": "6782c4afaaef37d3c8b7c58981318ca0752833450f1dce8656759d6f61bdc344",
+      "bytes": 180
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/middle/page.jsx",
+      "sha256": "bfe40e8673a86a36916f7d080743489787a221264010d142a0c41356cb6e1687",
+      "bytes": 171
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/primary/page.jsx",
+      "sha256": "99ed7d078e1d36a4bf2ed9556257687e8de132acfba9cdcd538a3fc58affe5b3",
+      "bytes": 174
+    },
+    {
+      "path": "app/(site)/admissions/inquiry/page.jsx",
+      "sha256": "f70702cb7fa8f92d5f0db0f84fa41b66cf9d6e5cf01deb957bc78a5ce5b2a5fb",
+      "bytes": 161
+    },
+    {
+      "path": "app/(site)/admissions/page.jsx",
+      "sha256": "1f28a0957470b9f14bc2400af10bb2dc300e2ce12ee8d1d50ec9aead7615ceb0",
+      "bytes": 137
+    },
+    {
+      "path": "app/(site)/contact/page.jsx",
+      "sha256": "3762722f8a42837e9dca24a1be728c7b06b71921ceae7576e2ccb45b58c70504",
+      "bytes": 126
+    },
+    {
+      "path": "app/(site)/extracurricular/clubs/page.jsx",
+      "sha256": "84d569a5663b0b358a47e46d16961b3b8f80f2361f3c661d0cce2fa5027caf22",
+      "bytes": 178
+    },
+    {
+      "path": "app/(site)/extracurricular/moments/page.jsx",
+      "sha256": "44b5e8f7b6fc3f3d5a012c0539b20fe139f75f48562e48da34e357b3d173ebf4",
+      "bytes": 166
+    },
+    {
+      "path": "app/(site)/gallery/page.jsx",
+      "sha256": "946c473a5bb0c39162fc8c8c8d55380f8f6b89030a19f0f880ad4a23b2e2377c",
+      "bytes": 120
+    },
+    {
+      "path": "app/(site)/infrastructure/page.jsx",
+      "sha256": "446977cc774079cf69015f12651a18acd8a7caf232eda21985feaa12eb0a28b1",
+      "bytes": 141
+    },
+    {
+      "path": "app/(site)/layout.jsx",
+      "sha256": "202c1a5adeb199973cce4a5a84a94704aa2046041c1f2c9d80858c4efc047c81",
+      "bytes": 421
+    },
+    {
+      "path": "app/(site)/mandatory-disclosure/page.jsx",
+      "sha256": "2e80df4f2f504a7ac1be6e8b181b6749e6aceb9b932d8914c8495e8b623db740",
+      "bytes": 156
+    },
+    {
+      "path": "app/(site)/page.jsx",
+      "sha256": "39f630ad78b8f4e7fd89c96db7b6bcc49761c38596787ed71dd8de7b151230fe",
+      "bytes": 108
+    },
+    {
+      "path": "app/(site)/past-pupils/page.jsx",
+      "sha256": "f48d0dacb3f85d93d050e2e6eee6d47248ed5273cf163b795ff7e54b9fb571df",
+      "bytes": 162
+    },
+    {
+      "path": "app/(site)/student-rules/page.jsx",
+      "sha256": "5850cac8599c05c1c8af866daa864b7f3949ca7d553d42c6343688d86df15e34",
+      "bytes": 135
+    },
+    {
+      "path": "app/admin/circulars/page.jsx",
+      "sha256": "74b8b5fb983308257094d7757fdc9faa28ffb0ea63f9ebdc1e1f0fe23bcf9e3c",
+      "bytes": 132
+    },
+    {
+      "path": "app/admin/dashboard/page.jsx",
+      "sha256": "7ca812f9a7f35adf348ed9a2f46f79f0d391619ae483111084c5bbef97a54cc9",
+      "bytes": 132
+    },
+    {
+      "path": "app/admin/gallery/page.jsx",
+      "sha256": "8002240137b446da06c9777bb306a04ed6052aedb3fc11500c1112abc769bfc4",
+      "bytes": 126
+    },
+    {
+      "path": "app/admin/layout.jsx",
+      "sha256": "3c51fd9001993630721356eb76853fc38d40637cbe52023cd370261124b7793d",
+      "bytes": 310
+    },
+    {
+      "path": "app/admin/page.jsx",
+      "sha256": "35dad280372a275ddd031deccf871b0695b41b078b41a1192ea65561b238877a",
+      "bytes": 109
+    },
+    {
+      "path": "app/admin/staff/page.jsx",
+      "sha256": "f4b5a8683c5474acae57af202f718874bc99813bf09b3c209ead03cd1e1a109d",
+      "bytes": 120
+    },
+    {
+      "path": "app/admin/syllabus/page.jsx",
+      "sha256": "34b8ce69822c92d42cba0e7be86d210e5d238e223bfee31f4ab3b20e25fb0e52",
+      "bytes": 129
+    },
+    {
+      "path": "app/api/[...path]/route.js",
+      "sha256": "aaa442eed6a83f7b1104781856d9d9a60cf7040c2ff00e3431a6cb81b6135382",
+      "bytes": 405
+    },
+    {
+      "path": "app/api/uploads/[...path]/route.js",
+      "sha256": "b0866abe0f469bfab8f57afffd7fbeabe0b308ef5c4b880c6afccc139744db81",
+      "bytes": 296
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "958d0814853949e51ce796effb9982c859d7101d3a1ae7007b6716c7a3e09999",
+      "bytes": 3024
+    },
+    {
+      "path": "app/layout.jsx",
+      "sha256": "a06de08fa7ab168dba1d966e1d06db0381dac49b3cca16dbb567a59f4ba1ce71",
+      "bytes": 444
+    },
+    {
+      "path": "app/login/page.jsx",
+      "sha256": "7c79d86e4b09863bc9edff37c14f4c175c611d6df437e98ec19ef25baa82831a",
+      "bytes": 111
+    },
+    {
+      "path": "app/not-found.jsx",
+      "sha256": "24d39ed9024b001d4d2d73a8c20caec16867553821e57ec2ebc1192a2dd3e468",
+      "bytes": 111
+    },
+    {
+      "path": "app/uploads/[...path]/route.js",
+      "sha256": "9b042f7ccba71ba99b8e8f95ba01618fbe2cdd7e622ac95687c3f6ee4a59cf93",
+      "bytes": 208
+    },
+    {
+      "path": "deploy/ecosystem.config.cjs",
+      "sha256": "50ff553eb3e6bdb539f0a2eee2f4b23d178a84786a577622d8eaecdf5825d3e3",
+      "bytes": 744
+    },
+    {
+      "path": "deploy/nginx-proxy.conf.example",
+      "sha256": "f0a5b11b1dfb1af8103366545bca1b0d750eb9bbf4d63515942f08ddb14bd742",
+      "bytes": 509
+    },
+    {
+      "path": "deploy/nginx.conf.example",
+      "sha256": "a12d0f2bc4f65d86db23451750572210f301d5cf2d153e1bf4942ccca3781149",
+      "bytes": 1823
+    },
+    {
+      "path": "docs/deployment/ENVIRONMENT_VARIABLES.md",
+      "sha256": "a2dfa0f5f9136675ce14e1a082afbdd236fc0fd7c86c411394e9b089c9a831cf",
+      "bytes": 5831
+    },
+    {
+      "path": "docs/deployment/HETZNER_DEPLOYMENT.md",
+      "sha256": "2d9a101283887245b186f76982fe4c74d921e01bdf978abd32aa920965756988",
+      "bytes": 19499
+    },
+    {
+      "path": "docs/verification/REPORT.md",
+      "sha256": "5ef56e50d2a88f5010137f2cc048a6c2c2e77246abcb2f9d6c31f15a4833397f",
+      "bytes": 14976
+    },
+    {
+      "path": "docs/verification/baseline.json",
+      "sha256": "6a10003c11869d1f36757efb49400ce7bbe16dbdb2a86ae0dfdf243f216f27b2",
+      "bytes": 27026
+    },
+    {
+      "path": "docs/verification/production-smoke.json",
+      "sha256": "79ce67dc856f73c013e7886a4ca811a9c792e857409caf49371b808df94221a7",
+      "bytes": 545
+    },
+    {
+      "path": "next.config.mjs",
+      "sha256": "c5355fc2611ed34bae5eed6f439eed1f315133e4fe918462a55067a5fbd304da",
+      "bytes": 642
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "2c81831a8dda97e25ff7707d95adc42105f091d7e7f6232227a52d90272891aa",
+      "bytes": 86682
+    },
+    {
+      "path": "package.json",
+      "sha256": "ca371f480b752300a662c6f4a78ab552bebf6b809de0f571a695dd98f67fe644",
+      "bytes": 1156
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "7dea05f7fa2b93f6e7da5dd056cf9987360d7cf39426d570e200ce474f4a4c4c",
+      "bytes": 74
+    },
+    {
+      "path": "public/domenica.png",
+      "sha256": "56f23e948a4b900de76f0b22e76d00ed59694dc08863f118fa753c4011457521",
+      "bytes": 2305068
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "bytes": 9522
+    },
+    {
+      "path": "public/icons.svg",
+      "sha256": "7ca2d67c9c3aebf50cdc8709ee8aacf8cdb8cc7ea6325ea94939caef5da1c53d",
+      "bytes": 5055
+    },
+    {
+      "path": "public/john.png",
+      "sha256": "a0fe590343f116b112220453930005c55f311b1a6cb2064b9f51ecc3c285585c",
+      "bytes": 2467643
+    },
+    {
+      "path": "public/logo.jpeg",
+      "sha256": "bc80e9c6fbe27544bd53fce5febbc85a96f991eb2e5994deb496c32660534635",
+      "bytes": 319793
+    },
+    {
+      "path": "public/principal.png",
+      "sha256": "d1392ba05f6d8420d2462042f4e13726cd88bab414d266b605a2a4c7fcc74b89",
+      "bytes": 1620473
+    },
+    {
+      "path": "public/sister.jpg",
+      "sha256": "00fb8c815eead2f0a015fdc8b785ebaa227c26f46f3fc9be62362a102c99bcce",
+      "bytes": 34357
+    },
+    {
+      "path": "public/uploads/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "public/walpaper.png",
+      "sha256": "feae3ca6c9dee7d1b45b04b913be2c9ecef0bb6fd2e661d01be598bc8dab69bd",
+      "bytes": 2479314
+    },
+    {
+      "path": "scripts/production-smoke.mjs",
+      "sha256": "13fc9a9859b513a8958be93b18d716ecc497362a86c50b6ee17d672b91430394",
+      "bytes": 8288
+    },
+    {
+      "path": "scripts/seed-admin.mjs",
+      "sha256": "7993ea1340464e5c0d72f7c7cd040595af58d21371988dc7ec2a5f070b2d766c",
+      "bytes": 2905
+    },
+    {
+      "path": "scripts/start.mjs",
+      "sha256": "eb71084609e0423161bd890742a0cdef85235b8dc0f1a1de85a139062f5ef567",
+      "bytes": 1096
+    },
+    {
+      "path": "scripts/verify-preservation.mjs",
+      "sha256": "789cd437ad7b43d3ea73018306f0e711d963bae332ac655ec6bb8ab75f644200",
+      "bytes": 1644
+    },
+    {
+      "path": "src/assets/hero.png",
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "bytes": 13057
+    },
+    {
+      "path": "src/components/ProtectedRoute.jsx",
+      "sha256": "f7bd2cd5611a24cf052a9825cb2cb174df1f4f364f652baadfc18f721edb19cd",
+      "bytes": 891
+    },
+    {
+      "path": "src/components/Providers.jsx",
+      "sha256": "3861cac839abdc6aee6ce9d270022ac206641513fd905f3fa269a0e792c9c608",
+      "bytes": 368
+    },
+    {
+      "path": "src/components/admin/Circulars.jsx",
+      "sha256": "d10789fdcf9a02c722b39bf545648b3f2534c20d0c796ddbaa2b7571205808ee",
+      "bytes": 13886
+    },
+    {
+      "path": "src/components/admin/Dashboard.jsx",
+      "sha256": "4c88b0c94df62a8ab15dbbfc552ffd475c840b0f78d0e49b2a4eafbe51560c93",
+      "bytes": 5731
+    },
+    {
+      "path": "src/components/admin/Gallery.jsx",
+      "sha256": "e4a7509b428116f9dd41cc33c32071cd867e1959120395f00c98514586d84674",
+      "bytes": 16774
+    },
+    {
+      "path": "src/components/admin/Staff.jsx",
+      "sha256": "5d769a3f40ab09348a045e76f10f3a1cc87056eb77d4be32cd1af4223639a8a2",
+      "bytes": 37047
+    },
+    {
+      "path": "src/components/admin/Syllabus.jsx",
+      "sha256": "63572157ce030c34660e0cc84697e5840fe416e4721b752f14f01e9e4cf6ba22",
+      "bytes": 13140
+    },
+    {
+      "path": "src/components/common/Accordion.jsx",
+      "sha256": "61e0ddd93310e87a1f6441471fc4a33084d10b1515a373a51983e435c81dd71b",
+      "bytes": 1445
+    },
+    {
+      "path": "src/components/common/Breadcrumb.jsx",
+      "sha256": "b89ef5dab73da65a7893b423d0b27c4961a1edfd2b75cbd5b57b80bb745170ab",
+      "bytes": 902
+    },
+    {
+      "path": "src/components/common/Card.jsx",
+      "sha256": "e807c8f796256dcaaa88b3cdfcaf5c372ca69208ee2f2e5d1b7541ce3d67d452",
+      "bytes": 557
+    },
+    {
+      "path": "src/components/common/ContactForm.jsx",
+      "sha256": "36f41c8a994c458f7235a468e444e74fb6ec31ee7160be8d583b0b2a5b695a13",
+      "bytes": 4286
+    },
+    {
+      "path": "src/components/common/GalleryGrid.jsx",
+      "sha256": "808094b563250f790d948884114143c68d6ee2c91d719bd5be69963268a01a65",
+      "bytes": 1677
+    },
+    {
+      "path": "src/components/common/Lightbox.jsx",
+      "sha256": "6704fe2865aa2f28dceea4c9d7704f42aa20d7e8ff94c08fe7c1ef504e0a7bf8",
+      "bytes": 2018
+    },
+    {
+      "path": "src/components/common/PageHeader.jsx",
+      "sha256": "8f928f76f5ea697e5504ca3ebbd7d7960f444ef543699286b1726013d89a3400",
+      "bytes": 1073
+    },
+    {
+      "path": "src/components/common/SectionWrapper.jsx",
+      "sha256": "86e88666a28a6220c07e50dcdcdca09522eac4c9328e66928e25d703ceac1039",
+      "bytes": 820
+    },
+    {
+      "path": "src/components/common/StaffCard.jsx",
+      "sha256": "6c35b2fd541f15f3fe329ebb1a30fb825977bebd17a02f0449dee355047810cd",
+      "bytes": 3246
+    },
+    {
+      "path": "src/components/home/CircularsPanel.jsx",
+      "sha256": "5b0a3ffe2a3d4e5cca55579d42db1d014a6095a273d21669dc22442b1a6124d6",
+      "bytes": 13594
+    },
+    {
+      "path": "src/components/home/FeatureCard.jsx",
+      "sha256": "bb13d94863e37bb6174f2b57e3075cd7bbbfff9a31ff1f78f5c6111b50818ada",
+      "bytes": 9331
+    },
+    {
+      "path": "src/components/home/HeroCarousel.jsx",
+      "sha256": "aa680170a71e8605c556d89f4c73fb144126c21a00046c77090591beaa737e0c",
+      "bytes": 11667
+    },
+    {
+      "path": "src/components/home/PrincipalMessage.jsx",
+      "sha256": "62dda456222573b6b413d75e98fe54acfa61f99022f60752f17e574423ae5040",
+      "bytes": 8697
+    },
+    {
+      "path": "src/components/home/StatsCounter.jsx",
+      "sha256": "74ab554ac7385e997b960cf1314892292562ddec57d0b8a001be2990c9025b20",
+      "bytes": 2041
+    },
+    {
+      "path": "src/components/home/WelcomeSection.jsx",
+      "sha256": "d9d8f0055c639798eba2d968f5dc4f490adcf2ce4475a09737f823d0f67c65e9",
+      "bytes": 8513
+    },
+    {
+      "path": "src/components/layout/AdminLayout.jsx",
+      "sha256": "ae8c2b18dec8e328cb8daae7599fee100e409ec50c3ff2bc1e0ff989f63dfa30",
+      "bytes": 5209
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "sha256": "962b0df817433e88b52531f4141599a33e52f486f1bb5bc79ebe26516a82105c",
+      "bytes": 10350
+    },
+    {
+      "path": "src/components/layout/NavDropdown.jsx",
+      "sha256": "7216db2d3faa3397709695be54d42131749a73bf5c1076b2c2ef7f50b89599f5",
+      "bytes": 864
+    },
+    {
+      "path": "src/components/layout/NavNestedDropdown.jsx",
+      "sha256": "79e9a296e6409867a7983cbf0fcc4d343da4e61ac8ab4f34284b9796a514893c",
+      "bytes": 2449
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "sha256": "12e43b636cd95aeb54cd7d680a1d0878cbbed7f18750d4a4632e5b9ee0fa0429",
+      "bytes": 15861
+    },
+    {
+      "path": "src/components/layout/TopBar.jsx",
+      "sha256": "7a0608a22842ab9947981efbbcf6edc374773ef880c4faf0a29f6564b66d0b0e",
+      "bytes": 9698
+    },
+    {
+      "path": "src/components/ui/Badge.jsx",
+      "sha256": "48fdb9c54b10e61f7704c692213138c51af19ac554a01a0b6dee9db80eb53643",
+      "bytes": 572
+    },
+    {
+      "path": "src/components/ui/Button.jsx",
+      "sha256": "780edc99676075315d5b06f3d385dd23df22900851b8e370f301fa99837f1fc0",
+      "bytes": 989
+    },
+    {
+      "path": "src/components/ui/Loader.jsx",
+      "sha256": "a41e4b6e1ffde60140cee1b7179521b7590996f041dbe3a1eff66afd4c4aa28f",
+      "bytes": 432
+    },
+    {
+      "path": "src/context/AuthContext.jsx",
+      "sha256": "af21f6c2f69a68f03095d33d0e7995a7f0d51d36ec02edcc2efcbbc5d2348fd8",
+      "bytes": 1756
+    },
+    {
+      "path": "src/hooks/useAuth.js",
+      "sha256": "68c403893093f749da0b6bf5165f4adacada5db555fe1113f93eebee4123c33c",
+      "bytes": 307
+    },
+    {
+      "path": "src/server/config/auth.js",
+      "sha256": "75c8bbd3e8291e59c49865bb34a99d73d349d0038bd8133f2c396a1629dabbbd",
+      "bytes": 2388
+    },
+    {
+      "path": "src/server/config/database.js",
+      "sha256": "83144d23f96f09ea56f956865dd548e84a87bb033fba522786395189b7fe1422",
+      "bytes": 1866
+    },
+    {
+      "path": "src/server/config/localStorage.js",
+      "sha256": "11a1939f98f8ca2f1f17a844f283d44a29a0ab289e44f5019e750f20fe48e08b",
+      "bytes": 3839
+    },
+    {
+      "path": "src/server/controller/auth.controller.js",
+      "sha256": "d0f745592a249edb0a97f871c4dce06e4e3f1d9e229329e5374cc2c67631f0d3",
+      "bytes": 5323
+    },
+    {
+      "path": "src/server/controller/circular.controller.js",
+      "sha256": "0792a91705d2e69b80d2a32a75dc7651d4d7212a57ee6d7b0874ddad2a6118bc",
+      "bytes": 9170
+    },
+    {
+      "path": "src/server/controller/gallery.controller.js",
+      "sha256": "f54162ea0468d7d0b7b7f4c0706869d7051cb6d68fbba3577b44a60dd863e571",
+      "bytes": 20432
+    },
+    {
+      "path": "src/server/controller/staff.controller.js",
+      "sha256": "434d3297e02f80757999bcfe1949ed3cd3ed084c6e129b65517bf64c498f0934",
+      "bytes": 13323
+    },
+    {
+      "path": "src/server/controller/syllabus.controller.js",
+      "sha256": "a7138097ad59a7c63992ed020a922c27c8901abd04521667179d9e4e6234f0c3",
+      "bytes": 13747
+    },
+    {
+      "path": "src/server/controller/upload.controller.js",
+      "sha256": "7147fec6bf0002c7303dde73858b0c2aa622a2e93c85f2387ca443edbf9d5099",
+      "bytes": 6094
+    },
+    {
+      "path": "src/server/middleware/auth.middleware.js",
+      "sha256": "43e8614ac1cff10bfbf5df2c2d812fa12ac2b2ce5132cd2a2db6ceaa23b1d58c",
+      "bytes": 429
+    },
+    {
+      "path": "src/server/middleware/refresh.middleware.js",
+      "sha256": "e4a95e5a69b950823ffad37514bfa58010b157e3000ba1fb8c0895327930e1a9",
+      "bytes": 1453
+    },
+    {
+      "path": "src/server/model/auth.model.js",
+      "sha256": "ae74450628a5e59525bb7c1c0361fd38631e7bf2410faf35a065df48ce86b479",
+      "bytes": 1496
+    },
+    {
+      "path": "src/server/model/circular.model.js",
+      "sha256": "66f8ac7ede62ed2989db64225e66a5bc51a4185a7ae22a041a986e639c1702e3",
+      "bytes": 791
+    },
+    {
+      "path": "src/server/model/gallery.model.js",
+      "sha256": "af73d65de706e54bf589a791315dd6ee9fabf3a0116a44bc2685edea25f5f557",
+      "bytes": 1326
+    },
+    {
+      "path": "src/server/model/staff.model.js",
+      "sha256": "c98e1f761bee47a8a7a83ded08b510f0f1cabb51c24ae7189341b95b34b5abd5",
+      "bytes": 1555
+    },
+    {
+      "path": "src/server/model/syllabus.model.js",
+      "sha256": "e6e977f9cccf22d89e6e1380a89f4bd6eed79b7d8bf36f679bd8ea90428c7f0a",
+      "bytes": 1057
+    },
+    {
+      "path": "src/server/route-adapter.js",
+      "sha256": "981e776aff34751c157250922a8fd377233fe6b1bc5a8479ecab7960b37bc079",
+      "bytes": 12158
+    },
+    {
+      "path": "src/server/route-path.js",
+      "sha256": "cf54dc1dc7607ff02ebf481d60d6fd83123ea30cd7d3eaecde5de034b8fd6187",
+      "bytes": 463
+    },
+    {
+      "path": "src/server/util/error.js",
+      "sha256": "3b8c9cdd6804999cb65b48c32c871d8a43f8d33c0824c7e322afc5195350ca81",
+      "bytes": 543
+    },
+    {
+      "path": "src/server/util/imageProcessor.js",
+      "sha256": "3bd9e9cb4e367ce1b0680553bae098b3b92b4ac054f51e9c539c213052671520",
+      "bytes": 1726
+    },
+    {
+      "path": "src/server/util/provisionAdmin.js",
+      "sha256": "212d1cb33e35cbab485d32f311fc0eff6168c395a2b78d11f2d642e481195673",
+      "bytes": 1713
+    },
+    {
+      "path": "src/server/util/requestSecurity.js",
+      "sha256": "97bdd1a8cfb49a9d74c7bfc687d8654506b8734ceb40bd108d6c33e1b6adcaa6",
+      "bytes": 3851
+    },
+    {
+      "path": "src/server/util/serveUpload.js",
+      "sha256": "49979c684ae1a5043d65ddc74cbf0cacb55a5f9c5ccc95d7346ce4d548a0f544",
+      "bytes": 1583
+    },
+    {
+      "path": "src/server/util/validation.mjs",
+      "sha256": "d8c90cc8fe957d77d3541e997b97144f0eda7c654b730ae308b0c7848f5e51dc",
+      "bytes": 3269
+    },
+    {
+      "path": "src/services/api.js",
+      "sha256": "f1557aae616a30d7205cdf5cebc156530285406b20ed7e8817d810b1af2e70e5",
+      "bytes": 12349
+    },
+    {
+      "path": "src/site-pages/ContactUs.jsx",
+      "sha256": "89af302b8c5df54ff6877519d799f1c2962ea558a05f89913b52abb067515cfc",
+      "bytes": 20948
+    },
+    {
+      "path": "src/site-pages/Gallery.jsx",
+      "sha256": "82ff1da0f3b12fa8b21e19c2130241a2af1496e57fc94f7cee42d96818bf5145",
+      "bytes": 27039
+    },
+    {
+      "path": "src/site-pages/Home.jsx",
+      "sha256": "6ba48270ef082917f4bb49fa8874a478b163695a52583d507da189092e793458",
+      "bytes": 10510
+    },
+    {
+      "path": "src/site-pages/Infrastructure.jsx",
+      "sha256": "6048289c3725631c7c51a12532e5cafbad2f4904325249344dafa5e5c4699c6a",
+      "bytes": 12466
+    },
+    {
+      "path": "src/site-pages/Login.jsx",
+      "sha256": "bfe93a79fd2ce7443e7497c37ad8ee0221eccd1a9c59f403a8043dafb71d5c39",
+      "bytes": 3903
+    },
+    {
+      "path": "src/site-pages/MandatoryDisclosure.jsx",
+      "sha256": "e0bf1016c729e5140b7f36d70f2838d131758dc3a4417ad495bd78120a77fafd",
+      "bytes": 15737
+    },
+    {
+      "path": "src/site-pages/NotFound.jsx",
+      "sha256": "c0875966caddb77ae08d130f984a8a5523252f6d51242406c8cff2ccf4a6acaa",
+      "bytes": 914
+    },
+    {
+      "path": "src/site-pages/PastPupilsAssociation.jsx",
+      "sha256": "269531e6486e0e7d7b50917a2fcb669ba91451e8ff1da22121648611395c0278",
+      "bytes": 6106
+    },
+    {
+      "path": "src/site-pages/StudentRules.jsx",
+      "sha256": "8b7a79aca1ffed949c145c37a259946039c0c3d743974160d3a430954955c0d8",
+      "bytes": 11244
+    },
+    {
+      "path": "src/site-pages/about/OurFounders.jsx",
+      "sha256": "8375c792f2ed2f9210747a71b644db7c2e9c2e6e82574dfa2d65090d9b630b18",
+      "bytes": 15264
+    },
+    {
+      "path": "src/site-pages/about/OurJourney.jsx",
+      "sha256": "6502f18d9885e07a7d46f8fcb0c9d6bcfb8d7861dc323b1f197fea747e1fa422",
+      "bytes": 13451
+    },
+    {
+      "path": "src/site-pages/about/Principal.jsx",
+      "sha256": "f6f49b60e62876bc18951132ad415826dce4b5d4b2fa90761a6c3d5a595c06ba",
+      "bytes": 13608
+    },
+    {
+      "path": "src/site-pages/about/Superiors.jsx",
+      "sha256": "ebf9815a1206192205e6d91b637962a97a09f04669f20b75f8202655b77232f7",
+      "bytes": 8994
+    },
+    {
+      "path": "src/site-pages/academics/Evaluation.jsx",
+      "sha256": "01646f29ddb1e779c7dd8eed2f5e17f089d7e32b711b36cefe3c081a12a1226a",
+      "bytes": 9948
+    },
+    {
+      "path": "src/site-pages/academics/Syllabus.jsx",
+      "sha256": "9c61979201c8401587ba9d9ecdb198f796f26ddc3702bf8b73fcdfe83f3c7947",
+      "bytes": 12072
+    },
+    {
+      "path": "src/site-pages/administration/Management.jsx",
+      "sha256": "523c463e7b36a989e7aa6b983235bb885ff203162120b27886d031d87553ed2d",
+      "bytes": 7981
+    },
+    {
+      "path": "src/site-pages/administration/NonTeachingStaff.jsx",
+      "sha256": "cf92fdea5cc08a66b2f679e9d83191b114fe6e457bd265011daa0be3fd232e6d",
+      "bytes": 6683
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+      "sha256": "e835dd41c119fa84df2264ac28744ef76761bbe12399860e29db07ac25c56f86",
+      "bytes": 6673
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+      "sha256": "6ed28e1c9322298262de65e140c0b390067898f357406c13d0de59e1f38aa650",
+      "bytes": 6713
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+      "sha256": "8555394c01960ad2a9f563d5c93fe8033b157d48db094bbbba892b7f5ba315f0",
+      "bytes": 6675
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+      "sha256": "9d629bb1619869fc77c878533b38b8863a7ff3534cbd91bfcf7f961f54b3e851",
+      "bytes": 6678
+    },
+    {
+      "path": "src/site-pages/admissions/Admission.jsx",
+      "sha256": "f92c49784c61a26f62daf2298944ca4ac689f405ca35c45d364b9695a3a5cbb0",
+      "bytes": 39854
+    },
+    {
+      "path": "src/site-pages/admissions/AdmissionInquiry.jsx",
+      "sha256": "d8b60523bad5c82a54caf93c668878dd9eeaa23facaa21c62badae6207a25275",
+      "bytes": 28349
+    },
+    {
+      "path": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+      "sha256": "9a00279ea3f3737efea37d9d226c4415588ea43fa11c3312f5eb2e6befa87ae9",
+      "bytes": 4971
+    },
+    {
+      "path": "src/site-pages/extracurricular/FormativeMoments.jsx",
+      "sha256": "b2938dbe76c823ef92f29ca2dc326dcb593e372c72dd816dee0e959d3e177231",
+      "bytes": 5098
+    },
+    {
+      "path": "src/utils/helpers.js",
+      "sha256": "18ae1b9a9371fedebf027cf20ddaf099469dd10ec88c9439a74956cce38848fe",
+      "bytes": 5299
+    },
+    {
+      "path": "tests/auth-security.test.js",
+      "sha256": "00e8c896c98d80f6c7f1899b068f07f4c80cb58cd36bd6a12d7bdf2017ac2675",
+      "bytes": 1613
+    },
+    {
+      "path": "tests/backend-security.test.js",
+      "sha256": "703c0aa9b5f71a22d89709655ac03265c61fe77c4df0cb5e459ee71e04ea1fde",
+      "bytes": 7020
+    },
+    {
+      "path": "tests/database.test.js",
+      "sha256": "94fb07742bb7409acf1702222a838f17ebdc00b88a701a96292104e968b27e8c",
+      "bytes": 2416
+    },
+    {
+      "path": "tests/frontend-auth.test.js",
+      "sha256": "d302dbb6203e517d994d56e19d976edd9d65753df0edb8aea666709d0fbbe817",
+      "bytes": 1478
+    },
+    {
+      "path": "tests/integration.test.js",
+      "sha256": "72d464a490d5584c722c870a5587ce3e4311bcd11bda5bb3c9a87916b14121f8",
+      "bytes": 14868
+    },
+    {
+      "path": "tests/seed-cli.test.js",
+      "sha256": "8481b247655092d5a7b1d635b8187d982964cf285099a435b1824a585bfebb64",
+      "bytes": 2133
+    }
+  ]
+}

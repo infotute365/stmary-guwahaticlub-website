@@ -1,0 +1,16 @@
+﻿[
+    {
+        "page":  "/",
+        "status":  200,
+        "footer":  "design by Apex@spire Digicom solution",
+        "oldCreditRemoved":  true,
+        "principalBadgeRemoved":  true
+    },
+    {
+        "page":  "/contact",
+        "status":  200,
+        "footer":  "design by Apex@spire Digicom solution",
+        "oldCreditRemoved":  true,
+        "principalBadgeRemoved":  null
+    }
+]

@@ -8,3 +8,8 @@ npm-debug.log*
 cookies.txt
 public/uploads/*
 !public/uploads/.gitkeep
+
+# Disposable local responsive QA tooling and isolated build output.
+.tmp-ui-qa/
+.tmp-ui-preview/
+.tmp-debug.mjs

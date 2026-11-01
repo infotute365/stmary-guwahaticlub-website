@@ -1,0 +1,28 @@
+{
+    "captured":  "2026-11-01",
+    "origin":  "http://localhost:3210",
+    "scope":  "Real local Next HTTP requests, not browser automation",
+    "anonymousCatalogRejected":  true,
+    "fixtureAdministratorLogin":  "PASS",
+    "editorFreePublicSSR":  "PASS",
+    "mutations":  [
+                      {
+                          "key":  "home.hero-carousel.slides.item1.title",
+                          "saveAndIndependentRead":  "PASS",
+                          "reset":  "PASS"
+                      },
+                      {
+                          "key":  "home.hero-carousel.hero-carousel.style",
+                          "saveAndIndependentRead":  "PASS",
+                          "reset":  "PASS"
+                      },
+                      {
+                          "key":  "home.home.href.2",
+                          "saveAndIndependentRead":  "PASS",
+                          "reset":  "PASS"
+                      }
+                  ],
+    "galleryFixtureMedia":  "PASS",
+    "schoolDataUsed":  false,
+    "browserUIVerified":  false
+}

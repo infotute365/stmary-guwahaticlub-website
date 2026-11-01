@@ -1,0 +1,71 @@
+{
+    "task":  "02 of 05",
+    "captured":  "2026-10-31",
+    "note":  "User-authorized additive backend/service integration only. The Task 01 baseline and original preservation script remain unchanged. Manifest and result log excluded from self-hashing.",
+    "modifiedFiles":  [
+                          {
+                              "path":  "src/server/route-adapter.js",
+                              "beforeSha256":  "981e776aff34751c157250922a8fd377233fe6b1bc5a8479ecab7960b37bc079",
+                              "afterSha256":  "969be7fe84a684dbc753a8a59d6e1fd96ba50fbc7164babf97ade018909c7e16"
+                          },
+                          {
+                              "path":  "src/services/api.js",
+                              "beforeSha256":  "f1557aae616a30d7205cdf5cebc156530285406b20ed7e8817d810b1af2e70e5",
+                              "afterSha256":  "426511de120bf152f42bb6036ca839273e929712fc481924ddbe02e972a980a8"
+                          }
+                      ],
+    "newFiles":  [
+                     {
+                         "path":  "src/server/model/website-content.model.js",
+                         "sha256":  "78c03418398a150a58df9766bc8d18a490479d73a894c852c3d09634d5b70c03"
+                     },
+                     {
+                         "path":  "src/server/model/website-content-revision.model.js",
+                         "sha256":  "14aa6f915846dc19a80e257944176a32c1c352db3a94c27361c5686f558b6fcf"
+                     },
+                     {
+                         "path":  "src/server/util/websiteContentPolicy.js",
+                         "sha256":  "bf40cc12606dab346e9ee75c835351d86c6a69c49ceca516cf2eb9cb31012948"
+                     },
+                     {
+                         "path":  "src/server/util/websiteContentStore.js",
+                         "sha256":  "dedf7325293cc9d05e65cb614f477c77bea7c865277a824f2aa229789bec29c9"
+                     },
+                     {
+                         "path":  "src/server/controller/website-content.controller.js",
+                         "sha256":  "78433cfa94cf4eaa4564f517c20491a1e6a79f455f279e5dbf4775b6dc7b313a"
+                     },
+                     {
+                         "path":  "tests/website-content.test.js",
+                         "sha256":  "518ac9c93d73111d7a638962fd8910ce83bfd3a98ca41fc6847e936202cef6aa"
+                     },
+                     {
+                         "path":  "tests/website-content-integration.test.js",
+                         "sha256":  "1b4df8513492542b9190f1c921df4d23932c82b22dc6cb2ca27ee5202ebb3d2b"
+                     },
+                     {
+                         "path":  "tests/website-content-service.test.js",
+                         "sha256":  "acffbeba34aef5afff17e436a1b74559addeafd572908c49a4c1de7b5646a096"
+                     },
+                     {
+                         "path":  "scripts/run-website-content-tests.mjs",
+                         "sha256":  "539b486cef43e42cd97a8d5e03431a12814cc028687d2595cd6bd80fb82c1e11"
+                     },
+                     {
+                         "path":  "scripts/verify-website-content.mjs",
+                         "sha256":  "5c79f443e35cda858d8b52a1e592f1d4c2c3422c611c3956690c47105c0d836d"
+                     },
+                     {
+                         "path":  "docs/website-editor/06-BACKEND-API.md",
+                         "sha256":  "377280521e9fe5d9d28778a298361c8042948002480b2524525e2d071a074f0d"
+                     },
+                     {
+                         "path":  "docs/website-editor/07-BACKEND-DATABASE.md",
+                         "sha256":  "964e6c005dba8058ab5fdb3029c19a8bd14085fbdb754b0dc540debd00e65a9d"
+                     },
+                     {
+                         "path":  "docs/website-editor/08-BACKEND-VERIFICATION.md",
+                         "sha256":  "d9d354adc06015ded2f773e495904b6efb17da37ef889cd950c4b5563965029a"
+                     }
+                 ]
+}

@@ -5,8 +5,13 @@ import { motion } from 'framer-motion'
 import SectionWrapper from '../../components/common/SectionWrapper.jsx'
 import { getSyllabus, getAcademicYears, getSyllabusClasses, getSyllabusStreams, getFileUrl } from '../../services/api.js'
 import { FileText, Loader, Calendar, GraduationCap, Download, Eye, BookOpen } from 'lucide-react'
+import { useManagedRecord } from '../../components/website-editor/useWebsiteField.js'
+import { useWebsiteContent } from '../../components/website-editor/useWebsiteContent.js'
 
 const SyllabusPublic = () => {
+  const websiteContent = useWebsiteContent()
+
+  const recordProps = useManagedRecord('syllabus')
   const [syllabus, setSyllabus] = useState([])
   const [loading, setLoading] = useState(true)
   const [academicYears, setAcademicYears] = useState([])
@@ -19,9 +24,9 @@ const SyllabusPublic = () => {
 
   const classOptions = ['KG', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
   const streamOptions = [
-    { value: 'arts', label: 'Arts' },
-    { value: 'science', label: 'Science' },
-    { value: 'commerce', label: 'Commerce' }
+    { value: 'arts', label: websiteContent.value("academics.syllabus.stream-options.item1.label", 'Arts') },
+    { value: 'science', label: websiteContent.value("academics.syllabus.stream-options.item2.label", 'Science') },
+    { value: 'commerce', label: websiteContent.value("academics.syllabus.stream-options.item3.label", 'Commerce') }
   ]
 
   useEffect(() => {
@@ -127,9 +132,7 @@ const SyllabusPublic = () => {
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">
-            SYLLABUS
-          </span>
+          <span {...websiteContent.props(["academics.syllabus.syllabus-public.text"])} className="text-[80px] md:text-[120px] font-serif font-bold text-white/5 tracking-[0.3em] select-none">{websiteContent.value("academics.syllabus.syllabus-public.text", "SYLLABUS")}</span>
         </div>
 
         <div className="container-custom relative h-full flex items-center">
@@ -141,26 +144,23 @@ const SyllabusPublic = () => {
               className="flex items-center gap-3 mb-2"
             >
               <BookOpen size={18} className="text-gold-400" />
-              <span className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">Curriculum</span>
+              <span {...websiteContent.props(["academics.syllabus.syllabus-public.text.2"])} className="text-xs font-semibold text-gold-400 tracking-[0.2em] uppercase">{websiteContent.value("academics.syllabus.syllabus-public.text.2", "Curriculum")}</span>
             </motion.div>
 
-            <motion.h1
+            <motion.h1 {...websiteContent.props(["academics.syllabus.syllabus-public.heading"])}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white"
-            >
-              Our <span className="text-gold-400">Syllabus</span>
+            >{websiteContent.value("academics.syllabus.syllabus-public.heading", "Our ")}<span {...websiteContent.props(["academics.syllabus.syllabus-public.text.3"])} className="text-gold-400">{websiteContent.value("academics.syllabus.syllabus-public.text.3", "Syllabus")}</span>
             </motion.h1>
 
-            <motion.p
+            <motion.p {...websiteContent.props(["academics.syllabus.syllabus-public.paragraph"])}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-sm mt-1"
-            >
-              Class-wise curriculum overview
-            </motion.p>
+            >{websiteContent.value("academics.syllabus.syllabus-public.paragraph", "Class-wise curriculum overview")}</motion.p>
           </div>
         </div>
 
@@ -172,50 +172,44 @@ const SyllabusPublic = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
-                <Calendar size={16} className="text-gold-500" />
-                Academic Year
-              </label>
+              <label {...websiteContent.props(["academics.syllabus.syllabus-public.text.4"])} className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
+                <Calendar size={16} className="text-gold-500" />{websiteContent.value("academics.syllabus.syllabus-public.text.4", "Academic Year")}</label>
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
                 className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent text-gray-700"
               >
                 {academicYears.map((year) => (
-                  <option key={year} value={year}>{year}</option>
+                  <option {...websiteContent.propsFor(year)} key={year} value={year}>{year}</option>
                 ))}
               </select>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
-                <GraduationCap size={16} className="text-gold-500" />
-                Class
-              </label>
+              <label {...websiteContent.props(["academics.syllabus.syllabus-public.text.5"])} className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
+                <GraduationCap size={16} className="text-gold-500" />{websiteContent.value("academics.syllabus.syllabus-public.text.5", "Class")}</label>
               <select
                 value={selectedClass}
                 onChange={(e) => setSelectedClass(e.target.value)}
                 className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent text-gray-700"
               >
                 {classes.map((cls) => (
-                  <option key={cls} value={cls}>Class {cls}</option>
+                  <option {...websiteContent.props(["academics.syllabus.syllabus-public.text.6"])} key={cls} value={cls}>{websiteContent.value("academics.syllabus.syllabus-public.text.6", "Class ")}{cls}</option>
                 ))}
               </select>
             </div>
 
             {['11', '12'].includes(selectedClass) && streams.length > 0 && (
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
-                  <FileText size={16} className="text-gold-500" />
-                  Stream
-                </label>
+                <label {...websiteContent.props(["academics.syllabus.syllabus-public.text.7"])} className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-2">
+                  <FileText size={16} className="text-gold-500" />{websiteContent.value("academics.syllabus.syllabus-public.text.7", "Stream")}</label>
                 <select
                   value={selectedStream}
                   onChange={(e) => setSelectedStream(e.target.value)}
                   className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent text-gray-700"
                 >
                   {streamOptions.map((s) => (
-                    <option key={s.value} value={s.value}>{s.label}</option>
+                    <option {...websiteContent.propsFor(s.label)} key={s.value} value={s.value}>{s.label}</option>
                   ))}
                 </select>
               </div>
@@ -234,20 +228,17 @@ const SyllabusPublic = () => {
           ) : syllabus.length === 0 ? (
             <div className="text-center py-16 bg-gray-50 rounded-2xl border border-gray-200">
               <FileText size={56} className="mx-auto text-gray-300 mb-4" />
-              <h3 className="text-xl font-serif font-semibold text-gray-600">No syllabus found</h3>
-              <p className="text-gray-400 text-sm mt-2">
-                No syllabus available for {selectedYear} - Class {selectedClass}
+              <h3 {...websiteContent.props(["academics.syllabus.syllabus-public.heading.2"])} className="text-xl font-serif font-semibold text-gray-600">{websiteContent.value("academics.syllabus.syllabus-public.heading.2", "No syllabus found")}</h3>
+              <p {...websiteContent.props(["academics.syllabus.syllabus-public.paragraph.2","academics.syllabus.syllabus-public.paragraph.3"])} className="text-gray-400 text-sm mt-2">{websiteContent.value("academics.syllabus.syllabus-public.paragraph.2", "No syllabus available for ")}{selectedYear}{websiteContent.value("academics.syllabus.syllabus-public.paragraph.3", " - Class ")}{selectedClass}
                 {['11', '12'].includes(selectedClass) && ` - ${selectedStream}`}
               </p>
             </div>
           ) : (
             <>
               <div className="flex items-center justify-between mb-6">
-                <p className="text-sm text-gray-500">
-                  Showing <span className="font-semibold text-maroon-700">{syllabus.length}</span> syllabus entries
-                </p>
-                <span className="text-xs text-gray-400 bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
-                  {selectedYear} · Class {selectedClass}
+                <p {...websiteContent.props(["academics.syllabus.syllabus-public.paragraph.5","academics.syllabus.syllabus-public.paragraph.6"])} className="text-sm text-gray-500">{websiteContent.value("academics.syllabus.syllabus-public.paragraph.5", "Showing ")}<span {...websiteContent.propsFor(syllabus.length)} className="font-semibold text-maroon-700">{syllabus.length}</span>{websiteContent.value("academics.syllabus.syllabus-public.paragraph.6", " syllabus entries")}</p>
+                <span {...websiteContent.props(["academics.syllabus.syllabus-public.text.8"])} className="text-xs text-gray-400 bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
+                  {selectedYear}{websiteContent.value("academics.syllabus.syllabus-public.text.8", " · Class ")}{selectedClass}
                   {['11', '12'].includes(selectedClass) && ` · ${selectedStream}`}
                 </span>
               </div>
@@ -261,6 +252,7 @@ const SyllabusPublic = () => {
               >
                 {syllabus.map((item) => (
                   <motion.div
+                    {...recordProps(item._id, `Class ${item.class} syllabus`)}
                     key={item._id}
                     variants={cardVariants}
                     className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-gold-300"
@@ -268,29 +260,25 @@ const SyllabusPublic = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="bg-maroon-100 text-maroon-800 text-xs px-3 py-1 rounded-full font-semibold">
-                            Class {item.class}
+                          <span {...websiteContent.props(["academics.syllabus.syllabus-public.text.10"])} className="bg-maroon-100 text-maroon-800 text-xs px-3 py-1 rounded-full font-semibold">{websiteContent.value("academics.syllabus.syllabus-public.text.10", "Class ")}{item.class}
                           </span>
                           {item.stream && item.stream !== 'general' && (
-                            <span className="bg-gold-100 text-gold-700 text-xs px-3 py-1 rounded-full font-medium capitalize">
+                            <span {...websiteContent.propsFor(item.stream)} className="bg-gold-100 text-gold-700 text-xs px-3 py-1 rounded-full font-medium capitalize">
                               {item.stream}
                             </span>
                           )}
                         </div>
                         <div className="mt-3">
-                          <a
+                          <a {...websiteContent.props(["academics.syllabus.syllabus-public.text.11"])}
                             href={getFileUrl(item.fileUrl)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-maroon-800 hover:bg-maroon-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                           >
-                            <Eye size={16} />
-                            View PDF
-                            <Download size={14} className="ml-1" />
+                            <Eye size={16} />{websiteContent.value("academics.syllabus.syllabus-public.text.11", "View PDF")}<Download size={14} className="ml-1" />
                           </a>
                         </div>
-                        <p className="text-gray-400 text-xs mt-2">
-                          Uploaded: {new Date(item.createdAt).toLocaleDateString()}
+                        <p {...websiteContent.props(["academics.syllabus.syllabus-public.paragraph.7"])} className="text-gray-400 text-xs mt-2">{websiteContent.value("academics.syllabus.syllabus-public.paragraph.7", "Uploaded: ")}{new Date(item.createdAt).toLocaleDateString()}
                         </p>
                       </div>
                     </div>

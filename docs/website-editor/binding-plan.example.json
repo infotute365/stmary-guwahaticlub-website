@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Empty review-only example. No source changes or exceptions are approved. Future file entries require path, beforeSha256, afterSha256, lookupImport and bindings containing registered keys.",
+  "files": []
+}

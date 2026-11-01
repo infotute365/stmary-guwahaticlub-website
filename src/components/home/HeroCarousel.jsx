@@ -1,35 +1,46 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
-import { motion } from 'framer-motion'
+import { Autoplay, Pagination, EffectFade, A11y } from 'swiper/modules'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Award, GraduationCap, Users, Sparkles } from 'lucide-react'
+import { useWebsiteField, useWebsiteImage, useEditorCarousel } from '../website-editor/useWebsiteField.js'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
+import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
 const HeroCarousel = () => {
+  const websiteContent = useWebsiteContent()
+
   const slides = [
     {
       title: "St. Mary's",
-      subtitle: 'Higher Secondary School, Guwahati',
+      subtitle: websiteContent.value("home.hero-carousel.slides.item1.subtitle", 'Higher Secondary School, Guwahati'),
       description: '"If you are seeking a secondary school, St. Mary\'s School is the place to be."',
-      badge: 'SINCE 1924'
+      badge: websiteContent.value("home.hero-carousel.slides.item1.badge", 'SINCE 1924')
     },
     {
-      title: 'Every Age, Every Ambition',
-      subtitle: 'KG to Class XII',
-      description: '"From a child\'s first alphabet to a young adult\'s final examination — one campus, one continuous journey."',
-      badge: '100+ YEARS LEGACY'
+      title: websiteContent.value("home.hero-carousel.slides.item2.title", 'Every Age, Every Ambition'),
+      subtitle: websiteContent.value("home.hero-carousel.slides.item2.subtitle", 'KG to Class XII'),
+      description: websiteContent.value("home.hero-carousel.slides.item2.description", '"From a child\'s first alphabet to a young adult\'s final examination — one campus, one continuous journey."'),
+      badge: websiteContent.value("home.hero-carousel.slides.item2.badge", '100+ YEARS LEGACY')
     },
     {
-      title: 'Beyond the Classroom',
-      subtitle: 'Mind, Body & Character',
-      description: '"Education here is not a subject to be studied, but a life to be lived — fully, kindly, and with purpose."',
-      badge: 'EST. 1924'
+      title: websiteContent.value("home.hero-carousel.slides.item3.title", 'Beyond the Classroom'),
+      subtitle: websiteContent.value("home.hero-carousel.slides.item3.subtitle", 'Mind, Body & Character'),
+      description: websiteContent.value("home.hero-carousel.slides.item3.description", '"Education here is not a subject to be studied, but a life to be lived — fully, kindly, and with purpose."'),
+      badge: websiteContent.value("home.hero-carousel.slides.item3.badge", 'EST. 1924')
     }
   ]
+
+  const heroHeading = useWebsiteField('home.hero-carousel.slides.item1.title', slides[0].title)
+  const heroDescription = useWebsiteField('home.hero-carousel.slides.item1.description', slides[0].description)
+  const heroImage = useWebsiteImage('home.hero-carousel.hero-carousel.style', "url('/walpaper.png')")
+  const editorCarousel = useEditorCarousel()
+  const reducedMotion=useReducedMotion()
+  const [activeSlide,setActiveSlide]=useState(0)
 
   const particles = [
     { left: 66.7, size: 4, drift: 18 },
@@ -55,35 +66,41 @@ const HeroCarousel = () => {
   ]
   return (
     <Swiper
-      modules={[Autoplay, Pagination, EffectFade]}
-      autoplay={{ delay: 6000, disableOnInteraction: false }}
+      onSwiper={editorCarousel}
+      onSlideChange={swiper=>setActiveSlide(swiper.activeIndex)}
+      modules={[Autoplay, Pagination, EffectFade, A11y]}
+      autoplay={reducedMotion?false:{ delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+      onFocusCapture={event=>event.currentTarget.swiper?.autoplay?.pause()}
+      onBlurCapture={event=>{if(!event.currentTarget.contains(event.relatedTarget)&&!reducedMotion)event.currentTarget.swiper?.autoplay?.resume()}}
       pagination={{ clickable: true }}
       effect="fade"
-      speed={1000}
-      className="h-full w-full"
+      fadeEffect={{crossFade:true}}
+      speed={reducedMotion?0:650}
+      className="school-hero-carousel h-full w-full"
     >
       {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div className="w-full h-full relative overflow-hidden">
+        <SwiperSlide key={index} aria-hidden={activeSlide!==index} inert={activeSlide!==index}>
+          <div {...heroImage.targetProps} className="school-hero-slide w-full h-full relative overflow-hidden">
             {/* Background Image with Ken Burns Zoom Effect */}
             <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-10000 scale-110"
+              {...heroImage.editorProps}
+              className="school-hero-image absolute inset-0 bg-cover bg-center"
               style={{ 
-                backgroundImage: `url('/walpaper.png')`,
+                backgroundImage: heroImage.value,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             />
             
             {/* Premium Gradient Overlay - MUCH STRONGER for text visibility */}
-            <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/60 to-black/30" />
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+            <div className="school-hero-overlay absolute inset-0" />
+            <div className="school-hero-shade absolute inset-0" />
             
             {/* Decorative Gold Accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-yellow-500" />
             
             {/* Floating Particles */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="school-hero-particles absolute inset-0 overflow-hidden pointer-events-none">
               {particles.map((particle, i) => (
                 <motion.div
                   key={i}
@@ -95,100 +112,89 @@ const HeroCarousel = () => {
                     left: `${particle.left}%`,
                     bottom: '-10%',
                   }}
-                  initial={{ opacity: 0 }}
-                  animate={{ 
-                    y: ['0%', '-150%'], 
-                    opacity: [0, 0.5, 0],
-                    x: [0, particle.drift]
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: i * 12,
-                    ease: 'easeInOut'
-                  }}
+                  initial={false}
+                  animate={{opacity:0}}
+                  transition={{duration:0}}
                 
                 />
               ))}
             </div>
 
             {/* Content */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="px-8 md:px-12 lg:px-16 max-w-3xl">
+            <div className="school-hero-content relative flex items-center">
+              <div className="school-hero-copy max-w-3xl">
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="space-y-5"
                 >
                   {/* Premium Badge - BOLD YELLOW for maximum visibility */}
                   <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
+                    initial={false}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="inline-flex items-center gap-2 bg-yellow-400 border-2 border-yellow-300 rounded-full px-6 py-2.5 shadow-2xl"
+                    className="school-hero-badge inline-flex items-center gap-2"
                   >
                     <Sparkles size={16} className="text-black/70" />
-                    <span className="text-sm md:text-base text-black font-extrabold font-label tracking-[0.15em] uppercase">
+                    <span {...websiteContent.propsFor(slide.badge)} className="text-sm md:text-base text-black font-extrabold font-label tracking-[0.15em] uppercase">
                       {slide.badge}
                     </span>
                   </motion.div>
 
                   {/* Title with Glow Effect */}
-                  <motion.h2 
-                    initial={{ opacity: 0, y: 20 }}
+                  <motion.h2 {...websiteContent.propsFor(index === 0 ? heroHeading.value : slide.title)}
+                    {...(index === 0 ? heroHeading.editorProps : {})}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif-custom text-white font-bold leading-tight drop-shadow-2xl"
+                    className="school-hero-heading font-serif-custom text-white font-bold"
                   >
-                    {slide.title}
-                    <span className="block text-yellow-300 text-2xl md:text-3xl lg:text-4xl font-light mt-2 drop-shadow-xl">
+                    {index === 0 ? heroHeading.value : slide.title}
+                    <span {...websiteContent.propsFor(slide.subtitle)} className="block text-yellow-300 text-2xl md:text-3xl lg:text-4xl font-light mt-2 drop-shadow-xl">
                       {slide.subtitle}
                     </span>
                   </motion.h2>
 
                   {/* Divider */}
                   <motion.div
-                    initial={{ width: 0 }}
+                    initial={false}
                     animate={{ width: '80px' }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="h-0.5 bg-yellow-400 rounded-full shadow-lg"
                   />
 
                   {/* Description with Glow Effect */}
-                  <motion.p
-                    initial={{ opacity: 0 }}
+                  <motion.p {...websiteContent.propsFor(index === 0 ? heroDescription.value : slide.description)}
+                    {...(index === 0 ? heroDescription.editorProps : {})}
+                    initial={false}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-white text-base md:text-lg lg:text-xl leading-relaxed max-w-xl font-light italic drop-shadow-lg"
+                    className="school-hero-description text-white leading-relaxed max-w-xl italic"
                   >
-                    {slide.description}
+                    {index === 0 ? heroDescription.value : slide.description}
                   </motion.p>
 
                   {/* CTA Buttons */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-wrap items-center gap-4 pt-2"
+                    className="school-hero-actions flex flex-wrap items-center gap-4 pt-2"
                   >
-                    <a
-                      href="/admissions"
+                    <a {...websiteContent.props(["home.hero-carousel.hero-carousel.href"])}
+                      href={websiteContent.value("home.hero-carousel.hero-carousel.href", "/admissions")}
                       className="group inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-800 text-white px-8 py-3.5 rounded-full font-bold text-sm font-label tracking-wide transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
                     >
-                      <span className="relative">
-                        Start Journey
-                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <span {...websiteContent.props(["home.hero-carousel.hero-carousel.text"])} className="relative">{websiteContent.value("home.hero-carousel.hero-carousel.text", "Start Journey")}<span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       </span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform group-hover:scale-110" />
                     </a>
-                    <a
-                      href="/about/founders"
+                    <a {...websiteContent.props(["home.hero-carousel.hero-carousel.href.2"])}
+                      href={websiteContent.value("home.hero-carousel.hero-carousel.href.2", "/about/founders")}
                       className="group inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-maroon-900 px-6 py-3.5 rounded-full font-bold text-sm font-label tracking-wide transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
                     >
-                      <span className="relative">
-                        Our Legacy
-                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-maroon-900/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <span {...websiteContent.props(["home.hero-carousel.hero-carousel.text.2"])} className="relative">{websiteContent.value("home.hero-carousel.hero-carousel.text.2", "Our Legacy")}<span className="absolute -bottom-1 left-0 w-full h-0.5 bg-maroon-900/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       </span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform group-hover:scale-110" />
                     </a>
@@ -196,18 +202,18 @@ const HeroCarousel = () => {
 
                   {/* Trust Indicators - With solid backgrounds */}
                   <motion.div
-                    initial={{ opacity: 0 }}
+                    initial={false}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1 }}
-                    className="flex items-center gap-4 pt-4 border-t border-white/20"
+                    className="school-hero-facts pt-4 border-t border-white/20"
                   >
                     <div className="flex items-center gap-3 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
                       <div className="w-10 h-10 rounded-full bg-yellow-500/30 flex items-center justify-center border border-yellow-500/30">
                         <Award size={18} className="text-yellow-400" />
                       </div>
                       <div>
-                        <div className="text-base font-bold text-white drop-shadow-lg">100+</div>
-                        <div className="text-[10px] text-white/80 font-label uppercase tracking-wide">Years Legacy</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.3"])} className="text-base font-bold text-white drop-shadow-lg">{websiteContent.value("home.hero-carousel.hero-carousel.text.3", "100+")}</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.4"])} className="text-[10px] text-white/80 font-label uppercase tracking-wide">{websiteContent.value("home.hero-carousel.hero-carousel.text.4", "Years Legacy")}</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
@@ -215,8 +221,8 @@ const HeroCarousel = () => {
                         <GraduationCap size={18} className="text-yellow-400" />
                       </div>
                       <div>
-                        <div className="text-base font-bold text-white drop-shadow-lg">KG-XII</div>
-                        <div className="text-[10px] text-white/80 font-label uppercase tracking-wide">Classes</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.5"])} className="text-base font-bold text-white drop-shadow-lg">{websiteContent.value("home.hero-carousel.hero-carousel.text.5", "KG-XII")}</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.6"])} className="text-[10px] text-white/80 font-label uppercase tracking-wide">{websiteContent.value("home.hero-carousel.hero-carousel.text.6", "Classes")}</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
@@ -224,8 +230,8 @@ const HeroCarousel = () => {
                         <Users size={18} className="text-yellow-400" />
                       </div>
                       <div>
-                        <div className="text-base font-bold text-white drop-shadow-lg">2000+</div>
-                        <div className="text-[10px] text-white/80 font-label uppercase tracking-wide">Students</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.7"])} className="text-base font-bold text-white drop-shadow-lg">{websiteContent.value("home.hero-carousel.hero-carousel.text.7", "2000+")}</div>
+                        <div {...websiteContent.props(["home.hero-carousel.hero-carousel.text.8"])} className="text-[10px] text-white/80 font-label uppercase tracking-wide">{websiteContent.value("home.hero-carousel.hero-carousel.text.8", "Students")}</div>
                       </div>
                     </div>
                   </motion.div>

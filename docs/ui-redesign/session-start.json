@@ -1,0 +1,636 @@
+{
+  "files": [
+    {
+      "path": "app/globals.css",
+      "sha256": "47e0d41a5d41243987aef9483b95a66db5001b2d0f5060748027c8484bfa9a92"
+    },
+    {
+      "path": "app/layout.jsx",
+      "sha256": "8179fad6262d4163a4f15c1641f361e22549ab86247c5a8deee482c36f8df272"
+    },
+    {
+      "path": "app/not-found.jsx",
+      "sha256": "24d39ed9024b001d4d2d73a8c20caec16867553821e57ec2ebc1192a2dd3e468"
+    },
+    {
+      "path": "app/(site)/layout.jsx",
+      "sha256": "5203ba4e767d42f262e42eaca774fe88c052b116e47febe72e9dd6183d4bd22f"
+    },
+    {
+      "path": "app/(site)/page.jsx",
+      "sha256": "39f630ad78b8f4e7fd89c96db7b6bcc49761c38596787ed71dd8de7b151230fe"
+    },
+    {
+      "path": "app/admin/layout.jsx",
+      "sha256": "3c51fd9001993630721356eb76853fc38d40637cbe52023cd370261124b7793d"
+    },
+    {
+      "path": "app/admin/page.jsx",
+      "sha256": "35dad280372a275ddd031deccf871b0695b41b078b41a1192ea65561b238877a"
+    },
+    {
+      "path": "app/login/page.jsx",
+      "sha256": "7c79d86e4b09863bc9edff37c14f4c175c611d6df437e98ec19ef25baa82831a"
+    },
+    {
+      "path": "app/(site)/admissions/page.jsx",
+      "sha256": "1f28a0957470b9f14bc2400af10bb2dc300e2ce12ee8d1d50ec9aead7615ceb0"
+    },
+    {
+      "path": "app/(site)/contact/page.jsx",
+      "sha256": "3762722f8a42837e9dca24a1be728c7b06b71921ceae7576e2ccb45b58c70504"
+    },
+    {
+      "path": "app/(site)/gallery/page.jsx",
+      "sha256": "946c473a5bb0c39162fc8c8c8d55380f8f6b89030a19f0f880ad4a23b2e2377c"
+    },
+    {
+      "path": "app/(site)/infrastructure/page.jsx",
+      "sha256": "446977cc774079cf69015f12651a18acd8a7caf232eda21985feaa12eb0a28b1"
+    },
+    {
+      "path": "app/(site)/mandatory-disclosure/page.jsx",
+      "sha256": "2e80df4f2f504a7ac1be6e8b181b6749e6aceb9b932d8914c8495e8b623db740"
+    },
+    {
+      "path": "app/(site)/past-pupils/page.jsx",
+      "sha256": "f48d0dacb3f85d93d050e2e6eee6d47248ed5273cf163b795ff7e54b9fb571df"
+    },
+    {
+      "path": "app/(site)/student-rules/page.jsx",
+      "sha256": "5850cac8599c05c1c8af866daa864b7f3949ca7d553d42c6343688d86df15e34"
+    },
+    {
+      "path": "app/admin/circulars/page.jsx",
+      "sha256": "74b8b5fb983308257094d7757fdc9faa28ffb0ea63f9ebdc1e1f0fe23bcf9e3c"
+    },
+    {
+      "path": "app/admin/dashboard/page.jsx",
+      "sha256": "7ca812f9a7f35adf348ed9a2f46f79f0d391619ae483111084c5bbef97a54cc9"
+    },
+    {
+      "path": "app/admin/disclosure/page.jsx",
+      "sha256": "3dff7a9a5e458cb6e21d305d78c8777fd6da7f511dec98f84b5507d0045ffe58"
+    },
+    {
+      "path": "app/admin/gallery/page.jsx",
+      "sha256": "8002240137b446da06c9777bb306a04ed6052aedb3fc11500c1112abc769bfc4"
+    },
+    {
+      "path": "app/admin/staff/page.jsx",
+      "sha256": "f4b5a8683c5474acae57af202f718874bc99813bf09b3c209ead03cd1e1a109d"
+    },
+    {
+      "path": "app/admin/syllabus/page.jsx",
+      "sha256": "34b8ce69822c92d42cba0e7be86d210e5d238e223bfee31f4ab3b20e25fb0e52"
+    },
+    {
+      "path": "app/api/[...path]/route.js",
+      "sha256": "aaa442eed6a83f7b1104781856d9d9a60cf7040c2ff00e3431a6cb81b6135382"
+    },
+    {
+      "path": "app/uploads/[...path]/route.js",
+      "sha256": "9b042f7ccba71ba99b8e8f95ba01618fbe2cdd7e622ac95687c3f6ee4a59cf93"
+    },
+    {
+      "path": "app/(site)/about/founders/page.jsx",
+      "sha256": "87b3a9470ac0bbffceb4678667cee86a73a33389a39329d299723e438a5dfdf1"
+    },
+    {
+      "path": "app/(site)/about/journey/page.jsx",
+      "sha256": "01f2090026ebbdea4875fe4e821f9b57cdea17809f73a811c5fe46c8215707d2"
+    },
+    {
+      "path": "app/(site)/about/principal/page.jsx",
+      "sha256": "94b00ac47166266afeecffa63f384695348f12fae7bbe60a9636c114a65c9d18"
+    },
+    {
+      "path": "app/(site)/about/superiors/page.jsx",
+      "sha256": "522e29a252aeb28ca7bafa220fae99a2c54c83194f9b337d88677224bf5c232b"
+    },
+    {
+      "path": "app/(site)/academics/evaluation/page.jsx",
+      "sha256": "1da3b4867b32251874614b7f01de5c56df4850bc2deebd4f9d95df76ae940aaf"
+    },
+    {
+      "path": "app/(site)/academics/syllabus/page.jsx",
+      "sha256": "d4845e4115aa90e9d57d8d9efab8c82f7a99e8f6cbfcb87f0d8f2cbdeb5e5a02"
+    },
+    {
+      "path": "app/(site)/administration/management/page.jsx",
+      "sha256": "70c7c361eb0724ca9a7693de91a5ecf9369c79c3b1de008c73314dc18e29260d"
+    },
+    {
+      "path": "app/(site)/administration/non-teaching/page.jsx",
+      "sha256": "c09705e5dd87d0e69d889ffc04e096911ee02bdef4fb988d6b73859d8eff757b"
+    },
+    {
+      "path": "app/(site)/admissions/inquiry/page.jsx",
+      "sha256": "f70702cb7fa8f92d5f0db0f84fa41b66cf9d6e5cf01deb957bc78a5ce5b2a5fb"
+    },
+    {
+      "path": "app/(site)/extracurricular/clubs/page.jsx",
+      "sha256": "84d569a5663b0b358a47e46d16961b3b8f80f2361f3c661d0cce2fa5027caf22"
+    },
+    {
+      "path": "app/(site)/extracurricular/moments/page.jsx",
+      "sha256": "44b5e8f7b6fc3f3d5a012c0539b20fe139f75f48562e48da34e357b3d173ebf4"
+    },
+    {
+      "path": "app/api/uploads/[...path]/route.js",
+      "sha256": "b0866abe0f469bfab8f57afffd7fbeabe0b308ef5c4b880c6afccc139744db81"
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/high/page.jsx",
+      "sha256": "378478d330eb0ccba253a8c1f7c346451496151b4ea1e4398bd0c71da05fdfce"
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/higher-secondary/page.jsx",
+      "sha256": "6782c4afaaef37d3c8b7c58981318ca0752833450f1dce8656759d6f61bdc344"
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/middle/page.jsx",
+      "sha256": "bfe40e8673a86a36916f7d080743489787a221264010d142a0c41356cb6e1687"
+    },
+    {
+      "path": "app/(site)/administration/teaching-staff/primary/page.jsx",
+      "sha256": "99ed7d078e1d36a4bf2ed9556257687e8de132acfba9cdcd538a3fc58affe5b3"
+    },
+    {
+      "path": "src/assets/hero.png",
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c"
+    },
+    {
+      "path": "src/components/ProtectedRoute.jsx",
+      "sha256": "f7bd2cd5611a24cf052a9825cb2cb174df1f4f364f652baadfc18f721edb19cd"
+    },
+    {
+      "path": "src/components/Providers.jsx",
+      "sha256": "87573e9448b90b9201008d636b8025bee9979c2d6b462c12b437847f30eebf09"
+    },
+    {
+      "path": "src/content/website-bindings.js",
+      "sha256": "aca918ac6f2f4f50917ebbfdb0ee00ac304ef095edff1f11e5fcef9f77e64913"
+    },
+    {
+      "path": "src/context/AuthContext.jsx",
+      "sha256": "af21f6c2f69a68f03095d33d0e7995a7f0d51d36ec02edcc2efcbbc5d2348fd8"
+    },
+    {
+      "path": "src/hooks/useAuth.js",
+      "sha256": "68c403893093f749da0b6bf5165f4adacada5db555fe1113f93eebee4123c33c"
+    },
+    {
+      "path": "src/server/route-adapter.js",
+      "sha256": "8654f6ec1fcacab6aae7a526fa434313776f9a999f1fd6f8a84ad83558f30cdc"
+    },
+    {
+      "path": "src/server/route-path.js",
+      "sha256": "cf54dc1dc7607ff02ebf481d60d6fd83123ea30cd7d3eaecde5de034b8fd6187"
+    },
+    {
+      "path": "src/services/api.js",
+      "sha256": "d001f33f392d111d02f803c3892f60614d94e9a52faf9992e97bb1e7e2e8f1fb"
+    },
+    {
+      "path": "src/site-pages/ContactUs.jsx",
+      "sha256": "948d64cb6c6ae5fd710eb39392e9bfc5d697621e2aeee1f3423db6cd7b3b4bf3"
+    },
+    {
+      "path": "src/site-pages/Gallery.jsx",
+      "sha256": "f0158f3d46b74a941c006a841269b377e920e93fd14172fceccf4f2a51732016"
+    },
+    {
+      "path": "src/site-pages/Home.jsx",
+      "sha256": "1f6b1f40400d68bfad78d7e570058b450cd9b816255aa778073654b54cad8c60"
+    },
+    {
+      "path": "src/site-pages/Infrastructure.jsx",
+      "sha256": "0c253a8935229620d04c3503245df6d73b0afbe22861ef91a9f31d45e5f31d07"
+    },
+    {
+      "path": "src/site-pages/Login.jsx",
+      "sha256": "bfe93a79fd2ce7443e7497c37ad8ee0221eccd1a9c59f403a8043dafb71d5c39"
+    },
+    {
+      "path": "src/site-pages/MandatoryDisclosure.jsx",
+      "sha256": "4e6d31d0570199c8e73815c6423b186428991a37dfad7d79f208c6e160f53ff7"
+    },
+    {
+      "path": "src/site-pages/NotFound.jsx",
+      "sha256": "c0875966caddb77ae08d130f984a8a5523252f6d51242406c8cff2ccf4a6acaa"
+    },
+    {
+      "path": "src/site-pages/PastPupilsAssociation.jsx",
+      "sha256": "beac6f42d8d611ec4f41b8df818f119aedbcdf9ba2469b759eb045732793a285"
+    },
+    {
+      "path": "src/site-pages/StudentRules.jsx",
+      "sha256": "a4da926524a651e5f01cb709105bf8c4227fa04a5c3a0d910bd8dc41f13761fe"
+    },
+    {
+      "path": "src/utils/helpers.js",
+      "sha256": "18ae1b9a9371fedebf027cf20ddaf099469dd10ec88c9439a74956cce38848fe"
+    },
+    {
+      "path": "src/components/admin/Circulars.jsx",
+      "sha256": "d10789fdcf9a02c722b39bf545648b3f2534c20d0c796ddbaa2b7571205808ee"
+    },
+    {
+      "path": "src/components/admin/Dashboard.jsx",
+      "sha256": "4c88b0c94df62a8ab15dbbfc552ffd475c840b0f78d0e49b2a4eafbe51560c93"
+    },
+    {
+      "path": "src/components/admin/Disclosure.jsx",
+      "sha256": "26947c5e1be15dc211b0c94a047c6cc7146a441f7bdc807663aa95e0533047af"
+    },
+    {
+      "path": "src/components/admin/Gallery.jsx",
+      "sha256": "e4a7509b428116f9dd41cc33c32071cd867e1959120395f00c98514586d84674"
+    },
+    {
+      "path": "src/components/admin/Staff.jsx",
+      "sha256": "5d769a3f40ab09348a045e76f10f3a1cc87056eb77d4be32cd1af4223639a8a2"
+    },
+    {
+      "path": "src/components/admin/Syllabus.jsx",
+      "sha256": "c97dd0f5cd8f2e3811fa789e2bf2f6a40fee0973365ceeaeac704e7d1025513c"
+    },
+    {
+      "path": "src/components/common/Accordion.jsx",
+      "sha256": "61e0ddd93310e87a1f6441471fc4a33084d10b1515a373a51983e435c81dd71b"
+    },
+    {
+      "path": "src/components/common/Breadcrumb.jsx",
+      "sha256": "67bf7d44eab2b2f63a867e60a007c4e6d47d2b83927fcb8aa255e12fda2be803"
+    },
+    {
+      "path": "src/components/common/Card.jsx",
+      "sha256": "fd518432b6a4f89dd79ee2254df1f655127387ab3b425b64e87ac81de51436b7"
+    },
+    {
+      "path": "src/components/common/ContactForm.jsx",
+      "sha256": "36f41c8a994c458f7235a468e444e74fb6ec31ee7160be8d583b0b2a5b695a13"
+    },
+    {
+      "path": "src/components/common/GalleryGrid.jsx",
+      "sha256": "808094b563250f790d948884114143c68d6ee2c91d719bd5be69963268a01a65"
+    },
+    {
+      "path": "src/components/common/Lightbox.jsx",
+      "sha256": "6704fe2865aa2f28dceea4c9d7704f42aa20d7e8ff94c08fe7c1ef504e0a7bf8"
+    },
+    {
+      "path": "src/components/common/PageHeader.jsx",
+      "sha256": "8f928f76f5ea697e5504ca3ebbd7d7960f444ef543699286b1726013d89a3400"
+    },
+    {
+      "path": "src/components/common/SchoolMotion.jsx",
+      "sha256": "c85a700aa04eff0c7491bf4a654d54c6438d2291fff7ae0178349e8de511dfdf"
+    },
+    {
+      "path": "src/components/common/SectionWrapper.jsx",
+      "sha256": "86e88666a28a6220c07e50dcdcdca09522eac4c9328e66928e25d703ceac1039"
+    },
+    {
+      "path": "src/components/common/StaffCard.jsx",
+      "sha256": "5792b67fca6d14f4061ffca01b52b68dd2e648438bb6029c805d2fe3a4991a4c"
+    },
+    {
+      "path": "src/components/home/CircularsPanel.jsx",
+      "sha256": "31cb467d6a689a692ddf4ced9c814ed5e259480ae7f747deb69e5fa9c6e95dd1"
+    },
+    {
+      "path": "src/components/home/FeatureCard.jsx",
+      "sha256": "de6cb8140402b935974fb3ce4e27877d55c5c23bb909281c341b4f83cacbe482"
+    },
+    {
+      "path": "src/components/home/HeroCarousel.jsx",
+      "sha256": "6aed739c6d3e2bd0e9106eb96bafaa39310e21f1712fa2070f298840a29eb887"
+    },
+    {
+      "path": "src/components/home/PrincipalMessage.jsx",
+      "sha256": "d9ad93b3155c2b2f9c40c74bfb2ed9be162bcd850bf5a296cbc49301f3a35429"
+    },
+    {
+      "path": "src/components/home/StatsCounter.jsx",
+      "sha256": "74ab554ac7385e997b960cf1314892292562ddec57d0b8a001be2990c9025b20"
+    },
+    {
+      "path": "src/components/home/WelcomeSection.jsx",
+      "sha256": "733c3cd49f910e16426ead67f135706e5b8d477ac64bd8502a157a6d8696c238"
+    },
+    {
+      "path": "src/components/layout/AdminLayout.jsx",
+      "sha256": "0612dee3b9049e1532d3a5d6a968b9e8929b3796125f916a16b25308150c5bc8"
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "sha256": "cc0688e1cfc71e88164c50d9a57a8856bcf30fef527c3307a81a75a9f81bd2d7"
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "sha256": "8983efb75af76d294278f63bcfadc50eb40532a980846b917af0b27be023022c"
+    },
+    {
+      "path": "src/components/layout/NavDropdown.jsx",
+      "sha256": "85a7bfb870ec22f2f3948ea48f05b84653f563adf96e0b5da0a48d62762cf9ea"
+    },
+    {
+      "path": "src/components/layout/navigation-state.js",
+      "sha256": "f8cb723d78ef1b525bd7607b441361aa1f44091191e1359215e148bf750dcd95"
+    },
+    {
+      "path": "src/components/layout/NavNestedDropdown.jsx",
+      "sha256": "3d3516d75e6f9a0b1261b5082277b663f0a2a9e0aeea4a6bc7bd75f843dad190"
+    },
+    {
+      "path": "src/components/layout/TopBar.jsx",
+      "sha256": "b19dc3e8a4aa3a3fe7d4d89fc9ddfd82236f2443927af9b2fa213f57824acca9"
+    },
+    {
+      "path": "src/components/ui/Badge.jsx",
+      "sha256": "48fdb9c54b10e61f7704c692213138c51af19ac554a01a0b6dee9db80eb53643"
+    },
+    {
+      "path": "src/components/ui/Button.jsx",
+      "sha256": "780edc99676075315d5b06f3d385dd23df22900851b8e370f301fa99837f1fc0"
+    },
+    {
+      "path": "src/components/ui/Loader.jsx",
+      "sha256": "a41e4b6e1ffde60140cee1b7179521b7590996f041dbe3a1eff66afd4c4aa28f"
+    },
+    {
+      "path": "src/components/website-editor/editor-bindings.js",
+      "sha256": "91f231d4c942450f904742c31877108da923caee79018e260668e6d54835fc3f"
+    },
+    {
+      "path": "src/components/website-editor/editor-state.js",
+      "sha256": "7bbb7b617417336f0bbeb6f6ad24e245035e17f46b41a1211c03e5dd7e6f31c4"
+    },
+    {
+      "path": "src/components/website-editor/useWebsiteContent.js",
+      "sha256": "f9148c84aba12b112f6b59544efdfe0f2ca1aa7af971ad9091a0d46952e4822d"
+    },
+    {
+      "path": "src/components/website-editor/useWebsiteField.js",
+      "sha256": "03bb11d037c446fe5ce7f68622e7b1aca89ac3c5ec5d791864373431b91cae00"
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorProvider.jsx",
+      "sha256": "810c0b9e90ab6b52a56e93aac399c9376cfd5958e3789cef21580bc021048b7b"
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorUI.jsx",
+      "sha256": "fce10b2d1d9ddba0155b4f3d988b44eda6d9a27bbd1e3c1a9916090dea307234"
+    },
+    {
+      "path": "src/components/website-editor/WebsiteEditorUI.module.css",
+      "sha256": "a2cab494ae043a45fff011dd6eb03a6667992962332c4d8a28d8798fcde989cf"
+    },
+    {
+      "path": "src/server/config/auth.js",
+      "sha256": "75c8bbd3e8291e59c49865bb34a99d73d349d0038bd8133f2c396a1629dabbbd"
+    },
+    {
+      "path": "src/server/config/database.js",
+      "sha256": "83144d23f96f09ea56f956865dd548e84a87bb033fba522786395189b7fe1422"
+    },
+    {
+      "path": "src/server/config/localStorage.js",
+      "sha256": "11a1939f98f8ca2f1f17a844f283d44a29a0ab289e44f5019e750f20fe48e08b"
+    },
+    {
+      "path": "src/server/controller/auth.controller.js",
+      "sha256": "d0f745592a249edb0a97f871c4dce06e4e3f1d9e229329e5374cc2c67631f0d3"
+    },
+    {
+      "path": "src/server/controller/circular.controller.js",
+      "sha256": "0792a91705d2e69b80d2a32a75dc7651d4d7212a57ee6d7b0874ddad2a6118bc"
+    },
+    {
+      "path": "src/server/controller/disclosure.controller.js",
+      "sha256": "22195c72a3b9fdfc6a8db280e47c33321f81d067b3f2dab674b3f40febdc6edd"
+    },
+    {
+      "path": "src/server/controller/gallery.controller.js",
+      "sha256": "f54162ea0468d7d0b7b7f4c0706869d7051cb6d68fbba3577b44a60dd863e571"
+    },
+    {
+      "path": "src/server/controller/staff.controller.js",
+      "sha256": "434d3297e02f80757999bcfe1949ed3cd3ed084c6e129b65517bf64c498f0934"
+    },
+    {
+      "path": "src/server/controller/syllabus.controller.js",
+      "sha256": "a7138097ad59a7c63992ed020a922c27c8901abd04521667179d9e4e6234f0c3"
+    },
+    {
+      "path": "src/server/controller/upload.controller.js",
+      "sha256": "2f795931415cf8bc984e6127aca2e355017cbc8901e083837440e5e103c467ae"
+    },
+    {
+      "path": "src/server/controller/website-content.controller.js",
+      "sha256": "aa8b69816fd36f0cf7a3d1ed88d82c35df31183d02e3f345f1978cf6b283189d"
+    },
+    {
+      "path": "src/server/middleware/auth.middleware.js",
+      "sha256": "43e8614ac1cff10bfbf5df2c2d812fa12ac2b2ce5132cd2a2db6ceaa23b1d58c"
+    },
+    {
+      "path": "src/server/middleware/refresh.middleware.js",
+      "sha256": "e4a95e5a69b950823ffad37514bfa58010b157e3000ba1fb8c0895327930e1a9"
+    },
+    {
+      "path": "src/server/model/auth.model.js",
+      "sha256": "ae74450628a5e59525bb7c1c0361fd38631e7bf2410faf35a065df48ce86b479"
+    },
+    {
+      "path": "src/server/model/circular.model.js",
+      "sha256": "66f8ac7ede62ed2989db64225e66a5bc51a4185a7ae22a041a986e639c1702e3"
+    },
+    {
+      "path": "src/server/model/disclosure.model.js",
+      "sha256": "7bbdc2ebe636eb1db9b068fdbb8d14dc55b28ba264646c17fac9d1997e3cab99"
+    },
+    {
+      "path": "src/server/model/gallery.model.js",
+      "sha256": "af73d65de706e54bf589a791315dd6ee9fabf3a0116a44bc2685edea25f5f557"
+    },
+    {
+      "path": "src/server/model/staff.model.js",
+      "sha256": "c98e1f761bee47a8a7a83ded08b510f0f1cabb51c24ae7189341b95b34b5abd5"
+    },
+    {
+      "path": "src/server/model/syllabus.model.js",
+      "sha256": "e6e977f9cccf22d89e6e1380a89f4bd6eed79b7d8bf36f679bd8ea90428c7f0a"
+    },
+    {
+      "path": "src/server/model/website-content-revision.model.js",
+      "sha256": "14aa6f915846dc19a80e257944176a32c1c352db3a94c27361c5686f558b6fcf"
+    },
+    {
+      "path": "src/server/model/website-content.model.js",
+      "sha256": "3b971136f23ad285939d58217644c07ce294b2956f8adea7682bdfede713fbc4"
+    },
+    {
+      "path": "src/server/util/error.js",
+      "sha256": "3b8c9cdd6804999cb65b48c32c871d8a43f8d33c0824c7e322afc5195350ca81"
+    },
+    {
+      "path": "src/server/util/imageProcessor.js",
+      "sha256": "3bd9e9cb4e367ce1b0680553bae098b3b92b4ac054f51e9c539c213052671520"
+    },
+    {
+      "path": "src/server/util/provisionAdmin.js",
+      "sha256": "212d1cb33e35cbab485d32f311fc0eff6168c395a2b78d11f2d642e481195673"
+    },
+    {
+      "path": "src/server/util/publishedWebsiteContent.js",
+      "sha256": "98755d69cdd602e574061490318eafb4f0944f0acdca02d197272db3291df3a9"
+    },
+    {
+      "path": "src/server/util/requestSecurity.js",
+      "sha256": "97bdd1a8cfb49a9d74c7bfc687d8654506b8734ceb40bd108d6c33e1b6adcaa6"
+    },
+    {
+      "path": "src/server/util/serveUpload.js",
+      "sha256": "49979c684ae1a5043d65ddc74cbf0cacb55a5f9c5ccc95d7346ce4d548a0f544"
+    },
+    {
+      "path": "src/server/util/validation.mjs",
+      "sha256": "d8c90cc8fe957d77d3541e997b97144f0eda7c654b730ae308b0c7848f5e51dc"
+    },
+    {
+      "path": "src/server/util/websiteContentApprovals.js",
+      "sha256": "8922992ea020d1b2204e8ce4cc211532d537e4f690e669759d0eeb6bfc0aa609"
+    },
+    {
+      "path": "src/server/util/websiteContentPolicy.js",
+      "sha256": "10739004ecccbd088ac4280664d6f7974c90a9a4458821c0797a4a9ff04ee926"
+    },
+    {
+      "path": "src/server/util/websiteContentStore.js",
+      "sha256": "dedf7325293cc9d05e65cb614f477c77bea7c865277a824f2aa229789bec29c9"
+    },
+    {
+      "path": "src/server/util/websiteImageProcessor.js",
+      "sha256": "c55b9f85042a848f985b5e33bf488fd813fc0e1ea1aad51284bc8af3c449325f"
+    },
+    {
+      "path": "src/site-pages/about/OurFounders.jsx",
+      "sha256": "261f8b8304e6793b167eeb4c4c9b53de743570d63df02d59206966a5d817aa52"
+    },
+    {
+      "path": "src/site-pages/about/OurJourney.jsx",
+      "sha256": "69c39ef434ddc2b9942d8c275daf0e46dc0d5cffe60d95f3e00adda84f6fa178"
+    },
+    {
+      "path": "src/site-pages/about/Principal.jsx",
+      "sha256": "b2c4568aaba316891e2f1dc330e3ddd2141276d5742cfb92cc2cd3c907088a62"
+    },
+    {
+      "path": "src/site-pages/about/Superiors.jsx",
+      "sha256": "6e84131258752d0f7794e3ce06c92b94f3b88d2b21c074ed5185f2330c6e5cd9"
+    },
+    {
+      "path": "src/site-pages/academics/Evaluation.jsx",
+      "sha256": "0b607689101d795055fbfbd9f56f0859c45dd0b2185694cc1db88185f863ab90"
+    },
+    {
+      "path": "src/site-pages/academics/Syllabus.jsx",
+      "sha256": "7af39c2fb094d4d5d33c904862faaab458e6c5b2532ecdea0e85e4bfb999b77b"
+    },
+    {
+      "path": "src/site-pages/administration/Management.jsx",
+      "sha256": "8754160f8ac7ddc6e5f4696891e5338dfa2422d396a63845d89c19827b1bd4f4"
+    },
+    {
+      "path": "src/site-pages/administration/NonTeachingStaff.jsx",
+      "sha256": "8db278db8e82966243db9e8262c3f73d9313a4fe4784c32deab2ea5ffa53f177"
+    },
+    {
+      "path": "src/site-pages/admissions/Admission.jsx",
+      "sha256": "1aec09b2efeb034c67ebc0dd95849bb5e364ca14108c853c6ce0841c227ea086"
+    },
+    {
+      "path": "src/site-pages/admissions/AdmissionInquiry.jsx",
+      "sha256": "d3ac8e2022f9cce2e2241f8d79616a425e783a76752aa4b3d37dbd71b44dbf31"
+    },
+    {
+      "path": "src/site-pages/extracurricular/ClubsAndAssociations.jsx",
+      "sha256": "d7c058e5f99ddae8a526a7bc1b7394badbed86d36b653eea8b5088d4921280f0"
+    },
+    {
+      "path": "src/site-pages/extracurricular/FormativeMoments.jsx",
+      "sha256": "b504b5d2ed79def45032023ca1ffbce46d063d78b4e67e22f47f084e50718fdb"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HigherSecondery.jsx",
+      "sha256": "67aea7eb7c1837ffa6517d3090ca71b24dcd5aecb65b6b9dbc0d1500b02ed152"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/HighSchool.jsx",
+      "sha256": "c8ba702196522a61662cb81c1e74e6f638fc4c0bdb7e8db31dd203cac8a08596"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/MiddleSchool.jsx",
+      "sha256": "e093aa65a775628507039fa8a41c04adbc58b2f882a6ee822bdae5d04c2e97ce"
+    },
+    {
+      "path": "src/site-pages/administration/teaching-staff/PrimarySchool.jsx",
+      "sha256": "aea5565de256ace783af0de3ffa4d826e9ca418953bd1cdea1e8a7f8ab6ef92e"
+    },
+    {
+      "path": "public/domenica.png",
+      "sha256": "56f23e948a4b900de76f0b22e76d00ed59694dc08863f118fa753c4011457521"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "path": "public/icons.svg",
+      "sha256": "7ca2d67c9c3aebf50cdc8709ee8aacf8cdb8cc7ea6325ea94939caef5da1c53d"
+    },
+    {
+      "path": "public/john.png",
+      "sha256": "a0fe590343f116b112220453930005c55f311b1a6cb2064b9f51ecc3c285585c"
+    },
+    {
+      "path": "public/logo.jpeg",
+      "sha256": "bc80e9c6fbe27544bd53fce5febbc85a96f991eb2e5994deb496c32660534635"
+    },
+    {
+      "path": "public/principal.png",
+      "sha256": "d1392ba05f6d8420d2462042f4e13726cd88bab414d266b605a2a4c7fcc74b89"
+    },
+    {
+      "path": "public/sister.jpg",
+      "sha256": "00fb8c815eead2f0a015fdc8b785ebaa227c26f46f3fc9be62362a102c99bcce"
+    },
+    {
+      "path": "public/walpaper.png",
+      "sha256": "feae3ca6c9dee7d1b45b04b913be2c9ecef0bb6fd2e661d01be598bc8dab69bd"
+    },
+    {
+      "path": "public/uploads/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/uploads/gallery/33263314-ff97-4ddd-bfcb-74a9fac3b026.webp",
+      "sha256": "56bdf9e63a910332d49d77241529f94f94c99713b1ec52e4d8db2fcfa8dfec7a"
+    },
+    {
+      "path": "public/uploads/gallery/6132cde2-7bce-484a-808c-c6f1cb615ecb.webp",
+      "sha256": "4031d1edb0cfcdbaf897d0e44e29d43d76960c74f4cce8d0a0e5dc6ff27f087d"
+    },
+    {
+      "path": "public/uploads/gallery/73306072-ec98-49c2-aacf-49e563047452.webp",
+      "sha256": "30a5b9b27a20b3fad28e9ac2bb91b4ff48e4dee6206c05cda094c3027e256d70"
+    },
+    {
+      "path": "public/uploads/gallery/980fd352-0607-43dd-bb89-e9be47dbe348.webp",
+      "sha256": "10319d050984abd4939d76ee11aaa78ce38803c9363ecfbe91b6510af0f97a04"
+    }
+  ]
+}
