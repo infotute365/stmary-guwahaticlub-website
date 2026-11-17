@@ -104,7 +104,7 @@ const PrimarySchool = () => {
             {loading ? (
               [...Array(6)].map((_, i) => (
                 <div key={i} className="animate-pulse bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto"></div>
+                  <div className="mx-auto aspect-square w-40 max-w-full rounded-xl bg-gray-200 sm:w-44"></div>
                   <div className="h-5 bg-gray-200 rounded w-1/2 mx-auto mt-3"></div>
                   <div className="h-4 bg-gray-100 rounded w-1/3 mx-auto mt-1"></div>
                   <div className="h-3 bg-gray-100 rounded w-2/3 mx-auto mt-2"></div>
@@ -112,8 +112,8 @@ const PrimarySchool = () => {
               ))
             ) : staff.length > 0 ? (
               staff.map((member) => (
-                <SectionWrapper key={member.id}>
-                  <StaffCard staff={member} />
+                <SectionWrapper key={member._id || member.id} className="h-full min-w-0">
+                  <StaffCard staff={member} portrait />
                 </SectionWrapper>
               ))
             ) : (

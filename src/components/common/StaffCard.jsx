@@ -47,7 +47,7 @@ import Card from './Card.jsx'
 import { useManagedRecord } from '../website-editor/useWebsiteField.js'
 import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
-const StaffCard = ({ staff }) => {
+const StaffCard = ({ staff, portrait = false }) => {
   const websiteContent = useWebsiteContent()
 
   const recordProps = useManagedRecord('staff')
@@ -60,12 +60,12 @@ const StaffCard = ({ staff }) => {
   }
 
   return (
-    <Card {...recordProps(staff._id || staff.id, staff.name)} className="text-center p-6">
-      <div className="relative inline-block">
+    <Card {...recordProps(staff._id || staff.id, staff.name)} hover={!portrait} className={portrait ? 'school-staff-card text-center p-6' : 'text-center p-6'}>
+      <div className={portrait ? 'school-staff-photo relative inline-block' : 'relative inline-block'}>
         <img
-          src={getImageUrl(staff.image) || `https://ui-avatars.com/api/?name=${encodeURIComponent(staff.name)}&background=7A0C1E&color=fff&size=120`}
+          src={getImageUrl(staff.image) || `https://ui-avatars.com/api/?name=${encodeURIComponent(staff.name)}&background=7A0C1E&color=fff&size=${portrait ? 240 : 120}`}
           alt={staff.name}
-          className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-maroon-100"
+          className={portrait ? 'school-staff-image' : 'w-24 h-24 rounded-full object-cover mx-auto border-4 border-maroon-100'}
           loading="lazy"
         />
       </div>

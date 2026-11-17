@@ -74,6 +74,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ============ PRINCIPAL'S MESSAGE ============ */}
+      <PrincipalMessage />
+
       {/* ============ WELCOME SECTION ============ */}
       <section className="py-16 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gold-300/30" />
@@ -162,9 +165,6 @@ const Home = () => {
           <FeatureCard />
         </div>
       </section>
-
-      {/* ============ PRINCIPAL'S MESSAGE ============ */}
-      <PrincipalMessage />
 
       {/* ============ READY TO JOIN ============ */}
       <section className="py-16 bg-maroon-900 text-white relative overflow-hidden">

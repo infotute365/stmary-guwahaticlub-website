@@ -210,6 +210,70 @@
 .school-gallery-lightbox > .bottom-8 { bottom: max(16px,env(safe-area-inset-bottom)); max-width: calc(100% - 24px); }
 .school-gallery-lightbox > .bottom-8 button { min-width: 36px; min-height: 44px; }
 
+/* Primary staff portraits: show the complete photo inside a responsive square. */
+.school-site .school-staff-card {
+  position: relative;
+  height: 100%;
+  border: 1px solid #eaded1;
+  border-radius: 18px;
+  background: linear-gradient(180deg,#fffdf8 0%,#fff 65%);
+  box-shadow: 0 6px 22px #450a1809;
+  transition: transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.school-staff-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg,#d4af3730,#d4af37,#d4af3730);
+}
+.school-staff-photo {
+  width: min(100%,10rem);
+  aspect-ratio: 1;
+  padding: 6px;
+  border: 1px solid #dfcd9f;
+  border-radius: 12px;
+  background: #fffaf0;
+  box-shadow: 0 5px 16px #450a1810;
+  vertical-align: top;
+  transition: border-color .25s ease,box-shadow .25s ease;
+}
+.school-staff-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 6px;
+  background: #f8f1e6;
+}
+.school-staff-card h4 { margin-top: 20px; }
+.school-staff-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  flex-shrink: 0;
+  min-height: 44px;
+  border: 1px solid #eaded1;
+  border-radius: 10px;
+  color: #6a1028;
+  background: #fffaf0;
+}
+.school-staff-card a:hover { border-color: #c9a84c; background: #f9f0dc; }
+.school-site .school-staff-card:focus-within { border-color: #c9a84c; box-shadow: 0 12px 28px #450a1814; }
+@media (min-width:640px) {
+  .school-staff-photo { width: min(100%,11rem); }
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .school-site .school-staff-card:hover { transform: translateY(-5px); border-color: #c9a84c; box-shadow: 0 16px 35px #450a181a; }
+  .school-staff-card:hover .school-staff-photo { border-color: #b18c1f; box-shadow: 0 7px 20px #b18c1f26; }
+}
+
 @media (max-width:767px) {
   .school-site .container-custom { padding-inline: max(16px,env(safe-area-inset-left)); }
   .school-topbar-row { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 0 10px; padding-block: 6px; }

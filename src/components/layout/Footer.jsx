@@ -108,6 +108,13 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/disclaimer"
+              className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-gold-400 px-5 py-2.5 font-label text-sm font-semibold text-maroon-900 transition-colors hover:bg-gold-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400"
+            >
+              Disclaimer
+              <ChevronRight size={16} aria-hidden="true" />
+            </Link>
           </motion.div>
 
           {/* Academics - Column 3 */}
@@ -180,7 +187,7 @@ const Footer = () => {
         >
           <p {...websiteContent.props(["global.footer.footer.paragraph.4"])} className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()}{websiteContent.value("global.footer.footer.paragraph.4", " St. Mary's Higher Secondary School. All rights reserved.")}</p>
-          <div className="flex items-center gap-4 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500">
             <span {...websiteContent.props(["global.footer.footer.text.6"])}>{websiteContent.value("global.footer.footer.text.6", "Privacy Policy")}</span>
             <span className="w-px h-4 bg-white/10" />
             <span {...websiteContent.props(["global.footer.footer.text.7"])}>{websiteContent.value("global.footer.footer.text.7", "Terms of Service")}</span>

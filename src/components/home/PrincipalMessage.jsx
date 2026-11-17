@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Mail, Phone, Sparkles, Pen, Quote, Star, Award, Heart } from 'lucide-react'
+import { Mail, Phone, Sparkles, Pen, Quote, Star, Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useWebsiteContent } from '../website-editor/useWebsiteContent.js'
 
@@ -63,14 +63,6 @@ const PrincipalMessage = () => {
               <div className="absolute top-6 right-6 w-6 h-6 border-t-2 border-r-2 border-gold-400/50 rounded-tr" />
               <div className="absolute bottom-6 left-6 w-6 h-6 border-b-2 border-l-2 border-gold-400/50 rounded-bl" />
               <div className="absolute bottom-6 right-6 w-6 h-6 border-b-2 border-r-2 border-gold-400/50 rounded-br" />
-
-              {/* Years Badge */}
-              {websiteContent.value("home.principal-message.principal-message.text.2", "100 Years") && (
-              <div className="absolute top-4 right-4 bg-gold-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
-                <span {...websiteContent.props(["home.principal-message.principal-message.text.2"])} className="flex items-center gap-1.5 text-[10px] font-bold text-maroon-900">
-                  <Award size={12} />{websiteContent.value("home.principal-message.principal-message.text.2", "100 Years")}</span>
-              </div>
-              )}
 
               {/* ✅ FIXED: Name Plate - Now Visible */}
               <div className="absolute bottom-6 left-6 right-6">
